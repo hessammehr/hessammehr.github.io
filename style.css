@@ -24,3 +24,9 @@ li {
     padding-bottom: 0.2em;
     list-style: none
 }
+
+img {
+    width: 20%;
+    display: block;
+    margin: 0 auto
+}

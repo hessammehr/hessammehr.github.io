@@ -1,7 +1,9 @@
 # Science and computers
 ## S. Hessam M. Mehr ([CV](https://github.com/hessammehr/CV/raw/phys-chem/myCV.pdf))
 
-I am passionate about amplifying our mental capacity when it comes to science and computers.
+![](rings.png)
+
+I am passionate about technologies that amplifying our physical and mental capacity to do science.
 
 ### Code
 - [coalescence] Demonstration of peak coalescence in NMR [live demo][coalescence live] (TypeScript)
