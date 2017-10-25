@@ -1,0 +1,1 @@
+pandoc -s -o index.html --to html5 -c style.css -T "- S. Hessam M. Mehr -" index.md
