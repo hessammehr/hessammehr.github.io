@@ -3,7 +3,7 @@
 
 ![](rings.png)
 
-I am passionate about technologies that amplifying our physical and mental capacity to do science.
+I am passionate about technologies that amplify our physical and mental capacity to do science.
 
 ### Code
 - [coalescence] Demonstration of peak coalescence in NMR [live demo][coalescence live] (TypeScript)
