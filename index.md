@@ -6,7 +6,9 @@ I am passionate about amplifying our mental capacity when it comes to science an
 ### Code
 - [coalescence] Demonstration of peak coalescence in NMR [live demo][coalescence live] (TypeScript)
 - [molsketch-cljs] Cross-platfrom 2D molecular structure drawing program (ClojureScript)
+- [NMR.jl] Processing, visualization and analysis of NMR spectra (Julia)
 - [pyMPB] Python interface to MIT Photonic Bands (MPB) 
+- [SolidStateNMR.jl] Simulation of solid-state NMR spectra based on calculated shielding matrix
 - [vim-gaussian] Gaussian syntax highlighting for vim
 - [XRD.jl] Utility functions for X-ray diffraction (Julia)
 
@@ -29,5 +31,6 @@ I am passionate about amplifying our mental capacity when it comes to science an
 [molsketch-cljs]: https://github.com/hessammehr/molsketch-cljs
 [NMR.jl]: https://github.com/hessammehr/NMR.jl
 [pyMPB]: https://github.com/hessammehr/pyMPB 
+[SolidStateNMR.jl]: https://github.com/hessammehr/SolidStateNMR.jl
 [vim-gaussian]: https://github.com/hessammehr/vim-gaussian
 [XRD.jl]: https://github.com/hessammehr/XRD.jl
