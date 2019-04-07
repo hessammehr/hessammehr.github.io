@@ -1,11 +1,16 @@
 # Science and computers
-## S. Hessam M. Mehr ([CV](https://github.com/hessammehr/CV/raw/phys-chem/myCV.pdf))
+## S. Hessam M. Mehr ([CV] [blog] [github])
 
 ![](rings.png)
 
 Passionate about using technology to amplify our physical and mental capacity to do science.
 
+### Writing
+You can find my blog [here][blog].
+
 ### Code
+- [Logic.jl] Early sketch of a typed logic programming system embedded in Julia
+- [liquid_rules] Proof of concept scheduling system for liquid movement in Prolog
 - [coalescence] Demonstration of peak coalescence in NMR [live demo][coalescence live] (TypeScript)
 - [molsketch-cljs] Cross-platfrom 2D molecular structure drawing program (ClojureScript)
 - [NMR.jl] Processing, visualization and analysis of NMR spectra (Julia)
@@ -15,6 +20,7 @@ Passionate about using technology to amplify our physical and mental capacity to
 - [XRD.jl] Utility functions for X-ray diffraction (Julia)
 
 ### Publications
+- [Catalyst: The Metaphysics of Chemical Reactivity][10.1016/j.chempr.2018.07.008] <br/> Cronin, L.; Mehr, S. H. M.; Granda, J. M. _Chem_ **2018**, _4_, 1759–1761
 - [Tuning the tautomeric behavior of tris(salicylaldimines)][10.1039/C7OB02058A] <br/> Mehr, S. H. M.; Oshima, H.; Carta, V.; Patrick, B. O.; White, N. G.; MacLachlan, M. J. _Org. Biomol. Chem._ **2017**, _15_, 8418–8424
 - [Formylation of phenols using formamidine acetate][10.1039/C6OB02727J] <br/> Mehr, S. H. M.; Depmeier, H.; Fukuyama, K.; Maghami, M.; MacLachlan, M. J. _Org. Biomol. Chem._ **2017**, _15_, 581–583
 - [Stabilization of a Strained Heteroradialene by Peripheral Electron Delocalization][10.1021/acs.orglett.6b00577] <br/> Mehr, S. H. M.; Patrick, B. O.; MacLachlan, M. J. _Org. Lett._ **2016**, _18_, 1840–1843
@@ -22,12 +28,18 @@ Passionate about using technology to amplify our physical and mental capacity to
 - [Novel PPV/Mesoporous Organosilica Composites: Influence of the Host Chirality on a Conjugated Polymer Guest][10.1021/la4024597] <br/> Mehr, S. H. M.; Giese, M.; Qi, H.; Shopsowitz, K. E.; Hamad, W. Y.; MacLachlan, M. J. _Langmuir_ **2013**, _29_, 12579–12584
 - [Role of Entropy and Autosolvation in Dimerization and Complexation of C<sub>60</sub> by Zn<sub>7</sub> Metallocavitands][10.1021/ic202049t] <br/> Frischmann, P. D.; Mehr, S. H. M.; Patrick, B. O.; Lelj, F.; MacLachlan, M. J. _Inorg. Chem._ **2012**, _51_, 3443–3453
 
+[CV]: https://github.com/hessammehr/CV/raw/master/myCV.pdf
+[blog]: https://hessammehr.posthaven.com
+[10.1016/j.chempr.2018.07.008]: https://dx.doi.org/10.1016/j.chempr.2018.07.008
 [10.1039/C7OB02058A]: https://dx.doi.org/10.1039/C7OB02058A
 [10.1039/C6OB02727J]: https://dx.doi.org/10.1039/C6OB02727J
 [10.1021/acs.orglett.6b00577]: https://dx.doi.org/10.1021/acs.orglett.6b00577
 [10.1021/acs.joc.5b00539]: https://dx.doi.org/10.1021/acs.joc.5b00539
 [10.1021/la4024597]: https://dx.doi.org/10.1021/la4024597
 [10.1021/ic202049t]: https://dx.doi.org/10.1021/ic202049t
+[github]: https://github.com/hessammehr
+[Logic.jl]: https://github.com/hessammehr/Logic.jl
+[liquid_rules]: https://github.com/hessammehr/liquid_rules
 [coalescence]: https://github.com/hessammehr/coalescence
 [coalescence live]: https://rawgit.com/hessammehr/coalescence/javascript/coalesce.html
 [molsketch-cljs]: https://github.com/hessammehr/molsketch-cljs
