@@ -1,0 +1,13 @@
+baseURL =  "http://hessammehr.github.io/blog/"
+publishDir = "blog"
+
+languageCode = "en-us"
+title = "I wonder: Hessam's blog"
+theme = "one"
+
+pygmentsCodefences = true
+pygmentsCodefencesGuessSyntax = false
+pygmentsStyle = "github"
+
+[params]
+	author = "Hessam Mehr"
