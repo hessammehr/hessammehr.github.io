@@ -29,7 +29,7 @@ You can find my blog [here][blog].
 - [Role of Entropy and Autosolvation in Dimerization and Complexation of C<sub>60</sub> by Zn<sub>7</sub> Metallocavitands][10.1021/ic202049t] <br/> Frischmann, P. D.; Mehr, S. H. M.; Patrick, B. O.; Lelj, F.; MacLachlan, M. J. _Inorg. Chem._ **2012**, _51_, 3443–3453
 
 [CV]: https://github.com/hessammehr/CV/raw/master/myCV.pdf
-[blog]: https://hessammehr.posthaven.com/blog
+[blog]: https://hessammehr.github.io/blog
 [10.1016/j.chempr.2018.07.008]: https://dx.doi.org/10.1016/j.chempr.2018.07.008
 [10.1039/C7OB02058A]: https://dx.doi.org/10.1039/C7OB02058A
 [10.1039/C6OB02727J]: https://dx.doi.org/10.1039/C6OB02727J
