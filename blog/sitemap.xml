@@ -3,65 +3,65 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://hessammehr.github.io/blog/categories/</loc>
+    <loc>https://hessammehr.github.io/blog/categories/</loc>
     <lastmod>2019-04-07T17:21:08+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hessammehr.github.io/blog/posts/2019-04-07-fertile-land-at-the-confluence-of-staged-programming-and-typed-logic-programming/</loc>
+    <loc>https://hessammehr.github.io/blog/posts/2019-04-07-fertile-land-at-the-confluence-of-staged-programming-and-typed-logic-programming/</loc>
     <lastmod>2019-04-07T17:21:08+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://hessammehr.github.io/blog/</loc>
-    <lastmod>2019-04-07T17:21:08+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://hessammehr.github.io/blog/tags/jit/</loc>
+    <loc>https://hessammehr.github.io/blog/</loc>
     <lastmod>2019-04-07T17:21:08+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hessammehr.github.io/blog/tags/julia/</loc>
+    <loc>https://hessammehr.github.io/blog/tags/jit/</loc>
     <lastmod>2019-04-07T17:21:08+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hessammehr.github.io/blog/posts/</loc>
+    <loc>https://hessammehr.github.io/blog/tags/julia/</loc>
     <lastmod>2019-04-07T17:21:08+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hessammehr.github.io/blog/tags/</loc>
+    <loc>https://hessammehr.github.io/blog/posts/</loc>
     <lastmod>2019-04-07T17:21:08+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hessammehr.github.io/blog/tags/logic-programming/</loc>
+    <loc>https://hessammehr.github.io/blog/tags/</loc>
     <lastmod>2019-04-07T17:21:08+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hessammehr.github.io/blog/categories/programming/</loc>
+    <loc>https://hessammehr.github.io/blog/tags/logic-programming/</loc>
     <lastmod>2019-04-07T17:21:08+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hessammehr.github.io/blog/posts/2013-12-28-funny/</loc>
+    <loc>https://hessammehr.github.io/blog/categories/programming/</loc>
+    <lastmod>2019-04-07T17:21:08+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hessammehr.github.io/blog/posts/2013-12-28-funny/</loc>
     <lastmod>2013-12-28T22:09:51+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://hessammehr.github.io/blog/posts/2013-12-23-a-new-way-of-doing-chemistry/</loc>
+    <loc>https://hessammehr.github.io/blog/posts/2013-12-23-a-new-way-of-doing-chemistry/</loc>
     <lastmod>2013-12-23T20:09:02+00:00</lastmod>
   </url>
   
