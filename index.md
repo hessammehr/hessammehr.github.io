@@ -10,16 +10,18 @@ You can find my blog [here][blog].
 
 ### Code
 - [Logic.jl] Early sketch of a typed logic programming system embedded in Julia
-- [liquid_rules] Proof of concept scheduling system for liquid movement in Prolog
+- [liquid_rules] (Prolog) and [liquid_rules_ddlog] (Differential Datalog) Proof of concept declarative scheduler for robotic liquid handling
 - [coalescence] Demonstration of peak coalescence in NMR [live demo][coalescence live] (TypeScript)
 - [molsketch-cljs] Cross-platfrom 2D molecular structure drawing program (ClojureScript)
 - [NMR.jl] Processing, visualization and analysis of NMR spectra (Julia)
 - [pyMPB] Python interface to MIT Photonic Bands (MPB) 
-- [SolidStateNMR.jl] Simulation of solid-state NMR spectra based on calculated shielding matrix
+- [SolidStateNMR.jl] Simulation of solid-state NMR spectra from calculated shielding matrix
 - [vim-gaussian] Gaussian syntax highlighting for vim
 - [XRD.jl] Utility functions for X-ray diffraction (Julia)
 
 ### Publications
+- Digitization and automatic execution of the chemical synthesis literature <br/> Mehr, S. H. M.; Craven, M.; Leonov, A. I.; Keenan, G.; Cronin, L. **2020**, under review
+- [Intuition-Enabled Machine Learning Beats the Competition When Joint Human-Robot Teams Perform In- organic Chemical Experiments][10.1021/acs.jcim.9b00304], <br/> Duros, V.; Grizou, J.; Sharma, A.; Mehr, S. H. M.; Bubliauskas, A.; Frei, P.; Miras, H. N.; Cronin, L. _J. Chem. Inf. Model._ **2019**, _59_, 2664–2671
 - [Catalyst: The Metaphysics of Chemical Reactivity][10.1016/j.chempr.2018.07.008] <br/> Cronin, L.; Mehr, S. H. M.; Granda, J. M. _Chem_ **2018**, _4_, 1759–1761
 - [Tuning the tautomeric behavior of tris(salicylaldimines)][10.1039/C7OB02058A] <br/> Mehr, S. H. M.; Oshima, H.; Carta, V.; Patrick, B. O.; White, N. G.; MacLachlan, M. J. _Org. Biomol. Chem._ **2017**, _15_, 8418–8424
 - [Formylation of phenols using formamidine acetate][10.1039/C6OB02727J] <br/> Mehr, S. H. M.; Depmeier, H.; Fukuyama, K.; Maghami, M.; MacLachlan, M. J. _Org. Biomol. Chem._ **2017**, _15_, 581–583
@@ -30,6 +32,7 @@ You can find my blog [here][blog].
 
 [CV]: https://github.com/hessammehr/CV/raw/master/myCV.pdf
 [blog]: https://hessammehr.github.io/blog
+[10.1021/acs.jcim.9b00304]: https://pubs.acs.org/doi/10.1021/acs.jcim.9b00304
 [10.1016/j.chempr.2018.07.008]: https://dx.doi.org/10.1016/j.chempr.2018.07.008
 [10.1039/C7OB02058A]: https://dx.doi.org/10.1039/C7OB02058A
 [10.1039/C6OB02727J]: https://dx.doi.org/10.1039/C6OB02727J
@@ -40,6 +43,7 @@ You can find my blog [here][blog].
 [github]: https://github.com/hessammehr
 [Logic.jl]: https://github.com/hessammehr/Logic.jl
 [liquid_rules]: https://github.com/hessammehr/liquid_rules
+[liquid_rules_ddlog]: https://github.com/hessammehr/liquid_rules_ddlog
 [coalescence]: https://github.com/hessammehr/coalescence
 [coalescence live]: https://rawgit.com/hessammehr/coalescence/javascript/coalesce.html
 [molsketch-cljs]: https://github.com/hessammehr/molsketch-cljs
