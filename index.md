@@ -30,7 +30,7 @@ You can find my blog [here][blog].
 - [Novel PPV/Mesoporous Organosilica Composites: Influence of the Host Chirality on a Conjugated Polymer Guest][10.1021/la4024597] <br/> Mehr, S. H. M.; Giese, M.; Qi, H.; Shopsowitz, K. E.; Hamad, W. Y.; MacLachlan, M. J. _Langmuir_ **2013**, _29_, 12579–12584
 - [Role of Entropy and Autosolvation in Dimerization and Complexation of C<sub>60</sub> by Zn<sub>7</sub> Metallocavitands][10.1021/ic202049t] <br/> Frischmann, P. D.; Mehr, S. H. M.; Patrick, B. O.; Lelj, F.; MacLachlan, M. J. _Inorg. Chem._ **2012**, _51_, 3443–3453
 
-[CV]: https://github.com/hessammehr/CV/raw/master/myCV.pdf
+[CV]: https://drive.google.com/open?id=1P0mogViFoOcPGpp1AaTVhUSIjP4NH84p
 [blog]: https://github.com/hessammehr/hessammehr.github.io/blob/master/blog/index.md
 [10.1021/acs.jcim.9b00304]: https://pubs.acs.org/doi/10.1021/acs.jcim.9b00304
 [10.1016/j.chempr.2018.07.008]: https://dx.doi.org/10.1016/j.chempr.2018.07.008
