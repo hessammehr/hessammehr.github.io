@@ -1,10 +1,5 @@
----
-author: Hessam Mehr
-categories: []
-date: '2013-12-23T20:09:02'
-tags: []
-title: A new way of doing chemistry
----
+# A new way of doing chemistry
+
 I've been thinking about a new way of doing chemistry. Take for example the
 case of growing crystals. In the more difficult cases, this involves trial and
 error using a number of educated guesses about the solvents and conditions.

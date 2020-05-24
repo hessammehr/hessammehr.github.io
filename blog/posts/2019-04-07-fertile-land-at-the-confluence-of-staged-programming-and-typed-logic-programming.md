@@ -1,11 +1,5 @@
----
-author: Hessam Mehr
-categories: ["programming"]
-date: '2019-04-07T17:21:08'
-tags: ["logic programming", "Julia", "JIT"]
-title: Fertile land at the confluence of staged programming and (typed) logic programming
-  — Part 1
----
+# Fertile land at the confluence of staged programming and (typed) logic programming — Part 1
+
 I recently started sketching out a logic programming library called
 [Logic.jl](https://github.com/hessammehr/Logic.jl) (it really is very much a
 sketch at the moment). As the name might imply, the library is implemented in
@@ -14,6 +8,7 @@ Julia and the twist on logic programming that I am aiming for are motivated by
 a particularly interesting confluence of ideas that I have become aware of in
 the past year and hope to describe in this blog post. I would love to hear
 your thoughts of course; just keep in mind that I am not a computer scientist.  
+
 ## Idea #1: Staged programming and languages with first-class JIT compilation machinery
 
 There is no shortage of programming languages with just-in-time (JIT)
