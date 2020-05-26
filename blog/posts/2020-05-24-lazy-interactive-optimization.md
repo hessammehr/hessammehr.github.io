@@ -17,10 +17,15 @@ Libraries like Theano and TensorFlow have a fairly limited scope (numerical code
 
 Using this design, optimizations will be part of libraries that can be imported and applied to existing code _a la carte_ as opposed to hard-coded in the compiler/JIT. This model is somewhat similar to what Julia does, _i.e._ interpretation and JIT compilation of code based on inferred type, but goes beyond building everything around the type system. Moreover, it can be implemented as a library in Julia, Python, or any language with bindings to codegen backend being targetted (if any).
 
+**Update (2020-05-26):** Relevant discussion on the [Julia discourse]. Forum users pointed out some of the promising developments in the area, e.g. [Mjolnir] and being able to [customize the compilation pipeline] through parameterized interpretation.
+
 [AdvancedHMC.jl]: https://github.com/TuringLang/AdvancedHMC.jl
+[customize the compilation pipeline]: https://github.com/JuliaLang/julia/pull/33955
 [Dario]: https://twitter.com/DarioCaramelli
 [DynamicHMC.jl]: https://github.com/tpapp/DynamicHMC.jl
+[Julia discourse]: https://discourse.julialang.org/t/idea-scope-rather-than-type-centric-composable-optimizations
 [Markov chain Monte carlo]: https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo
+[Mjolnir]: https://github.com/MikeInnes/Mjolnir.jl
 [PyMC3]: https://docs.pymc.io
 [Theano]: http://www.deeplearning.net/software/theano/
 [Turing.jl]: https://turing.ml
