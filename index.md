@@ -19,8 +19,8 @@ You can find my blog [here][blog].
 - [vim-gaussian] Gaussian syntax highlighting for vim
 - [XRD.jl] Utility functions for X-ray diffraction (Julia)
 
-### Publications
-- Digitization and automatic execution of the chemical synthesis literature <br/> Mehr, S. H. M.; Craven, M.; Leonov, A. I.; Keenan, G.; Cronin, L. **2020**, under review
+### Selected publications
+- A universal system for digitization and automatic execution of the chemical synthesis literature <br/> Mehr, S. H. M.; Craven, M.; Leonov, A. I.; Keenan, G.; Cronin, L. _Science_, **2020**, _in press_.
 - [Intuition-Enabled Machine Learning Beats the Competition When Joint Human-Robot Teams Perform In- organic Chemical Experiments][10.1021/acs.jcim.9b00304], <br/> Duros, V.; Grizou, J.; Sharma, A.; Mehr, S. H. M.; Bubliauskas, A.; Frei, P.; Miras, H. N.; Cronin, L. _J. Chem. Inf. Model._ **2019**, _59_, 2664–2671
 - [Catalyst: The Metaphysics of Chemical Reactivity][10.1016/j.chempr.2018.07.008] <br/> Cronin, L.; Mehr, S. H. M.; Granda, J. M. _Chem_ **2018**, _4_, 1759–1761
 - [Tuning the tautomeric behavior of tris(salicylaldimines)][10.1039/C7OB02058A] <br/> Mehr, S. H. M.; Oshima, H.; Carta, V.; Patrick, B. O.; White, N. G.; MacLachlan, M. J. _Org. Biomol. Chem._ **2017**, _15_, 8418–8424
@@ -30,7 +30,7 @@ You can find my blog [here][blog].
 - [Novel PPV/Mesoporous Organosilica Composites: Influence of the Host Chirality on a Conjugated Polymer Guest][10.1021/la4024597] <br/> Mehr, S. H. M.; Giese, M.; Qi, H.; Shopsowitz, K. E.; Hamad, W. Y.; MacLachlan, M. J. _Langmuir_ **2013**, _29_, 12579–12584
 - [Role of Entropy and Autosolvation in Dimerization and Complexation of C<sub>60</sub> by Zn<sub>7</sub> Metallocavitands][10.1021/ic202049t] <br/> Frischmann, P. D.; Mehr, S. H. M.; Patrick, B. O.; Lelj, F.; MacLachlan, M. J. _Inorg. Chem._ **2012**, _51_, 3443–3453
 
-[CV]: https://drive.google.com/open?id=1P0mogViFoOcPGpp1AaTVhUSIjP4NH84p
+[CV]: https://drive.google.com/file/d/1RhEjWDwHJo6byc4MLY5XFHEtTAhP5Z0u
 [blog]: https://github.com/hessammehr/hessammehr.github.io/blob/master/blog/index.md
 [10.1021/acs.jcim.9b00304]: https://pubs.acs.org/doi/10.1021/acs.jcim.9b00304
 [10.1016/j.chempr.2018.07.008]: https://dx.doi.org/10.1016/j.chempr.2018.07.008
