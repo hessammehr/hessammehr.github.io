@@ -20,8 +20,8 @@ You can find my blog [here][blog].
 - [XRD.jl] Utility functions for X-ray diffraction (Julia)
 
 ### Selected publications
+- [A universal system for digitization and automatic execution of the chemical synthesis literature][10.1126/science.abc2986] <br/> Mehr, S. H. M.; Craven, M.; Leonov, A. I.; Keenan, G.; Cronin, L. _Science_, **2020**, 370, 101–108.
 - [An Artificial Intelligence that Discovers Unpredictable Chemical Reactions][10.26434/chemrxiv.12924968.v1] <br/> Caramelli, D.; Granda, J.; Cambié, D.; Mehr, S. H. M.; Henson, A.; Cronin, L. _ChemRxiv_, **2020**.
-- A universal system for digitization and automatic execution of the chemical synthesis literature <br/> Mehr, S. H. M.; Craven, M.; Leonov, A. I.; Keenan, G.; Cronin, L. _Science_, **2020**, _in press_.
 - [Intuition-Enabled Machine Learning Beats the Competition When Joint Human-Robot Teams Perform In- organic Chemical Experiments][10.1021/acs.jcim.9b00304], <br/> Duros, V.; Grizou, J.; Sharma, A.; Mehr, S. H. M.; Bubliauskas, A.; Frei, P.; Miras, H. N.; Cronin, L. _J. Chem. Inf. Model._ **2019**, _59_, 2664–2671
 - [Catalyst: The Metaphysics of Chemical Reactivity][10.1016/j.chempr.2018.07.008] <br/> Cronin, L.; Mehr, S. H. M.; Granda, J. M. _Chem_ **2018**, _4_, 1759–1761
 - [Tuning the tautomeric behavior of tris(salicylaldimines)][10.1039/C7OB02058A] <br/> Mehr, S. H. M.; Oshima, H.; Carta, V.; Patrick, B. O.; White, N. G.; MacLachlan, M. J. _Org. Biomol. Chem._ **2017**, _15_, 8418–8424
@@ -33,6 +33,7 @@ You can find my blog [here][blog].
 
 [CV]: https://drive.google.com/file/d/1RhEjWDwHJo6byc4MLY5XFHEtTAhP5Z0u
 [blog]: https://github.com/hessammehr/hessammehr.github.io/blob/master/blog/index.md
+[10.1126/science.abc2986]: https://science.sciencemag.org/content/370/6512/101
 [10.26434/chemrxiv.12924968.v1]: https://doi.org/10.26434/chemrxiv.12924968.v1
 [10.1021/acs.jcim.9b00304]: https://pubs.acs.org/doi/10.1021/acs.jcim.9b00304
 [10.1016/j.chempr.2018.07.008]: https://dx.doi.org/10.1016/j.chempr.2018.07.008
