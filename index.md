@@ -20,7 +20,7 @@ You can find my blog [here][blog].
 - [XRD.jl] Utility functions for X-ray diffraction (Julia)
 
 ### Selected publications
-- [Digitizing Chemistry Using the Chemical Processing Unit: From Synthesis to Discovery][10.1021/acs.accounts.0c00674] <br/> Wilbraham, L; Mehr, S. H. M.; Cronin, L. _Acc. Chem. Res._, **2020**, _XXX_, XXX–XXX
+- [Digitizing Chemistry Using the Chemical Processing Unit: From Synthesis to Discovery][10.1021/acs.accounts.0c00674] <br/> Wilbraham, L; Mehr, S. H. M.; Cronin, L. _Acc. Chem. Res._, **2021**, _54_, 253–262
 - [An Artificial Intelligence that Discovers Unpredictable Chemical Reactions][10.26434/chemrxiv.12924968.v1] <br/> Caramelli, D.; Granda, J.; Cambié, D.; Mehr, S. H. M.; Henson, A.; Cronin, L. _ChemRxiv_, **2020**
 - [A universal system for digitization and automatic execution of the chemical synthesis literature][10.1126/science.abc2986] <br/> Mehr, S. H. M.; Craven, M.; Leonov, A. I.; Keenan, G.; Cronin, L. _Science_, **2020**, _370_, 101–108
 - [Intuition-Enabled Machine Learning Beats the Competition When Joint Human-Robot Teams Perform In- organic Chemical Experiments][10.1021/acs.jcim.9b00304], <br/> Duros, V.; Grizou, J.; Sharma, A.; Mehr, S. H. M.; Bubliauskas, A.; Frei, P.; Miras, H. N.; Cronin, L. _J. Chem. Inf. Model._ **2019**, _59_, 2664–2671
