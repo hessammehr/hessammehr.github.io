@@ -6,7 +6,8 @@
 Passionate about using technology to amplify our physical and mental capacity to do science.
 
 ### Writing
-You can find my blog [here][blog].
+- [0101chem] companion website to my *Digital chemistry for digital natives* outreach project, kindly funded by the [Royal Society of Chemistry][RSC]
+- [My blog][blog] on github
 
 ### Code
 - [Logic.jl] Early sketch of a typed logic programming system embedded in Julia
@@ -33,6 +34,8 @@ You can find my blog [here][blog].
 - [Role of Entropy and Autosolvation in Dimerization and Complexation of C<sub>60</sub> by Zn<sub>7</sub> Metallocavitands][10.1021/ic202049t] <br/> Frischmann, P. D.; Mehr, S. H. M.; Patrick, B. O.; Lelj, F.; MacLachlan, M. J. _Inorg. Chem._ **2012**, _51_, 3443–3453
 
 [CV]: https://drive.google.com/u/0/uc?id=1P0mogViFoOcPGpp1AaTVhUSIjP4NH84p
+[0101chem]: https://0101chem.science
+[RSC]: https://www.rsc.org
 [blog]: https://github.com/hessammehr/hessammehr.github.io/blob/master/blog/index.md
 [10.1021/acs.accounts.0c00674]: https://dx.doi.org/10.1021/acs.accounts.0c00674
 [10.26434/chemrxiv.12924968.v1]: https://doi.org/10.26434/chemrxiv.12924968.v1
