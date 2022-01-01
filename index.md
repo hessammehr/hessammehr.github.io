@@ -6,10 +6,17 @@
 Passionate about using technology to amplify our physical and mental capacity to do science.
 
 ### Writing
-- [0101chem] companion website to my *Digital chemistry for digital natives* outreach project, kindly funded by the [Royal Society of Chemistry][RSC]
+- [0101chem] companion website to my *Digital chemistry for digital natives* outreach project, funded by the [Royal Society of Chemistry][RSC]
 - [My blog][blog] on github
 
+### Talks
+- [Building robot chemists with micro:bit][talk:microbit] <br/> Lightning talk, _micro:bit LIVE_, **2021**
+- [A lingua franca for robot chemists][talk:scotchem] (slides) <br/> _ScotCHEM Early Career Research Seminar_, **2020**
+- [An alcohol? What are the chances? Knowledge-based and probabilistic models in chemistry][talk:pymcon] <br/> _PyMCon_, **2020**
+- [Saving lives with Julia][talk:julia] <br/> _JuliaCon_, **2018**
+
 ### Code
+- [XDL] A hardware-independent chemical programming language
 - [Logic.jl] Early sketch of a typed logic programming system embedded in Julia
 - [liquid_rules] (Prolog) and [liquid_rules_ddlog] (Differential Datalog) Proof-of-concept declarative scheduler for robotic liquid handling
 - [coalescence] Demonstration of peak coalescence in NMR [live demo][coalescence live] (TypeScript)
@@ -21,8 +28,8 @@ Passionate about using technology to amplify our physical and mental capacity to
 - [XRD.jl] Utility functions for X-ray diffraction (Julia)
 
 ### Selected publications
+- [Discovering New Chemistry with an Autonomous Robotic Platform Driven by a Reactivity-Seeking Neural Network][10.1021/acscentsci.1c00435] <br/> Caramelli, D.; Granda, J.; Mehr, S. H. M.; Cambié, D.; Henson, A.; Cronin, L. _ACS Cent. Sci._, **2021**, _7_, 1821–1830
 - [Digitizing Chemistry Using the Chemical Processing Unit: From Synthesis to Discovery][10.1021/acs.accounts.0c00674] <br/> Wilbraham, L; Mehr, S. H. M.; Cronin, L. _Acc. Chem. Res._, **2021**, _54_, 253–262
-- [An Artificial Intelligence that Discovers Unpredictable Chemical Reactions][10.26434/chemrxiv.12924968.v1] <br/> Caramelli, D.; Granda, J.; Cambié, D.; Mehr, S. H. M.; Henson, A.; Cronin, L. _ChemRxiv_, **2020**
 - [A universal system for digitization and automatic execution of the chemical synthesis literature][10.1126/science.abc2986] <br/> Mehr, S. H. M.; Craven, M.; Leonov, A. I.; Keenan, G.; Cronin, L. _Science_, **2020**, _370_, 101–108
 - [Intuition-Enabled Machine Learning Beats the Competition When Joint Human-Robot Teams Perform In- organic Chemical Experiments][10.1021/acs.jcim.9b00304], <br/> Duros, V.; Grizou, J.; Sharma, A.; Mehr, S. H. M.; Bubliauskas, A.; Frei, P.; Miras, H. N.; Cronin, L. _J. Chem. Inf. Model._ **2019**, _59_, 2664–2671
 - [Catalyst: The Metaphysics of Chemical Reactivity][10.1016/j.chempr.2018.07.008] <br/> Cronin, L.; Mehr, S. H. M.; Granda, J. M. _Chem_ **2018**, _4_, 1759–1761
@@ -38,7 +45,7 @@ Passionate about using technology to amplify our physical and mental capacity to
 [RSC]: https://www.rsc.org
 [blog]: https://github.com/hessammehr/hessammehr.github.io/blob/master/blog/index.md
 [10.1021/acs.accounts.0c00674]: https://dx.doi.org/10.1021/acs.accounts.0c00674
-[10.26434/chemrxiv.12924968.v1]: https://doi.org/10.26434/chemrxiv.12924968.v1
+[10.1021/acscentsci.1c00435]: https://doi.org/10.1021/acscentsci.1c00435
 [10.1126/science.abc2986]: https://dx.doi.org/10.1126/science.abc2986 
 [10.1021/acs.jcim.9b00304]: https://pubs.acs.org/doi/10.1021/acs.jcim.9b00304
 [10.1016/j.chempr.2018.07.008]: https://dx.doi.org/10.1016/j.chempr.2018.07.008
@@ -58,5 +65,10 @@ Passionate about using technology to amplify our physical and mental capacity to
 [NMR.jl]: https://github.com/hessammehr/NMR.jl
 [pyMPB]: https://github.com/hessammehr/pyMPB 
 [SolidStateNMR.jl]: https://github.com/hessammehr/SolidStateNMR.jl
+[talk:julia]: https://www.youtube.com/watch?v=QhPdqUG2mRg
+[talk:microbit]: https://www.youtube.com/watch?v=LdGD7-9-e5A
+[talk:pymcon]: https://www.youtube.com/watch?v=q8n8XD-cB90
+[talk:scotchem]: https://drive.google.com/u/0/uc?export=download&id=1I7gghfB4_kOd7AKrNqMFcO9DsrId9hpp
 [vim-gaussian]: https://github.com/hessammehr/vim-gaussian
+[XDL]: https://gitlab.com/croningroup/chemputer/xdl
 [XRD.jl]: https://github.com/hessammehr/XRD.jl
