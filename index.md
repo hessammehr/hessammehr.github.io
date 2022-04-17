@@ -1,9 +1,9 @@
-# Science and computers
+# Chemistry <span id="arrow">⟷</span> Information
 ## S. Hessam M. Mehr ([CV] [blog] [github])
 
 ![](rings.png)
 
-Passionate about using technology to amplify our physical and mental capacity to do science.
+Leverhulme Early Career Fellow (University of Glasgow) investigating information and automation as gateways to new discovery paradigms in chemistry.
 
 ### Writing
 - [0101chem] companion website to my *Digital chemistry for digital natives* outreach project, funded by the [Royal Society of Chemistry][RSC]
@@ -16,7 +16,7 @@ Passionate about using technology to amplify our physical and mental capacity to
 - [Saving lives with Julia][talk:julia] <br/> _JuliaCon_, **2018**
 
 ### Code
-- [XDL] A hardware-independent chemical programming language
+- [XDL] A hardware-independent chemical programming language ([see publication][10.1126/science.abc2986])
 - [Logic.jl] Early sketch of a typed logic programming system embedded in Julia
 - [liquid_rules] (Prolog) and [liquid_rules_ddlog] (Differential Datalog) Proof-of-concept declarative scheduler for robotic liquid handling
 - [coalescence] Demonstration of peak coalescence in NMR [live demo][coalescence live] (TypeScript)
@@ -28,6 +28,7 @@ Passionate about using technology to amplify our physical and mental capacity to
 - [XRD.jl] Utility functions for X-ray diffraction (Julia)
 
 ### Selected publications
+- [Automated Qualitative and Quantitative Analysis of Complex Forensic Drug Samples using <sup>1</sup>H NMR][10.1002/mrc.5265] <br/> Mehr, S. H. M.; Tang, A. W.; Laing, R. R. _Magn. Reson. Chem._, **2022**, _1_
 - [Discovering New Chemistry with an Autonomous Robotic Platform Driven by a Reactivity-Seeking Neural Network][10.1021/acscentsci.1c00435] <br/> Caramelli, D.; Granda, J.; Mehr, S. H. M.; Cambié, D.; Henson, A.; Cronin, L. _ACS Cent. Sci._, **2021**, _7_, 1821–1830
 - [Digitizing Chemistry Using the Chemical Processing Unit: From Synthesis to Discovery][10.1021/acs.accounts.0c00674] <br/> Wilbraham, L; Mehr, S. H. M.; Cronin, L. _Acc. Chem. Res._, **2021**, _54_, 253–262
 - [A universal system for digitization and automatic execution of the chemical synthesis literature][10.1126/science.abc2986] <br/> Mehr, S. H. M.; Craven, M.; Leonov, A. I.; Keenan, G.; Cronin, L. _Science_, **2020**, _370_, 101–108
@@ -44,6 +45,7 @@ Passionate about using technology to amplify our physical and mental capacity to
 [0101chem]: https://0101chem.science
 [RSC]: https://www.rsc.org
 [blog]: https://github.com/hessammehr/hessammehr.github.io/blob/master/blog/index.md
+[10.1002/mrc.5265]: https://dx.doi.org/10.1002/mrc.5265
 [10.1021/acs.accounts.0c00674]: https://dx.doi.org/10.1021/acs.accounts.0c00674
 [10.1021/acscentsci.1c00435]: https://doi.org/10.1021/acscentsci.1c00435
 [10.1126/science.abc2986]: https://dx.doi.org/10.1126/science.abc2986 
