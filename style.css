@@ -1,6 +1,6 @@
 body {
     margin: 1em auto;
-    width: 80%;
+    width: min(80%, 820px);
     font-family: sans-serif;
     font-size: small;
     border-top: 1px solid black;
