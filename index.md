@@ -28,6 +28,7 @@ Leverhulme Early Career Fellow (University of Glasgow) investigating information
 - [XRD.jl] Utility functions for X-ray diffraction (Julia)
 
 ### Selected publications
+- [Digitization and validation of a chemical synthesis literature database in the ChemPU][10.1126/science.abo0058] <br/> Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; Mehr, S. H. M.; Trushina, E.; et al. _Science_, **2022**, 377, 172–180
 - [Automated Qualitative and Quantitative Analysis of Complex Forensic Drug Samples using <sup>1</sup>H NMR][10.1002/mrc.5265] <br/> Mehr, S. H. M.; Tang, A. W.; Laing, R. R. _Magn. Reson. Chem._, **2022**, _1_
 - [Discovering New Chemistry with an Autonomous Robotic Platform Driven by a Reactivity-Seeking Neural Network][10.1021/acscentsci.1c00435] <br/> Caramelli, D.; Granda, J.; Mehr, S. H. M.; Cambié, D.; Henson, A.; Cronin, L. _ACS Cent. Sci._, **2021**, _7_, 1821–1830
 - [Digitizing Chemistry Using the Chemical Processing Unit: From Synthesis to Discovery][10.1021/acs.accounts.0c00674] <br/> Wilbraham, L; Mehr, S. H. M.; Cronin, L. _Acc. Chem. Res._, **2021**, _54_, 253–262
@@ -45,6 +46,7 @@ Leverhulme Early Career Fellow (University of Glasgow) investigating information
 [0101chem]: https://0101chem.science
 [RSC]: https://www.rsc.org
 [blog]: https://github.com/hessammehr/hessammehr.github.io/blob/master/blog/index.md
+[10.1126/science.abo0058]: https://dx.doi.org/10.1126/science.abo0058
 [10.1002/mrc.5265]: https://dx.doi.org/10.1002/mrc.5265
 [10.1021/acs.accounts.0c00674]: https://dx.doi.org/10.1021/acs.accounts.0c00674
 [10.1021/acscentsci.1c00435]: https://doi.org/10.1021/acscentsci.1c00435
