@@ -1,9 +1,10 @@
-# Chemistry <span id="arrow">⟷</span> Information
-## S. Hessam M. Mehr ([CV] [blog] [github])
+# Chemistry <span id="arrow">⟷</span> Information <span id="arrow">⟷</span> Discovery
+## S. Hessam M. Mehr ([CV] [blog] [github] [email])
+<div id="under_title"> Leverhulme Early Career Research Fellow, University of Glasgow </div>
 
 ![](rings.png)
 
-Leverhulme Early Career Fellow (University of Glasgow) investigating information and automation as gateways to new discovery paradigms in chemistry.
+Investigating information and automation as gateways to new discovery paradigms in chemistry.
 
 ### Writing
 - [0101chem] companion website to my *Digital chemistry for digital natives* outreach project, funded by the [Royal Society of Chemistry][RSC]
@@ -27,6 +28,9 @@ Leverhulme Early Career Fellow (University of Glasgow) investigating information
 - [vim-gaussian] Gaussian syntax highlighting for vim
 - [XRD.jl] Utility functions for X-ray diffraction (Julia)
 
+### Opportunities
+If you are interested in research at the intersection of chemistry, automation, and please contact me directly by email. I would be very happy to discuss opportunities for visitors and project students, as well as prospective MSc/PhD students and post-docs.
+
 ### Selected publications
 - [Digitization and validation of a chemical synthesis literature database in the ChemPU][10.1126/science.abo0058] <br/> Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; Mehr, S. H. M.; Trushina, E.; et al. _Science_, **2022**, 377, 172–180
 - [Automated Qualitative and Quantitative Analysis of Complex Forensic Drug Samples using <sup>1</sup>H NMR][10.1002/mrc.5265] <br/> Mehr, S. H. M.; Tang, A. W.; Laing, R. R. _Magn. Reson. Chem._, **2022**, _1_
@@ -43,6 +47,7 @@ Leverhulme Early Career Fellow (University of Glasgow) investigating information
 - [Role of Entropy and Autosolvation in Dimerization and Complexation of C<sub>60</sub> by Zn<sub>7</sub> Metallocavitands][10.1021/ic202049t] <br/> Frischmann, P. D.; Mehr, S. H. M.; Patrick, B. O.; Lelj, F.; MacLachlan, M. J. _Inorg. Chem._ **2012**, _51_, 3443–3453
 
 [CV]: https://drive.google.com/u/0/uc?id=1P0mogViFoOcPGpp1AaTVhUSIjP4NH84p
+[email]: mailto:Hessam.Mehr@glasgow.ac.uk
 [0101chem]: https://0101chem.science
 [RSC]: https://www.rsc.org
 [blog]: https://github.com/hessammehr/hessammehr.github.io/blob/master/blog/index.md

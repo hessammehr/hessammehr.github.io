@@ -13,7 +13,8 @@ h1 {
 
 h2 {
     text-align: center;
-    font-size: medium
+    font-size: medium;
+    margin-bottom: 0px;
 }
 
 ul {
@@ -33,4 +34,9 @@ img {
 
 span#arrow {
     vertical-align: 0.1em;
+}
+
+#under_title {
+    text-align: center;
+    font-weight: bold;
 }
