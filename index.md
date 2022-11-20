@@ -17,6 +17,7 @@ Investigating information and automation as gateways to new discovery paradigms 
 - [Saving lives with Julia][talk:julia] <br/> _JuliaCon_, **2018**
 
 ### Code
+- [Delphi] A standard interface for storing, sampling/fitting, and comparing probabilistic models for interpreting scientific experiments
 - [XDL] A hardware-independent chemical programming language ([see publication][10.1126/science.abc2986])
 - [Logic.jl] Early sketch of a typed logic programming system embedded in Julia
 - [liquid_rules] (Prolog) and [liquid_rules_ddlog] (Differential Datalog) Proof-of-concept declarative scheduler for robotic liquid handling
@@ -29,7 +30,7 @@ Investigating information and automation as gateways to new discovery paradigms 
 - [XRD.jl] Utility functions for X-ray diffraction (Julia)
 
 ### Opportunities
-If you are interested in research at the intersection of chemistry, automation, and please contact me directly by email. I would be very happy to discuss opportunities for visitors and project students, as well as prospective MSc/PhD students and post-docs.
+If you are interested in research at the intersection of chemistry, automation, and algorithms/machine-learning please contact me directly by email. I would be very happy to discuss opportunities for visitors and project students, as well as prospective MSc/PhD students and post-docs.
 
 ### Selected publications
 - [Digitizing Chemical Discovery with a Bayesian Explorer for Interpreting Reactivity Data][10.26434/chemrxiv-2022-t5qqx] <br/>
@@ -74,6 +75,7 @@ Cronin, L.; Mehr, S. H. M.; Caramelli, D. _ChemRxiv_, **2022**
 [liquid_rules_ddlog]: https://github.com/hessammehr/liquid_rules_ddlog
 [coalescence]: https://github.com/hessammehr/coalescence
 [coalescence live]: https://rawgit.com/hessammehr/coalescence/javascript/coalesce.html
+[Delphi]: https://github.com/hessammehr/Delphi
 [molsketch-cljs]: https://github.com/hessammehr/molsketch-cljs
 [NMR.jl]: https://github.com/hessammehr/NMR.jl
 [pyMPB]: https://github.com/hessammehr/pyMPB 
