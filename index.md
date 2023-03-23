@@ -33,10 +33,10 @@ Investigating information and automation as gateways to new discovery paradigms 
 If you are interested in research at the intersection of chemistry, automation, and algorithms/machine-learning please contact me directly by email. I would be very happy to discuss opportunities for visitors and project students, as well as prospective MSc/PhD students and post-docs.
 
 ### Selected publications
-- [Digitizing Chemical Discovery with a Bayesian Explorer for Interpreting Reactivity Data][10.26434/chemrxiv-2022-t5qqx] <br/>
-Cronin, L.; Mehr, S. H. M.; Caramelli, D. _ChemRxiv_, **2022**
-- [Digitization and validation of a chemical synthesis literature database in the ChemPU][10.1126/science.abo0058] <br/> Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; Mehr, S. H. M.; Trushina, E.; et al. _Science_, **2022**, 377, 172–180
-- [Automated Qualitative and Quantitative Analysis of Complex Forensic Drug Samples using <sup>1</sup>H NMR][10.1002/mrc.5265] <br/> Mehr, S. H. M.; Tang, A. W.; Laing, R. R. _Magn. Reson. Chem._, **2022**, _1_
+- [Digitizing Chemical Discovery with a Bayesian Explorer for Interpreting Reactivity Data][10.26434/chemrxiv-2022-t5qqx] (link to pre-print) <br/>
+Mehr, S. H. M.; Caramelli, D., Cronin, L. _PNAS_, **2023**, _In press_
+- [Automated Qualitative and Quantitative Analysis of Complex Forensic Drug Samples using <sup>1</sup>H NMR][10.1002/mrc.5265] <br/> Mehr, S. H. M.; Tang, A. W.; Laing, R. R. _Magn. Reson. Chem._, **2023**, _61_, 95–105
+- [Digitization and validation of a chemical synthesis literature database in the ChemPU][10.1126/science.abo0058] <br/> Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; Mehr, S. H. M.; Trushina, E.; et al. _Science_, **2022**, _377_, 172–180
 - [Discovering New Chemistry with an Autonomous Robotic Platform Driven by a Reactivity-Seeking Neural Network][10.1021/acscentsci.1c00435] <br/> Caramelli, D.; Granda, J.; Mehr, S. H. M.; Cambié, D.; Henson, A.; Cronin, L. _ACS Cent. Sci._, **2021**, _7_, 1821–1830
 - [Digitizing Chemistry Using the Chemical Processing Unit: From Synthesis to Discovery][10.1021/acs.accounts.0c00674] <br/> Wilbraham, L; Mehr, S. H. M.; Cronin, L. _Acc. Chem. Res._, **2021**, _54_, 253–262
 - [A universal system for digitization and automatic execution of the chemical synthesis literature][10.1126/science.abc2986] <br/> Mehr, S. H. M.; Craven, M.; Leonov, A. I.; Keenan, G.; Cronin, L. _Science_, **2020**, _370_, 101–108
@@ -49,7 +49,7 @@ Cronin, L.; Mehr, S. H. M.; Caramelli, D. _ChemRxiv_, **2022**
 - [Novel PPV/Mesoporous Organosilica Composites: Influence of the Host Chirality on a Conjugated Polymer Guest][10.1021/la4024597] <br/> Mehr, S. H. M.; Giese, M.; Qi, H.; Shopsowitz, K. E.; Hamad, W. Y.; MacLachlan, M. J. _Langmuir_ **2013**, _29_, 12579–12584
 - [Role of Entropy and Autosolvation in Dimerization and Complexation of C<sub>60</sub> by Zn<sub>7</sub> Metallocavitands][10.1021/ic202049t] <br/> Frischmann, P. D.; Mehr, S. H. M.; Patrick, B. O.; Lelj, F.; MacLachlan, M. J. _Inorg. Chem._ **2012**, _51_, 3443–3453
 
-[CV]: https://drive.google.com/u/0/uc?id=1P0mogViFoOcPGpp1AaTVhUSIjP4NH84p
+[CV]: https://drive.google.com/u/0/uc?id=1t9PgrrGAe7qhM5hyWioGxxXwpGZaeXj0
 [blog]: https://github.com/hessammehr/hessammehr.github.io/blob/master/blog/index.md
 [github]: https://github.com/hessammehr
 [twitter]: https://twitter.com/hessammehr
