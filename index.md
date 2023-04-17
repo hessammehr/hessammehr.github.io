@@ -33,8 +33,8 @@ Investigating information and automation as gateways to new discovery paradigms 
 If you are interested in research at the intersection of chemistry, automation, and algorithms/machine-learning please contact me directly by email. I would be very happy to discuss opportunities for visitors and project students, as well as prospective MSc/PhD students and post-docs.
 
 ### Selected publications
-- [Digitizing Chemical Discovery with a Bayesian Explorer for Interpreting Reactivity Data][10.26434/chemrxiv-2022-t5qqx] (link to pre-print) <br/>
-Mehr, S. H. M.; Caramelli, D., Cronin, L. _PNAS_, **2023**, _In press_
+- [Digitizing chemical discovery with a Bayesian explorer for interpreting reactivity data][10.1073/pnas.2220045120] <br/>
+Mehr, S. H. M.; Caramelli, D., Cronin, L. _PNAS_, **2023**, _120_
 - [Automated Qualitative and Quantitative Analysis of Complex Forensic Drug Samples using <sup>1</sup>H NMR][10.1002/mrc.5265] <br/> Mehr, S. H. M.; Tang, A. W.; Laing, R. R. _Magn. Reson. Chem._, **2023**, _61_, 95–105
 - [Digitization and validation of a chemical synthesis literature database in the ChemPU][10.1126/science.abo0058] <br/> Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; Mehr, S. H. M.; Trushina, E.; et al. _Science_, **2022**, _377_, 172–180
 - [Discovering New Chemistry with an Autonomous Robotic Platform Driven by a Reactivity-Seeking Neural Network][10.1021/acscentsci.1c00435] <br/> Caramelli, D.; Granda, J.; Mehr, S. H. M.; Cambié, D.; Henson, A.; Cronin, L. _ACS Cent. Sci._, **2021**, _7_, 1821–1830
@@ -56,7 +56,7 @@ Mehr, S. H. M.; Caramelli, D., Cronin, L. _PNAS_, **2023**, _In press_
 [email]: mailto:Hessam.Mehr@glasgow.ac.uk
 [0101chem]: https://0101chem.science
 [RSC]: https://www.rsc.org
-[10.26434/chemrxiv-2022-t5qqx]: https://doi.org/10.26434/chemrxiv-2022-t5qqx
+[10.1073/pnas.2220045120]: https://dx.doi.org/10.1073/pnas.2220045120
 [10.1126/science.abo0058]: https://dx.doi.org/10.1126/science.abo0058
 [10.1002/mrc.5265]: https://dx.doi.org/10.1002/mrc.5265
 [10.1021/acs.accounts.0c00674]: https://dx.doi.org/10.1021/acs.accounts.0c00674
