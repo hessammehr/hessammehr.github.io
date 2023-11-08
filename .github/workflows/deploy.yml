@@ -22,7 +22,7 @@ jobs:
     - name: Build with Nix
       id: build
       run: |
-        nix shell --extra-experimental-features nix-command --extra-experimental-features flakes nixpkgs/23.05#pandoc -c sh -c "mkdir -p html && find . -name '*.md' -type f -exec pandoc --css=style.css -o html/{}.html {} \;"
+        nix shell --extra-experimental-features nix-command --extra-experimental-features flakes nixpkgs/23.05#pandoc -c sh -c "mkdir -p html && find . -name '*.md' -type f -exec sh -c 'pandoc --css=style.css --metadata pagetitle=\"${0%.*}\" -o html/${0%.*}.html \"$0\"' {} \;"
 
     - name: Publish HTML files
       uses: peaceiris/actions-gh-pages@v3

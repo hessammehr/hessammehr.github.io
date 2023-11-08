@@ -1,6 +1,6 @@
 # Chemistry <span id="arrow">⟷</span> Information <span id="arrow">⟷</span> Discovery
 ## S. Hessam M. Mehr
-<div id="under_title"> Leverhulme Early Career Research Fellow, University of Glasgow <br/> [CV] [blog] [github] [twitter] [email] </div>
+<div id="under_title"> Leverhulme Early Career Research Fellow, University of Glasgow <br/> [CV] [blog] [github] [twitter] [email] [group] </div>
 
 ![](rings.png)
 
@@ -54,6 +54,7 @@ Mehr, S. H. M.; Caramelli, D., Cronin, L. _PNAS_, **2023**, _120_
 [github]: https://github.com/hessammehr
 [twitter]: https://twitter.com/hessammehr
 [email]: mailto:Hessam.Mehr@glasgow.ac.uk
+[group]: https://mehrresearch.github.io
 [0101chem]: https://0101chem.science
 [RSC]: https://www.rsc.org
 [10.1073/pnas.2220045120]: https://dx.doi.org/10.1073/pnas.2220045120
