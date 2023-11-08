@@ -1,0 +1,31 @@
+name: Deploy Website
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    outputs:
+      html_dir: ${{ steps.build.outputs.html_dir }}
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install Nix
+      uses: cachix/install-nix-action@v13
+
+    - name: Build with Nix
+      id: build
+      run: |
+        nix shell --extra-experimental-features nix-command --extra-experimental-features flakes nixpkgs/23.05#pandoc -c sh -c "mkdir -p html && find . -name '*.md' -type f -exec pandoc --css=style.css -o html/{}.html {} \;"
+
+    - name: Publish HTML files
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./html
