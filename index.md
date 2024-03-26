@@ -11,16 +11,18 @@ title: S. Hessam M. Mehr
 Investigating information and automation as gateways to new discovery paradigms in chemistry.
 
 ### Writing
+- [My group's blog][group_blog]
 - [0101chem] companion website to my *Digital chemistry for digital natives* outreach project, funded by the [Royal Society of Chemistry][RSC]
-- [My blog][blog] on github
+- [My old blog][blog] on github
 
-### Talks
+### Recorded talks
 - [Building robot chemists with micro:bit][talk:microbit] <br/> Lightning talk, _micro:bit LIVE_, **2021**
 - [A lingua franca for robot chemists][talk:scotchem] (slides) <br/> _ScotCHEM Early Career Research Seminar_, **2020**
 - [An alcohol? What are the chances? Knowledge-based and probabilistic models in chemistry][talk:pymcon] <br/> _PyMCon_, **2020**
 - [Saving lives with Julia][talk:julia] <br/> _JuliaCon_, **2018**
 
 ### Code
+For an up-to-date list check out my [personal projects](https://github.com/hessammehr) and my [research group's projects](https://github.com/MehrResearch) on Github.
 - [Delphi] A standard interface for storing, sampling/fitting, and comparing probabilistic models for interpreting scientific experiments
 - [XDL] A hardware-independent chemical programming language ([see publication][10.1126/science.abc2986])
 - [Logic.jl] Early sketch of a typed logic programming system embedded in Julia
@@ -34,9 +36,11 @@ Investigating information and automation as gateways to new discovery paradigms 
 - [XRD.jl] Utility functions for X-ray diffraction (Julia)
 
 ### Opportunities
-If you are interested in research at the intersection of chemistry, automation, and algorithms/machine-learning please contact me directly by email. I would be very happy to discuss opportunities for visitors and project students, as well as prospective MSc/PhD students and post-docs.
+I am always keen to welcome motivated individuals from a range of technical backgrounds into the group. Please refer to the [my group's website](https://mehr-research.science/opportunities-engagement/) for a list of current opportunities.
 
-### Selected publications
+### Selected publications (pre-2024)
+An up-to-date list of publications is available on my [group's website](https://mehr-research.science/research/#publications). For a full list refer to [Google Scholar](https://scholar.google.com/citations?user=8Z6Z9YIAAAAJ&hl=en), and [ORCiD](https://orcid.org/0000-0001-7710-3102).
+
 - [Digitizing chemical discovery with a Bayesian explorer for interpreting reactivity data][10.1073/pnas.2220045120] <br/>
 Mehr, S. H. M.; Caramelli, D., Cronin, L. _PNAS_, **2023**, _120_
 - [Automated Qualitative and Quantitative Analysis of Complex Forensic Drug Samples using <sup>1</sup>H NMR][10.1002/mrc.5265] <br/> Mehr, S. H. M.; Tang, A. W.; Laing, R. R. _Magn. Reson. Chem._, **2023**, _61_, 95–105
@@ -61,26 +65,27 @@ Mehr, S. H. M.; Caramelli, D., Cronin, L. _PNAS_, **2023**, _120_
 [group]: https://mehr-research.science
 [0101chem]: https://0101chem.science
 [RSC]: https://www.rsc.org
-[10.1073/pnas.2220045120]: https://dx.doi.org/10.1073/pnas.2220045120
-[10.1126/science.abo0058]: https://dx.doi.org/10.1126/science.abo0058
-[10.1002/mrc.5265]: https://dx.doi.org/10.1002/mrc.5265
-[10.1021/acs.accounts.0c00674]: https://dx.doi.org/10.1021/acs.accounts.0c00674
+[10.1073/pnas.2220045120]: https://doi.org/10.1073/pnas.2220045120
+[10.1126/science.abo0058]: https://doi.org/10.1126/science.abo0058
+[10.1002/mrc.5265]: https://doi.org/10.1002/mrc.5265
+[10.1021/acs.accounts.0c00674]: https://doi.org/10.1021/acs.accounts.0c00674
 [10.1021/acscentsci.1c00435]: https://doi.org/10.1021/acscentsci.1c00435
-[10.1126/science.abc2986]: https://dx.doi.org/10.1126/science.abc2986 
+[10.1126/science.abc2986]: https://doi.org/10.1126/science.abc2986 
 [10.1021/acs.jcim.9b00304]: https://pubs.acs.org/doi/10.1021/acs.jcim.9b00304
-[10.1016/j.chempr.2018.07.008]: https://dx.doi.org/10.1016/j.chempr.2018.07.008
-[10.1039/C7OB02058A]: https://dx.doi.org/10.1039/C7OB02058A
-[10.1039/C6OB02727J]: https://dx.doi.org/10.1039/C6OB02727J
-[10.1021/acs.orglett.6b00577]: https://dx.doi.org/10.1021/acs.orglett.6b00577
-[10.1021/acs.joc.5b00539]: https://dx.doi.org/10.1021/acs.joc.5b00539
-[10.1021/la4024597]: https://dx.doi.org/10.1021/la4024597
-[10.1021/ic202049t]: https://dx.doi.org/10.1021/ic202049t
+[10.1016/j.chempr.2018.07.008]: https://doi.org/10.1016/j.chempr.2018.07.008
+[10.1039/C7OB02058A]: https://doi.org/10.1039/C7OB02058A
+[10.1039/C6OB02727J]: https://doi.org/10.1039/C6OB02727J
+[10.1021/acs.orglett.6b00577]: https://doi.org/10.1021/acs.orglett.6b00577
+[10.1021/acs.joc.5b00539]: https://doi.org/10.1021/acs.joc.5b00539
+[10.1021/la4024597]: https://doi.org/10.1021/la4024597
+[10.1021/ic202049t]: https://doi.org/10.1021/ic202049t
 [Logic.jl]: https://github.com/hessammehr/Logic.jl
 [liquid_rules]: https://github.com/hessammehr/liquid_rules
 [liquid_rules_ddlog]: https://github.com/hessammehr/liquid_rules_ddlog
 [coalescence]: https://github.com/hessammehr/coalescence
 [coalescence live]: https://rawgit.com/hessammehr/coalescence/javascript/coalesce.html
 [Delphi]: https://github.com/hessammehr/Delphi
+[group_blog]: https://mehr-research.science/archives
 [molsketch-cljs]: https://github.com/hessammehr/molsketch-cljs
 [NMR.jl]: https://github.com/hessammehr/NMR.jl
 [pyMPB]: https://github.com/hessammehr/pyMPB 
