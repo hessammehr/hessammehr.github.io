@@ -24,6 +24,7 @@ Investigating information and automation as gateways to new discovery paradigms 
 
 ### Code
 For an up-to-date list check out my [personal projects](https://github.com/hessammehr) and my [research group's projects](https://github.com/MehrResearch) on Github.
+
 - [microbit_sensornet] Browser dashboard and [accompanying MakeCode sketch][microbit_sensornet_sketch] for aggregating sensor readings from a swarm of micro:bits over Web Bluetooth
 - [RecursiveMA] Algorithm for inferring the complexity of a given molecule from tandem mass spectrometry (MS<sup>2</sup>, MS<sup>3</sup>, ...) data
 - [Delphi] A standard interface for storing, sampling/fitting, and comparing probabilistic models for interpreting scientific experiments
