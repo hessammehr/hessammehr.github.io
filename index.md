@@ -13,6 +13,7 @@ Investigating information and automation as gateways to new discovery paradigms 
 ### Writing
 - [My group's blog][group_blog]
 - [0101chem] companion website to my *Digital chemistry for digital natives* outreach project, funded by the [Royal Society of Chemistry][RSC]
+- _[Sound Chemistry]_ Royal Society of Edinburgh workshop that I organised in March 2024 with a focus on novel modalities for chemical containers, e.g. acoustic confinement
 - [My old blog][blog] on github
 
 ### Recorded talks
@@ -23,6 +24,8 @@ Investigating information and automation as gateways to new discovery paradigms 
 
 ### Code
 For an up-to-date list check out my [personal projects](https://github.com/hessammehr) and my [research group's projects](https://github.com/MehrResearch) on Github.
+- [microbit_sensornet] Browser dashboard and [accompanying MakeCode sketch][microbit_sensornet_sketch] for aggregating sensor readings from a swarm of micro:bits over Web Bluetooth
+- [RecursiveMA] Algorithm for inferring the complexity of a given molecule from tandem mass spectrometry (MS<sup>2</sup>, MS<sup>3</sup>, ...) data
 - [Delphi] A standard interface for storing, sampling/fitting, and comparing probabilistic models for interpreting scientific experiments
 - [XDL] A hardware-independent chemical programming language ([see publication][10.1126/science.abc2986])
 - [Logic.jl] Early sketch of a typed logic programming system embedded in Julia
@@ -81,6 +84,7 @@ Mehr, S. H. M.; Caramelli, D., Cronin, L. _PNAS_, **2023**, _120_
 [email]: mailto:Hessam.Mehr@glasgow.ac.uk
 [group]: https://mehr-research.science
 [0101chem]: https://0101chem.science
+[Sound Chemistry]: https://sound-chemistry.science/
 [RSC]: https://www.rsc.org
 [2024/DD/D4DD00139G]: https://pubs.rsc.org/en/content/articlepdf/2024/DD/D4DD00139G
 [10.1021/acscentsci.4c00120]: https://doi.org/10.1021/acscentsci.4c00120
@@ -106,6 +110,9 @@ Mehr, S. H. M.; Caramelli, D., Cronin, L. _PNAS_, **2023**, _120_
 [liquid_rules_ddlog]: https://github.com/hessammehr/liquid_rules_ddlog
 [coalescence]: https://github.com/hessammehr/coalescence
 [coalescence live]: https://rawgit.com/hessammehr/coalescence/javascript/coalesce.html
+[microbit_sensornet]: https://github.com/MehrResearch/microbit_sensornet
+[microbit_sensornet_sketch]: https://makecode.microbit.org/05783-02185-24551-63527
+[RecursiveMA]: https://github.com/hessammehr/recursiveMA
 [Delphi]: https://github.com/hessammehr/Delphi
 [group_blog]: https://mehr-research.science/archives
 [molsketch-cljs]: https://github.com/hessammehr/molsketch-cljs
