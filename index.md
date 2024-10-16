@@ -10,7 +10,7 @@ title: S. Hessam M. Mehr
 
 Investigating information and automation as gateways to new discovery paradigms in chemistry.
 
-### Writing
+### Writing and projects
 - [My group's blog][group_blog]
 - [0101chem] companion website to my *Digital chemistry for digital natives* outreach project, funded by the [Royal Society of Chemistry][RSC]
 - _[Sound Chemistry]_ Royal Society of Edinburgh workshop that I organised in March 2024 with a focus on novel modalities for chemical containers, e.g. acoustic confinement
