@@ -1,182 +1,116 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>2020-06-14-rant-against-macros</title>
-  <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      {   }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-    code span.at { color: #7d9029; } /* Attribute */
-    code span.bn { color: #40a070; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #4070a0; } /* Char */
-    code span.cn { color: #880000; } /* Constant */
-    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-    code span.dt { color: #902000; } /* DataType */
-    code span.dv { color: #40a070; } /* DecVal */
-    code span.er { color: #ff0000; font-weight: bold; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #40a070; } /* Float */
-    code span.fu { color: #06287e; } /* Function */
-    code span.im { } /* Import */
-    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-    code span.op { color: #666666; } /* Operator */
-    code span.ot { color: #007020; } /* Other */
-    code span.pp { color: #bc7a00; } /* Preprocessor */
-    code span.sc { color: #4070a0; } /* SpecialChar */
-    code span.ss { color: #bb6688; } /* SpecialString */
-    code span.st { color: #4070a0; } /* String */
-    code span.va { color: #19177c; } /* Variable */
-    code span.vs { color: #4070a0; } /* VerbatimString */
-    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="/primer.css">
+  <link rel="stylesheet" href="/github.min.css">
 </head>
 <body>
-<h1 id="a-rant-against-macros">A rant against macros</h1>
-<p>I used to be a huge fan of macros. I remember reading SICP and being amazed that you could use the language to generate and transform code. How cool is that? First a couple of examples: Clojure’s <code>core.async</code> library includes a <code>go</code> macro that lets you launch goroutine-like tasks without having to change the language.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode clojure"><code class="sourceCode clojure"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="co">; https://github.com/clojure/core.async/blob/master/examples/walkthrough.clj</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>(<span class="kw">let</span> [c1 (chan)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>      c2 (chan)]</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>  (go (<span class="kw">while</span> <span class="va">true</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>        (<span class="kw">let</span> [[v ch] (alts! [c1 c2])]</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>          (<span class="kw">println</span> <span class="st">&quot;Read&quot;</span> v <span class="st">&quot;from&quot;</span> ch))))</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>  (go (&gt;! c1 <span class="st">&quot;hi&quot;</span>))</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>  (go (&gt;! c2 <span class="st">&quot;there&quot;</span>)))</span></code></pre></div>
-<p>The Turing library lets you write probabilistic programs in Julia as if you’re using a dedicated probabilistic programming language (PPL):</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="pp">@model</span> gdemo(x<span class="op">,</span> y) <span class="op">=</span> <span class="kw">begin</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>    <span class="co"># Assumptions</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>    σ <span class="op">~</span> InverseGamma(<span class="fl">2</span><span class="op">,</span><span class="fl">3</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>    μ <span class="op">~</span> Normal(<span class="fl">0</span><span class="op">,</span>sqrt(σ))</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>    <span class="co"># Observations</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>    x <span class="op">~</span> Normal(μ, sqrt(σ))</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a>    y <span class="op">~</span> Normal(μ, sqrt(σ))</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a><span class="kw">end</span></span></code></pre></div>
-<p>Fast forward to 2018 when I sat down with Chris Rackauckas before JuliaCon and he mentioned he’d been in touch with the Turing developers. I thought he bring up their PPL syntax and how it’s so wonderful that Julia lets you mold the language, but when I prompted him he said the macros have gotten in the way of using Turing as a library. He said functions and types were the way forward if you want things to compose.</p>
-<p>Since then, I’ve written a couple of macros of my own and, powerful as they are, I have come to the conclusion that the problems I used them for were better handled by i) new or more expressive data structures, ii) plain old functions, iii) accepting a small amount of extra verbosity. In return you get, i) better interoperability, ii) code that is more explicit and easier to undestand, iii) much easier debugging, iv) a more robust design, v) much better support from your tools (<em>e.g.</em> IDE, REPL).</p>
-<p>Let’s look at a simpler model:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="kw">using</span> Distributions</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a><span class="pp">@model</span> normal_model(x) <span class="op">=</span> <span class="kw">begin</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>    <span class="co"># just a simple transformation; z is still observed, just like x</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>    z <span class="op">=</span> <span class="fl">2</span>x</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a>    <span class="co"># sample y</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a>    y <span class="op">~</span> Normal(<span class="fl">0.0</span><span class="op">,</span> <span class="fl">1.0</span>)</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a>    <span class="co"># observe z</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a>    z <span class="op">~</span> Normal(y<span class="op">,</span> <span class="fl">1.0</span>)</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a><span class="kw">end</span></span></code></pre></div>
-<p>This is what it expands to</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="kw">quote</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a>    <span class="co">#= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:348 =#</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>    <span class="kw">function</span> var<span class="st">&quot;##evaluator#371&quot;</span>(_rng<span class="op">::</span><span class="bu">Random</span>.AbstractRNG<span class="op">,</span> _model<span class="op">::</span>DynamicPPL.Model<span class="op">,</span> _varinfo<span class="op">::</span>DynamicPPL.AbstractVarInfo<span class="op">,</span> _sampler<span class="op">::</span>AbstractMCMC.AbstractSampler<span class="op">,</span> _context<span class="op">::</span>DynamicPPL.AbstractContext)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a>        <span class="co">#= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:355 =#</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a>        <span class="kw">begin</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a>            x <span class="op">=</span> (DynamicPPL.matchingvalue)(_sampler<span class="op">,</span> _varinfo<span class="op">,</span> _model.args.x)</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a>        <span class="kw">end</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a>        <span class="co">#= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:356 =#</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"></a>        <span class="kw">begin</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true"></a>            <span class="co">#= REPL[22]:1 =#</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true"></a>            <span class="co">#= REPL[22]:2 =#</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true"></a>            z <span class="op">=</span> <span class="fl">2</span>x</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true"></a>            <span class="co">#= REPL[22]:3 =#</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true"></a>            <span class="kw">begin</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true"></a>                var<span class="st">&quot;##tmpright#363&quot;</span> <span class="op">=</span> Normal(<span class="fl">0.0</span><span class="op">,</span> <span class="fl">1.0</span>)</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true"></a>                var<span class="st">&quot;##tmpright#363&quot;</span> isa <span class="dt">Union</span>{Distribution<span class="op">,</span> <span class="dt">AbstractVector</span>{<span class="op">&lt;:</span>Distribution}} <span class="op">||</span> throw(<span class="dt">ArgumentError</span>(<span class="st">&quot;Right-hand side of a ~ must be subtype of Distribution or a vector of Distributions.&quot;</span>))</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true"></a>                var<span class="st">&quot;##vn#365&quot;</span> <span class="op">=</span> y</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true"></a>                var<span class="st">&quot;##inds#366&quot;</span> <span class="op">=</span> ()</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true"></a>                y <span class="op">=</span> (DynamicPPL.tilde_assume)(_rng<span class="op">,</span> _context<span class="op">,</span> _sampler<span class="op">,</span> var<span class="st">&quot;##tmpright#363&quot;</span><span class="op">,</span> var<span class="st">&quot;##vn#365&quot;</span><span class="op">,</span> var<span class="st">&quot;##inds#366&quot;</span><span class="op">,</span> _varinfo)</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true"></a>            <span class="kw">end</span></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true"></a>            <span class="co">#= REPL[22]:4 =#</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true"></a>            <span class="kw">begin</span></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true"></a>                var<span class="st">&quot;##tmpright#367&quot;</span> <span class="op">=</span> Normal(y<span class="op">,</span> <span class="fl">1.0</span>)</span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true"></a>                var<span class="st">&quot;##tmpright#367&quot;</span> isa <span class="dt">Union</span>{Distribution<span class="op">,</span> <span class="dt">AbstractVector</span>{<span class="op">&lt;:</span>Distribution}} <span class="op">||</span> throw(<span class="dt">ArgumentError</span>(<span class="st">&quot;Right-hand side of a ~ must be subtype of Distribution or a vector of Distributions.&quot;</span>))</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true"></a>                var<span class="st">&quot;##vn#369&quot;</span> <span class="op">=</span> z</span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true"></a>                var<span class="st">&quot;##inds#370&quot;</span> <span class="op">=</span> ()</span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true"></a>                z <span class="op">=</span> (DynamicPPL.tilde_assume)(_rng<span class="op">,</span> _context<span class="op">,</span> _sampler<span class="op">,</span> var<span class="st">&quot;##tmpright#367&quot;</span><span class="op">,</span> var<span class="st">&quot;##vn#369&quot;</span><span class="op">,</span> var<span class="st">&quot;##inds#370&quot;</span><span class="op">,</span> _varinfo)</span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true"></a>            <span class="kw">end</span></span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true"></a>        <span class="kw">end</span></span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true"></a>    <span class="kw">end</span></span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true"></a>    <span class="co">#= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:359 =#</span></span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true"></a>    var<span class="st">&quot;##generator#372&quot;</span>(x) <span class="op">=</span> <span class="kw">begin</span></span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true"></a>            <span class="co">#= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:359 =#</span></span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true"></a>            (DynamicPPL.Model)(var<span class="st">&quot;##evaluator#371&quot;</span><span class="op">,</span> (DynamicPPL.namedtuple)(<span class="dt">NamedTuple</span>{(<span class="op">:</span>x<span class="op">,</span>)<span class="op">,</span> <span class="dt">Tuple</span>{<span class="bu">Core</span>.Typeof(x)}}<span class="op">,</span> (x<span class="op">,</span>))<span class="op">,</span> (DynamicPPL.ModelGen){(<span class="op">:</span>x<span class="op">,</span>)}(var<span class="st">&quot;##generator#372&quot;</span><span class="op">,</span> <span class="dt">NamedTuple</span>()))</span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true"></a>        <span class="kw">end</span></span>
-<span id="cb4-36"><a href="#cb4-36" aria-hidden="true"></a>    <span class="co">#= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:360 =#</span></span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true"></a>    var<span class="st">&quot;##generator#372&quot;</span>(<span class="op">;</span> x) <span class="op">=</span> <span class="kw">begin</span></span>
-<span id="cb4-38"><a href="#cb4-38" aria-hidden="true"></a>            <span class="co">#= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:344 =#</span></span>
-<span id="cb4-39"><a href="#cb4-39" aria-hidden="true"></a>            var<span class="st">&quot;##generator#372&quot;</span>(x)</span>
-<span id="cb4-40"><a href="#cb4-40" aria-hidden="true"></a>        <span class="kw">end</span></span>
-<span id="cb4-41"><a href="#cb4-41" aria-hidden="true"></a>    <span class="co">#= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:362 =#</span></span>
-<span id="cb4-42"><a href="#cb4-42" aria-hidden="true"></a>    <span class="kw">begin</span></span>
-<span id="cb4-43"><a href="#cb4-43" aria-hidden="true"></a>        <span class="op">$</span>(<span class="dt">Expr</span>(<span class="op">:</span>meta<span class="op">,</span> <span class="op">:</span>doc))</span>
-<span id="cb4-44"><a href="#cb4-44" aria-hidden="true"></a>        normal_model <span class="op">=</span> (DynamicPPL.ModelGen){(<span class="op">:</span>x<span class="op">,</span>)}(var<span class="st">&quot;##generator#372&quot;</span><span class="op">,</span> <span class="dt">NamedTuple</span>())</span>
-<span id="cb4-45"><a href="#cb4-45" aria-hidden="true"></a>    <span class="kw">end</span></span>
-<span id="cb4-46"><a href="#cb4-46" aria-hidden="true"></a><span class="kw">end</span></span></code></pre></div>
-<p>And now to sample it:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a>sample(normal_model(<span class="fl">3.0</span>)<span class="op">,</span> NUTS()<span class="op">,</span> <span class="fl">1000</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a><span class="co"># Summary Statistics</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a><span class="co">#   parameters    mean     std  naive_se    mcse       ess   r_hat</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a><span class="co">#   ──────────  ──────  ──────  ────────  ──────  ────────  ──────</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true"></a><span class="co">#            y  0.0096  1.0146    0.0454  0.0978  168.5831  0.9986</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true"></a><span class="co">#            z  0.0169  1.4692    0.0657  0.1204  158.7592  0.9992</span></span></code></pre></div>
-<p>And we see that Turing has sampled both <code>y</code> and <code>z</code>, where <code>z</code> should have been marked as deterministic and observed rather than sampled. Now, I’m sure this is well-documented somewhere but the point is that when you use a macro, your Julia code no longer functions the way you would expect. Worse, yet finding out why means being able to navigate the mess of generated symbols in the expanded version. And yes, the authors can fix this (if it’s actually a bug) but it doesn’t change the problem that the language inside that block is no longer Julia. You keep having to second guess yourself every time you reach for a new language feature.</p>
-<p>Increasingly, macros, even nice hygienic ones remind me of the horrible mess that’s C/C++ macros: an untamed partial language with its own semantics that you need to learn and use, and how people have created whole programming languages in part to escape this ugly metalangauge problem. It’s true that homoiconic languages mostly get rid of the macro/preprocessor language, but the semantics of how language constucts behave within the macro and how they compose with other langauge features is still completely up to the programmer and, in my experience, quite hard to get right.</p>
-<p>I see macros used in places that I find really troubling. I was writing a toy GTK application in Rust earlier today and learned that you need to use these weird macros to get memory management to play nicely with Rust.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="kw">use</span> <span class="pp">glib::</span>clone<span class="op">;</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a><span class="kw">let</span> window <span class="op">=</span> <span class="pp">Rc::</span>new(<span class="pp">ApplicationWindow::</span>new(app))<span class="op">;</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true"></a># moving a weak reference to `window` into the closure</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true"></a>butten<span class="op">.</span>connect_activate(<span class="pp">clone!</span>(<span class="op">@</span>weak window <span class="op">=&gt;</span> <span class="kw">move</span> <span class="op">|</span>_<span class="op">|</span> <span class="op">{</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true"></a>    window<span class="op">.</span>close(<span class="op">&amp;</span>button)<span class="op">;</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true"></a><span class="op">}</span>))<span class="op">;</span></span></code></pre></div>
-<p>I really don’t think introducing this metalanguage is a good idea at all. Also, how is this custom syntax supposed to be understood by the editor? Before <code>rust-analyzer</code> my editor (VSCode + RLS) would give up with the macro and I would have to guess my way out. Things are better now that we have <code>rust-analyzer</code> but I’m not even sure the Rust tooling is ever supposed to be able to make sense of this.</p>
-<p>Bottom line (and I’m happy to be proven wrong): macros are an unsustainable convenience. They are never good enough to justify the readability/maintainability/tooling headaches.</p>
+  <div class="container-lg px-3 my-5 markdown-body">
+    <h1 id="a-rant-against-macros">A rant against macros</h1>
+    <p>I used to be a huge fan of macros. I remember reading SICP and being amazed that you could use the language to generate and transform code. How cool is that? First a couple of examples: Clojure’s <code>core.async</code> library includes a <code>go</code> macro that lets you launch goroutine-like tasks without having to change the language.</p>
+    <pre class="clojure"><code>; https://github.com/clojure/core.async/blob/master/examples/walkthrough.clj
+    (let [c1 (chan)
+          c2 (chan)]
+      (go (while true
+            (let [[v ch] (alts! [c1 c2])]
+              (println &quot;Read&quot; v &quot;from&quot; ch))))
+      (go (&gt;! c1 &quot;hi&quot;))
+      (go (&gt;! c2 &quot;there&quot;)))</code></pre>
+    <p>The Turing library lets you write probabilistic programs in Julia as if you’re using a dedicated probabilistic programming language (PPL):</p>
+    <pre class="julia"><code>@model gdemo(x, y) = begin
+        # Assumptions
+        σ ~ InverseGamma(2,3)
+        μ ~ Normal(0,sqrt(σ))
+        # Observations
+        x ~ Normal(μ, sqrt(σ))
+        y ~ Normal(μ, sqrt(σ))
+    end</code></pre>
+    <p>Fast forward to 2018 when I sat down with Chris Rackauckas before JuliaCon and he mentioned he’d been in touch with the Turing developers. I thought he bring up their PPL syntax and how it’s so wonderful that Julia lets you mold the language, but when I prompted him he said the macros have gotten in the way of using Turing as a library. He said functions and types were the way forward if you want things to compose.</p>
+    <p>Since then, I’ve written a couple of macros of my own and, powerful as they are, I have come to the conclusion that the problems I used them for were better handled by i) new or more expressive data structures, ii) plain old functions, iii) accepting a small amount of extra verbosity. In return you get, i) better interoperability, ii) code that is more explicit and easier to undestand, iii) much easier debugging, iv) a more robust design, v) much better support from your tools (<em>e.g.</em> IDE, REPL).</p>
+    <p>Let’s look at a simpler model:</p>
+    <pre class="julia"><code>using Distributions
+
+    @model normal_model(x) = begin
+        # just a simple transformation; z is still observed, just like x
+        z = 2x
+        # sample y
+        y ~ Normal(0.0, 1.0)
+        # observe z
+        z ~ Normal(y, 1.0)
+    end</code></pre>
+    <p>This is what it expands to</p>
+    <pre class="julia"><code>quote
+        #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:348 =#
+        function var&quot;##evaluator#371&quot;(_rng::Random.AbstractRNG, _model::DynamicPPL.Model, _varinfo::DynamicPPL.AbstractVarInfo, _sampler::AbstractMCMC.AbstractSampler, _context::DynamicPPL.AbstractContext)
+            #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:355 =#
+            begin
+                x = (DynamicPPL.matchingvalue)(_sampler, _varinfo, _model.args.x)
+            end
+            #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:356 =#
+            begin
+                #= REPL[22]:1 =#
+                #= REPL[22]:2 =#
+                z = 2x
+                #= REPL[22]:3 =#
+                begin
+                    var&quot;##tmpright#363&quot; = Normal(0.0, 1.0)
+                    var&quot;##tmpright#363&quot; isa Union{Distribution, AbstractVector{&lt;:Distribution}} || throw(ArgumentError(&quot;Right-hand side of a ~ must be subtype of Distribution or a vector of Distributions.&quot;))
+                    var&quot;##vn#365&quot; = y
+                    var&quot;##inds#366&quot; = ()
+                    y = (DynamicPPL.tilde_assume)(_rng, _context, _sampler, var&quot;##tmpright#363&quot;, var&quot;##vn#365&quot;, var&quot;##inds#366&quot;, _varinfo)
+                end
+                #= REPL[22]:4 =#
+                begin
+                    var&quot;##tmpright#367&quot; = Normal(y, 1.0)
+                    var&quot;##tmpright#367&quot; isa Union{Distribution, AbstractVector{&lt;:Distribution}} || throw(ArgumentError(&quot;Right-hand side of a ~ must be subtype of Distribution or a vector of Distributions.&quot;))
+                    var&quot;##vn#369&quot; = z
+                    var&quot;##inds#370&quot; = ()
+                    z = (DynamicPPL.tilde_assume)(_rng, _context, _sampler, var&quot;##tmpright#367&quot;, var&quot;##vn#369&quot;, var&quot;##inds#370&quot;, _varinfo)
+                end
+            end
+        end
+        #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:359 =#
+        var&quot;##generator#372&quot;(x) = begin
+                #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:359 =#
+                (DynamicPPL.Model)(var&quot;##evaluator#371&quot;, (DynamicPPL.namedtuple)(NamedTuple{(:x,), Tuple{Core.Typeof(x)}}, (x,)), (DynamicPPL.ModelGen){(:x,)}(var&quot;##generator#372&quot;, NamedTuple()))
+            end
+        #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:360 =#
+        var&quot;##generator#372&quot;(; x) = begin
+                #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:344 =#
+                var&quot;##generator#372&quot;(x)
+            end
+        #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:362 =#
+        begin
+            $(Expr(:meta, :doc))
+            normal_model = (DynamicPPL.ModelGen){(:x,)}(var&quot;##generator#372&quot;, NamedTuple())
+        end
+    end</code></pre>
+    <p>And now to sample it:</p>
+    <pre class="julia"><code>sample(normal_model(3.0), NUTS(), 1000)
+
+    # Summary Statistics
+    #   parameters    mean     std  naive_se    mcse       ess   r_hat
+    #   ──────────  ──────  ──────  ────────  ──────  ────────  ──────
+    #            y  0.0096  1.0146    0.0454  0.0978  168.5831  0.9986
+    #            z  0.0169  1.4692    0.0657  0.1204  158.7592  0.9992</code></pre>
+    <p>And we see that Turing has sampled both <code>y</code> and <code>z</code>, where <code>z</code> should have been marked as deterministic and observed rather than sampled. Now, I’m sure this is well-documented somewhere but the point is that when you use a macro, your Julia code no longer functions the way you would expect. Worse, yet finding out why means being able to navigate the mess of generated symbols in the expanded version. And yes, the authors can fix this (if it’s actually a bug) but it doesn’t change the problem that the language inside that block is no longer Julia. You keep having to second guess yourself every time you reach for a new language feature.</p>
+    <p>Increasingly, macros, even nice hygienic ones remind me of the horrible mess that’s C/C++ macros: an untamed partial language with its own semantics that you need to learn and use, and how people have created whole programming languages in part to escape this ugly metalangauge problem. It’s true that homoiconic languages mostly get rid of the macro/preprocessor language, but the semantics of how language constucts behave within the macro and how they compose with other langauge features is still completely up to the programmer and, in my experience, quite hard to get right.</p>
+    <p>I see macros used in places that I find really troubling. I was writing a toy GTK application in Rust earlier today and learned that you need to use these weird macros to get memory management to play nicely with Rust.</p>
+    <pre class="rust"><code>use glib::clone;
+
+    let window = Rc::new(ApplicationWindow::new(app));
+
+    # moving a weak reference to `window` into the closure
+    butten.connect_activate(clone!(@weak window =&gt; move |_| {
+        window.close(&amp;button);
+    }));</code></pre>
+    <p>I really don’t think introducing this metalanguage is a good idea at all. Also, how is this custom syntax supposed to be understood by the editor? Before <code>rust-analyzer</code> my editor (VSCode + RLS) would give up with the macro and I would have to guess my way out. Things are better now that we have <code>rust-analyzer</code> but I’m not even sure the Rust tooling is ever supposed to be able to make sense of this.</p>
+    <p>Bottom line (and I’m happy to be proven wrong): macros are an unsustainable convenience. They are never good enough to justify the readability/maintainability/tooling headaches.</p>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 </body>
 </html>

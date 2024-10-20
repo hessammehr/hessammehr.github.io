@@ -1,137 +1,71 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>2019-04-07-fertile-land-at-the-confluence-of-staged-programming-and-typed-logic-programming</title>
-  <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      {   }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-    code span.at { color: #7d9029; } /* Attribute */
-    code span.bn { color: #40a070; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #4070a0; } /* Char */
-    code span.cn { color: #880000; } /* Constant */
-    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-    code span.dt { color: #902000; } /* DataType */
-    code span.dv { color: #40a070; } /* DecVal */
-    code span.er { color: #ff0000; font-weight: bold; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #40a070; } /* Float */
-    code span.fu { color: #06287e; } /* Function */
-    code span.im { } /* Import */
-    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-    code span.op { color: #666666; } /* Operator */
-    code span.ot { color: #007020; } /* Other */
-    code span.pp { color: #bc7a00; } /* Preprocessor */
-    code span.sc { color: #4070a0; } /* SpecialChar */
-    code span.ss { color: #bb6688; } /* SpecialString */
-    code span.st { color: #4070a0; } /* String */
-    code span.va { color: #19177c; } /* Variable */
-    code span.vs { color: #4070a0; } /* VerbatimString */
-    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="/primer.css">
+  <link rel="stylesheet" href="/github.min.css">
 </head>
 <body>
-<h1 id="fertile-land-at-the-confluence-of-staged-programming-and-typed-logic-programming-part-1">Fertile land at the confluence of staged programming and (typed) logic programming — Part 1</h1>
-<p>I recently started sketching out a logic programming library called <a href="https://github.com/hessammehr/Logic.jl">Logic.jl</a> (it really is very much a sketch at the moment). As the name might imply, the library is implemented in Julia, which seems like an odd choice of implementation language. Choosing Julia and the twist on logic programming that I am aiming for are motivated by a particularly interesting confluence of ideas that I have become aware of in the past year and hope to describe in this blog post. I would love to hear your thoughts of course; just keep in mind that I am not a computer scientist.</p>
-<h2 id="idea-1-staged-programming-and-languages-with-first-class-jit-compilation-machinery">Idea #1: Staged programming and languages with first-class JIT compilation machinery</h2>
-<p>There is no shortage of programming languages with just-in-time (JIT) accelerated virtual machines. Typical JITs are opaque: they step in at run time and speed up your code without you having to tell them anything. Increasingly, however, there are JITs of a different breed that, rather than stay hidden and opaque, work <em>in conjunction</em> with the program, giving rise to a class of programming languages where application code can inspect and influence the various stages of code lowering as a <em>precise</em> mechanism for on- demand code generation and behaviour adaptation. Using the notion of <em>staged programming</em> , the various components of the runtime monolith (type checker, GC, codegen) can also be used in an <em>à la carte</em> fashion, further blurring the line between compile and run time. I find this paradigm superior to the AST- level metaprogramming often encountered with LISP family languages. Where conventional JITs like HotSpot are often used to bridge the performance gap between bytecode-interpreted dynamically-typed languages like Python and statically-typed compiled languages like OCaml, staged programming, e.g. in Julia, also recovers some of the safety and expressive power of a sophisticated type system in an otherwise dynamically-typed environment.</p>
-<p>The immediate trade-off is the overhead of including the full compiler toolchain with application code. The run time memory footprint would then resemble the equivalent of an AST/bytecode interpreter, libraries, and any compiler passes, including [possibly] the type system and codegen (e.g. LLVM). This is non-trivial and impractical in memory-constrained applications such as embedded systems. In principle at least, one can ahead-of-time compile the application and discard unused toolchain code as long as it can be inferred as unnecessary. That said, annotating/inferring dependencies between application code and the various pieces of compiler/runtime might require some effort.</p>
-<h3 id="staged-programming-in-the-wild">Staged programming in the wild</h3>
-<p>Before we move on to Julia, let’s look at a few examples of programming langauges/environments that feature elements of staged programming. I suspect that there are many more such systems out there that I am not aware of.</p>
-<p><a href="http://okmij.org/ftp/ML/MetaOCaml.html">MetaOCaml</a> is described as an OCaml dialect for multi-stage programming. OCaml seems like a particularly good choice of language in my opinion, because a lot of the power afforded by its type system is challenged when dealing with data the structure of which is unknown until run time. Here for example is a (simplified) definition of the <code>json</code> type from the OCaml package Yojson.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">type</span> json = [</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>  | `Assoc <span class="kw">of</span> (<span class="dt">string</span> * json) <span class="dt">list</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>  | `Bool <span class="kw">of</span> <span class="dt">bool</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>  | `Float <span class="kw">of</span> <span class="dt">float</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>  | `Int <span class="kw">of</span> <span class="dt">int</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>  | `List <span class="kw">of</span> json <span class="dt">list</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>  | `Null</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>  | `String <span class="kw">of</span> <span class="dt">string</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>]</span></code></pre></div>
-<p>Here is the Yojson package in use</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode ocaml"><code class="sourceCode ocaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="kw">let</span> doc = </span></code></pre></div>
-<p><a href="http://terralang.org/">Terra</a>, essentially a metaprogramming system using Lua and LLVM aimed at low-level system programming.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode lua"><code class="sourceCode lua"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="co">-- Terra allows the Lua interpreter and LLVM to interact.</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a><span class="co">-- Lua code can invoke LLVM for code generation.</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a><span class="co">-- LLVM can also call Lua, here to partially evaluate an expression.</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a><span class="kw">local</span> a <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>terra sin5<span class="op">()</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a>    <span class="cf">return</span> <span class="op">[</span> <span class="fu">math.sin</span><span class="op">(</span>a<span class="op">)</span> <span class="op">]</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a><span class="cf">end</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a><span class="co">-- output bitcode</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a>sin5<span class="op">:</span>printpretty<span class="op">()</span> </span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a><span class="op">&gt;</span> output<span class="op">:</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true"></a><span class="op">&gt;</span> sin50 <span class="op">=</span> terra<span class="op">()</span> <span class="op">:</span> <span class="op">{</span>double<span class="op">}</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true"></a><span class="op">&gt;</span>    <span class="cf">return</span> <span class="op">-</span><span class="dv">0.95892427466314</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true"></a><span class="op">&gt;</span> <span class="cf">end</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true"></a></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true"></a><span class="co">-- example code from terralang.org</span></span></code></pre></div>
-<h3 id="staged-programming-in-julia">Staged programming in Julia</h3>
-<p>In my opinion Julia is the most successful implementation of the staged programming paradigm today. I say this based on the number of Julia users as well as how far it has taken the paradigm.</p>
-<p>In Julia functions act as the basic unit of JIT compilation, with types guiding the process through a language feature called <em>multiple dispatch</em>. Take the following simple function, for instance.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="st">&quot;&quot;&quot; sum(col)</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a><span class="st">Return the sum of the elements of collection `col`</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a><span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a><span class="kw">function</span> sum(col)</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a>    result <span class="op">=</span> zero(eltype(col))</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a>    <span class="kw">for</span> elem <span class="kw">in</span> col</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a>        result <span class="op">+=</span> elem</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a>    <span class="kw">end</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"></a><span class="kw">end</span></span></code></pre></div>
-<p>No code generation happens for this function until it is invoked, e.g. <code>sum([1,2,3])</code>, at which point the type of its argument <code>Array{Int64, 1}</code> recursively propagates through the body of the function. Much of the logic inside the function can be constant-folded given this concrete type. far from perfect.</p>
-<p>The use of multiple dispatch as the primary driver of code generation in Julia seems to have worked out really well for the language. Still, I wonder if there are mechanisms that allow more expressive programming.</p>
-<p>Julia was conceived as a programming language for high performance numerical calculations but, unlike other languages in its league like Matlab and Mathematica, its type system and compilation machinery appear to be applicable well beyond the realm of scientific computing, as demonstrated by projects like <a href="https://github.com/jamii/imp">imp</a> and <a href="https://github.com/rbt-lang/DataKnots.jl">DataKnots.jl</a> and <a href="https://github.com/BioJulia/Automa.jl">Automa.jl</a>.</p>
-<p>Staged-programming is also known as multi</p>
-<h2 id="first-class-embedding-of-logic-programming">First-class embedding of logic programming</h2>
-<p>Having learned the functional paradigm, many people find it hard to go back to their old imperitive tools, which feel verbose and error-prone in comparison. My brief exposure to logic programming has left me with a similar feeling towards functional programming, namely the sense that logic programming allows solving the problem in a more direct and natural way. Just as functional programming seems removed from the physical reality of the computer because of its pervasive use of the function as a layer of indirection, logic programming’s symbolic variables and predicates provide a further layer of abstraction that allow the solution to be described by its properties rather than its realization from a given set of inputs.</p>
-<p>Many Prolog users are familiar with the less-than-ideal interoperability of typical Prolog implementations with real-world code written in a language like Python. In a follow-up blog post I will try to explain how Julia’s multiple dispatch and staged programming facilitate embedding logic programming to bring most of its expressive power to Julia.</p>
+  <div class="container-lg px-3 my-5 markdown-body">
+    <h1 id="fertile-land-at-the-confluence-of-staged-programming-and-typed-logic-programming-part-1">Fertile land at the confluence of staged programming and (typed) logic programming — Part 1</h1>
+    <p>I recently started sketching out a logic programming library called <a href="https://github.com/hessammehr/Logic.jl">Logic.jl</a> (it really is very much a sketch at the moment). As the name might imply, the library is implemented in Julia, which seems like an odd choice of implementation language. Choosing Julia and the twist on logic programming that I am aiming for are motivated by a particularly interesting confluence of ideas that I have become aware of in the past year and hope to describe in this blog post. I would love to hear your thoughts of course; just keep in mind that I am not a computer scientist.</p>
+    <h2 id="idea-1-staged-programming-and-languages-with-first-class-jit-compilation-machinery">Idea #1: Staged programming and languages with first-class JIT compilation machinery</h2>
+    <p>There is no shortage of programming languages with just-in-time (JIT) accelerated virtual machines. Typical JITs are opaque: they step in at run time and speed up your code without you having to tell them anything. Increasingly, however, there are JITs of a different breed that, rather than stay hidden and opaque, work <em>in conjunction</em> with the program, giving rise to a class of programming languages where application code can inspect and influence the various stages of code lowering as a <em>precise</em> mechanism for on- demand code generation and behaviour adaptation. Using the notion of <em>staged programming</em> , the various components of the runtime monolith (type checker, GC, codegen) can also be used in an <em>à la carte</em> fashion, further blurring the line between compile and run time. I find this paradigm superior to the AST- level metaprogramming often encountered with LISP family languages. Where conventional JITs like HotSpot are often used to bridge the performance gap between bytecode-interpreted dynamically-typed languages like Python and statically-typed compiled languages like OCaml, staged programming, e.g. in Julia, also recovers some of the safety and expressive power of a sophisticated type system in an otherwise dynamically-typed environment.</p>
+    <p>The immediate trade-off is the overhead of including the full compiler toolchain with application code. The run time memory footprint would then resemble the equivalent of an AST/bytecode interpreter, libraries, and any compiler passes, including [possibly] the type system and codegen (e.g. LLVM). This is non-trivial and impractical in memory-constrained applications such as embedded systems. In principle at least, one can ahead-of-time compile the application and discard unused toolchain code as long as it can be inferred as unnecessary. That said, annotating/inferring dependencies between application code and the various pieces of compiler/runtime might require some effort.</p>
+    <h3 id="staged-programming-in-the-wild">Staged programming in the wild</h3>
+    <p>Before we move on to Julia, let’s look at a few examples of programming langauges/environments that feature elements of staged programming. I suspect that there are many more such systems out there that I am not aware of.</p>
+    <p><a href="http://okmij.org/ftp/ML/MetaOCaml.html">MetaOCaml</a> is described as an OCaml dialect for multi-stage programming. OCaml seems like a particularly good choice of language in my opinion, because a lot of the power afforded by its type system is challenged when dealing with data the structure of which is unknown until run time. Here for example is a (simplified) definition of the <code>json</code> type from the OCaml package Yojson.</p>
+    <pre class="ocaml"><code>type json = [
+      | `Assoc of (string * json) list
+      | `Bool of bool
+      | `Float of float
+      | `Int of int
+      | `List of json list
+      | `Null
+      | `String of string
+    ]</code></pre>
+    <p>Here is the Yojson package in use</p>
+    <pre class="ocaml"><code>let doc = </code></pre>
+    <p><a href="http://terralang.org/">Terra</a>, essentially a metaprogramming system using Lua and LLVM aimed at low-level system programming.</p>
+    <pre class="lua"><code>-- Terra allows the Lua interpreter and LLVM to interact.
+    -- Lua code can invoke LLVM for code generation.
+    -- LLVM can also call Lua, here to partially evaluate an expression.
+    local a = 5
+    terra sin5()
+        return [ math.sin(a) ]
+    end
+
+    -- output bitcode
+    sin5:printpretty() 
+    &gt; output:
+    &gt; sin50 = terra() : {double}
+    &gt;    return -0.95892427466314
+    &gt; end
+
+    -- example code from terralang.org</code></pre>
+    <h3 id="staged-programming-in-julia">Staged programming in Julia</h3>
+    <p>In my opinion Julia is the most successful implementation of the staged programming paradigm today. I say this based on the number of Julia users as well as how far it has taken the paradigm.</p>
+    <p>In Julia functions act as the basic unit of JIT compilation, with types guiding the process through a language feature called <em>multiple dispatch</em>. Take the following simple function, for instance.</p>
+    <pre class="julia"><code>&quot;&quot;&quot; sum(col)
+    Return the sum of the elements of collection `col`
+    &quot;&quot;&quot;
+    function sum(col)
+        result = zero(eltype(col))
+        for elem in col
+            result += elem
+        end
+    end</code></pre>
+    <p>No code generation happens for this function until it is invoked, e.g. <code>sum([1,2,3])</code>, at which point the type of its argument <code>Array{Int64, 1}</code> recursively propagates through the body of the function. Much of the logic inside the function can be constant-folded given this concrete type. far from perfect.</p>
+    <p>The use of multiple dispatch as the primary driver of code generation in Julia seems to have worked out really well for the language. Still, I wonder if there are mechanisms that allow more expressive programming.</p>
+    <p>Julia was conceived as a programming language for high performance numerical calculations but, unlike other languages in its league like Matlab and Mathematica, its type system and compilation machinery appear to be applicable well beyond the realm of scientific computing, as demonstrated by projects like <a href="https://github.com/jamii/imp">imp</a> and <a href="https://github.com/rbt-lang/DataKnots.jl">DataKnots.jl</a> and <a href="https://github.com/BioJulia/Automa.jl">Automa.jl</a>.</p>
+    <p>Staged-programming is also known as multi</p>
+    <h2 id="first-class-embedding-of-logic-programming">First-class embedding of logic programming</h2>
+    <p>Having learned the functional paradigm, many people find it hard to go back to their old imperitive tools, which feel verbose and error-prone in comparison. My brief exposure to logic programming has left me with a similar feeling towards functional programming, namely the sense that logic programming allows solving the problem in a more direct and natural way. Just as functional programming seems removed from the physical reality of the computer because of its pervasive use of the function as a layer of indirection, logic programming’s symbolic variables and predicates provide a further layer of abstraction that allow the solution to be described by its properties rather than its realization from a given set of inputs.</p>
+    <p>Many Prolog users are familiar with the less-than-ideal interoperability of typical Prolog implementations with real-world code written in a language like Python. In a follow-up blog post I will try to explain how Julia’s multiple dispatch and staged programming facilitate embedding logic programming to bring most of its expressive power to Julia.</p>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 </body>
 </html>
