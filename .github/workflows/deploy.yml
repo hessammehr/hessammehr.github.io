@@ -67,7 +67,7 @@ jobs:
           for file in $(find ./blog/posts -name "*.md" | sort -r); do
             title=$(sed -n '1s/^# //p' "$file")
             filename=$(basename "$file")
-            echo "[$title]: https://github.com/hessammehr/hessammehr.github.io/blob/master/blog/posts/$filename" >> blog/index.md
+            echo "[$title]: /blog/posts/$filename" >> blog/index.md
           done
 
       - name: Convert blog Markdown files to HTML
