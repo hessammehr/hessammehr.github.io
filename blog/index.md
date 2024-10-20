@@ -1,4 +1,6 @@
-# Hessam's blog
+---
+title: Hessam's blog
+---
 
 ## Posts
 | Date       | Title                                                                                          |
