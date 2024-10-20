@@ -45,18 +45,25 @@ jobs:
 
       - name: Generate blog index
         run: |
-          echo "# Hessam's blog" > blog/index.md
-          echo "" >> blog/index.md
-          echo "## Posts" >> blog/index.md
-          echo "| Date       | Title                                                                                          |" >> blog/index.md
-          echo "|:-----------|:-----------------------------------------------------------------------------------------------|" >> blog/index.md
+          cat << EOF > blog/index.md
+          ---
+          title: Hessam's blog
+          ---
+
+          ## Posts
+          | Date       | Title                                                                                          |
+          |:-----------|:-----------------------------------------------------------------------------------------------|
+          EOF
+
           for file in $(find ./blog/posts -name "*.md" | sort -r); do
             date=$(basename "$file" | cut -d- -f1,2,3)
             title=$(sed -n '1s/^# //p' "$file")
             filename=$(basename "$file")
             echo "| $date | [$title]" >> blog/index.md
           done
+          
           echo "" >> blog/index.md
+          
           for file in $(find ./blog/posts -name "*.md" | sort -r); do
             title=$(sed -n '1s/^# //p' "$file")
             filename=$(basename "$file")
