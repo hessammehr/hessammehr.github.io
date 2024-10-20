@@ -29,6 +29,7 @@ jobs:
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>\$title\$</title>
+            <link rel="stylesheet" href="/style.css">
             <link rel="stylesheet" href="/primer.css">
             <link rel="stylesheet" href="/github.min.css">
           </head>
@@ -42,16 +43,48 @@ jobs:
           </html>
           EOF
 
+      - name: Generate blog index
+        run: |
+          echo "# Hessam's blog" > blog/index.md
+          echo "" >> blog/index.md
+          echo "## Posts" >> blog/index.md
+          echo "| Date       | Title                                                                                          |" >> blog/index.md
+          echo "|:-----------|:-----------------------------------------------------------------------------------------------|" >> blog/index.md
+          for file in $(find ./blog/posts -name "*.md" | sort -r); do
+            date=$(basename "$file" | cut -d- -f1,2,3)
+            title=$(sed -n '1s/^# //p' "$file")
+            filename=$(basename "$file")
+            echo "| $date | [$title]" >> blog/index.md
+          done
+          echo "" >> blog/index.md
+          for file in $(find ./blog/posts -name "*.md" | sort -r); do
+            title=$(sed -n '1s/^# //p' "$file")
+            filename=$(basename "$file")
+            echo "[$title]: https://github.com/hessammehr/hessammehr.github.io/blob/master/blog/posts/$filename" >> blog/index.md
+          done
+
       - name: Convert blog Markdown files to HTML
         run: |
-          for file in $(find ./blog -name "*.md"); do
+          for file in $(find ./blog/posts -name "*.md"); do
             pandoc -s "$file" \
               --template=github_template.html \
               --no-highlight \
               -o "${file%.md}.html"
           done
 
-      - name: Convert index.md to HTML
+      - name: Convert blog index to HTML
+        run: |
+          pandoc -s blog/index.md \
+            -c /style.css \
+            --lua-filter=<(echo '
+              function Link(el)
+                el.target = el.target:gsub("%.md$", ".html")
+                return el
+              end
+            ') \
+            -o blog/index.html
+
+      - name: Convert main index.md to HTML
         run: |
           pandoc -s index.md -c style.css -o index.html
 
