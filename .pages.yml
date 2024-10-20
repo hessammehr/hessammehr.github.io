@@ -1,5 +1,0 @@
-contents:
-  - name: posts
-    label: Posts
-    path: src/_posts
-    type: collection
