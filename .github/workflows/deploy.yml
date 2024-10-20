@@ -11,16 +11,53 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
       - name: Install Pandoc
         run: sudo apt-get install pandoc
-      - name: Convert Markdown to HTML
+
+      - name: Download Primer CSS and GitHub Syntax Highlighting
         run: |
-          for file in $(find . -name "*.md"); do
-              pandoc -s "$file" -c style.css -o "${file%.md}.html"
+          curl -O https://unpkg.com/@primer/css/dist/primer.css
+          curl -O https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/github.min.css
+
+      - name: Create GitHub-style HTML template
+        run: |
+          cat << EOF > github_template.html
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>\$title\$</title>
+            <link rel="stylesheet" href="/primer.css">
+            <link rel="stylesheet" href="/github.min.css">
+          </head>
+          <body>
+            <div class="container-lg px-3 my-5 markdown-body">
+              \$body\$
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+            <script>hljs.highlightAll();</script>
+          </body>
+          </html>
+          EOF
+
+      - name: Convert blog Markdown files to HTML
+        run: |
+          for file in $(find ./blog -name "*.md"); do
+            pandoc -s "$file" \
+              --template=github_template.html \
+              --no-highlight \
+              -o "${file%.md}.html"
           done
+
+      - name: Convert index.md to HTML
+        run: |
+          pandoc -s index.md -c style.css -o index.html
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: master
           publish_dir: ./
