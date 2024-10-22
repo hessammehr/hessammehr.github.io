@@ -4,7 +4,7 @@ title: S. Hessam M. Mehr
 
 # Chemistry <span id="arrow">⟷</span> Information <span id="arrow">⟷</span> Discovery
 ## S. Hessam M. Mehr
-<div id="under_title"> Leverhulme Early Career Research Fellow, University of Glasgow <br/> [CV] [blog] [github] [twitter] [email] [group] </div>
+<div id="under_title"> Leverhulme Early Career Research Fellow, University of Glasgow <br/> [CV] [blog] [GitHub] [Twitter/X] [Email] [Group website] </div>
 
 ![](rings.png)
 
@@ -80,10 +80,10 @@ Mehr, S. H. M.; Caramelli, D., Cronin, L. _PNAS_, **2023**, _120_
 
 [CV]: https://drive.google.com/u/0/uc?id=16xHJQQshijyGfEfSn_kpNxpLe9xHZPfx
 [blog]: https://hessammehr.github.io/blog
-[github]: https://github.com/hessammehr
-[twitter]: https://twitter.com/hessammehr
-[email]: mailto:Hessam.Mehr@glasgow.ac.uk
-[group]: https://mehr-research.science
+[GitHub]: https://github.com/hessammehr
+[Twitter/X]: https://twitter.com/hessammehr
+[Email]: mailto:Hessam.Mehr@glasgow.ac.uk
+[Group website]: https://mehr-research.science
 [0101chem]: https://0101chem.science
 [Sound Chemistry]: https://sound-chemistry.science/
 [RSC]: https://www.rsc.org
