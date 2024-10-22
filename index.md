@@ -4,17 +4,17 @@ title: S. Hessam M. Mehr
 
 # Chemistry <span id="arrow">⟷</span> Information <span id="arrow">⟷</span> Discovery
 ## S. Hessam M. Mehr
-<div id="under_title"> Leverhulme Early Career Research Fellow, University of Glasgow <br/> [CV] [blog] [GitHub] [Twitter/X] [Email] [Group website] </div>
+<div id="under_title"> Leverhulme Early Career Research Fellow, University of Glasgow <br/> [CV] [Blog] [GitHub] [Twitter/X] [Email] [Group website] </div>
 
 ![](rings.png)
 
 Investigating information and automation as gateways to new discovery paradigms in chemistry.
 
 ### Writing and projects
-- [My group's blog][group_blog]
+- [Mehr Research blog][group_blog] My group's blog, featuring posts by current and past members
 - [0101chem] companion website to my *Digital chemistry for digital natives* outreach project, funded by the [Royal Society of Chemistry][RSC]
 - _[Sound Chemistry]_ Royal Society of Edinburgh workshop that I organised in March 2024 with a focus on novel modalities for chemical containers, e.g. acoustic confinement
-- [My old blog][blog] on github
+- [Personal blog][Blog] Personal takes and hobby project covering chemistry, programming and electronics
 
 ### Recorded talks
 - [Building robot chemists with micro:bit][talk:microbit] <br/> Lightning talk, _micro:bit LIVE_, **2021**
@@ -79,7 +79,7 @@ Mehr, S. H. M.; Caramelli, D., Cronin, L. _PNAS_, **2023**, _120_
 - [Role of Entropy and Autosolvation in Dimerization and Complexation of C<sub>60</sub> by Zn<sub>7</sub> Metallocavitands][10.1021/ic202049t] <br/> Frischmann, P. D.; Mehr, S. H. M.; Patrick, B. O.; Lelj, F.; MacLachlan, M. J. _Inorg. Chem._ **2012**, _51_, 3443–3453
 
 [CV]: https://drive.google.com/u/0/uc?id=16xHJQQshijyGfEfSn_kpNxpLe9xHZPfx
-[blog]: https://hessammehr.github.io/blog
+[Blog]: https://hessammehr.github.io/blog
 [GitHub]: https://github.com/hessammehr
 [Twitter/X]: https://twitter.com/hessammehr
 [Email]: mailto:Hessam.Mehr@glasgow.ac.uk
