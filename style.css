@@ -37,6 +37,9 @@ span#arrow {
     text-align: center;
     font-weight: bold;
     line-height: 1.2;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 table {
@@ -50,4 +53,13 @@ th {
 
 th, td {
     padding: 5px;
+}
+
+a, a:visited {
+    color: #3F51B5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
