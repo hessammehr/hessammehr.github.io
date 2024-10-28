@@ -26,6 +26,7 @@ Investigating information and automation as gateways to new discovery paradigms 
 ### Code
 For an up-to-date list check out my [personal projects](https://github.com/hessammehr) and my [research group's projects](https://github.com/MehrResearch) on Github.
 
+- [FemtoEdit] A minimal, keyboard-first WYSIWYG editor for web pages
 - [microbit_sensornet] Browser dashboard and [accompanying MakeCode sketch][microbit_sensornet_sketch] for aggregating sensor readings from a swarm of micro:bits over Web Bluetooth
 - [RecursiveMA] Algorithm for inferring the complexity of a given molecule from tandem mass spectrometry (MS<sup>2</sup>, MS<sup>3</sup>, ...) data
 - [Delphi] A standard interface for storing, sampling/fitting, and comparing probabilistic models for interpreting scientific experiments
@@ -108,10 +109,11 @@ Mehr, S. H. M.; Caramelli, D., Cronin, L. _PNAS_, **2023**, _120_
 [10.1021/la4024597]: https://doi.org/10.1021/la4024597
 [10.1021/ic202049t]: https://doi.org/10.1021/ic202049t
 [Logic.jl]: https://github.com/hessammehr/Logic.jl
-[liquid_rules]: https://github.com/hessammehr/liquid_rules
-[liquid_rules_ddlog]: https://github.com/hessammehr/liquid_rules_ddlog
 [coalescence]: https://github.com/hessammehr/coalescence
 [coalescence live]: https://rawgit.com/hessammehr/coalescence/javascript/coalesce.html
+[FemtoEdit]: https://github.com/hessammehr/femto_edit
+[liquid_rules]: https://github.com/hessammehr/liquid_rules
+[liquid_rules_ddlog]: https://github.com/hessammehr/liquid_rules_ddlog
 [microbit_sensornet]: https://github.com/MehrResearch/microbit_sensornet
 [microbit_sensornet_sketch]: https://makecode.microbit.org/05783-02185-24551-63527
 [RecursiveMA]: https://github.com/hessammehr/recursiveMA
