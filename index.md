@@ -48,8 +48,8 @@ I am always keen to welcome motivated individuals from a range of technical back
 For more context on current research projects and related publications see my [group's research page](https://mehr-research.science/research/#publications). For a full list see [Google Scholar](https://scholar.google.com/citations?user=8Z6Z9YIAAAAJ&hl=en), and [ORCiD](https://orcid.org/0000-0001-7710-3102).
 
 #### 2024
-- [Micron-sized soft chemical reactors synthesized via the aerosol phase][2024/DD/D4DD00139G] <br/>
-Zhang, L.; Mehr, S. H. M., accepted for publication in _RSC Digital Discovery_, **2024**
+- [In situ synthesis within micron-sized hydrogel reactors created via programmable aerosol chemistry][10.1039/D4DD00139G] <br/>
+Zhang, L.; Mehr, S. H. M. _RSC Digital Discovery_, **2024**
 - [Investigating and Quantifying Molecular Complexity Using Assembly Theory and Spectroscopy][10.1021/acscentsci.4c00120] <br/>
 Jirasek, M; Sharma, A; Bame, J. R.; Mehr, S. H. M.; et al _ACS Cent. Sci._, **2024**, _10_, 1054
 - [Evidence of Selection in Mineral Mediated Polymerization Reactions Executed in a Robotic Chemputer System][10.1002/syst.202400006] <br/>
@@ -89,7 +89,7 @@ Mehr, S. H. M.; Caramelli, D., Cronin, L. _PNAS_, **2023**, _120_
 [0101chem]: https://0101chem.science
 [Sound Chemistry]: https://sound-chemistry.science/
 [RSC]: https://www.rsc.org
-[2024/DD/D4DD00139G]: https://pubs.rsc.org/en/content/articlepdf/2024/DD/D4DD00139G
+[10.1039/D4DD00139G]: https://doi.org/10.1039/D4DD00139G
 [10.1021/acscentsci.4c00120]: https://doi.org/10.1021/acscentsci.4c00120
 [10.1002/syst.202400006]: https://doi.org/10.1002/syst.202400006
 [10.1038/s41467-024-45444-3]: https://doi.org/10.1038/s41467-024-45444-3
