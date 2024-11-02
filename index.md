@@ -33,7 +33,7 @@ For an up-to-date list check out my [personal projects](https://github.com/hessa
 - [XDL] A hardware-independent chemical programming language ([see publication][10.1126/science.abc2986])
 - [Logic.jl] Early sketch of a typed logic programming system embedded in Julia
 - [liquid_rules] (Prolog) and [liquid_rules_ddlog] (Differential Datalog) Proof-of-concept declarative scheduler for robotic liquid handling
-- [coalescence] Demonstration of peak coalescence in NMR [live demo][coalescence live] (JS)
+- [coalescence] Demonstration of peak coalescence in NMR ([source code][coalescence code]) (JS)
 - [molsketch-cljs] Cross-platfrom 2D molecular structure drawing program (ClojureScript)
 - [NMR.jl] Processing, visualization and analysis of NMR spectra (Julia)
 - [pyMPB] Python interface to MIT Photonic Bands (MPB) 
@@ -109,8 +109,8 @@ Mehr, S. H. M.; Caramelli, D., Cronin, L. _PNAS_, **2023**, _120_
 [10.1021/la4024597]: https://doi.org/10.1021/la4024597
 [10.1021/ic202049t]: https://doi.org/10.1021/ic202049t
 [Logic.jl]: https://github.com/hessammehr/Logic.jl
-[coalescence]: https://github.com/hessammehr/coalescence
-[coalescence live]: https://hessammehr.github.io/coalescence/coalesce.html
+[coalescence]: https://hessammehr.github.io/coalescence
+[coalescence code]: https://github.com/hessammehr/coalescence
 [FemtoEdit]: https://github.com/hessammehr/femto_edit
 [liquid_rules]: https://github.com/hessammehr/liquid_rules
 [liquid_rules_ddlog]: https://github.com/hessammehr/liquid_rules_ddlog
