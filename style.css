@@ -63,3 +63,26 @@ a, a:visited {
 a:hover {
     text-decoration: underline;
 }
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+        border-top: 1px solid #555;
+        border-bottom: 1px solid #555;
+    }
+
+    th {
+        border-top: 1px solid #555;
+        border-bottom: 2px solid #555;
+    }
+
+    a, a:visited {
+        color: #cb9c79;
+    }
+
+    img {
+        filter: invert(1);
+    }
+}
