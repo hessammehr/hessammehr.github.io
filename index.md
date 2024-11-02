@@ -24,7 +24,7 @@ Investigating information and automation as gateways to new discovery paradigms 
 - [Saving lives with Julia][talk:julia] <br/> _JuliaCon_, **2018**
 
 ### Code
-For an up-to-date list check out my [personal projects](https://github.com/hessammehr) and my [research group's projects](https://github.com/MehrResearch) on Github.
+For an up-to-date list check out my [personal projects](https://github.com/hessammehr) and my [research group's projects](https://github.com/MehrResearch) on GitHub.
 
 - [FemtoEdit] A minimal, keyboard-first WYSIWYG editor for web pages
 - [microbit_sensornet] Browser dashboard and [accompanying MakeCode sketch][microbit_sensornet_sketch] for aggregating sensor readings from a swarm of micro:bits over Web Bluetooth
@@ -33,7 +33,7 @@ For an up-to-date list check out my [personal projects](https://github.com/hessa
 - [XDL] A hardware-independent chemical programming language ([see publication][10.1126/science.abc2986])
 - [Logic.jl] Early sketch of a typed logic programming system embedded in Julia
 - [liquid_rules] (Prolog) and [liquid_rules_ddlog] (Differential Datalog) Proof-of-concept declarative scheduler for robotic liquid handling
-- [coalescence] Demonstration of peak coalescence in NMR [live demo][coalescence live] (TypeScript)
+- [coalescence] Demonstration of peak coalescence in NMR [live demo][coalescence live] (JS)
 - [molsketch-cljs] Cross-platfrom 2D molecular structure drawing program (ClojureScript)
 - [NMR.jl] Processing, visualization and analysis of NMR spectra (Julia)
 - [pyMPB] Python interface to MIT Photonic Bands (MPB) 
@@ -110,7 +110,7 @@ Mehr, S. H. M.; Caramelli, D., Cronin, L. _PNAS_, **2023**, _120_
 [10.1021/ic202049t]: https://doi.org/10.1021/ic202049t
 [Logic.jl]: https://github.com/hessammehr/Logic.jl
 [coalescence]: https://github.com/hessammehr/coalescence
-[coalescence live]: https://rawgit.com/hessammehr/coalescence/javascript/coalesce.html
+[coalescence live]: https://hessammehr.github.io/coalescence/coalesce.html
 [FemtoEdit]: https://github.com/hessammehr/femto_edit
 [liquid_rules]: https://github.com/hessammehr/liquid_rules
 [liquid_rules_ddlog]: https://github.com/hessammehr/liquid_rules_ddlog
