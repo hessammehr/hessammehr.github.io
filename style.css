@@ -24,9 +24,13 @@ ul {
 }
 
 img {
-    width: 15em;
     display: block;
-    margin: 0 auto
+    margin: 0 auto;
+}
+
+img.logo {
+    width: 15em;
+    mix-blend-mode: multiply;
 }
 
 span#arrow {
@@ -82,7 +86,8 @@ a:hover {
         color: #cb9c79;
     }
 
-    img {
+    img.logo {
         filter: invert(1);
+        mix-blend-mode: screen;
     }
 }
