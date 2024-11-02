@@ -15,10 +15,11 @@ jobs:
       - name: Install Pandoc
         run: sudo apt-get install pandoc
 
-      - name: Download Primer CSS and GitHub Syntax Highlighting
+      - name: Download Primer CSS and Highlight.js themes
         run: |
           curl -O https://unpkg.com/@primer/css/dist/primer.css
-          curl -O https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/github.min.css
+          curl -o light.css https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/github.min.css
+          curl -o dark.css https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/night-owl.min.css
 
       - name: Create GitHub-style HTML template
         run: |
@@ -31,7 +32,8 @@ jobs:
             <title>\$title\$</title>
             <link rel="stylesheet" href="/style.css">
             <link rel="stylesheet" href="/primer.css">
-            <link rel="stylesheet" href="/github.min.css">
+            <link rel="stylesheet" href="/light.css" media="(prefers-color-scheme: light)">
+            <link rel="stylesheet" href="/dark.css" media="(prefers-color-scheme: dark)">
           </head>
           <body>
             <div class="container-lg px-3 my-5 markdown-body">
