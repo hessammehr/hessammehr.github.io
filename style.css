@@ -26,7 +26,8 @@ ul {
 img {
     width: 15em;
     display: block;
-    margin: 0 auto
+    margin: 0 auto;
+    mix-blend-mode: multiply; /* This helps with white backgrounds */
 }
 
 span#arrow {
@@ -84,5 +85,6 @@ a:hover {
 
     img {
         filter: invert(1);
+        mix-blend-mode: screen; /* Changes blend mode for dark mode */
     }
 }
