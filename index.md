@@ -7,7 +7,7 @@ title: S. Hessam M. Mehr
 <div id="under_title"> Leverhulme Early Career Research Fellow, University of Glasgow </div>
 <div id="under_title"> [CV] [Blog] [GitHub] [Twitter/X] [Email] [Group website] </div>
 
-![](rings.png)
+![](rings.png){.logo}
 
 Investigating information and automation as gateways to new discovery paradigms in chemistry.
 
