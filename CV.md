@@ -1,5 +1,5 @@
 ---
-title: Hessam Mehr - CV
+pagetitle: "Hessam Mehr — CV"
 css: CV.css
 ---
 
@@ -43,14 +43,14 @@ In my fellowship I have created a modular, digitally controlled aerosol reactor 
 <span class="institution-date">Cronin Group, University of Glasgow, UK | 2018–2022</span>
 </div>
 
-Focal points include (i) the digitisation of synthetic chemistry, leading to [two Science papers]{.link-publication} and commercialisation via a patent that now underpins [a £40M spin-out company, Chemify Ltd]{.link-commercial}; (ii) introducing Bayesian probability as a tool to automate the interpretation of chemistry experiments leading to.
+Focal points include (i) the digitisation of synthetic chemistry, leading to [two](#chempu){.link-publication} [Science papers](#xdl){.link-publication} and commercialisation via a patent that now underpins [a £40M spin-out company, Chemify Ltd]{.link-commercial}; (ii) introducing Bayesian probability as a tool to automate the interpretation of chemistry experiments leading to.
 
 <div class="position">
 <span class="position-title">Specialist</span>
 <span class="institution-date">Health Canada, Canada | 2017–2018</span>
 </div>
 
-I devised a system combining signal processing algorithms with probability theory to automate the quantitative analysis of complex forensic drug samples. Alongside continued development at Health Canada and nationwide deployment, the underlying technical innovations were [published]{.link-publication} in a special issue of *Mag. Reson. Chem.*
+I devised a system combining signal processing algorithms with probability theory to automate the quantitative analysis of complex forensic drug samples. Alongside continued development at Health Canada and nationwide deployment, the underlying technical innovations were [published](#nmr){.link-publication} in a special issue of *Mag. Reson. Chem.*
 
 ## Education
 
@@ -70,70 +70,49 @@ Focus areas: Digital signal processing
 
 ## Outputs
 
-Highlights among **~30 primary research** papers (**h-index: 12**; full list available on [ORCiD](https://orcid.org/0000-0001-7710-3102){.link-standard} & [Scholar](https://scholar.google.com/citations?user=HeyhCHEAAAAJ){.link-standard})
+Highlights among **~35 primary research** papers (**h-index: 13**; full list available on [ORCiD](https://orcid.org/0000-0001-7710-3102){.link-standard} & [Scholar](https://scholar.google.com/citations?user=HeyhCHEAAAAJ){.link-standard})
 
-<div class="publication">
-<div class="publication-title">In situ synthesis within micron-sized soft chemical reactors created via programmable aerosol chemistry</div>
-<div class="authors">Zhang, L.; <span class="author-self">Mehr, S. H. M.</span></div>
-<div class="citation">*Submitted for peer review*, **2024** (preprint: [10.26434/chemrxiv-2024-3zqw5-v2](https://doi.org/10.26434/chemrxiv-2024-3zqw5-v2){.link-publication})</div>
-<div class="paper-highlight">
-**Hydrogel microdroplets as next-generation reactors:** Chemical synthesis in microdroplets can accelerate reactions and enable unique reaction pathways, but existing methods provide limited control over droplet composition and environmental conditions. Using programmable aerosol chemistry, we developed a platform for creating chemically distinct microdroplet populations and demonstrated its utility through the synthesis of metal-organic frameworks.
-</div>
-</div>
+### In situ synthesis within micron-sized soft chemical reactors created via programmable aerosol chemistry
+Zhang, L.; <span class="author-self">Mehr, S. H. M.</span>  
+*Submitted for peer review*, **2024** (preprint: [10.26434/chemrxiv-2024-3zqw5-v2](https://doi.org/10.26434/chemrxiv-2024-3zqw5-v2){.link-publication})
 
-<div class="publication">
-<div class="publication-title">Investigating and Quantifying Molecular Complexity Using Assembly Theory and Spectroscopy</div>
-<div class="authors">Jirasek, M.; Sharma, A.; Bame, J.; <span class="author-self">Mehr, S. H. M.</span>, et al.</div>
-<div class="citation">*ACS Cent. Sci.*, **2024** ([10.1021/acscentsci.4c00120](https://doi.org/10.1021/acscentsci.4c00120){.link-publication})</div>
-<div class="paper-highlight">
-Tandem mass spectrometry is a formidable tool for analysing complex mixtures of unknown compounds, e.g. exoplanet samples, but pinpointing compounds of interest without extrapolating from currently known species remains a challenge. My contribution to this paper, the *recursive molecular assembly* (RecursiveMA) algorithm, searches tandem MS dataset for evidence of shared molecular building blocks to differentiate complex molecules from those that are simply large.
-</div>
-</div>
+> **Hydrogel microdroplets as next-generation reactors:** Chemical synthesis in microdroplets can accelerate reactions and enable unique reaction pathways, but existing methods provide limited control over droplet composition and environmental conditions. Using programmable aerosol chemistry, we developed a platform for creating chemically distinct microdroplet populations and demonstrated its utility through the synthesis of metal-organic frameworks.
 
-<div class="publication">
-<div class="publication-title">Digitizing chemical discovery with a Bayesian explorer for interpreting reactivity data</div>
-<div class="authors"><span class="author-self">Mehr, S. H. M.</span>; Caramelli, D.; Cronin, L.</div>
-<div class="citation">*PNAS*, **2023** ([10.1073/pnas.2220045120](https://doi.org/10.1073/pnas.2220045120){.link-publication})</div>
-<div class="paper-highlight">
-**A fresh take on AI in chemistry:** The applications of AI in chemistry are proliferating, yet instead of empowering expert chemists to undertake larger-scale experiments, most efforts supplant the chemist with data-hungry and opaque models. Bridging Bayesian probability and chemistry, we built a system that encodes and formalises chemists' intuition into a probabilistic model working in tandem with a robotic chemistry platform to explore large experimental spaces and plan
-</div>
-</div>
+### Investigating and Quantifying Molecular Complexity Using Assembly Theory and Spectroscopy
+Jirasek, M.; Sharma, A.; Bame, J.; <span class="author-self">Mehr, S. H. M.</span>, et al.  
+*ACS Cent. Sci.*, **2024** ([10.1021/acscentsci.4c00120](https://doi.org/10.1021/acscentsci.4c00120){.link-publication})
 
-<div class="publication">
-<div class="publication-title">Automated Qualitative and Quantitative Analysis of Complex Forensic Drug Samples using ¹H NMR</div>
-<div class="authors"><span class="author-self">Mehr, S. H. M.</span>; Tang, A. W.; Laing, R. R.</div>
-<div class="citation">*Magn. Reson. Chem.*, **2023** ([10.1002/mrc.5265](https://doi.org/10.1002/mrc.5265){.link-publication})</div>
-<div class="paper-highlight">
-**Digital signal processing and statistics to counter drug epidemics:** Developing robust and accurate analytical protocols for drug detection and is often too slow to respond to emerging drug epidemics.
-</div>
-</div>
+> Tandem mass spectrometry is a formidable tool for analysing complex mixtures of unknown compounds, e.g. exoplanet samples, but pinpointing compounds of interest without extrapolating from currently known species remains a challenge. My contribution to this paper, the *recursive molecular assembly* (RecursiveMA) algorithm, searches tandem MS dataset for evidence of shared molecular building blocks to differentiate complex molecules from those that are simply large.
 
-<div class="publication">
-<div class="publication-title">Digitization and validation of a chemical synthesis literature database in the ChemPU</div>
-<div class="authors">Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; <span class="author-self">Mehr, S. H. M.</span>; et al.</div>
-<div class="citation">*Science*, **2022** ([10.1126/science.abo0058](https://doi.org/10.1126/science.abo0058){.link-publication})</div>
-<div class="paper-highlight">
-**On-demand digital synthesis:** Just as the digitisation of music led to on-demand streaming services, we demonstrate how digitization of the chemical literature enables an automated synthesis platform to directly execute published procedures without human intervention. The work highlights the power of abstract chemical description languages in separating procedure specification from hardware-specific implementation details.
-</div>
-</div>
+### Digitizing chemical discovery with a Bayesian explorer for interpreting reactivity data
+<span class="author-self">Mehr, S. H. M.</span>; Caramelli, D.; Cronin, L.  
+*PNAS*, **2023** ([10.1073/pnas.2220045120](https://doi.org/10.1073/pnas.2220045120){.link-publication})
 
-<div class="publication">
-<div class="publication-title">A universal system for digitization and automatic execution of the chemical synthesis literature</div>
-<div class="authors"><span class="author-self">Mehr, S. H. M.</span>; Craven, M.; Leonov, A. I.; Keenan, G.; Cronin, L.</div>
-<div class="citation">*Science*, **2020** ([10.1126/science.abc2986](https://doi.org/10.1126/science.abc2986){.link-publication})</div>
-<div class="paper-highlight">
-**Hardware-independent synthesis automation:** Digitising synthesis requires in-depth knowledge of vendor specific programming interfaces and lengthy development to adapt literature protocols to robotic execution. Our high-level hardware-independent chemical programming language XDL formalises the chemical literature's universal method for describing synthesis procedures in prose and translates these descriptions to robot-ready instructions.
-</div>
-</div>
+> **A fresh take on AI in chemistry:** The applications of AI in chemistry are proliferating, yet instead of empowering expert chemists to undertake larger-scale experiments, most efforts supplant the chemist with data-hungry and opaque models. Bridging Bayesian probability and chemistry, we built a system that encodes and formalises chemists' intuition into a probabilistic model working in tandem with a robotic chemistry platform to explore large experimental spaces and plan
 
-<div class="publication">
-<div class="publication-title">Stabilization of a Strained Heteroradialene by Peripheral Electron Delocalization</div>
-<div class="authors"><span class="author-self">Mehr, S. H. M.</span>; Patrick, B. O.; MacLachlan, M. J.</div>
-<div class="citation">*Org. Lett.*, **2016** ([10.1021/acs.orglett.6b00577](https://doi.org/10.1021/acs.orglett.6b00577){.link-publication})</div>
-<div class="paper-highlight">
-**Aromaticity challenged:** Electronic structure effects in organic chemistry are traditionally understood as limited to immediately adjacent atoms or through-bond conjugation. Here we show that multi-centre electron delocalisation over a molecular framework can override such local effects, opening doors to molecules with unusual bonding and electronic properties.
-</div>
-</div>
+### Automated Qualitative and Quantitative Analysis of Complex Forensic Drug Samples using ¹H NMR
+<span class="author-self">Mehr, S. H. M.</span>; Tang, A. W.; Laing, R. R.  
+*Magn. Reson. Chem.*, **2023** ([10.1002/mrc.5265](https://doi.org/10.1002/mrc.5265){.link-publication})
+
+> **Digital signal processing and statistics to counter drug epidemics:** Developing robust and accurate analytical protocols for drug detection and is often too slow to respond to emerging drug epidemics.
+
+### Digitization and validation of a chemical synthesis literature database in the ChemPU
+Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; <span class="author-self">Mehr, S. H. M.</span>; et al.  
+*Science*, **2022** ([10.1126/science.abo0058](https://doi.org/10.1126/science.abo0058){.link-publication})
+
+> **On-demand digital synthesis:** Just as the digitisation of music led to on-demand streaming services, we demonstrate how digitization of the chemical literature enables an automated synthesis platform to directly execute published procedures without human intervention. The work highlights the power of abstract chemical description languages in separating procedure specification from hardware-specific implementation details.
+
+### A universal system for digitization and automatic execution of the chemical synthesis literature
+<span class="author-self">Mehr, S. H. M.</span>; Craven, M.; Leonov, A. I.; Keenan, G.; Cronin, L.  
+*Science*, **2020** ([10.1126/science.abc2986](https://doi.org/10.1126/science.abc2986){.link-publication})
+
+> **Hardware-independent synthesis automation:** Digitising synthesis requires in-depth knowledge of vendor specific programming interfaces and lengthy development to adapt literature protocols to robotic execution. Our high-level hardware-independent chemical programming language XDL formalises the chemical literature's universal method for describing synthesis procedures in prose and translates these descriptions to robot-ready instructions.
+
+### Stabilization of a Strained Heteroradialene by Peripheral Electron Delocalization
+<span class="author-self">Mehr, S. H. M.</span>; Patrick, B. O.; MacLachlan, M. J.  
+*Org. Lett.*, **2016** ([10.1021/acs.orglett.6b00577](https://doi.org/10.1021/acs.orglett.6b00577){.link-publication})
+
+> **Aromaticity challenged:** Electronic structure effects in organic chemistry are traditionally understood as limited to immediately adjacent atoms or through-bond conjugation. Here we show that multi-centre electron delocalisation over a molecular framework can override such local effects, opening doors to molecules with unusual bonding and electronic properties.
 
 ## Patents
 
@@ -154,7 +133,7 @@ US Patent, App. [17/922,240](https://patents.google.com/patent/US20230173450A1/e
 </div>
 
 <div class="grant">
-<span class="grant-title">Research Workshop Grant: ["Sound Chemistry"]{.link-outreach} (£7k)</span>
+<span class="grant-title">Research Workshop Grant: ["Sound Chemistry"](#sound-chem){.link-outreach} (£7k)</span>
 <span class="grant-institution">Royal Society of Edinburgh | 2023–2024</span>
 </div>
 
@@ -183,7 +162,7 @@ Contributing to the board's mission of being a critical friend to senior univers
 Used a £2,500 grant from UofG ARC to curate a series of pop-up hacker/maker stations. The versatility of these stations — covering drag-and-drop programming of embedded microcontroller board, prototyping tools and electronic circuits — combines with larger investment in ARC maker tools to enable a wide range of researcher-led outreach activities.
 </div>
 
-<div class="activity">
+<div class="activity" id="sound-chem">
 <div class="activity-header">
 <span class="activity-title">[Sound Chemistry](https://sound-chemistry.science/){.link-outreach}</span>
 <span class="activity-role-date">Workshop | 2024</span>

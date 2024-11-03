@@ -15,7 +15,7 @@ body {
     color: var(--primary-color);
 }
 
-h1, h2, h3 {
+h1, h2 {
     color: var(--heading-color);
 }
 
@@ -35,6 +35,18 @@ h2 {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
     border-bottom: 2px solid #eee;
+}
+
+h3 {
+    margin-bottom: 0.2em;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: left;
+}
+
+h3 + p {
+    margin-top: 0;
+    margin-bottom: 0.2em;
 }
 
 .contact-grid {
@@ -71,18 +83,12 @@ h2 {
     line-height: 1.6;
 }
 
-.paper-highlight {
-    margin-top: 0.5rem;
-    padding: 1rem;
-}
-
 .paper-highlight strong {
     color: var(--primary-color);
 }
 
 a {
     color: inherit;
-    text-decoration: none;
     position: relative;
 }
 
@@ -106,6 +112,10 @@ a:hover {
     border-bottom: 1.5px solid #d32f2f;
 }
 
+[class^="link-"] {
+    text-decoration: none;
+}
+
 p {
     margin: 0.5rem 0 1.0rem 0;
 }
@@ -122,6 +132,16 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    flex-wrap: nowrap;
+}
+
+.position p, .activity-header p, .grant p {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0;
 }
 
 .position {
@@ -135,11 +155,14 @@ section {
 .institution-date, .activity-role-date, .grant-institution {
     color: var(--secondary-color);
     font-size: 0.9rem;
+    margin-left: auto;
+    padding-left: 1rem;
+    white-space: nowrap;
 }
 
+/* Remove redundant rules */
 .grant-institution, .activity-role-date {
     text-align: right;
-    padding-left: 2rem;
 }
 
 .publication, .patent, .activity, .grant {
@@ -164,6 +187,18 @@ section {
 
 .activity p {
     margin: 0.5rem 0;
+}
+
+blockquote {
+    background-color: var(--highlight-bg);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 0.5rem 0 2em 0;
+    text-align: justify;
+}
+
+blockquote strong {
+    color: var(--primary-color);
 }
 
 @media print {

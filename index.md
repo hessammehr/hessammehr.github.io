@@ -45,7 +45,7 @@ For an up-to-date list check out my [personal projects](https://github.com/hessa
 I am always keen to welcome motivated individuals from a range of technical backgrounds into the group. Please refer to the [my group's website](https://mehr-research.science/opportunities-engagement/) for a list of current opportunities.
 
 ### Selected publications
-For more context on current research projects and related publications see my [group's research page](https://mehr-research.science/research/#publications). For a full list see [Google Scholar](https://scholar.google.com/citations?user=8Z6Z9YIAAAAJ&hl=en), and [ORCiD](https://orcid.org/0000-0001-7710-3102).
+For more context on current research projects and related publications see my [group's research page](https://mehr-research.science/research/#publications) or my [CV]. For a full list see [Google Scholar](https://scholar.google.com/citations?user=8Z6Z9YIAAAAJ&hl=en) or [ORCiD](https://orcid.org/0000-0001-7710-3102).
 
 #### 2024
 - [In situ synthesis within micron-sized hydrogel reactors created via programmable aerosol chemistry][10.1039/D4DD00139G] <br/>
