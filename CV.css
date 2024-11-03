@@ -82,7 +82,6 @@ h2 {
 
 a {
     color: inherit;
-    text-decoration: none;
     position: relative;
 }
 
@@ -106,6 +105,10 @@ a:hover {
     border-bottom: 1.5px solid #d32f2f;
 }
 
+[class^="link-"] {
+    text-decoration: none;
+}
+
 p {
     margin: 0.5rem 0 1.0rem 0;
 }
@@ -122,6 +125,16 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    flex-wrap: nowrap;
+}
+
+.position p, .activity-header p, .grant p {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0;
 }
 
 .position {
@@ -135,11 +148,14 @@ section {
 .institution-date, .activity-role-date, .grant-institution {
     color: var(--secondary-color);
     font-size: 0.9rem;
+    margin-left: auto;
+    padding-left: 1rem;
+    white-space: nowrap;
 }
 
+/* Remove redundant rules */
 .grant-institution, .activity-role-date {
     text-align: right;
-    padding-left: 2rem;
 }
 
 .publication, .patent, .activity, .grant {

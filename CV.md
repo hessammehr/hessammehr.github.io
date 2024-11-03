@@ -1,5 +1,5 @@
 ---
-title: Hessam Mehr - CV
+pagetitle: "Hessam Mehr — CV"
 css: CV.css
 ---
 
@@ -43,14 +43,14 @@ In my fellowship I have created a modular, digitally controlled aerosol reactor 
 <span class="institution-date">Cronin Group, University of Glasgow, UK | 2018–2022</span>
 </div>
 
-Focal points include (i) the digitisation of synthetic chemistry, leading to [two Science papers]{.link-publication} and commercialisation via a patent that now underpins [a £40M spin-out company, Chemify Ltd]{.link-commercial}; (ii) introducing Bayesian probability as a tool to automate the interpretation of chemistry experiments leading to.
+Focal points include (i) the digitisation of synthetic chemistry, leading to [two](#chempu){.link-publication} [Science papers](#xdl){.link-publication} and commercialisation via a patent that now underpins [a £40M spin-out company, Chemify Ltd]{.link-commercial}; (ii) introducing Bayesian probability as a tool to automate the interpretation of chemistry experiments leading to.
 
 <div class="position">
 <span class="position-title">Specialist</span>
 <span class="institution-date">Health Canada, Canada | 2017–2018</span>
 </div>
 
-I devised a system combining signal processing algorithms with probability theory to automate the quantitative analysis of complex forensic drug samples. Alongside continued development at Health Canada and nationwide deployment, the underlying technical innovations were [published]{.link-publication} in a special issue of *Mag. Reson. Chem.*
+I devised a system combining signal processing algorithms with probability theory to automate the quantitative analysis of complex forensic drug samples. Alongside continued development at Health Canada and nationwide deployment, the underlying technical innovations were [published](#nmr){.link-publication} in a special issue of *Mag. Reson. Chem.*
 
 ## Education
 
@@ -99,7 +99,7 @@ Tandem mass spectrometry is a formidable tool for analysing complex mixtures of 
 </div>
 </div>
 
-<div class="publication">
+<div class="publication" id="nmr">
 <div class="publication-title">Automated Qualitative and Quantitative Analysis of Complex Forensic Drug Samples using ¹H NMR</div>
 <div class="authors"><span class="author-self">Mehr, S. H. M.</span>; Tang, A. W.; Laing, R. R.</div>
 <div class="citation">*Magn. Reson. Chem.*, **2023** ([10.1002/mrc.5265](https://doi.org/10.1002/mrc.5265){.link-publication})</div>
@@ -108,7 +108,7 @@ Tandem mass spectrometry is a formidable tool for analysing complex mixtures of 
 </div>
 </div>
 
-<div class="publication">
+<div class="publication" id="chempu">
 <div class="publication-title">Digitization and validation of a chemical synthesis literature database in the ChemPU</div>
 <div class="authors">Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; <span class="author-self">Mehr, S. H. M.</span>; et al.</div>
 <div class="citation">*Science*, **2022** ([10.1126/science.abo0058](https://doi.org/10.1126/science.abo0058){.link-publication})</div>
@@ -117,7 +117,7 @@ Tandem mass spectrometry is a formidable tool for analysing complex mixtures of 
 </div>
 </div>
 
-<div class="publication">
+<div class="publication" id="xdl">
 <div class="publication-title">A universal system for digitization and automatic execution of the chemical synthesis literature</div>
 <div class="authors"><span class="author-self">Mehr, S. H. M.</span>; Craven, M.; Leonov, A. I.; Keenan, G.; Cronin, L.</div>
 <div class="citation">*Science*, **2020** ([10.1126/science.abc2986](https://doi.org/10.1126/science.abc2986){.link-publication})</div>
@@ -154,7 +154,7 @@ US Patent, App. [17/922,240](https://patents.google.com/patent/US20230173450A1/e
 </div>
 
 <div class="grant">
-<span class="grant-title">Research Workshop Grant: ["Sound Chemistry"]{.link-outreach} (£7k)</span>
+<span class="grant-title">Research Workshop Grant: ["Sound Chemistry"](#sound-chem){.link-outreach} (£7k)</span>
 <span class="grant-institution">Royal Society of Edinburgh | 2023–2024</span>
 </div>
 
@@ -183,7 +183,7 @@ Contributing to the board's mission of being a critical friend to senior univers
 Used a £2,500 grant from UofG ARC to curate a series of pop-up hacker/maker stations. The versatility of these stations — covering drag-and-drop programming of embedded microcontroller board, prototyping tools and electronic circuits — combines with larger investment in ARC maker tools to enable a wide range of researcher-led outreach activities.
 </div>
 
-<div class="activity">
+<div class="activity" id="sound-chem">
 <div class="activity-header">
 <span class="activity-title">[Sound Chemistry](https://sound-chemistry.science/){.link-outreach}</span>
 <span class="activity-role-date">Workshop | 2024</span>
