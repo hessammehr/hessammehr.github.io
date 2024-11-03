@@ -1,5 +1,5 @@
 ---
-title: S. Hessam M. Mehr
+title: Hessam Mehr
 ---
 
 # Chemistry <span id="arrow">⟷</span> Information <span id="arrow">⟷</span> Discovery
