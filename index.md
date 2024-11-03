@@ -5,7 +5,7 @@ title: Hessam Mehr
 # Chemistry <span id="arrow">⟷</span> Information <span id="arrow">⟷</span> Discovery
 ## S. Hessam M. Mehr
 <div id="under_title"> Leverhulme Early Career Research Fellow, University of Glasgow </div>
-<div id="under_title"> [CV] [Blog] [GitHub] [Twitter/X] [Email] [Group website] </div>
+<div id="under_title"> [CV] [CV<sub>(PDF)</sub>][CV PDF] [Blog] [GitHub] [Twitter/X] [Email] [Group website] </div>
 
 ![](rings.png){.logo}
 
@@ -80,7 +80,8 @@ Mehr, S. H. M.; Caramelli, D., Cronin, L. _PNAS_, **2023**, _120_
 - [Novel PPV/Mesoporous Organosilica Composites: Influence of the Host Chirality on a Conjugated Polymer Guest][10.1021/la4024597] <br/> Mehr, S. H. M.; Giese, M.; Qi, H.; Shopsowitz, K. E.; Hamad, W. Y.; MacLachlan, M. J. _Langmuir_ **2013**, _29_, 12579–12584
 - [Role of Entropy and Autosolvation in Dimerization and Complexation of C<sub>60</sub> by Zn<sub>7</sub> Metallocavitands][10.1021/ic202049t] <br/> Frischmann, P. D.; Mehr, S. H. M.; Patrick, B. O.; Lelj, F.; MacLachlan, M. J. _Inorg. Chem._ **2012**, _51_, 3443–3453
 
-[CV]: https://drive.google.com/u/0/uc?id=16xHJQQshijyGfEfSn_kpNxpLe9xHZPfx
+[CV]: https://hessammehr.github.io/CV.html
+[CV PDF]: https://drive.google.com/u/0/uc?id=16xHJQQshijyGfEfSn_kpNxpLe9xHZPfx
 [Blog]: https://hessammehr.github.io/blog
 [GitHub]: https://github.com/hessammehr
 [Twitter/X]: https://twitter.com/hessammehr
