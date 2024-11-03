@@ -79,12 +79,8 @@ h3 + p {
 
 .intro-box {
     margin: 0.5rem auto;
-    padding: 1.5rem;
+    padding: 0.5rem 1.5rem;
     line-height: 1.6;
-}
-
-.paper-highlight strong {
-    color: var(--primary-color);
 }
 
 a {
@@ -96,25 +92,16 @@ a:hover {
     text-decoration: none;
 }
 
-.link-standard {
-    border-bottom: 1.5px solid var(--link-color);
-}
-
-.link-publication {
-    border-bottom: 1.5px solid #1565c0;
-}
-
-.link-commercial {
-    border-bottom: 1.5px solid #b36dbc;
-}
-
-.link-outreach {
-    border-bottom: 1.5px solid #d32f2f;
-}
-
+/* Simplify link styles to single class since they only differ in border color */
 [class^="link-"] {
     text-decoration: none;
+    border-bottom: 1.5px solid;
 }
+
+.link-standard { border-bottom-color: var(--link-color); }
+.link-publication { border-bottom-color: #1565c0; }
+.link-commercial { border-bottom-color: #b36dbc; }
+.link-outreach { border-bottom-color: #d32f2f; }
 
 p {
     margin: 0.5rem 0 1.0rem 0;
@@ -169,10 +156,6 @@ section {
     margin-bottom: 1rem;
 }
 
-.publication-title, .patent-title {
-    margin-bottom: 0.5rem;
-}
-
 .authors {
     margin-bottom: 0.25rem;
 }
@@ -192,7 +175,7 @@ section {
 blockquote {
     background-color: var(--highlight-bg);
     border-radius: 0.5rem;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     margin: 0.5rem 0 2em 0;
     text-align: justify;
 }

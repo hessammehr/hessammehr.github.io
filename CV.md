@@ -26,7 +26,7 @@ GitHub: [hessammehr](https://github.com/hessammehr) / [MehrResearch](https://git
 </div>
 
 <div class="intro-box">
-I lead an interdisciplinary research group that reimagines and recombines the fundamental building blocks of practical chemistry — reagents, media, and energy — to create new paradigms for chemical synthesis and discovery. Using a broad toolbox of ideas and techniques spanning synthetic chemistry, computer science and programming languages, signal processing and statistics, and aerosol science. Pioneered the first programmable aerosol reactor.
+I lead an interdisciplinary research group with the aim of reimagining the fundamental building blocks of practical chemistry — reagents, media, and energy — to devise new paradigms for chemical synthesis and discovery. We draw on a broad toolbox of ideas and techniques spanning synthetic chemistry, computer science and programming languages, signal processing and statistics, and aerosol science.
 </div>
 
 ## Employment
@@ -36,7 +36,7 @@ I lead an interdisciplinary research group that reimagines and recombines the fu
 <span class="institution-date">University of Glasgow, UK | 2022–2025</span>
 </div>
 
-In my fellowship I have created a modular, digitally controlled aerosol reactor and championed its adoption as a mainstream medium for chemical synthesis and discovery. Applications ranging from materials chemistry to antimicrobial discovery are being pursued within my group and via collaborators.
+In my fellowship I have created a modular, digitally controlled aerosol reactor — the first of its kind — and championed its adoption as a mainstream medium for chemical synthesis and discovery. Applications ranging from materials chemistry to antimicrobial discovery are being pursued within my group and via collaborators.
 
 <div class="position">
 <span class="position-title">Post-doctoral Researcher</span>
@@ -94,7 +94,7 @@ Jirasek, M.; Sharma, A.; Bame, J.; <span class="author-self">Mehr, S. H. M.</spa
 <span class="author-self">Mehr, S. H. M.</span>; Tang, A. W.; Laing, R. R.  
 *Magn. Reson. Chem.*, **2023** ([10.1002/mrc.5265](https://doi.org/10.1002/mrc.5265){.link-publication})
 
-> **Digital signal processing and statistics to counter drug epidemics:** Developing robust and accurate analytical protocols for drug detection and is often too slow to respond to emerging drug epidemics.
+> **Digital signal processing and statistics to counter drug epidemics:** Developing bespoke analytical protocols for drug detection is resource intensive and time consuming, incompatible with the challenge of tackling rapidly emerging drug epidemics, such as the fentanyl crisis. At Health Canada, we demonstrated an automated <sup>1</sup>H NMR-based pipeline, based on advanced signal processing techniques and statistical inference, that can be applied to new analytes and sample types with little adaptation or method development.
 
 ### Digitization and validation of a chemical synthesis literature database in the ChemPU
 Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; <span class="author-self">Mehr, S. H. M.</span>; et al.  
@@ -155,7 +155,7 @@ Contributing to the board's mission of being a critical friend to senior univers
 
 <div class="activity">
 <div class="activity-header">
-<span class="activity-title">[Hack](https://www.gla.ac.uk/research/arc/researchersandstaff/hackthearc/thehackersarc/){.link-outreach} the ARC & ARC Maker Space</span>
+<span class="activity-title">[Hack the ARC](https://www.gla.ac.uk/research/arc/researchersandstaff/hackthearc/thehackersarc/){.link-outreach} & ARC MakerSpace</span>
 <span class="activity-role-date">Public engagement | 2024</span>
 </div>
 
