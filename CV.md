@@ -74,7 +74,7 @@ Highlights among **~35 primary research** papers (**h-index: 13**; full list ava
 
 ### In situ synthesis within micron-sized soft chemical reactors created via programmable aerosol chemistry
 Zhang, L.; <span class="author-self">Mehr, S. H. M.</span>  
-*Submitted for peer review*, **2024** (preprint: [10.26434/chemrxiv-2024-3zqw5-v2](https://doi.org/10.26434/chemrxiv-2024-3zqw5-v2){.link-publication})
+*Digital Discovery*, **2024** ([10.1039/D4DD00139G](https://doi.org/10.1039/D4DD00139G){.link-publication})
 
 > **Hydrogel microdroplets as next-generation reactors:** Chemical synthesis in microdroplets can accelerate reactions and enable unique reaction pathways, but existing methods provide limited control over droplet composition and environmental conditions. Using programmable aerosol chemistry, we developed a platform for creating chemically distinct microdroplet populations and demonstrated its utility through the synthesis of metal-organic frameworks.
 
