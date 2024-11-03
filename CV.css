@@ -1,0 +1,184 @@
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #4a4a4a;
+    --heading-color: rgb(15, 71, 97);
+    --highlight-bg: #FCF8EA;
+    --link-color: var(--primary-color);
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: var(--primary-color);
+}
+
+h1, h2, h3 {
+    color: var(--heading-color);
+}
+
+h1 {
+    margin: 0 0 1rem 0;
+    font-size: 2rem;
+    border-bottom: 1px solid #000;
+}
+
+h1 .credentials {
+    font-size: 1.25rem;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #eee;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.contact-left {
+    grid-column: 1;
+}
+
+.contact-right {
+    grid-column: 2;
+    text-align: right;
+}
+
+.contact-left p, .contact-right p {
+    margin: 0;
+    line-height: 1.8;
+}
+
+.intro-box, .paper-highlight {
+    background-color: var(--highlight-bg);
+    border-radius: 0.5rem;
+    text-align: justify;
+}
+
+.intro-box {
+    margin: 0.5rem auto;
+    padding: 1.5rem;
+    line-height: 1.6;
+}
+
+.paper-highlight {
+    margin-top: 0.5rem;
+    padding: 1rem;
+}
+
+.paper-highlight strong {
+    color: var(--primary-color);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.link-standard {
+    border-bottom: 1.5px solid var(--link-color);
+}
+
+.link-publication {
+    border-bottom: 1.5px solid #1565c0;
+}
+
+.link-commercial {
+    border-bottom: 1.5px solid #b36dbc;
+}
+
+.link-outreach {
+    border-bottom: 1.5px solid #d32f2f;
+}
+
+p {
+    margin: 0.5rem 0 1.0rem 0;
+}
+
+em {
+    font-style: italic;
+}
+
+section {
+    margin-bottom: 1rem;
+}
+
+.position, .activity-header, .grant {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.position {
+    margin-bottom: 0.25rem;
+}
+
+.position-title, .activity-title, .grant-title, .publication-title, .patent-title {
+    font-weight: bold;
+}
+
+.institution-date, .activity-role-date, .grant-institution {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.grant-institution, .activity-role-date {
+    text-align: right;
+    padding-left: 2rem;
+}
+
+.publication, .patent, .activity, .grant {
+    margin-bottom: 1rem;
+}
+
+.publication-title, .patent-title {
+    margin-bottom: 0.5rem;
+}
+
+.authors {
+    margin-bottom: 0.25rem;
+}
+
+.author-self {
+    text-decoration: underline;
+}
+
+.citation {
+    margin-bottom: 0.5rem;
+}
+
+.activity p {
+    margin: 0.5rem 0;
+}
+
+@media print {
+    body {
+        font-size: 11pt;
+        padding: 0;
+        max-width: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .paper-highlight, .intro-box {
+        background-color: transparent;
+        border: 1px solid #ddd;
+    }
+}
