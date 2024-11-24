@@ -9,7 +9,7 @@ css: CV.css
 <div class="contact-left">
 
 Leverhulme Early Career Fellow  
-[Hessam.Mehr@glasgow.ac.uk](mailto:Hessam.Mehr@glasgow.ac.uk)  
+[Hessam.Mehr@glasgow.ac.uk][email]  
 School of Chemistry, University of Glasgow  
 Advanced Research Centre, Office 576  
 11 Chapel Lane, Glasgow, UK G11 6EW
@@ -17,10 +17,10 @@ Advanced Research Centre, Office 576
 </div>
 <div class="contact-right">
 
-[mehr-research.science](https://mehr-research.science/) / [hessammehr.github.io](https://hessammehr.github.io/)  
-[orcid.org/0000-0001-7710-3102](https://orcid.org/0000-0001-7710-3102)  
-[Google Scholar](https://scholar.google.com/citations?user=HeyhCHEAAAAJ) / [UofG Profile](https://www.gla.ac.uk/schools/chemistry/staff/hessammehr)  
-GitHub: [hessammehr](https://github.com/hessammehr) / [MehrResearch](https://github.com/MehrResearch)
+[mehr-research.science] / [hessammehr.github.io]  
+[orcid.org/0000-0001-7710-3102][ORCiD]  
+[Google Scholar] / [UofG Profile]  
+GitHub: [hessammehr][github] / [MehrResearch][group-github]
 
 </div>
 </div>
@@ -46,21 +46,21 @@ From doped silicon to superconductors, the ability to fine-tune materials' elect
 ### BSc – Electrical Engineering <span> Sharif University of Technology, Iran | 2005–2009 </span>
 Focus areas: Digital signal processing, photonic crystals.
 
-## Outputs
+## Publications
 
-Highlights among **35 primary research** papers (**h-index: 13**; full list available on [ORCiD](https://orcid.org/0000-0001-7710-3102) & [Scholar](https://scholar.google.com/citations?user=HeyhCHEAAAAJ))
+Highlights among **35 primary research** papers (**h-index: 13**; full list available on [ORCiD] & [Google Scholar])
 
 ### In situ synthesis within micron-sized soft chemical reactors created via programmable aerosol chemistry
 Zhang, L.; [Mehr, S. H. M.]{.underline}  
 *Digital Discovery*, **2024** ([10.1039/D4DD00139G](https://doi.org/10.1039/D4DD00139G)) Selected for display on front cover of December 2024 issue.
 
-> **Hydrogel microdroplets as next-generation reactors:** Chemical synthesis in microdroplets can accelerate reactions and enable unique reaction pathways, but existing methods provide limited control over droplet composition and environmental conditions. Using programmable aerosol chemistry, we developed a platform for creating chemically distinct microdroplet populations and demonstrated its utility through the synthesis of metal-organic frameworks.
+> **Aerosol-generated hydrogel microdroplets as miniature self-assembled reactors:** Hydrogel matrices hold promise as a locus for inhomogeneous chemistry, especially in the micron range, where reactants and products can be transported via diffusion. In this work, we generated reactive microdroplets of sodium alginate which, upon contact with and cross-linking with a reagent-loaded solution of calcium ions, acted as hydrogel containers for subsequent *in situ* reactivity within them.
 
 ### Reaction blueprints and logical control flow for parallelized chiral synthesis in the Chemputer
 Šiaučiulis, M.; Knittl-Frank, C.; [Mehr, S. H. M]{.underline}; Clarke, E.; Cronin, L.
 *Nat. Chem.*, **2024**, *in press*
 
-> **Evolving a chemical programming language:** Early means of programming robotic modules for chemical synthesis have proven their immense research and industrial promise, but lack the fundamental constructs — re-usable reactions, parallel synthesis, and a higher-level representation of reagents and hardware — needed to tackle more ambitious synthetic challenges. This paper demonstrates first-class implementation of these constructs in the χDL 2.0 language whilst maintaining compatibility with the existing repertoire of procedures digitised via χDL 1.0.
+> **Evolving a chemical programming language:** Early means of programming robotic modules for chemical synthesis show immense promise for deployment in research and industrial labs, but lack the fundamental constructs — re-usable reactions, parallel synthesis, and a higher-level representation of reagents and hardware — needed to tackle more ambitious synthetic challenges. This paper demonstrates first-class implementation of these constructs in the χDL 2.0 language whilst maintaining compatibility with the existing repertoire of procedures digitised via χDL 1.0.
 
 ### Investigating and Quantifying Molecular Complexity Using Assembly Theory and Spectroscopy
 Jirasek, M.; Sharma, A.; Bame, J.; [Mehr, S. H. M.]{.underline}, et al.  
@@ -98,9 +98,25 @@ Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; [Mehr, 
 
 > **Aromaticity challenged:** Electronic structure effects in organic chemistry are traditionally understood as limited to immediately adjacent atoms or through-bond conjugation. Here we show that multi-centre electron delocalisation over a molecular framework can override such local effects, opening doors to molecules with unusual bonding and electronic properties.
 
-## Patents
+## Books
+### Building a digital chemistry lab <span>Royal Society of Chemistry Books </span>
+[Mehr, S. H. M.]{.underline} Book proposal accepted with publication in the RSC Foundations Series expected in 2025.
 
-### Automated chemical synthesis platform <span>GB, [WO2021219999 (A1)](https://worldwide.espacenet.com/publicationDetails/biblio?FT=D&date=20211104&DB=EPODOC&locale=en_EP&CC=WO&NR=2021219999A1&KC=A1&ND=5), **2021**; US [17/922,240](https://patents.google.com/patent/US20230173450A1/en), **2023**</span>{#patent-chemputer}
+## Selected talks
+### Time-Resolved Chemical Discovery in a Mass Spectrometer-Coupled Programmable Aerosol Reactor 
+Annual Aerosol Science Conference, 2024
+
+### Bringing back the human touch: Expert-in-the-loop AI in chemistry using probabilistic models
+7th RSC AI in Chemistry Symposium, 2024
+
+### Aerosols as a new reaction medium for massively parallel chemical discovery
+Annual Aerosol Science Conference, 2023
+
+### Probablistic reasoning: From interpreting known chemistry to discovering the unknown
+ScotCHEM Computational Chemistry Symposium, 2022
+
+## Patents
+### Automated chemical synthesis platform <span>GB, [WO2021219999 (A1)][GB-patent], **2021**; US [17/922,240][US-patent], **2023**</span>{#patent-chemputer}
 Cronin, L.; <span class="author-self">Mehr, H.</span>; Craven, M.; Leonov, A. I.
 
 ## Grants and awards
@@ -130,23 +146,23 @@ UofG's flagship *Lord Kelvin / Adam Smith* (LKAS) Fellowship Scheme — establis
 
 ## Leadership, outreach and civic engagement
 
-### [University of Glasgow Shadow Board](https://www.gla.ac.uk/myglasgow/staff/shadowboard/) <span>Leadership | 2022–2025</span>
+### [University of Glasgow Shadow Board][Shadow Board] <span>Leadership | 2022–2025</span>
 
 Contributing to the board’s mission of being a "critical friend" to senior UofG management. I advocated for specific concerns of early-career researchers and initiated the conversation within the board about widening recruitment to under-represented groups in the University.
 
-### [Nuffield Research Placements](https://www.nuffieldresearchplacements.org/) <span> Mentorship & public engagement | 2023–2024 </span>
+### [Nuffield Research Placements] <span> Mentorship & public engagement | 2023–2024 </span>
 
-### [Hack the ARC & ARC MakerSpace](https://www.gla.ac.uk/research/arc/researchersandstaff/hackthearc/thehackersarc/) <span>Public engagement | 2024</span>
+### [Hack the ARC & ARC MakerSpace][Hack the ARC] <span>Public engagement | 2024</span>
 
 Used a £2,500 grant from UofG ARC to curate a series of pop-up hacker/maker stations. The versatility of these stations — covering drag-and-drop programming of embedded microcontroller board, prototyping tools and electronic circuits — combines with larger investment in ARC maker tools to enable a wide range of researcher-led outreach activities.
 
-### [Sound Chemistry](https://sound-chemistry.science/) <span>Workshop | 2024</span>{#sound-chemistry}
+### [Sound Chemistry] <span>Workshop | 2024</span>{#sound-chemistry}
 
 Conceived and organised a workshop bringing together four European institutions (Heidelberg, Navarre, Bristol, Cardiff) at the forefront of new techniques for confinement of matter, with the central question of whether future chemical reactions could be contained and manipulated using software, e.g. via acoustic fields, rather than glassware.
 
-### [Digital chemistry for digital natives](https://0101chem.science/) <span> Outreach | 2021 </span>
+### [Digital chemistry for digital natives] <span> Outreach | 2021 </span>
 
-This RSC Outreach Grant-supported workshop series introduced Glasgow high schoolers to cutting-edge advances in digital chemistry, ending with in a practical session on building a sub-£20 titrator robot. My work was [featured in the micro:bit LIVE conference](https://www.youtube.com/watch?v=LdGD7-9-e5A).
+This RSC Outreach Grant-supported workshop series introduced Glasgow high schoolers to cutting-edge advances in digital chemistry, ending with in a practical session on building a sub-£20 titrator robot. My work was [featured in the micro:bit LIVE conference][micro:bit talk].
 
 ## Teaching
 
@@ -164,3 +180,21 @@ Chemical Studies is a UofG Chemistry initiative aimed at distilling the spectrum
 **Past:** 2 MSc students; 5 Advanced Functional Materials PGT students; 1 Chemical Biology PGT student; 1 international post-graduate visiting student; 2 international exchange students; 2 interns.
 
 **Examination:** Examiner on 12 viva exams so far.
+
+
+[Google Scholar]: https://scholar.google.com/citations?user=HeyhCHEAAAAJ
+[ORCiD]: https://orcid.org/0000-0001-7710-3102
+[UofG Profile]: https://www.gla.ac.uk/schools/chemistry/staff/hessammehr
+[email]: mailto:Hessam.Mehr@glasgow.ac.uk
+[mehr-research.science]: https://mehr-research.science/
+[hessammehr.github.io]: https://hessammehr.github.io/
+[micro:bit talk]: https://www.youtube.com/watch?v=LdGD7-9-e5A
+[Digital chemistry for digital natives]: https://0101chem.science/
+[Sound Chemistry]: https://sound-chemistry.science/
+[Hack the ARC]: https://www.gla.ac.uk/research/arc/researchersandstaff/hackthearc/thehackersarc/
+[Nuffield Research Placements]: https://www.nuffieldresearchplacements.org/
+[Shadow Board]: https://www.gla.ac.uk/myglasgow/staff/shadowboard/
+[GB-patent]: https://worldwide.espacenet.com/publicationDetails/biblio?FT=D&date=20211104&DB=EPODOC&locale=en_EP&CC=WO&NR=2021219999A1&KC=A1&ND=5
+[US-patent]: https://patents.google.com/patent/US20230173450A1/en
+[github]: https://github.com/hessammehr
+[group-github]: https://github.com/MehrResearch
