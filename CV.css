@@ -4,6 +4,7 @@
     --heading-color: rgb(15, 71, 97);
     --highlight-bg: #FCF8EA;
     --link-color: var(--primary-color);
+    --default-weight: 400;
 }
 
 body {
@@ -33,7 +34,7 @@ h1 .credentials {
 h2 {
     font-size: 1.5rem;
     margin-top: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     border-bottom: 2px solid #eee;
 }
 
@@ -51,36 +52,18 @@ h3 + p {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 1rem;
     margin: 1rem 0;
-    font-size: 0.9rem;
 }
 
-.contact-left {
-    grid-column: 1;
-}
-
-.contact-right {
-    grid-column: 2;
+.contact-right p {
     text-align: right;
 }
 
 .contact-left p, .contact-right p {
     margin: 0;
     line-height: 1.8;
-}
-
-.intro-box, .paper-highlight {
-    background-color: var(--highlight-bg);
-    border-radius: 0.5rem;
-    text-align: justify;
-}
-
-.intro-box {
-    margin: 0.5rem auto;
-    padding: 0.5rem 1.5rem;
-    line-height: 1.6;
 }
 
 a {
@@ -92,72 +75,31 @@ a:hover {
     text-decoration: none;
 }
 
-/* Simplify link styles to single class since they only differ in border color */
-[class^="link-"] {
-    text-decoration: none;
-    border-bottom: 1.5px solid;
-}
-
-.link-standard { border-bottom-color: var(--link-color); }
-.link-publication { border-bottom-color: #1565c0; }
-.link-commercial { border-bottom-color: #b36dbc; }
-.link-outreach { border-bottom-color: #d32f2f; }
-
 p {
-    margin: 0.5rem 0 1.0rem 0;
+    margin: 0.5rem 0 0.5rem 0;
+    text-align: justify;
 }
 
 em {
     font-style: italic;
 }
 
-section {
-    margin-bottom: 1rem;
-}
-
-.position, .activity-header, .grant {
+h3 {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    flex-wrap: nowrap;
-}
-
-.position p, .activity-header p, .grant p {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: 100%;
     margin: 0;
 }
 
-.position {
-    margin-bottom: 0.25rem;
-}
-
-.position-title, .activity-title, .grant-title, .publication-title, .patent-title {
-    font-weight: bold;
-}
-
-.institution-date, .activity-role-date, .grant-institution {
+h3 span {
     color: var(--secondary-color);
     font-size: 0.9rem;
     margin-left: auto;
     padding-left: 1rem;
     white-space: nowrap;
-}
-
-/* Remove redundant rules */
-.grant-institution, .activity-role-date {
-    text-align: right;
-}
-
-.publication, .patent, .activity, .grant {
-    margin-bottom: 1rem;
-}
-
-.authors {
-    margin-bottom: 0.25rem;
+    font-weight: var(--default-weight);
 }
 
 .author-self {
@@ -175,28 +117,49 @@ section {
 blockquote {
     background-color: var(--highlight-bg);
     border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
-    margin: 0.5rem 0 2em 0;
+    padding: 0.7rem 1rem;
+    margin: 0.5rem 0 1.5rem 0;
     text-align: justify;
 }
 
-blockquote strong {
-    color: var(--primary-color);
+.level1 blockquote {
+    margin-bottom: 0.5rem;
+}
+
+blockquote p {
+    margin: 0;
 }
 
 @media print {
+    :root {
+        --default-weight: 500;
+    }
+
+    @page {
+        size: A4;
+        margin: 1.5cm 2cm 1cm;
+    }
+
+    html {
+        font-size: 9pt;
+        font-weight: var(--default-weight);
+    }
+
     body {
-        font-size: 11pt;
         padding: 0;
         max-width: none;
+        margin: 0;
     }
 
-    a {
-        text-decoration: none;
+    h1, h2 {
+        page-break-after: avoid;
+        break-after: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
     }
 
-    .paper-highlight, .intro-box {
-        background-color: transparent;
-        border: 1px solid #ddd;
+    section.level3, blockquote {
+        page-break-inside: avoid;
+        break-inside: avoid;
     }
 }

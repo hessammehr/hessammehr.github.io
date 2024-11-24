@@ -25,168 +25,142 @@ GitHub: [hessammehr](https://github.com/hessammehr) / [MehrResearch](https://git
 </div>
 </div>
 
-<div class="intro-box">
-I lead an interdisciplinary research group with the aim of reimagining the fundamental building blocks of practical chemistry — reagents, media, and energy — to devise new paradigms for chemical synthesis and discovery. We draw on a broad toolbox of ideas and techniques spanning synthetic chemistry, computer science and programming languages, signal processing and statistics, and aerosol science.
-</div>
+> **Chemistry–Information–Discovery:** I lead an interdisciplinary research group re-visiting the fundamental building blocks of practical chemistry — reagents, reaction media, and energy — in the context of pervasive automation, bespoke experimental hardware and analytics, and massive expansion in computational power, with the aim of devising new paradigms for chemical synthesis and discovery.
 
 ## Employment
 
-<div class="position">
-<span class="position-title">Leverhulme Early Career Fellow</span>
-<span class="institution-date">University of Glasgow, UK | 2022–2025</span>
-</div>
+### Leverhulme Early Career Fellow <span> University of Glasgow, UK | 2022–2025 </span>
+My fellowship aims to leverage automation and computational modelling to radically expand the gamut of interpretable experimental regimes in chemistry, with chemistry in aerosols as a first paradigm. I have created a modular, digitally controlled aerosol reactor — the first of its kind — and championed its adoption as a medium for chemical synthesis and discovery. Applications ranging from materials chemistry to antimicrobial discovery are being pursued within my group and via collaborations.
 
-In my fellowship I have created a modular, digitally controlled aerosol reactor — the first of its kind — and championed its adoption as a mainstream medium for chemical synthesis and discovery. Applications ranging from materials chemistry to antimicrobial discovery are being pursued within my group and via collaborators.
+### Post-doctoral Researcher <span> Cronin Group, University of Glasgow, UK | 2018–2022 </span>
+Focus areas include (i) the digitisation of synthetic chemistry, leading to [two](#chempu) [Science papers](#xdl) and commercialisation via a [patent](#patent-chemputer) that now underpins [a £40M spin-out company, Chemify Ltd]; (ii) introducing Bayesian probability as a tool to automate the interpretation of chemistry experiments leading to.
 
-<div class="position">
-<span class="position-title">Post-doctoral Researcher</span>
-<span class="institution-date">Cronin Group, University of Glasgow, UK | 2018–2022</span>
-</div>
-
-Focal points include (i) the digitisation of synthetic chemistry, leading to [two](#chempu){.link-publication} [Science papers](#xdl){.link-publication} and commercialisation via a patent that now underpins [a £40M spin-out company, Chemify Ltd]{.link-commercial}; (ii) introducing Bayesian probability as a tool to automate the interpretation of chemistry experiments leading to.
-
-<div class="position">
-<span class="position-title">Specialist</span>
-<span class="institution-date">Health Canada, Canada | 2017–2018</span>
-</div>
-
-I devised a system combining signal processing algorithms with probability theory to automate the quantitative analysis of complex forensic drug samples. Alongside continued development at Health Canada and nationwide deployment, the underlying technical innovations were [published](#nmr){.link-publication} in a special issue of *Mag. Reson. Chem.*
+### NMR Specialist <span> Health Canada, Canada | 2017–2018</span>
+I devised a system combining signal processing algorithms with probability theory to automate the quantitative analysis of complex forensic drug samples. Alongside continued development at Health Canada and nationwide deployment, the underlying technical innovations were [published](#nmr) in a special issue of *Mag. Reson. Chem.*
 
 ## Education
 
-<div class="position">
-<span class="position-title">PhD – Chemistry</span>
-<span class="institution-date">University of British Columbia, Canada | 2012–2017</span>
-</div>
+### PhD – Chemistry <span> University of British Columbia, Canada | 2012–2017 </span>
+From doped silicon to superconductors, the ability to fine-tune materials' electronic structure has transformed the landscape of possible material properties. Translating this idea to the field of organic chemistry, I demonstrated how the interplay of molecular shape and electron delocalisation can modulate and even defy properties like aromaticity.
 
-From doped silicon to superconductors, control of electronic structure has transformed the landscape of possible material properties. Translating this idea to the field of organic chemistry, I demonstrated how the interplay of molecular shape and electron delocalisation can modulate and even defy properties like aromaticity and bond lability.
-
-<div class="position">
-<span class="position-title">BSc – Electrical Engineering</span>
-<span class="institution-date">Sharif University of Technology, Iran | 2005–2009</span>
-</div>
-
-Focus areas: Digital signal processing
+### BSc – Electrical Engineering <span> Sharif University of Technology, Iran | 2005–2009 </span>
+Focus areas: Digital signal processing, photonic crystals.
 
 ## Outputs
 
-Highlights among **~35 primary research** papers (**h-index: 13**; full list available on [ORCiD](https://orcid.org/0000-0001-7710-3102){.link-standard} & [Scholar](https://scholar.google.com/citations?user=HeyhCHEAAAAJ){.link-standard})
+Highlights among **35 primary research** papers (**h-index: 13**; full list available on [ORCiD](https://orcid.org/0000-0001-7710-3102) & [Scholar](https://scholar.google.com/citations?user=HeyhCHEAAAAJ))
 
 ### In situ synthesis within micron-sized soft chemical reactors created via programmable aerosol chemistry
-Zhang, L.; <span class="author-self">Mehr, S. H. M.</span>  
-*Digital Discovery*, **2024** ([10.1039/D4DD00139G](https://doi.org/10.1039/D4DD00139G){.link-publication})
+Zhang, L.; [Mehr, S. H. M.]{.underline}  
+*Digital Discovery*, **2024** ([10.1039/D4DD00139G](https://doi.org/10.1039/D4DD00139G)) Selected for display on front cover of December 2024 issue.
 
 > **Hydrogel microdroplets as next-generation reactors:** Chemical synthesis in microdroplets can accelerate reactions and enable unique reaction pathways, but existing methods provide limited control over droplet composition and environmental conditions. Using programmable aerosol chemistry, we developed a platform for creating chemically distinct microdroplet populations and demonstrated its utility through the synthesis of metal-organic frameworks.
 
-### Investigating and Quantifying Molecular Complexity Using Assembly Theory and Spectroscopy
-Jirasek, M.; Sharma, A.; Bame, J.; <span class="author-self">Mehr, S. H. M.</span>, et al.  
-*ACS Cent. Sci.*, **2024** ([10.1021/acscentsci.4c00120](https://doi.org/10.1021/acscentsci.4c00120){.link-publication})
+### Reaction blueprints and logical control flow for parallelized chiral synthesis in the Chemputer
+Šiaučiulis, M.; Knittl-Frank, C.; [Mehr, S. H. M]{.underline}; Clarke, E.; Cronin, L.
+*Nat. Chem.*, **2024**, *in press*
 
-> Tandem mass spectrometry is a formidable tool for analysing complex mixtures of unknown compounds, e.g. exoplanet samples, but pinpointing compounds of interest without extrapolating from currently known species remains a challenge. My contribution to this paper, the *recursive molecular assembly* (RecursiveMA) algorithm, searches tandem MS dataset for evidence of shared molecular building blocks to differentiate complex molecules from those that are simply large.
+> **Evolving a chemical programming language:** Early means of programming robotic modules for chemical synthesis have proven their immense research and industrial promise, but lack the fundamental constructs — re-usable reactions, parallel synthesis, and a higher-level representation of reagents and hardware — needed to tackle more ambitious synthetic challenges. This paper demonstrates first-class implementation of these constructs in the χDL 2.0 language whilst maintaining compatibility with the existing repertoire of procedures digitised via χDL 1.0.
+
+### Investigating and Quantifying Molecular Complexity Using Assembly Theory and Spectroscopy
+Jirasek, M.; Sharma, A.; Bame, J.; [Mehr, S. H. M.]{.underline}, et al.  
+*ACS Cent. Sci.*, **2024** ([10.1021/acscentsci.4c00120](https://doi.org/10.1021/acscentsci.4c00120))
+
+> Tandem mass spectrometry is a formidable tool for analysing complex mixtures of unknown compounds, e.g. exoplanet samples, but pinpointing compounds of interest without extrapolating from currently known species remains a challenge. My contribution to this paper, the *recursive molecular assembly* ([RecursiveMA](https://github.com/hessammehr/recursiveMA)) algorithm, searches tandem MS dataset for evidence of shared molecular building blocks to differentiate complex molecules from those that are simply large.
 
 ### Digitizing chemical discovery with a Bayesian explorer for interpreting reactivity data
-<span class="author-self">Mehr, S. H. M.</span>; Caramelli, D.; Cronin, L.  
-*PNAS*, **2023** ([10.1073/pnas.2220045120](https://doi.org/10.1073/pnas.2220045120){.link-publication})
+[Mehr, S. H. M.]{.underline}; Caramelli, D.; Cronin, L.  
+*PNAS*, **2023** ([10.1073/pnas.2220045120](https://doi.org/10.1073/pnas.2220045120))
 
 > **A fresh take on AI in chemistry:** The applications of AI in chemistry are proliferating, yet instead of empowering expert chemists to undertake larger-scale experiments, most efforts supplant the chemist with data-hungry and opaque models. Bridging Bayesian probability and chemistry, we built a system that encodes and formalises chemists' intuition into a probabilistic model working in tandem with a robotic chemistry platform to explore large experimental spaces and plan
 
 ### Automated Qualitative and Quantitative Analysis of Complex Forensic Drug Samples using ¹H NMR
-<span class="author-self">Mehr, S. H. M.</span>; Tang, A. W.; Laing, R. R.  
-*Magn. Reson. Chem.*, **2023** ([10.1002/mrc.5265](https://doi.org/10.1002/mrc.5265){.link-publication})
+[Mehr, S. H. M.]{.underline}; Tang, A. W.; Laing, R. R.  
+*Magn. Reson. Chem.*, **2023** ([10.1002/mrc.5265](https://doi.org/10.1002/mrc.5265))
 
 > **Digital signal processing and statistics to counter drug epidemics:** Developing bespoke analytical protocols for drug detection is resource intensive and time consuming, incompatible with the challenge of tackling rapidly emerging drug epidemics, such as the fentanyl crisis. At Health Canada, we demonstrated an automated <sup>1</sup>H NMR-based pipeline, based on advanced signal processing techniques and statistical inference, that can be applied to new analytes and sample types with little adaptation or method development.
 
-### Digitization and validation of a chemical synthesis literature database in the ChemPU
-Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; <span class="author-self">Mehr, S. H. M.</span>; et al.  
-*Science*, **2022** ([10.1126/science.abo0058](https://doi.org/10.1126/science.abo0058){.link-publication})
+### Digitization and validation of a chemical synthesis literature database in the ChemPU{#chempu}
+Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; [Mehr, S. H. M.]{.underline}; et al.  
+*Science*, **2022** ([10.1126/science.abo0058](https://doi.org/10.1126/science.abo0058))
 
 > **On-demand digital synthesis:** Just as the digitisation of music led to on-demand streaming services, we demonstrate how digitization of the chemical literature enables an automated synthesis platform to directly execute published procedures without human intervention. The work highlights the power of abstract chemical description languages in separating procedure specification from hardware-specific implementation details.
 
-### A universal system for digitization and automatic execution of the chemical synthesis literature
-<span class="author-self">Mehr, S. H. M.</span>; Craven, M.; Leonov, A. I.; Keenan, G.; Cronin, L.  
-*Science*, **2020** ([10.1126/science.abc2986](https://doi.org/10.1126/science.abc2986){.link-publication})
+### A universal system for digitization and automatic execution of the chemical synthesis literature{#xdl}
+[Mehr, S. H. M.]{.underline}; Craven, M.; Leonov, A. I.; Keenan, G.; Cronin, L.  
+*Science*, **2020** ([10.1126/science.abc2986](https://doi.org/10.1126/science.abc2986))
 
 > **Hardware-independent synthesis automation:** Digitising synthesis requires in-depth knowledge of vendor specific programming interfaces and lengthy development to adapt literature protocols to robotic execution. Our high-level hardware-independent chemical programming language XDL formalises the chemical literature's universal method for describing synthesis procedures in prose and translates these descriptions to robot-ready instructions.
 
 ### Stabilization of a Strained Heteroradialene by Peripheral Electron Delocalization
-<span class="author-self">Mehr, S. H. M.</span>; Patrick, B. O.; MacLachlan, M. J.  
-*Org. Lett.*, **2016** ([10.1021/acs.orglett.6b00577](https://doi.org/10.1021/acs.orglett.6b00577){.link-publication})
+[Mehr, S. H. M.]{.underline}; Patrick, B. O.; MacLachlan, M. J.  
+*Org. Lett.*, **2016** ([10.1021/acs.orglett.6b00577](https://doi.org/10.1021/acs.orglett.6b00577))
 
 > **Aromaticity challenged:** Electronic structure effects in organic chemistry are traditionally understood as limited to immediately adjacent atoms or through-bond conjugation. Here we show that multi-centre electron delocalisation over a molecular framework can override such local effects, opening doors to molecules with unusual bonding and electronic properties.
 
 ## Patents
 
-<div class="patent">
-<div class="patent-title">Automated chemical synthesis platform</div>
-<div class="authors">Cronin, L.; <span class="author-self">Mehr, H.</span>; Craven, M.; Leonov, A. I.</div>
-<div class="citation">
-GB Patent, [WO2021219999 (A1)](https://worldwide.espacenet.com/publicationDetails/biblio?FT=D&date=20211104&DB=EPODOC&locale=en_EP&CC=WO&NR=2021219999A1&KC=A1&ND=5){.link-publication}, **2021**  
-US Patent, App. [17/922,240](https://patents.google.com/patent/US20230173450A1/en){.link-publication}, **2023**
-</div>
-</div>
+### Automated chemical synthesis platform <span>GB, [WO2021219999 (A1)](https://worldwide.espacenet.com/publicationDetails/biblio?FT=D&date=20211104&DB=EPODOC&locale=en_EP&CC=WO&NR=2021219999A1&KC=A1&ND=5), **2021**; US [17/922,240](https://patents.google.com/patent/US20230173450A1/en), **2023**</span>{#patent-chemputer}
+Cronin, L.; <span class="author-self">Mehr, H.</span>; Craven, M.; Leonov, A. I.
 
-## Grants and funding
+## Grants and awards
 
-<div class="grant">
-<span class="grant-title">Research Excellence Award (£10k)</span>
-<span class="grant-institution">University of Glasgow | 2024</span>
-</div>
+### Digital Discovery Emerging Investigator <span>RSC Digital Discovery Journal | 2025</span>
+Nominated as an Digital Discovery Emerging Investigator: "an up-and-coming researcher making a significant contribution to accelerated science using machine learning, robotics, AI or quantum computing". Invited to contribute to forthcoming themed collection.
 
-<div class="grant">
-<span class="grant-title">Research Workshop Grant: ["Sound Chemistry"](#sound-chem){.link-outreach} (£7k)</span>
-<span class="grant-institution">Royal Society of Edinburgh | 2023–2024</span>
-</div>
+### Early-Career Research Excellence Award (£10k) <span>University of Glasgow | 2024</span>
 
-<div class="grant">
-<span class="grant-title">Research Enablement Grant (£10k)</span>
-<span class="grant-institution">Royal Society of Chemistry | 2023–2024</span>
-</div>
+### Research Workshop Grant: Sound Chemistry (£7k) <span>Royal Society of Edinburgh | 2023–2024</span>
+With RSEd's support, I organised the [first workshop](#sound-chemistry) dedicated to the novel  strategies for creating compartments and containers to enable future chemistry.
+
+### Research Enablement Grant (£10k) <span>Royal Society of Chemistry | 2023–2024</span>
+Via this grant, we explored the applications of acoustic fields to generating contact-free chemical reactors, fostering collaboration with leading European groups in Bristol, Pamplona, and Helsinki.
+
+### Lord Kelvin / Adam Smith Leadership Fellowship (£100k) <span>University of Glasgow | 2022–2025</span>
+UofG's flagship *Lord Kelvin / Adam Smith* (LKAS) Fellowship Scheme — established to support outstanding early-career researchers on the trajectory to becoming leaders in their field.
+
+### Leverhulme Early Career Fellowship (£300k)
+<span>Leverhulme Trust | 2022–2025</span>
+
+### Early Career Award
+<span> ScotCHEM | 2021</span>
+
+### ASPIRE Challenge Awards
+<span>NIH National Center for Advancing Translational Science | 2019</span>
 
 ## Leadership, outreach and civic engagement
 
-<div class="activity">
-<div class="activity-header">
-<span class="activity-title">[University of Glasgow Shadow Board](https://www.gla.ac.uk/myglasgow/staff/shadowboard/){.link-outreach}</span>
-<span class="activity-role-date">Leadership | 2022–2025</span>
-</div>
+### [University of Glasgow Shadow Board](https://www.gla.ac.uk/myglasgow/staff/shadowboard/) <span>Leadership | 2022–2025</span>
 
-Contributing to the board's mission of being a critical friend to senior university management. Representing early career researchers in furthering; recruited; widening diversity within board; advocating for early career researchers and international members of the institution.
-</div>
+Contributing to the board’s mission of being a "critical friend" to senior UofG management. I advocated for specific concerns of early-career researchers and initiated the conversation within the board about widening recruitment to under-represented groups in the University.
 
-<div class="activity">
-<div class="activity-header">
-<span class="activity-title">[Hack the ARC](https://www.gla.ac.uk/research/arc/researchersandstaff/hackthearc/thehackersarc/){.link-outreach} & ARC MakerSpace</span>
-<span class="activity-role-date">Public engagement | 2024</span>
-</div>
+### [Nuffield Research Placements](https://www.nuffieldresearchplacements.org/) <span> Mentorship & public engagement | 2023–2024 </span>
+
+### [Hack the ARC & ARC MakerSpace](https://www.gla.ac.uk/research/arc/researchersandstaff/hackthearc/thehackersarc/) <span>Public engagement | 2024</span>
 
 Used a £2,500 grant from UofG ARC to curate a series of pop-up hacker/maker stations. The versatility of these stations — covering drag-and-drop programming of embedded microcontroller board, prototyping tools and electronic circuits — combines with larger investment in ARC maker tools to enable a wide range of researcher-led outreach activities.
-</div>
 
-<div class="activity" id="sound-chem">
-<div class="activity-header">
-<span class="activity-title">[Sound Chemistry](https://sound-chemistry.science/){.link-outreach}</span>
-<span class="activity-role-date">Workshop | 2024</span>
-</div>
+### [Sound Chemistry](https://sound-chemistry.science/) <span>Workshop | 2024</span>{#sound-chemistry}
 
-Raised funding for and organised a workshop that brought together four European institutions leading new techniques for confinement of matter (Heidelberg, Pamplona, Bristol, Cardiff) with the central question of whether future chemical reactions could be contained and manipulated using software, e.g. via acoustic fields, rather than glassware.
-</div>
+Conceived and organised a workshop bringing together four European institutions (Heidelberg, Navarre, Bristol, Cardiff) at the forefront of new techniques for confinement of matter, with the central question of whether future chemical reactions could be contained and manipulated using software, e.g. via acoustic fields, rather than glassware.
 
-<div class="activity">
-<div class="activity-header">
-<span class="activity-title">[Digital chemistry for digital natives](https://0101chem.science/){.link-outreach}</span>
-<span class="activity-role-date">Outreach | 2021</span>
-</div>
+### [Digital chemistry for digital natives](https://0101chem.science/) <span> Outreach | 2021 </span>
 
-This RSC-supported workshop series introduced Glasgow high schoolers to cutting-edge advances in digital chemistry, culminating in a hands-on session on building a sub-£20 titrator robot [featured in the micro:bit LIVE conference](https://www.youtube.com/watch?v=LdGD7-9-e5A){.link-outreach}.
-</div>
+This RSC Outreach Grant-supported workshop series introduced Glasgow high schoolers to cutting-edge advances in digital chemistry, ending with in a practical session on building a sub-£20 titrator robot. My work was [featured in the micro:bit LIVE conference](https://www.youtube.com/watch?v=LdGD7-9-e5A).
 
-## Teaching and supervision
+## Teaching
 
-<div class="activity">
-<div class="activity-header">
-<span class="activity-title">Chemical Studies</span>
-<span class="activity-role-date">Mentorship & hands-on workshop organisation | 2024</span>
-</div>
+### Chemical Studies <span> Leadership, mentorship & hands-on workshop implementation | 2023–25 </span>
 
-Chemical Studies is a UofG Chemistry initiative aimed at offering the full spectrum of skills and challenges to chemistry undergraduates normally excluded from higher level and laboratory courses. Small groups of student are paired with a mentor guiding them through the formulation of a research question, followed by 3–4 intensive lab sessions.
-</div>
+Chemical Studies is a UofG Chemistry initiative aimed at distilling the spectrum of skills and experience chemistry undergraduate in a format tailored to normally excluded from . As a co-organiser of this innovative programme for the past two years, I mentored small groups of student through the formulation of a research question; guiding them towards a tractable laboratory implementation, followed by 4 intensive lab sessions culminating in a group dissertation and poster.
+
+### Chemistry 2&3 <span> Tutorials| 2022–25 </span>
+
+### Science Fundamentals (Y1) <span> Lectures and revision tutorials| 2022–25 </span>
+
+## Supervision
+**Current:** 3 PhD students (including one jointly supervised with Computer Science); 1 MSc student; 1 research intern.
+
+**Past:** 2 MSc students; 5 Advanced Functional Materials PGT students; 1 Chemical Biology PGT student; 1 international post-graduate visiting student; 2 international exchange students; 2 interns.
+
+**Examination:** Examiner on 12 viva exams so far.
