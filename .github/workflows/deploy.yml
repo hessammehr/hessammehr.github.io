@@ -51,7 +51,7 @@ jobs:
 
       - name: Convert CV markdown to HTML
         run: |
-          pandoc -s CV.md -o CV.html
+          pandoc --section-divs -s CV.md -o CV.html
 
       - name: Convert blog index to HTML
         run: |

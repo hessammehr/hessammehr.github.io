@@ -81,7 +81,7 @@ Mehr, S. H. M.; Caramelli, D., Cronin, L. _PNAS_, **2023**, _120_
 - [Role of Entropy and Autosolvation in Dimerization and Complexation of C<sub>60</sub> by Zn<sub>7</sub> Metallocavitands][10.1021/ic202049t] <br/> Frischmann, P. D.; Mehr, S. H. M.; Patrick, B. O.; Lelj, F.; MacLachlan, M. J. _Inorg. Chem._ **2012**, _51_, 3443–3453
 
 <!-- [CV]: https://hessammehr.github.io/CV.html -->
-[CV]: https://drive.google.com/u/0/uc?id=16xHJQQshijyGfEfSn_kpNxpLe9xHZPfx
+[CV]: CV.html
 [CV PDF]: https://drive.google.com/u/0/uc?id=16xHJQQshijyGfEfSn_kpNxpLe9xHZPfx
 [Blog]: https://hessammehr.github.io/blog
 [GitHub]: https://github.com/hessammehr
