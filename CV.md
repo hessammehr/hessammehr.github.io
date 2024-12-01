@@ -33,7 +33,7 @@ GitHub: [hessammehr][github] / [MehrResearch][group-github]
 My fellowship aims to leverage automation and computational modelling to radically expand the gamut of interpretable experimental regimes in chemistry, with chemistry in aerosols as a first paradigm. I have created a modular, digitally controlled aerosol reactor — the first of its kind — and championed its adoption as a medium for chemical synthesis and discovery. Applications ranging from materials chemistry to antimicrobial discovery are being pursued within my group and via collaborations.
 
 ### Post-doctoral Researcher <span> Cronin Group, University of Glasgow, UK | 2018–2022 </span>
-Focus areas include (i) the digitisation of synthetic chemistry, leading to [two](#chempu) [Science papers](#xdl) and commercialisation via a [patent](#patent-chemputer) that now underpins a £40M spin-out company, Chemify Ltd; (ii) introducing Bayesian probability as a tool to automate the interpretation of chemistry experiments leading to.
+Focus areas include (i) the digitisation of synthetic chemistry, leading to [two](#chempu) [Science papers](#xdl) and commercialisation via a [patent](#patent-chemputer) that now underpins a £40M spin-out company; and (ii) algorithmic discovery of new reactivity via automated platforms integrating online analytical instruments.
 
 ### NMR Specialist <span> Health Canada, Canada | 2017–2018</span>
 I devised a system combining signal processing algorithms with probability theory to automate the quantitative analysis of complex forensic drug samples. Alongside continued development at Health Canada and nationwide deployment, the underlying technical innovations were [published](#nmr) in a special issue of *Mag. Reson. Chem.*
@@ -96,7 +96,7 @@ Jirasek, M.; Sharma, A.; Bame, J.; [Mehr, S. H. M.]{.underline}, et al.
 Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; [Mehr, S. H. M.]{.underline}; et al.  
 *Science*, **2022** ([10.1126/science.abo0058](https://doi.org/10.1126/science.abo0058))
 
-> **On-demand digital synthesis:** Just as the digitisation of music led to on-demand streaming services, we demonstrate how digitization of the chemical literature enables an automated synthesis platform to directly execute published procedures without human intervention. The work highlights the power of abstract chemical description languages in separating procedure specification from hardware-specific implementation details.
+<!-- > **On-demand digital synthesis:** Just as the digitisation of music led to on-demand streaming services, we demonstrate how digitization of the chemical literature enables an automated synthesis platform to directly execute published procedures without human intervention. The work highlights the power of abstract chemical description languages in separating procedure specification from hardware-specific implementation details. -->
 
 ### A universal system for digitization and automatic execution of the chemical synthesis literature{#xdl}
 [Mehr, S. H. M.]{.underline}; Craven, M.; Leonov, A. I.; Keenan, G.; Cronin, L.  
