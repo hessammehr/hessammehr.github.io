@@ -25,7 +25,7 @@ GitHub: [hessammehr][github] / [MehrResearch][group-github]
 </div>
 </div>
 
-> **Chemistry–Information–Discovery:** I lead an interdisciplinary research group re-visiting the fundamental building blocks of practical chemistry — reagents, reaction media, and energy — in the context of pervasive automation, bespoke experimental hardware and analytics, and massive expansion in computational power, with the aim of devising new paradigms for chemical synthesis and discovery.
+> **Chemistry–Information–Discovery:** I lead an interdisciplinary research group re-visiting the fundamental building blocks of practical chemistry — reagents, reaction media, and energy — predicated on automation and programmable chemistry; bespoke experimental hardware and analytics; and massive expansion in computational power, with the aim of devising new paradigms for chemical synthesis and discovery.
 
 ## Employment
 
@@ -33,7 +33,7 @@ GitHub: [hessammehr][github] / [MehrResearch][group-github]
 My fellowship aims to leverage automation and computational modelling to radically expand the gamut of interpretable experimental regimes in chemistry, with chemistry in aerosols as a first paradigm. I have created a modular, digitally controlled aerosol reactor — the first of its kind — and championed its adoption as a medium for chemical synthesis and discovery. Applications ranging from materials chemistry to antimicrobial discovery are being pursued within my group and via collaborations.
 
 ### Post-doctoral Researcher <span> Cronin Group, University of Glasgow, UK | 2018–2022 </span>
-Focus areas include (i) the digitisation of synthetic chemistry, leading to [two](#chempu) [Science papers](#xdl) and commercialisation via a [patent](#patent-chemputer) that now underpins [a £40M spin-out company, Chemify Ltd]; (ii) introducing Bayesian probability as a tool to automate the interpretation of chemistry experiments leading to.
+Focus areas include (i) the digitisation of synthetic chemistry, leading to [two](#chempu) [Science papers](#xdl) and commercialisation via a [patent](#patent-chemputer) that now underpins a £40M spin-out company, Chemify Ltd; (ii) introducing Bayesian probability as a tool to automate the interpretation of chemistry experiments leading to.
 
 ### NMR Specialist <span> Health Canada, Canada | 2017–2018</span>
 I devised a system combining signal processing algorithms with probability theory to automate the quantitative analysis of complex forensic drug samples. Alongside continued development at Health Canada and nationwide deployment, the underlying technical innovations were [published](#nmr) in a special issue of *Mag. Reson. Chem.*
@@ -50,17 +50,26 @@ Focus areas: Digital signal processing, photonic crystals.
 
 Highlights among **35 primary research** papers (**h-index: 13**; full list available on [ORCiD] & [Google Scholar])
 
+
 ### In situ synthesis within micron-sized soft chemical reactors created via programmable aerosol chemistry
 Zhang, L.; [Mehr, S. H. M.]{.underline}  
 *Digital Discovery*, **2024** ([10.1039/D4DD00139G](https://doi.org/10.1039/D4DD00139G)) Selected for display on front cover of December 2024 issue.
 
 > **Aerosol-generated hydrogel microdroplets as miniature self-assembled reactors:** Hydrogel matrices hold promise as a locus for inhomogeneous chemistry, especially in the micron range, where reactants and products can be transported via diffusion. In this work, we generated reactive microdroplets of sodium alginate which, upon contact with and cross-linking with a reagent-loaded solution of calcium ions, acted as hydrogel containers for subsequent *in situ* reactivity within them.
 
+### Constructing the Molecular Tree of Life using Assembly Theory and Mass Spectrometry
+Kahana, A.; MacLeod, A.; [Mehr, S. H. M.]{.underline}, Sharma, A. et al.  
+*Under review* ([preprint](https://doi.org/10.48550/arXiv.2408.09305))
+
 ### Reaction blueprints and logical control flow for parallelized chiral synthesis in the Chemputer
 Šiaučiulis, M.; Knittl-Frank, C.; [Mehr, S. H. M]{.underline}; Clarke, E.; Cronin, L.
-*Nat. Chem.*, **2024**, *in press*
+*Nat. Chem.*, **2024**, 
 
-> **Evolving a chemical programming language:** Early means of programming robotic modules for chemical synthesis show immense promise for deployment in research and industrial labs, but lack the fundamental constructs — re-usable reactions, parallel synthesis, and a higher-level representation of reagents and hardware — needed to tackle more ambitious synthetic challenges. This paper demonstrates first-class implementation of these constructs in the χDL 2.0 language whilst maintaining compatibility with the existing repertoire of procedures digitised via χDL 1.0.
+> Early means of programming robotic modules for chemical synthesis show immense promise for deployment in research and industrial labs, but lack the fundamental constructs — re-usable reactions, parallel synthesis, and a higher-level representation of reagents and hardware — needed to tackle more ambitious synthetic challenges. I designed a first-class implementation of these constructs in the χDL 2.0 language whilst maintaining compatibility with the existing repertoire of procedures digitised via χDL 1.0.
+
+### Operational considerations for approximating Molecular Assembly by Fourier transform mass spectrometry
+Weiss, G. M.; Asche, S.; Mclain, H.; Chung, A. H.; [Mehr, S. H. M.]{.underline}; Cronin, L.; Graham, H.  
+*Frontiers in Astronomy and Earth Sciences*, **2024** ([10.3389/fspas.2024.1485483](https://doi.org/10.3389/fspas.2024.1485483))
 
 ### Investigating and Quantifying Molecular Complexity Using Assembly Theory and Spectroscopy
 Jirasek, M.; Sharma, A.; Bame, J.; [Mehr, S. H. M.]{.underline}, et al.  
@@ -78,7 +87,7 @@ Jirasek, M.; Sharma, A.; Bame, J.; [Mehr, S. H. M.]{.underline}, et al.
 [Mehr, S. H. M.]{.underline}; Tang, A. W.; Laing, R. R.  
 *Magn. Reson. Chem.*, **2023** ([10.1002/mrc.5265](https://doi.org/10.1002/mrc.5265))
 
-> **Digital signal processing and statistics to counter drug epidemics:** Developing bespoke analytical protocols for drug detection is resource intensive and time consuming, incompatible with the challenge of tackling rapidly emerging drug epidemics, such as the fentanyl crisis. At Health Canada, we demonstrated an automated <sup>1</sup>H NMR-based pipeline, based on advanced signal processing techniques and statistical inference, that can be applied to new analytes and sample types with little adaptation or method development.
+> **Digital signal processing and statistics to counter drug epidemics:** Developing bespoke analytical protocols for drug detection is resource intensive and time consuming, incompatible with tackling rapidly emerging crises, such as the fentanyl epidemic. At Health Canada, we demonstrated an automated <sup>1</sup>H NMR-based pipeline, based on advanced signal processing techniques and statistical inference, that can be applied to new analytes and sample types with little adaptation or method development.
 
 ### Digitization and validation of a chemical synthesis literature database in the ChemPU{#chempu}
 Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; [Mehr, S. H. M.]{.underline}; et al.  
@@ -122,7 +131,7 @@ Cronin, L.; <span class="author-self">Mehr, H.</span>; Craven, M.; Leonov, A. I.
 ## Grants and awards
 
 ### Digital Discovery Emerging Investigator <span>RSC Digital Discovery Journal | 2025</span>
-Nominated as an Digital Discovery Emerging Investigator: "an up-and-coming researcher making a significant contribution to accelerated science using machine learning, robotics, AI or quantum computing". Invited to contribute to forthcoming themed collection.
+Nominated as a Digital Discovery Emerging Investigator: "an up-and-coming researcher making a significant contribution to accelerated science using machine learning, robotics, AI or quantum computing". Invited to contribute to forthcoming themed collection.
 
 ### Early-Career Research Excellence Award (£10k) <span>University of Glasgow | 2024</span>
 
@@ -135,14 +144,12 @@ Via this grant, we explored the applications of acoustic fields to generating co
 ### Lord Kelvin / Adam Smith Leadership Fellowship (£100k) <span>University of Glasgow | 2022–2025</span>
 UofG's flagship *Lord Kelvin / Adam Smith* (LKAS) Fellowship Scheme — established to support outstanding early-career researchers on the trajectory to becoming leaders in their field.
 
-### Leverhulme Early Career Fellowship (£300k)
-<span>Leverhulme Trust | 2022–2025</span>
+### Leverhulme Early Career Fellowship (£300k) <span>Leverhulme Trust | 2022–2025</span>
+My proposal *"Investigating the dark reactions present in chemical space"* focused on automated discovery of reactions remaining unknown due to inherent bias in current experimental technique. 
 
-### Early Career Award
-<span> ScotCHEM | 2021</span>
+### Early Career Award <span> ScotCHEM | 2021</span>
 
-### ASPIRE Challenge Awards
-<span>NIH National Center for Advancing Translational Science | 2019</span>
+### ASPIRE Challenge Awards <span>NIH National Center for Advancing Translational Science | 2019</span>
 
 ## Leadership, outreach and civic engagement
 
@@ -151,6 +158,7 @@ UofG's flagship *Lord Kelvin / Adam Smith* (LKAS) Fellowship Scheme — establis
 Contributing to the board’s mission of being a "critical friend" to senior UofG management. I advocated for specific concerns of early-career researchers and initiated the conversation within the board about widening recruitment to under-represented groups in the University.
 
 ### [Nuffield Research Placements] <span> Mentorship & public engagement | 2023–2024 </span>
+Widening participation summer research placements for high school students.
 
 ### [Hack the ARC & ARC MakerSpace][Hack the ARC] <span>Public engagement | 2024</span>
 
@@ -170,16 +178,17 @@ This RSC Outreach Grant-supported workshop series introduced Glasgow high school
 
 Chemical Studies is a UofG Chemistry initiative aimed at distilling the spectrum of skills and experience chemistry undergraduate in a format tailored to normally excluded from . As a co-organiser of this innovative programme for the past two years, I mentored small groups of student through the formulation of a research question; guiding them towards a tractable laboratory implementation, followed by 4 intensive lab sessions culminating in a group dissertation and poster.
 
-### Chemistry 2&3 <span> Tutorials| 2022–25 </span>
+### Year 2&3 MChem <span> Tutorials| 2022–25 </span>
+
 
 ### Science Fundamentals (Y1) <span> Lectures and revision tutorials| 2022–25 </span>
 
 ## Supervision
-**Current:** 3 PhD students (including one jointly supervised with Computer Science); 1 MSc student; 1 research intern.
+**Current:** **3** PhD students (including one jointly supervised with Computer Science); **1** MSc student; **1** research intern.
 
-**Past:** 2 MSc students; 5 Advanced Functional Materials PGT students; 1 Chemical Biology PGT student; 1 international post-graduate visiting student; 2 international exchange students; 2 interns.
+**Past:** **2** MSc students; **5** Advanced Functional Materials PGT students; **1** Chemical Biology PGT student; **1** international post-graduate visiting student; **2** international exchange students; **2** interns.
 
-**Examination:** Examiner on 12 viva exams so far.
+**Examination:** Examiner on **12** viva exams so far.
 
 
 [Google Scholar]: https://scholar.google.com/citations?user=HeyhCHEAAAAJ
