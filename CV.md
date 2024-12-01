@@ -50,12 +50,15 @@ Focus areas: Digital signal processing, photonic crystals.
 
 Highlights among **35 primary research** papers (**h-index: 13**; full list available on [ORCiD] & [Google Scholar])
 
-
 ### In situ synthesis within micron-sized soft chemical reactors created via programmable aerosol chemistry
 Zhang, L.; [Mehr, S. H. M.]{.underline}  
 *Digital Discovery*, **2024** ([10.1039/D4DD00139G](https://doi.org/10.1039/D4DD00139G)) Selected for display on front cover of December 2024 issue.
 
 > **Aerosol-generated hydrogel microdroplets as miniature self-assembled reactors:** Hydrogel matrices hold promise as a locus for inhomogeneous chemistry, especially in the micron range, where reactants and products can be transported via diffusion. In this work, we generated reactive microdroplets of sodium alginate which, upon contact with and cross-linking with a reagent-loaded solution of calcium ions, acted as hydrogel containers for subsequent *in situ* reactivity within them.
+
+### CtrlAer: A MicroPython package and embedded domain specific language for real-time control of piezoelectric atomisers  
+[Mehr, S. H. M.]{.underline}  
+*Under review*, ([preprint](https://github.com/MehrResearch/ctrlaer/actions/runs/11989164325/artifacts/2228303412))
 
 ### Constructing the Molecular Tree of Life using Assembly Theory and Mass Spectrometry
 Kahana, A.; MacLeod, A.; [Mehr, S. H. M.]{.underline}, Sharma, A. et al.  
