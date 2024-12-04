@@ -25,7 +25,7 @@ GitHub: [hessammehr][github] / [MehrResearch][group-github]
 </div>
 </div>
 
-> **Chemistry–Information–Discovery:** I lead an interdisciplinary research group devising new paradigms for chemical synthesis and discovery predicated on automation and programmable chemistry; bespoke experimental hardware and analytics; and massive expansion in computational power.
+> **Chemistry–Information–Discovery:** I lead an interdisciplinary research group devising new paradigms for chemical synthesis and discovery predicated on automation and programmable chemistry; bespoke reaction media and experimental hardware; and massive expansion in computational power.
 
 ## Employment
 
