@@ -25,12 +25,12 @@ GitHub: [hessammehr][github] / [MehrResearch][group-github]
 </div>
 </div>
 
-> **Chemistry–Information–Discovery:** I lead an interdisciplinary research group re-visiting the fundamental building blocks of practical chemistry — reagents, reaction media, and energy — predicated on automation and programmable chemistry; bespoke experimental hardware and analytics; and massive expansion in computational power, with the aim of devising new paradigms for chemical synthesis and discovery.
+> **Chemistry–Information–Discovery:** I lead an interdisciplinary research group devising new paradigms for chemical synthesis and discovery predicated on automation and programmable chemistry; bespoke experimental hardware and analytics; and massive expansion in computational power.
 
 ## Employment
 
 ### Leverhulme Early Career Fellow <span> University of Glasgow, UK | 2022–2025 </span>
-My fellowship aims to leverage automation and computational modelling to radically expand the gamut of interpretable experimental regimes in chemistry, with chemistry in aerosols as a first paradigm. I have created a modular, digitally controlled aerosol reactor — the first of its kind — and championed its adoption as a medium for chemical synthesis and discovery. Applications ranging from materials chemistry to antimicrobial discovery are being pursued within my group and via collaborations.
+My fellowship leverages automation and computational modelling to radically expand the gamut of interpretable experimental regimes in chemistry, with chemistry in aerosols as a first paradigm. I have created a modular, digitally controlled aerosol reactor — the first of its kind — and championed its adoption as a medium for chemical synthesis and discovery. Applications ranging from materials chemistry to antimicrobial discovery are being pursued within my group and via collaborations.
 
 ### Post-doctoral Researcher <span> Cronin Group, University of Glasgow, UK | 2018–2022 </span>
 Focus areas include (i) the digitisation of synthetic chemistry, leading to [two](#chempu) [Science papers](#xdl) and commercialisation via a [patent](#patent-chemputer) that now underpins a £40M spin-out company; and (ii) algorithmic discovery of new reactivity via automated platforms integrating online analytical instruments.
@@ -50,62 +50,64 @@ Focus areas: Digital signal processing, photonic crystals.
 
 Highlights among **35 primary research** papers (**h-index: 13**; full list available on [ORCiD] & [Google Scholar])
 
+### Operational considerations for approximating Molecular Assembly by Fourier transform mass spectrometry
+Weiss, G. M.; Asche, S.; Mclain, H.; Chung, A. H.; [Mehr, S. H. M.]{.underline}; Cronin, L.; Graham, H.
+*Frontiers in Astronomy and Earth Sciences*, **2024** ([10.3389/fspas.2024.1485483](https://doi.org/10.3389/fspas.2024.1485483))
+
+> This NASA collaboration deploys my [RecursiveMA algorithm](#recursiveMA) in the context of finding evidence of extra-terrestrial life via tandem mass spectrometry.
+
 ### In situ synthesis within micron-sized soft chemical reactors created via programmable aerosol chemistry
-Zhang, L.; [Mehr, S. H. M.]{.underline}  
-*Digital Discovery*, **2024** ([10.1039/D4DD00139G](https://doi.org/10.1039/D4DD00139G)) Selected for display on front cover of December 2024 issue.
+Zhang, L.; [Mehr, S. H. M.]{.underline}
+*Digital Discovery*, **2024** ([10.1039/D4DD00139G](https://doi.org/10.1039/D4DD00139G))
 
-> **Aerosol-generated hydrogel microdroplets as miniature self-assembled reactors:** Hydrogel matrices hold promise as a locus for inhomogeneous chemistry, especially in the micron range, where reactants and products can be transported via diffusion. In this work, we generated reactive microdroplets of sodium alginate which, upon contact with and cross-linking with a reagent-loaded solution of calcium ions, acted as hydrogel containers for subsequent *in situ* reactivity within them.
+> **Aerosol-generated hydrogel microdroplets as miniature self-assembled reactors:** Hydrogel matrices hold promise as a locus for inhomogeneous chemistry, especially in the micron range, where reactants and products can be transported via diffusion. In this work, we generated reactive microdroplets of sodium alginate which, upon contact with and cross-linking with a reagent-loaded solution of calcium ions, acted as hydrogel containers for subsequent *in situ* reactivity within them. *Featured on the front cover of December 2024 issue.*
 
-### CtrlAer: A MicroPython package and embedded domain specific language for real-time control of piezoelectric atomisers  
-[Mehr, S. H. M.]{.underline}  
+### CtrlAer: A MicroPython package and embedded domain specific language for real-time control of piezoelectric atomisers
+[Mehr, S. H. M.]{.underline}
 *Under review*, ([preprint](https://github.com/MehrResearch/ctrlaer/actions/runs/11989164325/artifacts/2228303412))
 
 ### Constructing the Molecular Tree of Life using Assembly Theory and Mass Spectrometry
-Kahana, A.; MacLeod, A.; [Mehr, S. H. M.]{.underline}, Sharma, A. et al.  
+Kahana, A.; MacLeod, A.; [Mehr, S. H. M.]{.underline}, Sharma, A. et al.
 *Under review* ([preprint](https://doi.org/10.48550/arXiv.2408.09305))
 
 ### Reaction blueprints and logical control flow for parallelized chiral synthesis in the Chemputer
 Šiaučiulis, M.; Knittl-Frank, C.; [Mehr, S. H. M]{.underline}; Clarke, E.; Cronin, L.
-*Nat. Chem.*, **2024**, 
+*Nat. Chem.*, **2024** ([10.1038/s41467-024-54238-6](https://doi.org/10.1038/s41467-024-54238-6))
 
 > Early means of programming robotic modules for chemical synthesis show immense promise for deployment in research and industrial labs, but lack the fundamental constructs — re-usable reactions, parallel synthesis, and a higher-level representation of reagents and hardware — needed to tackle more ambitious synthetic challenges. I designed a first-class implementation of these constructs in the χDL 2.0 language whilst maintaining compatibility with the existing repertoire of procedures digitised via χDL 1.0.
 
-### Operational considerations for approximating Molecular Assembly by Fourier transform mass spectrometry
-Weiss, G. M.; Asche, S.; Mclain, H.; Chung, A. H.; [Mehr, S. H. M.]{.underline}; Cronin, L.; Graham, H.  
-*Frontiers in Astronomy and Earth Sciences*, **2024** ([10.3389/fspas.2024.1485483](https://doi.org/10.3389/fspas.2024.1485483))
-
-### Investigating and Quantifying Molecular Complexity Using Assembly Theory and Spectroscopy
-Jirasek, M.; Sharma, A.; Bame, J.; [Mehr, S. H. M.]{.underline}, et al.  
+### Investigating and Quantifying Molecular Complexity Using Assembly Theory and Spectroscopy{#recursiveMA}
+Jirasek, M.; Sharma, A.; Bame, J.; [Mehr, S. H. M.]{.underline}, et al.
 *ACS Cent. Sci.*, **2024** ([10.1021/acscentsci.4c00120](https://doi.org/10.1021/acscentsci.4c00120))
 
 > Tandem mass spectrometry is a formidable tool for analysing complex mixtures of unknown compounds, e.g. exoplanet samples, but pinpointing compounds of interest without extrapolating from currently known species remains a challenge. My contribution to this paper, the *recursive molecular assembly* ([RecursiveMA](https://github.com/hessammehr/recursiveMA)) algorithm, searches tandem MS dataset for evidence of shared molecular building blocks to differentiate complex molecules from those that are simply large.
 
 ### Digitizing chemical discovery with a Bayesian explorer for interpreting reactivity data
-[Mehr, S. H. M.]{.underline}; Caramelli, D.; Cronin, L.  
+[Mehr, S. H. M.]{.underline}; Caramelli, D.; Cronin, L.
 *PNAS*, **2023** ([10.1073/pnas.2220045120](https://doi.org/10.1073/pnas.2220045120))
 
-> **A fresh take on AI in chemistry:** The applications of AI in chemistry are proliferating, yet instead of empowering expert chemists to undertake larger-scale experiments, most efforts supplant the chemist with data-hungry and opaque models. Bridging Bayesian probability and chemistry, we built a system that encodes and formalises chemists' intuition into a probabilistic model working in tandem with a robotic chemistry platform to explore large experimental spaces and plan
+> **A fresh take on AI in chemistry:** The applications of AI in chemistry are proliferating, yet instead of empowering expert chemists to undertake larger-scale experiments, most efforts supplant the chemist with data-hungry and opaque models. Bridging Bayesian probability and chemistry, we built a system that encodes and formalises chemists' intuition into a probabilistic model working in tandem with a robotic chemistry platform to explore large experimental spaces and plan next investigations.
 
 ### Automated Qualitative and Quantitative Analysis of Complex Forensic Drug Samples using ¹H NMR
-[Mehr, S. H. M.]{.underline}; Tang, A. W.; Laing, R. R.  
+[Mehr, S. H. M.]{.underline}; Tang, A. W.; Laing, R. R.
 *Magn. Reson. Chem.*, **2023** ([10.1002/mrc.5265](https://doi.org/10.1002/mrc.5265))
 
 > **Digital signal processing and statistics to counter drug epidemics:** Developing bespoke analytical protocols for drug detection is resource intensive and time consuming, incompatible with tackling rapidly emerging crises, such as the fentanyl epidemic. At Health Canada, we demonstrated an automated <sup>1</sup>H NMR-based pipeline, based on advanced signal processing techniques and statistical inference, that can be applied to new analytes and sample types with little adaptation or method development.
 
 ### Digitization and validation of a chemical synthesis literature database in the ChemPU{#chempu}
-Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; [Mehr, S. H. M.]{.underline}; et al.  
+Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; [Mehr, S. H. M.]{.underline}; et al.
 *Science*, **2022** ([10.1126/science.abo0058](https://doi.org/10.1126/science.abo0058))
 
 <!-- > **On-demand digital synthesis:** Just as the digitisation of music led to on-demand streaming services, we demonstrate how digitization of the chemical literature enables an automated synthesis platform to directly execute published procedures without human intervention. The work highlights the power of abstract chemical description languages in separating procedure specification from hardware-specific implementation details. -->
 
 ### A universal system for digitization and automatic execution of the chemical synthesis literature{#xdl}
-[Mehr, S. H. M.]{.underline}; Craven, M.; Leonov, A. I.; Keenan, G.; Cronin, L.  
+[Mehr, S. H. M.]{.underline}; Craven, M.; Leonov, A. I.; Keenan, G.; Cronin, L.
 *Science*, **2020** ([10.1126/science.abc2986](https://doi.org/10.1126/science.abc2986))
 
 > **Hardware-independent synthesis automation:** Digitising synthesis requires in-depth knowledge of vendor specific programming interfaces and lengthy development to adapt literature protocols to robotic execution. Our high-level hardware-independent chemical programming language XDL formalises the chemical literature's universal method for describing synthesis procedures in prose and translates these descriptions to robot-ready instructions.
 
 ### Stabilization of a Strained Heteroradialene by Peripheral Electron Delocalization
-[Mehr, S. H. M.]{.underline}; Patrick, B. O.; MacLachlan, M. J.  
+[Mehr, S. H. M.]{.underline}; Patrick, B. O.; MacLachlan, M. J.
 *Org. Lett.*, **2016** ([10.1021/acs.orglett.6b00577](https://doi.org/10.1021/acs.orglett.6b00577))
 
 > **Aromaticity challenged:** Electronic structure effects in organic chemistry are traditionally understood as limited to immediately adjacent atoms or through-bond conjugation. Here we show that multi-centre electron delocalisation over a molecular framework can override such local effects, opening doors to molecules with unusual bonding and electronic properties.
