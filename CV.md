@@ -181,7 +181,7 @@ This RSC Outreach Grant-supported workshop series introduced Glasgow high school
 
 ### Chemical Studies <span> Leadership, mentorship & hands-on workshop implementation | 2023–25 </span>
 
-Chemical Studies is a UofG Chemistry initiative aimed at distilling the spectrum of skills and experience chemistry undergraduate in a format tailored to normally excluded from . As a co-organiser of this innovative programme for the past two years, I mentored small groups of student through the formulation of a research question; guiding them towards a tractable laboratory implementation, followed by 4 intensive lab sessions culminating in a group dissertation and poster.
+Chemical Studies is a University of Glasgow Chemistry stream aimed at distilling the spectrum of skills and experience chemistry undergraduate in a format tailored to students ineligible for the full MSc. As a co-organiser of this innovative programme for the past two years, I mentored small groups of students through the formulation of a research question; guiding them towards a tractable laboratory implementation, followed by 4 intensive lab sessions culminating in a group dissertation and poster.
 
 ### Year 2&3 MChem <span> Tutorials| 2022–25 </span>
 
