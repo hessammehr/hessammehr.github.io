@@ -25,7 +25,7 @@ GitHub: [hessammehr][github] / [MehrResearch][group-github]
 </div>
 </div>
 
-> **Chemistry–Information–Discovery:** I lead an interdisciplinary research group devising new paradigms for chemical synthesis and discovery predicated on automation and programmable chemistry; bespoke reaction media and experimental hardware; and massive expansion in computational power.
+> **Chemistry–Information–Discovery:** I lead an interdisciplinary research group devising new paradigms for chemical synthesis and discovery predicated on automation and programmable chemistry; bespoke reaction media and experimental hardware; and cutting-edge computational approaches.
 
 ## Employment
 
@@ -46,67 +46,67 @@ From doped silicon to superconductors, the ability to fine-tune materials' elect
 ### BSc – Electrical Engineering <span> Sharif University of Technology, Iran | 2005–2009 </span>
 Focus areas: Digital signal processing, photonic crystals.
 
-## Publications
+## Selected publications
 
-Highlights among **35 primary research** papers (**h-index: 13**; full list available on [ORCiD] & [Google Scholar])
+Highlights among **35 primary research** papers (**h-index: 13**; 650+ citations; full list available on [ORCiD] & [Google Scholar])
 
-### Operational considerations for approximating Molecular Assembly by Fourier transform mass spectrometry
+### ▶ Operational considerations for approximating Molecular Assembly by Fourier transform mass spectrometry
 Weiss, G. M.; Asche, S.; Mclain, H.; Chung, A. H.; [Mehr, S. H. M.]{.underline}; Cronin, L.; Graham, H.
 *Frontiers in Astronomy and Earth Sciences*, **2024** ([10.3389/fspas.2024.1485483](https://doi.org/10.3389/fspas.2024.1485483))
 
 > This NASA collaboration deploys my [RecursiveMA algorithm](#recursiveMA) in the context of finding evidence of extra-terrestrial life via tandem mass spectrometry.
 
-### In situ synthesis within micron-sized soft chemical reactors created via programmable aerosol chemistry
+### ▶ In situ synthesis within micron-sized soft chemical reactors created via programmable aerosol chemistry
 Zhang, L.; [Mehr, S. H. M.]{.underline}
 *Digital Discovery*, **2024** ([10.1039/D4DD00139G](https://doi.org/10.1039/D4DD00139G))
 
 > **Aerosol-generated hydrogel microdroplets as miniature self-assembled reactors:** Hydrogel matrices hold promise as a locus for inhomogeneous chemistry, especially in the micron range, where reactants and products can be transported via diffusion. In this work, we generated reactive microdroplets of sodium alginate which, upon contact with and cross-linking with a reagent-loaded solution of calcium ions, acted as hydrogel containers for subsequent *in situ* reactivity within them. *Featured on the front cover of December 2024 issue.*
 
-### CtrlAer: A MicroPython package and embedded domain specific language for real-time control of piezoelectric atomisers
+### ▶ CtrlAer: A MicroPython package and embedded domain specific language for real-time control of piezoelectric atomisers
 [Mehr, S. H. M.]{.underline}
 *Under review*, ([preprint](https://github.com/MehrResearch/ctrlaer/actions/runs/11989164325/artifacts/2228303412))
 
-### Constructing the Molecular Tree of Life using Assembly Theory and Mass Spectrometry
+### ▶ Constructing the Molecular Tree of Life using Assembly Theory and Mass Spectrometry
 Kahana, A.; MacLeod, A.; [Mehr, S. H. M.]{.underline}, Sharma, A. et al.
 *Under review* ([preprint](https://doi.org/10.48550/arXiv.2408.09305))
 
-### Reaction blueprints and logical control flow for parallelized chiral synthesis in the Chemputer
+### ▶ Reaction blueprints and logical control flow for parallelized chiral synthesis in the Chemputer
 Šiaučiulis, M.; Knittl-Frank, C.; [Mehr, S. H. M]{.underline}; Clarke, E.; Cronin, L.
 *Nat. Chem.*, **2024** ([10.1038/s41467-024-54238-6](https://doi.org/10.1038/s41467-024-54238-6))
 
 > Early means of programming robotic modules for chemical synthesis show immense promise for deployment in research and industrial labs, but lack the fundamental constructs — re-usable reactions, parallel synthesis, and a higher-level representation of reagents and hardware — needed to tackle more ambitious synthetic challenges. I designed a first-class implementation of these constructs in the χDL 2.0 language whilst maintaining compatibility with the existing repertoire of procedures digitised via χDL 1.0.
 
-### Investigating and Quantifying Molecular Complexity Using Assembly Theory and Spectroscopy{#recursiveMA}
+### ▶ Investigating and Quantifying Molecular Complexity Using Assembly Theory and Spectroscopy{#recursiveMA}
 Jirasek, M.; Sharma, A.; Bame, J.; [Mehr, S. H. M.]{.underline}, et al.
 *ACS Cent. Sci.*, **2024** ([10.1021/acscentsci.4c00120](https://doi.org/10.1021/acscentsci.4c00120))
 
 > Tandem mass spectrometry is a formidable tool for analysing complex mixtures of unknown compounds, e.g. exoplanet samples, but pinpointing compounds of interest without extrapolating from currently known species remains a challenge. My contribution to this paper, the *recursive molecular assembly* ([RecursiveMA](https://github.com/hessammehr/recursiveMA)) algorithm, searches tandem MS dataset for evidence of shared molecular building blocks to differentiate complex molecules from those that are simply large.
 
-### Digitizing chemical discovery with a Bayesian explorer for interpreting reactivity data
+### ▶ Digitizing chemical discovery with a Bayesian explorer for interpreting reactivity data
 [Mehr, S. H. M.]{.underline}; Caramelli, D.; Cronin, L.
 *PNAS*, **2023** ([10.1073/pnas.2220045120](https://doi.org/10.1073/pnas.2220045120))
 
 > **A fresh take on AI in chemistry:** The applications of AI in chemistry are proliferating, yet instead of empowering expert chemists to undertake larger-scale experiments, most efforts supplant the chemist with data-hungry and opaque models. Bridging Bayesian probability and chemistry, we built a system that encodes and formalises chemists' intuition into a probabilistic model working in tandem with a robotic chemistry platform to explore large experimental spaces and plan next investigations.
 
-### Automated Qualitative and Quantitative Analysis of Complex Forensic Drug Samples using ¹H NMR
+### ▶ Automated Qualitative and Quantitative Analysis of Complex Forensic Drug Samples using ¹H NMR
 [Mehr, S. H. M.]{.underline}; Tang, A. W.; Laing, R. R.
 *Magn. Reson. Chem.*, **2023** ([10.1002/mrc.5265](https://doi.org/10.1002/mrc.5265))
 
 > **Digital signal processing and statistics to counter drug epidemics:** Developing bespoke analytical protocols for drug detection is resource intensive and time consuming, incompatible with tackling rapidly emerging crises, such as the fentanyl epidemic. At Health Canada, we demonstrated an automated <sup>1</sup>H NMR-based pipeline, based on advanced signal processing techniques and statistical inference, that can be applied to new analytes and sample types with little adaptation or method development.
 
-### Digitization and validation of a chemical synthesis literature database in the ChemPU{#chempu}
+### ▶ Digitization and validation of a chemical synthesis literature database in the ChemPU{#chempu}
 Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; [Mehr, S. H. M.]{.underline}; et al.
 *Science*, **2022** ([10.1126/science.abo0058](https://doi.org/10.1126/science.abo0058))
 
 <!-- > **On-demand digital synthesis:** Just as the digitisation of music led to on-demand streaming services, we demonstrate how digitization of the chemical literature enables an automated synthesis platform to directly execute published procedures without human intervention. The work highlights the power of abstract chemical description languages in separating procedure specification from hardware-specific implementation details. -->
 
-### A universal system for digitization and automatic execution of the chemical synthesis literature{#xdl}
+### ▶ A universal system for digitization and automatic execution of the chemical synthesis literature{#xdl}
 [Mehr, S. H. M.]{.underline}; Craven, M.; Leonov, A. I.; Keenan, G.; Cronin, L.
 *Science*, **2020** ([10.1126/science.abc2986](https://doi.org/10.1126/science.abc2986))
 
 > **Hardware-independent synthesis automation:** Digitising synthesis requires in-depth knowledge of vendor specific programming interfaces and lengthy development to adapt literature protocols to robotic execution. Our high-level hardware-independent chemical programming language XDL formalises the chemical literature's universal method for describing synthesis procedures in prose and translates these descriptions to robot-ready instructions.
 
-### Stabilization of a Strained Heteroradialene by Peripheral Electron Delocalization
+### ▶ Stabilization of a Strained Heteroradialene by Peripheral Electron Delocalization
 [Mehr, S. H. M.]{.underline}; Patrick, B. O.; MacLachlan, M. J.
 *Org. Lett.*, **2016** ([10.1021/acs.orglett.6b00577](https://doi.org/10.1021/acs.orglett.6b00577))
 
@@ -175,7 +175,7 @@ Conceived and organised a workshop bringing together four European institutions 
 
 ### [Digital chemistry for digital natives] <span> Outreach | 2021 </span>
 
-This RSC Outreach Grant-supported workshop series introduced Glasgow high schoolers to cutting-edge advances in digital chemistry, ending with in a practical session on building a sub-£20 titrator robot. My work was [featured in the micro:bit LIVE conference][micro:bit talk].
+This RSC Outreach Grant-supported workshop series introduced Glasgow high schoolers to cutting-edge advances in digital chemistry, ending with in a practical session on building a sub-£20 titrator robot. My work was [showcased in the micro:bit LIVE conference][micro:bit talk].
 
 ## Teaching
 
@@ -186,7 +186,9 @@ Chemical Studies is a University of Glasgow Chemistry stream aimed at distilling
 ### Year 2&3 MChem <span> Tutorials| 2022–25 </span>
 
 
-### Science Fundamentals (Y1) <span> Lectures and revision tutorials| 2022–25 </span>
+### Year 1 Science Fundamentals (non-chemist cohort) <span> Lectures and revision tutorials| 2022–25 </span>
+
+### Year 1 MChem <span> Synthesis laboratory | 2023–24 </span>
 
 ## Supervision
 **Current:** **3** PhD students (including one jointly supervised with Computer Science); **1** MSc student; **1** research intern.
