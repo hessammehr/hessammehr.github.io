@@ -3,6 +3,8 @@ title: Hessam's blog
 ---
 
 ## Posts
+[Subscribe via RSS](/feed.xml)
+
 | Date       | Title                                                                                          |
 |:-----------|:-----------------------------------------------------------------------------------------------|
 | 2020-06-14 | [A rant against macros]

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Hessam's blog</title>
+  <description>Personal takes and hobby projects covering chemistry, programming and electronics</description>
+  <link>https://hessammehr.github.io/blog/</link>
+  <atom:link href="https://hessammehr.github.io/feed.xml" rel="self" type="application/rss+xml" />
+  <language>en-us</language>
+<item>
+      <title>A rant against macros</title>
+      <link>https://hessammehr.github.io/blog/posts/2020-06-14-rant-against-macros.html</link>
+      <guid>https://hessammehr.github.io/blog/posts/2020-06-14-rant-against-macros.html</guid>
+      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
+      <description></description>
+    </item>
+<item>
+      <title>The case for lazy computation and interactive optimization</title>
+      <link>https://hessammehr.github.io/blog/posts/2020-05-24-lazy-interactive-optimization.html</link>
+      <guid>https://hessammehr.github.io/blog/posts/2020-05-24-lazy-interactive-optimization.html</guid>
+      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
+      <description>Since 2018, my colleague [Dario] and I have been working on a probabilistic model of chemical reactivity. In a nutshell, this model can take reactivity observations between a bunch of compounds and interpret them as manifestations of properties and their mutual reactivities. The [Markov chain Monte carlo] implementation of this model in [PyMC3] was quite fast to start but over time we have expanded the model and now with all the bells and whistles sampling can take close to a day. </description>
+    </item>
+<item>
+      <title>Fertile land at the confluence of staged programming and (typed) logic programming — Part 1</title>
+      <link>https://hessammehr.github.io/blog/posts/2019-04-07-fertile-land-at-the-confluence-of-staged-programming-and-typed-logic-programming.html</link>
+      <guid>https://hessammehr.github.io/blog/posts/2019-04-07-fertile-land-at-the-confluence-of-staged-programming-and-typed-logic-programming.html</guid>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <description></description>
+    </item>
+<item>
+      <title>Funny</title>
+      <link>https://hessammehr.github.io/blog/posts/2013-12-28-funny.html</link>
+      <guid>https://hessammehr.github.io/blog/posts/2013-12-28-funny.html</guid>
+      <pubDate>Sat, 28 Dec 2013 00:00:00 +0000</pubDate>
+      <description></description>
+    </item>
+<item>
+      <title>A new way of doing chemistry</title>
+      <link>https://hessammehr.github.io/blog/posts/2013-12-23-a-new-way-of-doing-chemistry.html</link>
+      <guid>https://hessammehr.github.io/blog/posts/2013-12-23-a-new-way-of-doing-chemistry.html</guid>
+      <pubDate>Mon, 23 Dec 2013 00:00:00 +0000</pubDate>
+      <description></description>
+    </item>
+</channel>
+</rss>
