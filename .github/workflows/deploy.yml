@@ -13,13 +13,36 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install Pandoc
-        run: sudo apt-get install pandoc
+        run: sudo apt-get install pandoc xmlstarlet
 
       - name: Download Primer CSS and Highlight.js themes
         run: |
           curl -O https://unpkg.com/@primer/css/dist/primer.css
           curl -o light.css https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/github.min.css
           curl -o dark.css https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/night-owl.min.css
+
+      - name: Generate RSS feed
+        run: |
+          cp feed.template.xml feed.xml
+          
+          for file in $(find ./blog/posts -name "*.md" | sort -r); do
+            date=$(basename "$file" | cut -d- -f1,2,3)
+            title=$(sed -n '1s/^# //p' "$file")
+            formatted_date=$(date -d "$date" --rfc-822)
+            
+            # Extract first non-empty paragraph after h1 as description
+            description=$(awk 'BEGIN{p=0} /^# /{p=1;next} p==1&&NF>0{printf "%s ", $0;exit}' "$file" | xmlstarlet escape)
+            
+            # Insert item before closing </channel> tag
+            sed -i "/<\/channel>/i \
+              <item>\n\
+                <title>$title</title>\n\
+                <link>https://hessammehr.github.io/blog/posts/$(basename ${file%.md}.html)</link>\n\
+                <guid>https://hessammehr.github.io/blog/posts/$(basename ${file%.md}.html)</guid>\n\
+                <pubDate>$formatted_date</pubDate>\n\
+                <description>$description</description>\n\
+              </item>" feed.xml
+          done
 
       - name: Generate blog index
         run: |

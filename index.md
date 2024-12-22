@@ -15,7 +15,7 @@ Investigating information and automation as gateways to new discovery paradigms 
 - [Mehr Research blog][group_blog] My group's blog, featuring posts by current and past members
 - [0101chem] companion website to my *Digital chemistry for digital natives* outreach project, funded by the [Royal Society of Chemistry][RSC]
 - _[Sound Chemistry]_ Royal Society of Edinburgh workshop that I organised in March 2024 with a focus on novel modalities for chemical containers, e.g. acoustic confinement
-- [Personal blog][Blog] Personal takes and hobby project covering chemistry, programming and electronics
+- [Personal blog][Blog] Personal takes and hobby project covering chemistry, programming and electronics ([RSS feed](/feed.xml))
 
 ### Publications
 For more context on current research projects and related publications see my [group's research page](https://mehr-research.science/research/#publications) or my [CV][CV publications]. For a complete list see [my Google Scholar][Google Scholar] or [ORCiD profile][ORCiD].
