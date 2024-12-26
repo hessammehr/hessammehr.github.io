@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-  <link rel="alternate" type="application/rss+xml" title="Hessam's blog RSS Feed" href="/feed.xml">
-  <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="/primer.css">
-  <link rel="stylesheet" href="/light.css" media="(prefers-color-scheme: light)">
-  <link rel="stylesheet" href="/dark.css" media="(prefers-color-scheme: dark)">
-</head>
-<body>
-  <div class="container-lg px-3 my-5 markdown-body">
-    <h1 id="a-new-way-of-doing-chemistry">A new way of doing chemistry</h1>
-    <p>I’ve been thinking about a new way of doing chemistry. Take for example the case of growing crystals. In the more difficult cases, this involves trial and error using a number of educated guesses about the solvents and conditions. What if we had an algorithm that would decide the best procedure based on a database of molecular metrics, e.g., dipole moment, molecular weight, melting point, decomposition temperature, functional groups, hydrogen bonding, etc. for solutes as well as solvents, trained on a series of successful/unsuccessful combinations, e.g., naphthalene from hot ethanol, macrocycle x from DMSO + ether by diffusion at room temperature, compound y from slow evaporation of hexanes solution?</p>
-    <p>This of course can be generalized to any chemical transformation. Publicly available databases like Org. Syn. can be mined for information that no one chemist can hope to memorize, significantly reducing the amount of trial and error in day-to-day chemistry.</p>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Hessam's blog RSS Feed"
+      href="/feed.xml"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/primer.css" />
+    <link
+      rel="stylesheet"
+      href="/light.css"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="stylesheet"
+      href="/dark.css"
+      media="(prefers-color-scheme: dark)"
+    />
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body"><h1 id="a-new-way-of-doing-chemistry">A new way of doing chemistry</h1>
+<p>I’ve been thinking about a new way of doing chemistry. Take for example the case of growing crystals. In the more difficult cases, this involves trial and error using a number of educated guesses about the solvents and conditions. What if we had an algorithm that would decide the best procedure based on a database of molecular metrics, e.g., dipole moment, molecular weight, melting point, decomposition temperature, functional groups, hydrogen bonding, etc. for solutes as well as solvents, trained on a series of successful/unsuccessful combinations, e.g., naphthalene from hot ethanol, macrocycle x from DMSO + ether by diffusion at room temperature, compound y from slow evaporation of hexanes solution?</p>
+<p>This of course can be generalized to any chemical transformation. Publicly available databases like Org. Syn. can be mined for information that no one chemist can hope to memorize, significantly reducing the amount of trial and error in day-to-day chemistry.</p></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script>
+      // Remove leading spaces from code blocks (pandoc artefact)
+      document.querySelectorAll("pre code").forEach((block) => {
+        block.textContent = block.textContent.replace(/^( {4})/gm, "");
+      });
+      hljs.highlightAll();
+    </script>
+  </body>
 </html>

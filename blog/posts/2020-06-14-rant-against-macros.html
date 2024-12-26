@@ -1,119 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-  <link rel="alternate" type="application/rss+xml" title="Hessam's blog RSS Feed" href="/feed.xml">
-  <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="/primer.css">
-  <link rel="stylesheet" href="/light.css" media="(prefers-color-scheme: light)">
-  <link rel="stylesheet" href="/dark.css" media="(prefers-color-scheme: dark)">
-</head>
-<body>
-  <div class="container-lg px-3 my-5 markdown-body">
-    <h1 id="a-rant-against-macros">A rant against macros</h1>
-    <p>I used to be a huge fan of macros. I remember reading SICP and being amazed that you could use the language to generate and transform code. How cool is that? First a couple of examples: Clojure’s <code>core.async</code> library includes a <code>go</code> macro that lets you launch goroutine-like tasks without having to change the language.</p>
-    <pre class="clojure"><code>; https://github.com/clojure/core.async/blob/master/examples/walkthrough.clj
-    (let [c1 (chan)
-          c2 (chan)]
-      (go (while true
-            (let [[v ch] (alts! [c1 c2])]
-              (println &quot;Read&quot; v &quot;from&quot; ch))))
-      (go (&gt;! c1 &quot;hi&quot;))
-      (go (&gt;! c2 &quot;there&quot;)))</code></pre>
-    <p>The Turing library lets you write probabilistic programs in Julia as if you’re using a dedicated probabilistic programming language (PPL):</p>
-    <pre class="julia"><code>@model gdemo(x, y) = begin
-        # Assumptions
-        σ ~ InverseGamma(2,3)
-        μ ~ Normal(0,sqrt(σ))
-        # Observations
-        x ~ Normal(μ, sqrt(σ))
-        y ~ Normal(μ, sqrt(σ))
-    end</code></pre>
-    <p>Fast forward to 2018 when I sat down with Chris Rackauckas before JuliaCon and he mentioned he’d been in touch with the Turing developers. I thought he bring up their PPL syntax and how it’s so wonderful that Julia lets you mold the language, but when I prompted him he said the macros have gotten in the way of using Turing as a library. He said functions and types were the way forward if you want things to compose.</p>
-    <p>Since then, I’ve written a couple of macros of my own and, powerful as they are, I have come to the conclusion that the problems I used them for were better handled by i) new or more expressive data structures, ii) plain old functions, iii) accepting a small amount of extra verbosity. In return you get, i) better interoperability, ii) code that is more explicit and easier to undestand, iii) much easier debugging, iv) a more robust design, v) much better support from your tools (<em>e.g.</em> IDE, REPL).</p>
-    <p>Let’s look at a simpler model:</p>
-    <pre class="julia"><code>using Distributions
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Hessam's blog RSS Feed"
+      href="/feed.xml"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/primer.css" />
+    <link
+      rel="stylesheet"
+      href="/light.css"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="stylesheet"
+      href="/dark.css"
+      media="(prefers-color-scheme: dark)"
+    />
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body"><h1 id="a-rant-against-macros">A rant against macros</h1>
+<p>I used to be a huge fan of macros. I remember reading SICP and being amazed that you could use the language to generate and transform code. How cool is that? First a couple of examples: Clojure’s <code>core.async</code> library includes a <code>go</code> macro that lets you launch goroutine-like tasks without having to change the language.</p>
+<pre class="clojure"><code>; https://github.com/clojure/core.async/blob/master/examples/walkthrough.clj
+(let [c1 (chan)
+      c2 (chan)]
+  (go (while true
+        (let [[v ch] (alts! [c1 c2])]
+          (println &quot;Read&quot; v &quot;from&quot; ch))))
+  (go (&gt;! c1 &quot;hi&quot;))
+  (go (&gt;! c2 &quot;there&quot;)))</code></pre>
+<p>The Turing library lets you write probabilistic programs in Julia as if you’re using a dedicated probabilistic programming language (PPL):</p>
+<pre class="julia"><code>@model gdemo(x, y) = begin
+    # Assumptions
+    σ ~ InverseGamma(2,3)
+    μ ~ Normal(0,sqrt(σ))
+    # Observations
+    x ~ Normal(μ, sqrt(σ))
+    y ~ Normal(μ, sqrt(σ))
+end</code></pre>
+<p>Fast forward to 2018 when I sat down with Chris Rackauckas before JuliaCon and he mentioned he’d been in touch with the Turing developers. I thought he bring up their PPL syntax and how it’s so wonderful that Julia lets you mold the language, but when I prompted him he said the macros have gotten in the way of using Turing as a library. He said functions and types were the way forward if you want things to compose.</p>
+<p>Since then, I’ve written a couple of macros of my own and, powerful as they are, I have come to the conclusion that the problems I used them for were better handled by i) new or more expressive data structures, ii) plain old functions, iii) accepting a small amount of extra verbosity. In return you get, i) better interoperability, ii) code that is more explicit and easier to undestand, iii) much easier debugging, iv) a more robust design, v) much better support from your tools (<em>e.g.</em> IDE, REPL).</p>
+<p>Let’s look at a simpler model:</p>
+<pre class="julia"><code>using Distributions
 
-    @model normal_model(x) = begin
-        # just a simple transformation; z is still observed, just like x
-        z = 2x
-        # sample y
-        y ~ Normal(0.0, 1.0)
-        # observe z
-        z ~ Normal(y, 1.0)
-    end</code></pre>
-    <p>This is what it expands to</p>
-    <pre class="julia"><code>quote
-        #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:348 =#
-        function var&quot;##evaluator#371&quot;(_rng::Random.AbstractRNG, _model::DynamicPPL.Model, _varinfo::DynamicPPL.AbstractVarInfo, _sampler::AbstractMCMC.AbstractSampler, _context::DynamicPPL.AbstractContext)
-            #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:355 =#
-            begin
-                x = (DynamicPPL.matchingvalue)(_sampler, _varinfo, _model.args.x)
-            end
-            #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:356 =#
-            begin
-                #= REPL[22]:1 =#
-                #= REPL[22]:2 =#
-                z = 2x
-                #= REPL[22]:3 =#
-                begin
-                    var&quot;##tmpright#363&quot; = Normal(0.0, 1.0)
-                    var&quot;##tmpright#363&quot; isa Union{Distribution, AbstractVector{&lt;:Distribution}} || throw(ArgumentError(&quot;Right-hand side of a ~ must be subtype of Distribution or a vector of Distributions.&quot;))
-                    var&quot;##vn#365&quot; = y
-                    var&quot;##inds#366&quot; = ()
-                    y = (DynamicPPL.tilde_assume)(_rng, _context, _sampler, var&quot;##tmpright#363&quot;, var&quot;##vn#365&quot;, var&quot;##inds#366&quot;, _varinfo)
-                end
-                #= REPL[22]:4 =#
-                begin
-                    var&quot;##tmpright#367&quot; = Normal(y, 1.0)
-                    var&quot;##tmpright#367&quot; isa Union{Distribution, AbstractVector{&lt;:Distribution}} || throw(ArgumentError(&quot;Right-hand side of a ~ must be subtype of Distribution or a vector of Distributions.&quot;))
-                    var&quot;##vn#369&quot; = z
-                    var&quot;##inds#370&quot; = ()
-                    z = (DynamicPPL.tilde_assume)(_rng, _context, _sampler, var&quot;##tmpright#367&quot;, var&quot;##vn#369&quot;, var&quot;##inds#370&quot;, _varinfo)
-                end
-            end
-        end
-        #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:359 =#
-        var&quot;##generator#372&quot;(x) = begin
-                #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:359 =#
-                (DynamicPPL.Model)(var&quot;##evaluator#371&quot;, (DynamicPPL.namedtuple)(NamedTuple{(:x,), Tuple{Core.Typeof(x)}}, (x,)), (DynamicPPL.ModelGen){(:x,)}(var&quot;##generator#372&quot;, NamedTuple()))
-            end
-        #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:360 =#
-        var&quot;##generator#372&quot;(; x) = begin
-                #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:344 =#
-                var&quot;##generator#372&quot;(x)
-            end
-        #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:362 =#
+@model normal_model(x) = begin
+    # just a simple transformation; z is still observed, just like x
+    z = 2x
+    # sample y
+    y ~ Normal(0.0, 1.0)
+    # observe z
+    z ~ Normal(y, 1.0)
+end</code></pre>
+<p>This is what it expands to</p>
+<pre class="julia"><code>quote
+    #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:348 =#
+    function var&quot;##evaluator#371&quot;(_rng::Random.AbstractRNG, _model::DynamicPPL.Model, _varinfo::DynamicPPL.AbstractVarInfo, _sampler::AbstractMCMC.AbstractSampler, _context::DynamicPPL.AbstractContext)
+        #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:355 =#
         begin
-            $(Expr(:meta, :doc))
-            normal_model = (DynamicPPL.ModelGen){(:x,)}(var&quot;##generator#372&quot;, NamedTuple())
+            x = (DynamicPPL.matchingvalue)(_sampler, _varinfo, _model.args.x)
         end
-    end</code></pre>
-    <p>And now to sample it:</p>
-    <pre class="julia"><code>sample(normal_model(3.0), NUTS(), 1000)
+        #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:356 =#
+        begin
+            #= REPL[22]:1 =#
+            #= REPL[22]:2 =#
+            z = 2x
+            #= REPL[22]:3 =#
+            begin
+                var&quot;##tmpright#363&quot; = Normal(0.0, 1.0)
+                var&quot;##tmpright#363&quot; isa Union{Distribution, AbstractVector{&lt;:Distribution}} || throw(ArgumentError(&quot;Right-hand side of a ~ must be subtype of Distribution or a vector of Distributions.&quot;))
+                var&quot;##vn#365&quot; = y
+                var&quot;##inds#366&quot; = ()
+                y = (DynamicPPL.tilde_assume)(_rng, _context, _sampler, var&quot;##tmpright#363&quot;, var&quot;##vn#365&quot;, var&quot;##inds#366&quot;, _varinfo)
+            end
+            #= REPL[22]:4 =#
+            begin
+                var&quot;##tmpright#367&quot; = Normal(y, 1.0)
+                var&quot;##tmpright#367&quot; isa Union{Distribution, AbstractVector{&lt;:Distribution}} || throw(ArgumentError(&quot;Right-hand side of a ~ must be subtype of Distribution or a vector of Distributions.&quot;))
+                var&quot;##vn#369&quot; = z
+                var&quot;##inds#370&quot; = ()
+                z = (DynamicPPL.tilde_assume)(_rng, _context, _sampler, var&quot;##tmpright#367&quot;, var&quot;##vn#369&quot;, var&quot;##inds#370&quot;, _varinfo)
+            end
+        end
+    end
+    #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:359 =#
+    var&quot;##generator#372&quot;(x) = begin
+            #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:359 =#
+            (DynamicPPL.Model)(var&quot;##evaluator#371&quot;, (DynamicPPL.namedtuple)(NamedTuple{(:x,), Tuple{Core.Typeof(x)}}, (x,)), (DynamicPPL.ModelGen){(:x,)}(var&quot;##generator#372&quot;, NamedTuple()))
+        end
+    #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:360 =#
+    var&quot;##generator#372&quot;(; x) = begin
+            #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:344 =#
+            var&quot;##generator#372&quot;(x)
+        end
+    #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:362 =#
+    begin
+        $(Expr(:meta, :doc))
+        normal_model = (DynamicPPL.ModelGen){(:x,)}(var&quot;##generator#372&quot;, NamedTuple())
+    end
+end</code></pre>
+<p>And now to sample it:</p>
+<pre class="julia"><code>sample(normal_model(3.0), NUTS(), 1000)
 
-    # Summary Statistics
-    #   parameters    mean     std  naive_se    mcse       ess   r_hat
-    #   ──────────  ──────  ──────  ────────  ──────  ────────  ──────
-    #            y  0.0096  1.0146    0.0454  0.0978  168.5831  0.9986
-    #            z  0.0169  1.4692    0.0657  0.1204  158.7592  0.9992</code></pre>
-    <p>And we see that Turing has sampled both <code>y</code> and <code>z</code>, where <code>z</code> should have been marked as deterministic and observed rather than sampled. Now, I’m sure this is well-documented somewhere but the point is that when you use a macro, your Julia code no longer functions the way you would expect. Worse, yet finding out why means being able to navigate the mess of generated symbols in the expanded version. And yes, the authors can fix this (if it’s actually a bug) but it doesn’t change the problem that the language inside that block is no longer Julia. You keep having to second guess yourself every time you reach for a new language feature.</p>
-    <p>Increasingly, macros, even nice hygienic ones remind me of the horrible mess that’s C/C++ macros: an untamed partial language with its own semantics that you need to learn and use, and how people have created whole programming languages in part to escape this ugly metalangauge problem. It’s true that homoiconic languages mostly get rid of the macro/preprocessor language, but the semantics of how language constucts behave within the macro and how they compose with other langauge features is still completely up to the programmer and, in my experience, quite hard to get right.</p>
-    <p>I see macros used in places that I find really troubling. I was writing a toy GTK application in Rust earlier today and learned that you need to use these weird macros to get memory management to play nicely with Rust.</p>
-    <pre class="rust"><code>use glib::clone;
+# Summary Statistics
+#   parameters    mean     std  naive_se    mcse       ess   r_hat
+#   ──────────  ──────  ──────  ────────  ──────  ────────  ──────
+#            y  0.0096  1.0146    0.0454  0.0978  168.5831  0.9986
+#            z  0.0169  1.4692    0.0657  0.1204  158.7592  0.9992</code></pre>
+<p>And we see that Turing has sampled both <code>y</code> and <code>z</code>, where <code>z</code> should have been marked as deterministic and observed rather than sampled. Now, I’m sure this is well-documented somewhere but the point is that when you use a macro, your Julia code no longer functions the way you would expect. Worse, yet finding out why means being able to navigate the mess of generated symbols in the expanded version. And yes, the authors can fix this (if it’s actually a bug) but it doesn’t change the problem that the language inside that block is no longer Julia. You keep having to second guess yourself every time you reach for a new language feature.</p>
+<p>Increasingly, macros, even nice hygienic ones remind me of the horrible mess that’s C/C++ macros: an untamed partial language with its own semantics that you need to learn and use, and how people have created whole programming languages in part to escape this ugly metalangauge problem. It’s true that homoiconic languages mostly get rid of the macro/preprocessor language, but the semantics of how language constucts behave within the macro and how they compose with other langauge features is still completely up to the programmer and, in my experience, quite hard to get right.</p>
+<p>I see macros used in places that I find really troubling. I was writing a toy GTK application in Rust earlier today and learned that you need to use these weird macros to get memory management to play nicely with Rust.</p>
+<pre class="rust"><code>use glib::clone;
 
-    let window = Rc::new(ApplicationWindow::new(app));
+let window = Rc::new(ApplicationWindow::new(app));
 
-    # moving a weak reference to `window` into the closure
-    butten.connect_activate(clone!(@weak window =&gt; move |_| {
-        window.close(&amp;button);
-    }));</code></pre>
-    <p>I really don’t think introducing this metalanguage is a good idea at all. Also, how is this custom syntax supposed to be understood by the editor? Before <code>rust-analyzer</code> my editor (VSCode + RLS) would give up with the macro and I would have to guess my way out. Things are better now that we have <code>rust-analyzer</code> but I’m not even sure the Rust tooling is ever supposed to be able to make sense of this.</p>
-    <p>Bottom line (and I’m happy to be proven wrong): macros are an unsustainable convenience. They are never good enough to justify the readability/maintainability/tooling headaches.</p>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
-</body>
+# moving a weak reference to `window` into the closure
+butten.connect_activate(clone!(@weak window =&gt; move |_| {
+    window.close(&amp;button);
+}));</code></pre>
+<p>I really don’t think introducing this metalanguage is a good idea at all. Also, how is this custom syntax supposed to be understood by the editor? Before <code>rust-analyzer</code> my editor (VSCode + RLS) would give up with the macro and I would have to guess my way out. Things are better now that we have <code>rust-analyzer</code> but I’m not even sure the Rust tooling is ever supposed to be able to make sense of this.</p>
+<p>Bottom line (and I’m happy to be proven wrong): macros are an unsustainable convenience. They are never good enough to justify the readability/maintainability/tooling headaches.</p></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script>
+      // Remove leading spaces from code blocks (pandoc artefact)
+      document.querySelectorAll("pre code").forEach((block) => {
+        block.textContent = block.textContent.replace(/^( {4})/gm, "");
+      });
+      hljs.highlightAll();
+    </script>
+  </body>
 </html>

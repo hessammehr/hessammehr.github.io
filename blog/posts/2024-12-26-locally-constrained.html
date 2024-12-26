@@ -1,220 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-  <link rel="alternate" type="application/rss+xml" title="Hessam's blog RSS Feed" href="/feed.xml">
-  <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="/primer.css">
-  <link rel="stylesheet" href="/light.css" media="(prefers-color-scheme: light)">
-  <link rel="stylesheet" href="/dark.css" media="(prefers-color-scheme: dark)">
-</head>
-<body>
-  <div class="container-lg px-3 my-5 markdown-body">
-    <h1 id="simple-generation-of-locally-constrained-values-in-numpyro">Simple generation of locally constrained values in <code>numpyro</code></h1>
-    <p>Just a simple experiment using <code>numpyro</code> to simulate values from a function with locally constrained values. This is often achieved using Gaussian processed but I thought it would be interesting to try something a bit more intuitive, plus priors on the points themselves and their interdependence can be anything, not just normal distributions.</p>
-    <pre class="python"><code>import jax
-    import jax.numpy as jnp
-    import matplotlib.pyplot as plt
-    import numpy as np
-    import numpyro.distributions as dist
-    import seaborn as sns
-    from numpyro import sample
-    from numpyro.infer import MCMC, NUTS
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Hessam's blog RSS Feed"
+      href="/feed.xml"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/primer.css" />
+    <link
+      rel="stylesheet"
+      href="/light.css"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="stylesheet"
+      href="/dark.css"
+      media="(prefers-color-scheme: dark)"
+    />
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body"><h1 id="simple-generation-of-locally-constrained-values-in-numpyro">Simple generation of locally constrained values in <code>numpyro</code></h1>
+<p>Just a simple experiment using <code>numpyro</code> to simulate values from a function with locally constrained values. This is often achieved using Gaussian processed but I thought it would be interesting to try something a bit more intuitive, plus priors on the points themselves and their interdependence can be anything, not just normal distributions.</p>
+<pre class="python"><code>import jax
+import jax.numpy as jnp
+import matplotlib.pyplot as plt
+import numpy as np
+import numpyro.distributions as dist
+import seaborn as sns
+from numpyro import sample
+from numpyro.infer import MCMC, NUTS
 
-    sns.set_theme(&#39;notebook&#39;, &#39;ticks&#39;, font=&#39;Arial&#39;)
+sns.set_theme(&#39;notebook&#39;, &#39;ticks&#39;, font=&#39;Arial&#39;)
 
-    plt.rcParams[&#39;figure.dpi&#39;] = 200</code></pre>
-    <p>First, baseline: Independent draws from a normal distribution.</p>
-    <pre class="python"><code>def model1():
-        x = sample(&quot;x&quot;, dist.Normal().expand([100]))
-
-
-    mcmc = MCMC(NUTS(model1), num_warmup=1000, num_samples=100)
-    mcmc.run(jax.random.PRNGKey(0))
-    samples = mcmc.get_samples()
-
-    x_points = np.repeat(np.arange(100)[None, :], samples[&quot;x&quot;].shape[0], axis=0)
-    plt.scatter(
-        x_points.flatten(), samples[&quot;x&quot;].flatten(), color=&quot;darkblue&quot;, alpha=0.01, s=10
-    )
-    plt.gca().set(xlabel=&quot;Spatial/temporal dimension&quot;, ylabel=&quot;Observable&quot;);</code></pre>
-    <pre><code>sample: 100%|██████████| 1100/1100 [00:00&lt;00:00, 1656.79it/s, 7 steps of size 4.46e-01. acc. prob=0.86]</code></pre>
-    <figure>
-    <img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_3_1.png" alt="" /><figcaption>png</figcaption>
-    </figure>
-    <p>Adding some point observations …</p>
-    <pre class="python"><code>obs_vals = jnp.array([3.3, -2.5, 4.9])
-    obs_idx = jnp.array([20, 40, 75])
-
-    def model2(obs_vals, obs_idx):
-        x = sample(&#39;x&#39;, dist.Normal().expand([100]))
-        sample(&#39;x_point_obs&#39;, dist.Normal(loc=obs_vals, scale=0.1), obs=x[obs_idx])
+plt.rcParams[&#39;figure.dpi&#39;] = 200</code></pre>
+<p>First, baseline: Independent draws from a normal distribution.</p>
+<pre class="python"><code>def model1():
+    x = sample(&quot;x&quot;, dist.Normal().expand([100]))
 
 
-    mcmc = MCMC(NUTS(model2), num_warmup=1000, num_samples=100)
-    mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
-    samples = mcmc.get_samples()
+mcmc = MCMC(NUTS(model1), num_warmup=1000, num_samples=100)
+mcmc.run(jax.random.PRNGKey(0))
+samples = mcmc.get_samples()
 
-    plt.scatter(x_points.flatten(), samples[&#39;x&#39;].flatten(), color=&#39;darkblue&#39;, alpha=0.01, s=10);
-    plt.scatter(obs_idx, obs_vals, label=&#39;Observed values&#39;, color=&#39;crimson&#39;, s=20)
-    plt.legend();</code></pre>
-    <pre><code>sample: 100%|██████████| 1100/1100 [00:00&lt;00:00, 1624.28it/s, 15 steps of size 4.02e-01. acc. prob=0.90]</code></pre>
-    <figure>
-    <img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_5_1.png" alt="" /><figcaption>png</figcaption>
-    </figure>
-    <p>“Observing” each point to be the average of previous and following points. This would be equivalent to adjusting the log-likelihood or adding a potential in other packages.</p>
-    <pre class="python"><code>def model3(obs_vals, obs_idx):
-        x = sample(&#39;x&#39;, dist.Normal().expand([100]))
-        sample(&#39;x_dependence&#39;, dist.Normal(loc=(x[:-2]+x[2:])/2.0, scale=0.1), obs=x[1:-1])
-        sample(&#39;x_point_obs&#39;, dist.Normal(loc=obs_vals, scale=0.1), obs=x[obs_idx])
+x_points = np.repeat(np.arange(100)[None, :], samples[&quot;x&quot;].shape[0], axis=0)
+plt.scatter(
+    x_points.flatten(), samples[&quot;x&quot;].flatten(), color=&quot;darkblue&quot;, alpha=0.01, s=10
+)
+plt.gca().set(xlabel=&quot;Spatial/temporal dimension&quot;, ylabel=&quot;Observable&quot;);</code></pre>
+<pre><code>sample: 100%|██████████| 1100/1100 [00:00&lt;00:00, 1656.79it/s, 7 steps of size 4.46e-01. acc. prob=0.86]</code></pre>
+<figure>
+<img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_3_1.png" alt="" /><figcaption>png</figcaption>
+</figure>
+<p>Adding some point observations …</p>
+<pre class="python"><code>obs_vals = jnp.array([3.3, -2.5, 4.9])
+obs_idx = jnp.array([20, 40, 75])
 
-
-    mcmc = MCMC(NUTS(model3), num_warmup=1000, num_samples=100)
-    mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
-    samples = mcmc.get_samples()
-
-    plt.scatter(x_points.flatten(), samples[&#39;x&#39;].flatten(), color=&#39;darkblue&#39;, alpha=0.01, s=10)
-    plt.scatter(obs_idx, obs_vals, label=&#39;Observed values&#39;, color=&#39;crimson&#39;, s=20)
-    plt.legend();</code></pre>
-    <pre><code>sample: 100%|██████████| 1100/1100 [00:01&lt;00:00, 903.87it/s, 63 steps of size 8.62e-02. acc. prob=0.84] </code></pre>
-    <figure>
-    <img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_7_1.png" alt="" /><figcaption>png</figcaption>
-    </figure>
-    <p>Slightly fancier — weighted relation to next/previous 2 points. I don’t notice a dramatic change with this 1:2:2:1 weighting but it would be interesting to add asymmetric constraints, etc. I suppose this could be useful for probabilistic low-pass filtering with sinc weights.</p>
-    <pre class="python"><code>def model4(obs_vals, obs_idx):
-        x = sample(&#39;x&#39;, dist.Normal().expand([100]))
-        sample(&#39;x_pre_obs&#39;, dist.Normal(loc=(x[:-4]+2.0*x[1:-3]+2.0*x[3:-1]+x[4:])/6.0, scale=0.1), obs=x[2:-2])
-        sample(&#39;x_point_obs&#39;, dist.Normal(loc=obs_vals, scale=0.1), obs=x[obs_idx])
+def model2(obs_vals, obs_idx):
+    x = sample(&#39;x&#39;, dist.Normal().expand([100]))
+    sample(&#39;x_point_obs&#39;, dist.Normal(loc=obs_vals, scale=0.1), obs=x[obs_idx])
 
 
-    mcmc = MCMC(NUTS(model4), num_warmup=1000, num_samples=100)
-    mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
-    samples = mcmc.get_samples()
+mcmc = MCMC(NUTS(model2), num_warmup=1000, num_samples=100)
+mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
+samples = mcmc.get_samples()
 
-    plt.plot(samples[&#39;x&#39;].T, color=&#39;darkblue&#39;, alpha=0.01)
-    plt.scatter(obs_idx, obs_vals, label=&#39;Observed values&#39;, color=&#39;crimson&#39;, s=20)
-    plt.legend();</code></pre>
-    <pre><code>sample: 100%|██████████| 1100/1100 [00:01&lt;00:00, 1011.04it/s, 63 steps of size 9.88e-02. acc. prob=0.89]</code></pre>
-    <figure>
-    <img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_9_1.png" alt="" /><figcaption>png</figcaption>
-    </figure>
-    <p>Something a bit more interesting. Let’s change the “base” distribution to be bimodal and asymmetric. I have picked fairly broad humps so we have a fair shot at achieving good mixing.</p>
-    <pre class="python"><code>mixing_distribution = dist.Categorical(jnp.array([0.3, 0.7]))
-    component_distribution = dist.Normal(
-        loc=jnp.array([-3.0, 3.5]), scale=jnp.array([1.0, 1.5])
-    )
+plt.scatter(x_points.flatten(), samples[&#39;x&#39;].flatten(), color=&#39;darkblue&#39;, alpha=0.01, s=10);
+plt.scatter(obs_idx, obs_vals, label=&#39;Observed values&#39;, color=&#39;crimson&#39;, s=20)
+plt.legend();</code></pre>
+<pre><code>sample: 100%|██████████| 1100/1100 [00:00&lt;00:00, 1624.28it/s, 15 steps of size 4.02e-01. acc. prob=0.90]</code></pre>
+<figure>
+<img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_5_1.png" alt="" /><figcaption>png</figcaption>
+</figure>
+<p>“Observing” each point to be the average of previous and following points. This would be equivalent to adjusting the log-likelihood or adding a potential in other packages.</p>
+<pre class="python"><code>def model3(obs_vals, obs_idx):
+    x = sample(&#39;x&#39;, dist.Normal().expand([100]))
+    sample(&#39;x_dependence&#39;, dist.Normal(loc=(x[:-2]+x[2:])/2.0, scale=0.1), obs=x[1:-1])
+    sample(&#39;x_point_obs&#39;, dist.Normal(loc=obs_vals, scale=0.1), obs=x[obs_idx])
 
-    d = dist.MixtureSameFamily(mixing_distribution, component_distribution)
 
-    x = jnp.linspace(-10, 10, 200)
-    y = np.exp(d.log_prob(x))
+mcmc = MCMC(NUTS(model3), num_warmup=1000, num_samples=100)
+mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
+samples = mcmc.get_samples()
 
-    plt.fill_between(x, y, alpha=0.3, color=&#39;darkblue&#39;)
-    plt.gca().set(xlabel=&#39;x&#39;, ylabel=&#39;PDF&#39;);</code></pre>
-    <figure>
-    <img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_11_0.png" alt="" /><figcaption>png</figcaption>
-    </figure>
-    <pre class="python"><code>def model5(obs_vals, obs_idx):
-        x = sample(&#39;x&#39;, d.expand([100]))
+plt.scatter(x_points.flatten(), samples[&#39;x&#39;].flatten(), color=&#39;darkblue&#39;, alpha=0.01, s=10)
+plt.scatter(obs_idx, obs_vals, label=&#39;Observed values&#39;, color=&#39;crimson&#39;, s=20)
+plt.legend();</code></pre>
+<pre><code>sample: 100%|██████████| 1100/1100 [00:01&lt;00:00, 903.87it/s, 63 steps of size 8.62e-02. acc. prob=0.84] </code></pre>
+<figure>
+<img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_7_1.png" alt="" /><figcaption>png</figcaption>
+</figure>
+<p>Slightly fancier — weighted relation to next/previous 2 points. I don’t notice a dramatic change with this 1:2:2:1 weighting but it would be interesting to add asymmetric constraints, etc. I suppose this could be useful for probabilistic low-pass filtering with sinc weights.</p>
+<pre class="python"><code>def model4(obs_vals, obs_idx):
+    x = sample(&#39;x&#39;, dist.Normal().expand([100]))
+    sample(&#39;x_pre_obs&#39;, dist.Normal(loc=(x[:-4]+2.0*x[1:-3]+2.0*x[3:-1]+x[4:])/6.0, scale=0.1), obs=x[2:-2])
+    sample(&#39;x_point_obs&#39;, dist.Normal(loc=obs_vals, scale=0.1), obs=x[obs_idx])
 
-    mcmc = MCMC(NUTS(model5), num_warmup=1000, num_samples=200)
-    mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
-    samples = mcmc.get_samples()
 
-    x_points = np.repeat(np.arange(100)[None, :], samples[&#39;x&#39;].shape[0], axis=0)
-    plt.scatter(x_points.flatten(), samples[&#39;x&#39;].flatten(), color=&#39;darkblue&#39;, alpha=0.01, s=10);</code></pre>
-    <pre><code>sample: 100%|██████████| 1200/1200 [00:00&lt;00:00, 1610.28it/s, 15 steps of size 1.68e-01. acc. prob=0.83]</code></pre>
-    <figure>
-    <img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_12_1.png" alt="" /><figcaption>png</figcaption>
-    </figure>
-    <p>Adding back the observation constraints without dependence.</p>
-    <pre class="python"><code>def model6(obs_vals, obs_idx):
-        x = sample(&#39;x&#39;, d.expand([100]))
-        sample(&#39;x_point_obs&#39;, dist.Normal(loc=obs_vals, scale=0.1), obs=x[obs_idx])
+mcmc = MCMC(NUTS(model4), num_warmup=1000, num_samples=100)
+mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
+samples = mcmc.get_samples()
 
-    mcmc = MCMC(NUTS(model6), num_warmup=1000, num_samples=200)
-    mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
-    samples = mcmc.get_samples()
+plt.plot(samples[&#39;x&#39;].T, color=&#39;darkblue&#39;, alpha=0.01)
+plt.scatter(obs_idx, obs_vals, label=&#39;Observed values&#39;, color=&#39;crimson&#39;, s=20)
+plt.legend();</code></pre>
+<pre><code>sample: 100%|██████████| 1100/1100 [00:01&lt;00:00, 1011.04it/s, 63 steps of size 9.88e-02. acc. prob=0.89]</code></pre>
+<figure>
+<img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_9_1.png" alt="" /><figcaption>png</figcaption>
+</figure>
+<p>Something a bit more interesting. Let’s change the “base” distribution to be bimodal and asymmetric. I have picked fairly broad humps so we have a fair shot at achieving good mixing.</p>
+<pre class="python"><code>mixing_distribution = dist.Categorical(jnp.array([0.3, 0.7]))
+component_distribution = dist.Normal(
+    loc=jnp.array([-3.0, 3.5]), scale=jnp.array([1.0, 1.5])
+)
 
-    x_points = np.repeat(np.arange(100)[None, :], samples[&#39;x&#39;].shape[0], axis=0)
-    plt.scatter(x_points.flatten(), samples[&#39;x&#39;].flatten(), color=&#39;darkblue&#39;, alpha=0.01, s=10)
-    plt.scatter(obs_idx, obs_vals, label=&#39;Observed values&#39;, color=&#39;crimson&#39;, s=20)
-    plt.legend();</code></pre>
-    <pre><code>sample: 100%|██████████| 1200/1200 [00:00&lt;00:00, 1463.46it/s, 15 steps of size 1.48e-01. acc. prob=0.87]</code></pre>
-    <figure>
-    <img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_14_1.png" alt="" /><figcaption>png</figcaption>
-    </figure>
-    <p>Finally, bringing back dependency on adjacent points …</p>
-    <pre class="python"><code>def model6(obs_vals, obs_idx):
-        x = sample(&#39;x&#39;, d.expand([100]))
-        sample(&#39;x_dependence&#39;, dist.Normal(loc=(x[:-2]+x[2:])/2.0, scale=0.1), obs=x[1:-1])
-        sample(&#39;x_point_obs&#39;, dist.Normal(loc=obs_vals, scale=0.1), obs=x[obs_idx])
+d = dist.MixtureSameFamily(mixing_distribution, component_distribution)
 
-    mcmc = MCMC(NUTS(model6), num_warmup=1000, num_samples=200)
-    mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
-    samples = mcmc.get_samples()
+x = jnp.linspace(-10, 10, 200)
+y = np.exp(d.log_prob(x))
 
-    x_points = np.repeat(np.arange(100)[None, :], samples[&#39;x&#39;].shape[0], axis=0)
-    # plt.scatter(x_points.flatten(), samples[&#39;x&#39;].flatten(), color=&#39;darkblue&#39;, alpha=0.01, s=10)
-    plt.scatter(obs_idx, obs_vals, label=&#39;Observed values&#39;, color=&#39;crimson&#39;, s=20, zorder=10)
-    plt.plot(samples[&#39;x&#39;].T, color=&#39;darkblue&#39;, alpha=0.01)
-    plt.legend();</code></pre>
-    <pre><code>sample: 100%|██████████| 1200/1200 [00:03&lt;00:00, 356.29it/s, 255 steps of size 2.30e-02. acc. prob=0.88]</code></pre>
-    <figure>
-    <img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_16_1.png" alt="" /><figcaption>png</figcaption>
-    </figure>
-    <p>And now just for fun, let’s try a bimodal dependency distribution, here essentially saying that each point is likely to be larger than its neighbor (or linger in the same ballpark).</p>
-    <pre class="python"><code>d_dep = dist.MixtureSameFamily(
-        mixing_distribution,
-        dist.Normal(loc=jnp.array([0, 0.5]), scale=0.1)
-    )
+plt.fill_between(x, y, alpha=0.3, color=&#39;darkblue&#39;)
+plt.gca().set(xlabel=&#39;x&#39;, ylabel=&#39;PDF&#39;);</code></pre>
+<figure>
+<img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_11_0.png" alt="" /><figcaption>png</figcaption>
+</figure>
+<pre class="python"><code>def model5(obs_vals, obs_idx):
+    x = sample(&#39;x&#39;, d.expand([100]))
 
-    x = jnp.linspace(-1, 1, 200)
-    y = np.exp(d_dep.log_prob(x))
+mcmc = MCMC(NUTS(model5), num_warmup=1000, num_samples=200)
+mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
+samples = mcmc.get_samples()
 
-    plt.fill_between(x, y, alpha=0.3, color=&#39;darkblue&#39;)
-    plt.gca().set(xlabel=&#39;x&#39;, ylabel=&#39;PDF&#39;, title=&#39;$x_i - x_{i-1}$ prior&#39;);</code></pre>
-    <figure>
-    <img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_18_0.png" alt="" /><figcaption>png</figcaption>
-    </figure>
-    <pre class="python"><code>def model7(obs_vals, obs_idx):
-        x = sample(&#39;x&#39;, d.expand([100]))
-        sample(&#39;x_dependence&#39;, d_dep, obs=x[1:] - x[:-1])
+x_points = np.repeat(np.arange(100)[None, :], samples[&#39;x&#39;].shape[0], axis=0)
+plt.scatter(x_points.flatten(), samples[&#39;x&#39;].flatten(), color=&#39;darkblue&#39;, alpha=0.01, s=10);</code></pre>
+<pre><code>sample: 100%|██████████| 1200/1200 [00:00&lt;00:00, 1610.28it/s, 15 steps of size 1.68e-01. acc. prob=0.83]</code></pre>
+<figure>
+<img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_12_1.png" alt="" /><figcaption>png</figcaption>
+</figure>
+<p>Adding back the observation constraints without dependence.</p>
+<pre class="python"><code>def model6(obs_vals, obs_idx):
+    x = sample(&#39;x&#39;, d.expand([100]))
+    sample(&#39;x_point_obs&#39;, dist.Normal(loc=obs_vals, scale=0.1), obs=x[obs_idx])
 
-    mcmc = MCMC(NUTS(model7), num_warmup=1000, num_samples=200)
-    mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
-    samples = mcmc.get_samples()
+mcmc = MCMC(NUTS(model6), num_warmup=1000, num_samples=200)
+mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
+samples = mcmc.get_samples()
 
-    plt.scatter(x_points.flatten(), samples[&#39;x&#39;].flatten(), color=&#39;darkblue&#39;, alpha=0.01, s=10)
-    plt.plot(x_points[0], samples[&#39;x&#39;].mean(axis=0), color=&#39;crimson&#39;, lw=2, label=&#39;Mean&#39;)
-    plt.legend();</code></pre>
-    <pre><code>sample: 100%|██████████| 1200/1200 [00:03&lt;00:00, 396.09it/s, 127 steps of size 6.49e-02. acc. prob=0.84]</code></pre>
-    <figure>
-    <img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_19_1.png" alt="" /><figcaption>png</figcaption>
-    </figure>
-    <p>With the observations added back in you can see how the function finds it easier to catch up with sudden rises than falls due to the prior on adjacent values.</p>
-    <pre class="python"><code>def model8(obs_vals, obs_idx):
-        x = sample(&#39;x&#39;, d.expand([100]))
-        sample(&#39;x_dependence&#39;, d_dep, obs=x[1:] - x[:-1])
-        sample(&#39;x_point_obs&#39;, dist.Normal(loc=obs_vals, scale=0.25), obs=x[obs_idx])
+x_points = np.repeat(np.arange(100)[None, :], samples[&#39;x&#39;].shape[0], axis=0)
+plt.scatter(x_points.flatten(), samples[&#39;x&#39;].flatten(), color=&#39;darkblue&#39;, alpha=0.01, s=10)
+plt.scatter(obs_idx, obs_vals, label=&#39;Observed values&#39;, color=&#39;crimson&#39;, s=20)
+plt.legend();</code></pre>
+<pre><code>sample: 100%|██████████| 1200/1200 [00:00&lt;00:00, 1463.46it/s, 15 steps of size 1.48e-01. acc. prob=0.87]</code></pre>
+<figure>
+<img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_14_1.png" alt="" /><figcaption>png</figcaption>
+</figure>
+<p>Finally, bringing back dependency on adjacent points …</p>
+<pre class="python"><code>def model6(obs_vals, obs_idx):
+    x = sample(&#39;x&#39;, d.expand([100]))
+    sample(&#39;x_dependence&#39;, dist.Normal(loc=(x[:-2]+x[2:])/2.0, scale=0.1), obs=x[1:-1])
+    sample(&#39;x_point_obs&#39;, dist.Normal(loc=obs_vals, scale=0.1), obs=x[obs_idx])
 
-    mcmc = MCMC(NUTS(model8), num_warmup=1000, num_samples=200)
-    mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
-    samples = mcmc.get_samples()
+mcmc = MCMC(NUTS(model6), num_warmup=1000, num_samples=200)
+mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
+samples = mcmc.get_samples()
 
-    plt.scatter(x_points.flatten(), samples[&#39;x&#39;].flatten(), color=&#39;darkblue&#39;, alpha=0.01, s=10)
-    plt.plot(x_points[0], samples[&#39;x&#39;].mean(axis=0), color=&#39;crimson&#39;, lw=2, label=&#39;Mean&#39;)
-    plt.scatter(obs_idx, obs_vals, label=&#39;Observed values&#39;, color=&#39;crimson&#39;, s=20)
-    plt.legend();</code></pre>
-    <pre><code>sample: 100%|██████████| 1200/1200 [00:02&lt;00:00, 497.90it/s, 255 steps of size 5.76e-02. acc. prob=0.88]</code></pre>
-    <figure>
-    <img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_21_1.png" alt="" /><figcaption>png</figcaption>
-    </figure>
-    <p>Very cool and I think quite useful for modelling chromatograms.</p>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
-</body>
+x_points = np.repeat(np.arange(100)[None, :], samples[&#39;x&#39;].shape[0], axis=0)
+# plt.scatter(x_points.flatten(), samples[&#39;x&#39;].flatten(), color=&#39;darkblue&#39;, alpha=0.01, s=10)
+plt.scatter(obs_idx, obs_vals, label=&#39;Observed values&#39;, color=&#39;crimson&#39;, s=20, zorder=10)
+plt.plot(samples[&#39;x&#39;].T, color=&#39;darkblue&#39;, alpha=0.01)
+plt.legend();</code></pre>
+<pre><code>sample: 100%|██████████| 1200/1200 [00:03&lt;00:00, 356.29it/s, 255 steps of size 2.30e-02. acc. prob=0.88]</code></pre>
+<figure>
+<img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_16_1.png" alt="" /><figcaption>png</figcaption>
+</figure>
+<p>And now just for fun, let’s try a bimodal dependency distribution, here essentially saying that each point is likely to be larger than its neighbor (or linger in the same ballpark).</p>
+<pre class="python"><code>d_dep = dist.MixtureSameFamily(
+    mixing_distribution,
+    dist.Normal(loc=jnp.array([0, 0.5]), scale=0.1)
+)
+
+x = jnp.linspace(-1, 1, 200)
+y = np.exp(d_dep.log_prob(x))
+
+plt.fill_between(x, y, alpha=0.3, color=&#39;darkblue&#39;)
+plt.gca().set(xlabel=&#39;x&#39;, ylabel=&#39;PDF&#39;, title=&#39;$x_i - x_{i-1}$ prior&#39;);</code></pre>
+<figure>
+<img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_18_0.png" alt="" /><figcaption>png</figcaption>
+</figure>
+<pre class="python"><code>def model7(obs_vals, obs_idx):
+    x = sample(&#39;x&#39;, d.expand([100]))
+    sample(&#39;x_dependence&#39;, d_dep, obs=x[1:] - x[:-1])
+
+mcmc = MCMC(NUTS(model7), num_warmup=1000, num_samples=200)
+mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
+samples = mcmc.get_samples()
+
+plt.scatter(x_points.flatten(), samples[&#39;x&#39;].flatten(), color=&#39;darkblue&#39;, alpha=0.01, s=10)
+plt.plot(x_points[0], samples[&#39;x&#39;].mean(axis=0), color=&#39;crimson&#39;, lw=2, label=&#39;Mean&#39;)
+plt.legend();</code></pre>
+<pre><code>sample: 100%|██████████| 1200/1200 [00:03&lt;00:00, 396.09it/s, 127 steps of size 6.49e-02. acc. prob=0.84]</code></pre>
+<figure>
+<img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_19_1.png" alt="" /><figcaption>png</figcaption>
+</figure>
+<p>With the observations added back in you can see how the function finds it easier to catch up with sudden rises than falls due to the prior on adjacent values.</p>
+<pre class="python"><code>def model8(obs_vals, obs_idx):
+    x = sample(&#39;x&#39;, d.expand([100]))
+    sample(&#39;x_dependence&#39;, d_dep, obs=x[1:] - x[:-1])
+    sample(&#39;x_point_obs&#39;, dist.Normal(loc=obs_vals, scale=0.25), obs=x[obs_idx])
+
+mcmc = MCMC(NUTS(model8), num_warmup=1000, num_samples=200)
+mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
+samples = mcmc.get_samples()
+
+plt.scatter(x_points.flatten(), samples[&#39;x&#39;].flatten(), color=&#39;darkblue&#39;, alpha=0.01, s=10)
+plt.plot(x_points[0], samples[&#39;x&#39;].mean(axis=0), color=&#39;crimson&#39;, lw=2, label=&#39;Mean&#39;)
+plt.scatter(obs_idx, obs_vals, label=&#39;Observed values&#39;, color=&#39;crimson&#39;, s=20)
+plt.legend();</code></pre>
+<pre><code>sample: 100%|██████████| 1200/1200 [00:02&lt;00:00, 497.90it/s, 255 steps of size 5.76e-02. acc. prob=0.88]</code></pre>
+<figure>
+<img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_21_1.png" alt="" /><figcaption>png</figcaption>
+</figure>
+<p>Very cool and I think quite useful for modelling chromatograms.</p></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script>
+      // Remove leading spaces from code blocks (pandoc artefact)
+      document.querySelectorAll("pre code").forEach((block) => {
+        block.textContent = block.textContent.replace(/^( {4})/gm, "");
+      });
+      hljs.highlightAll();
+    </script>
+  </body>
 </html>

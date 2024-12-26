@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-  <link rel="alternate" type="application/rss+xml" title="Hessam's blog RSS Feed" href="/feed.xml">
-  <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="/primer.css">
-  <link rel="stylesheet" href="/light.css" media="(prefers-color-scheme: light)">
-  <link rel="stylesheet" href="/dark.css" media="(prefers-color-scheme: dark)">
-</head>
-<body>
-  <div class="container-lg px-3 my-5 markdown-body">
-    <h1 id="funny">Funny</h1>
-    <p>… Likewise, claiming JS is homoiconic because you can eval strings of code is nonsense. If that’s the only criteria for homoiconicity, then C is too, since you can treat an array of bytes as code and jump to it.</p>
-    <p>From <a href="http://journal.stuffwithstuff.com/2013/07/18/javascript-isnt-scheme">here</a>.</p>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Hessam's blog RSS Feed"
+      href="/feed.xml"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/primer.css" />
+    <link
+      rel="stylesheet"
+      href="/light.css"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="stylesheet"
+      href="/dark.css"
+      media="(prefers-color-scheme: dark)"
+    />
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body"><h1 id="funny">Funny</h1>
+<p>… Likewise, claiming JS is homoiconic because you can eval strings of code is nonsense. If that’s the only criteria for homoiconicity, then C is too, since you can treat an array of bytes as code and jump to it.</p>
+<p>From <a href="http://journal.stuffwithstuff.com/2013/07/18/javascript-isnt-scheme">here</a>.</p></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script>
+      // Remove leading spaces from code blocks (pandoc artefact)
+      document.querySelectorAll("pre code").forEach((block) => {
+        block.textContent = block.textContent.replace(/^( {4})/gm, "");
+      });
+      hljs.highlightAll();
+    </script>
+  </body>
 </html>
