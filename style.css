@@ -91,3 +91,16 @@ a:hover {
         mix-blend-mode: screen;
     }
 }
+
+figure {
+    margin: 0 auto;
+    overflow: auto;
+}
+
+figure img {
+    width: max(60%, 400px);
+}
+
+figcaption {
+    display: none;
+}
