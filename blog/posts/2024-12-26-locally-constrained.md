@@ -13,7 +13,7 @@ import seaborn as sns
 from numpyro import sample
 from numpyro.infer import MCMC, NUTS
 
-sns.set_theme('talk', 'ticks', font='Arial')
+sns.set_theme('notebook', 'ticks', font='Arial')
 
 plt.rcParams['figure.dpi'] = 150
 ```
@@ -33,7 +33,7 @@ samples = mcmc.get_samples()
 plt.plot(samples['x'].T, color='darkblue', alpha=0.01);
 ```
 
-    sample: 100%|██████████| 1100/1100 [00:00<00:00, 1787.68it/s, 7 steps of size 4.46e-01. acc. prob=0.86]
+    sample: 100%|██████████| 1100/1100 [00:00<00:00, 1402.57it/s, 7 steps of size 4.46e-01. acc. prob=0.86]
 
 
 
@@ -61,7 +61,7 @@ samples = mcmc.get_samples()
 plt.plot(samples['x'].T, color='darkblue', alpha=0.01);
 ```
 
-    sample: 100%|██████████| 1100/1100 [00:00<00:00, 1529.03it/s, 15 steps of size 4.02e-01. acc. prob=0.90]
+    sample: 100%|██████████| 1100/1100 [00:00<00:00, 1582.71it/s, 15 steps of size 4.02e-01. acc. prob=0.90]
 
 
 
@@ -87,7 +87,7 @@ samples = mcmc.get_samples()
 plt.plot(samples['x'].T, color='darkblue', alpha=0.01);
 ```
 
-    sample: 100%|██████████| 1100/1100 [00:01<00:00, 1033.71it/s, 63 steps of size 8.62e-02. acc. prob=0.84]
+    sample: 100%|██████████| 1100/1100 [00:01<00:00, 906.00it/s, 63 steps of size 8.62e-02. acc. prob=0.84]  
 
 
 
@@ -113,7 +113,7 @@ samples = mcmc.get_samples()
 plt.plot(samples['x'].T, color='darkblue', alpha=0.01);
 ```
 
-    sample: 100%|██████████| 1100/1100 [00:01<00:00, 926.95it/s, 63 steps of size 9.88e-02. acc. prob=0.89] 
+    sample: 100%|██████████| 1100/1100 [00:01<00:00, 897.50it/s, 63 steps of size 9.88e-02. acc. prob=0.89] 
 
 
 
@@ -159,7 +159,7 @@ x_points = np.repeat(np.arange(100)[None, :], samples['x'].shape[0], axis=0)
 plt.scatter(x_points.flatten(), samples['x'].flatten(), color='darkblue', alpha=0.01, s=10);
 ```
 
-    sample: 100%|██████████| 1200/1200 [00:00<00:00, 1606.27it/s, 15 steps of size 1.68e-01. acc. prob=0.83]
+    sample: 100%|██████████| 1200/1200 [00:00<00:00, 1542.65it/s, 15 steps of size 1.68e-01. acc. prob=0.83]
 
 
 
@@ -184,7 +184,7 @@ x_points = np.repeat(np.arange(100)[None, :], samples['x'].shape[0], axis=0)
 plt.scatter(x_points.flatten(), samples['x'].flatten(), color='darkblue', alpha=0.01, s=10);
 ```
 
-    sample: 100%|██████████| 1200/1200 [00:00<00:00, 1439.87it/s, 15 steps of size 1.48e-01. acc. prob=0.87]
+    sample: 100%|██████████| 1200/1200 [00:00<00:00, 1277.60it/s, 15 steps of size 1.48e-01. acc. prob=0.87]
 
 
 
@@ -210,7 +210,7 @@ x_points = np.repeat(np.arange(100)[None, :], samples['x'].shape[0], axis=0)
 plt.scatter(x_points.flatten(), samples['x'].flatten(), color='darkblue', alpha=0.01, s=10);
 ```
 
-    sample: 100%|██████████| 1200/1200 [00:03<00:00, 325.35it/s, 255 steps of size 2.30e-02. acc. prob=0.88]
+    sample: 100%|██████████| 1200/1200 [00:03<00:00, 339.54it/s, 255 steps of size 2.30e-02. acc. prob=0.88]
 
 
 
@@ -233,12 +233,27 @@ x = jnp.linspace(-1, 1, 200)
 y = np.exp(d_dep.log_prob(x))
 
 plt.fill_between(x, y, alpha=0.3, color='darkblue')
-plt.gca().set(xlabel='x', ylabel='PDF', title='Dependency "error"');
+plt.gca().set(xlabel='x', ylabel='PDF', title='$x_i - x_{i-1}$ prior');
+plt.figtext()
 ```
 
 
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    Cell In[10], line 12
+         10 plt.fill_between(x, y, alpha=0.3, color='darkblue')
+         11 plt.gca().set(xlabel='x', ylabel='PDF', title='$x_i - x_{i-1}$ prior');
+    ---> 12 plt.figtext()
+
+
+    TypeError: figtext() missing 3 required positional arguments: 'x', 'y', and 's'
+
+
+
     
-![png](2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_18_0.png)
+![png](2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_18_1.png)
     
 
 
@@ -253,10 +268,12 @@ mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
 samples = mcmc.get_samples()
 
 x_points = np.repeat(np.arange(100)[None, :], samples['x'].shape[0], axis=0)
-plt.scatter(x_points.flatten(), samples['x'].flatten(), color='darkblue', alpha=0.01, s=10);
+plt.scatter(x_points.flatten(), samples['x'].flatten(), color='darkblue', alpha=0.01, s=10)
+plt.plot(x_points[0], samples['x'].mean(axis=0), color='crimson', lw=2, label='Mean')
+plt.legend();
 ```
 
-    sample: 100%|██████████| 1200/1200 [00:03<00:00, 375.87it/s, 127 steps of size 6.49e-02. acc. prob=0.84]
+    sample: 100%|██████████| 1200/1200 [00:03<00:00, 376.06it/s, 127 steps of size 6.49e-02. acc. prob=0.84]
 
 
 
@@ -265,7 +282,7 @@ plt.scatter(x_points.flatten(), samples['x'].flatten(), color='darkblue', alpha=
     
 
 
-With the observations added back in:
+With the observations added back in you can see how the function finds it easier to catch up with sudden rises than falls due to the prior on adjacent values.
 
 
 ```python
@@ -280,10 +297,12 @@ samples = mcmc.get_samples()
 
 x_points = np.repeat(np.arange(100)[None, :], samples['x'].shape[0], axis=0)
 plt.scatter(x_points.flatten(), samples['x'].flatten(), color='darkblue', alpha=0.01, s=10)
-plt.scatter(obs_idx, obs_vals, label='observed values', color='crimson', s=20);
+plt.plot(x_points[0], samples['x'].mean(axis=0), color='crimson', lw=2, label='Mean')
+plt.scatter(obs_idx, obs_vals, label='Observed values', color='crimson', s=20)
+plt.legend();
 ```
 
-    sample: 100%|██████████| 1200/1200 [00:02<00:00, 493.73it/s, 255 steps of size 5.76e-02. acc. prob=0.88]
+    sample: 100%|██████████| 1200/1200 [00:02<00:00, 446.14it/s, 255 steps of size 5.76e-02. acc. prob=0.88]
 
 
 

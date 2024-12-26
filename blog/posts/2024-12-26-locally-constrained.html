@@ -23,7 +23,7 @@
     from numpyro import sample
     from numpyro.infer import MCMC, NUTS
 
-    sns.set_theme(&#39;talk&#39;, &#39;ticks&#39;, font=&#39;Arial&#39;)
+    sns.set_theme(&#39;notebook&#39;, &#39;ticks&#39;, font=&#39;Arial&#39;)
 
     plt.rcParams[&#39;figure.dpi&#39;] = 150</code></pre>
     <p>First, baseline: Independent draws from a normal distribution.</p>
@@ -36,7 +36,7 @@
     samples = mcmc.get_samples()
 
     plt.plot(samples[&#39;x&#39;].T, color=&#39;darkblue&#39;, alpha=0.01);</code></pre>
-    <pre><code>sample: 100%|██████████| 1100/1100 [00:00&lt;00:00, 1787.68it/s, 7 steps of size 4.46e-01. acc. prob=0.86]</code></pre>
+    <pre><code>sample: 100%|██████████| 1100/1100 [00:00&lt;00:00, 1402.57it/s, 7 steps of size 4.46e-01. acc. prob=0.86]</code></pre>
     <figure>
     <img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_3_1.png" alt="" /><figcaption>png</figcaption>
     </figure>
@@ -54,7 +54,7 @@
     samples = mcmc.get_samples()
 
     plt.plot(samples[&#39;x&#39;].T, color=&#39;darkblue&#39;, alpha=0.01);</code></pre>
-    <pre><code>sample: 100%|██████████| 1100/1100 [00:00&lt;00:00, 1529.03it/s, 15 steps of size 4.02e-01. acc. prob=0.90]</code></pre>
+    <pre><code>sample: 100%|██████████| 1100/1100 [00:00&lt;00:00, 1582.71it/s, 15 steps of size 4.02e-01. acc. prob=0.90]</code></pre>
     <figure>
     <img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_5_1.png" alt="" /><figcaption>png</figcaption>
     </figure>
@@ -70,7 +70,7 @@
     samples = mcmc.get_samples()
 
     plt.plot(samples[&#39;x&#39;].T, color=&#39;darkblue&#39;, alpha=0.01);</code></pre>
-    <pre><code>sample: 100%|██████████| 1100/1100 [00:01&lt;00:00, 1033.71it/s, 63 steps of size 8.62e-02. acc. prob=0.84]</code></pre>
+    <pre><code>sample: 100%|██████████| 1100/1100 [00:01&lt;00:00, 906.00it/s, 63 steps of size 8.62e-02. acc. prob=0.84]  </code></pre>
     <figure>
     <img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_7_1.png" alt="" /><figcaption>png</figcaption>
     </figure>
@@ -86,7 +86,7 @@
     samples = mcmc.get_samples()
 
     plt.plot(samples[&#39;x&#39;].T, color=&#39;darkblue&#39;, alpha=0.01);</code></pre>
-    <pre><code>sample: 100%|██████████| 1100/1100 [00:01&lt;00:00, 926.95it/s, 63 steps of size 9.88e-02. acc. prob=0.89] </code></pre>
+    <pre><code>sample: 100%|██████████| 1100/1100 [00:01&lt;00:00, 897.50it/s, 63 steps of size 9.88e-02. acc. prob=0.89] </code></pre>
     <figure>
     <img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_9_1.png" alt="" /><figcaption>png</figcaption>
     </figure>
@@ -115,7 +115,7 @@
 
     x_points = np.repeat(np.arange(100)[None, :], samples[&#39;x&#39;].shape[0], axis=0)
     plt.scatter(x_points.flatten(), samples[&#39;x&#39;].flatten(), color=&#39;darkblue&#39;, alpha=0.01, s=10);</code></pre>
-    <pre><code>sample: 100%|██████████| 1200/1200 [00:00&lt;00:00, 1606.27it/s, 15 steps of size 1.68e-01. acc. prob=0.83]</code></pre>
+    <pre><code>sample: 100%|██████████| 1200/1200 [00:00&lt;00:00, 1542.65it/s, 15 steps of size 1.68e-01. acc. prob=0.83]</code></pre>
     <figure>
     <img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_12_1.png" alt="" /><figcaption>png</figcaption>
     </figure>
@@ -130,7 +130,7 @@
 
     x_points = np.repeat(np.arange(100)[None, :], samples[&#39;x&#39;].shape[0], axis=0)
     plt.scatter(x_points.flatten(), samples[&#39;x&#39;].flatten(), color=&#39;darkblue&#39;, alpha=0.01, s=10);</code></pre>
-    <pre><code>sample: 100%|██████████| 1200/1200 [00:00&lt;00:00, 1439.87it/s, 15 steps of size 1.48e-01. acc. prob=0.87]</code></pre>
+    <pre><code>sample: 100%|██████████| 1200/1200 [00:00&lt;00:00, 1277.60it/s, 15 steps of size 1.48e-01. acc. prob=0.87]</code></pre>
     <figure>
     <img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_14_1.png" alt="" /><figcaption>png</figcaption>
     </figure>
@@ -146,7 +146,7 @@
 
     x_points = np.repeat(np.arange(100)[None, :], samples[&#39;x&#39;].shape[0], axis=0)
     plt.scatter(x_points.flatten(), samples[&#39;x&#39;].flatten(), color=&#39;darkblue&#39;, alpha=0.01, s=10);</code></pre>
-    <pre><code>sample: 100%|██████████| 1200/1200 [00:03&lt;00:00, 325.35it/s, 255 steps of size 2.30e-02. acc. prob=0.88]</code></pre>
+    <pre><code>sample: 100%|██████████| 1200/1200 [00:03&lt;00:00, 339.54it/s, 255 steps of size 2.30e-02. acc. prob=0.88]</code></pre>
     <figure>
     <img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_16_1.png" alt="" /><figcaption>png</figcaption>
     </figure>
@@ -161,9 +161,21 @@
     y = np.exp(d_dep.log_prob(x))
 
     plt.fill_between(x, y, alpha=0.3, color=&#39;darkblue&#39;)
-    plt.gca().set(xlabel=&#39;x&#39;, ylabel=&#39;PDF&#39;, title=&#39;Dependency &quot;error&quot;&#39;);</code></pre>
+    plt.gca().set(xlabel=&#39;x&#39;, ylabel=&#39;PDF&#39;, title=&#39;$x_i - x_{i-1}$ prior&#39;);
+    plt.figtext()</code></pre>
+    <pre><code>---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    Cell In[10], line 12
+         10 plt.fill_between(x, y, alpha=0.3, color=&#39;darkblue&#39;)
+         11 plt.gca().set(xlabel=&#39;x&#39;, ylabel=&#39;PDF&#39;, title=&#39;$x_i - x_{i-1}$ prior&#39;);
+    ---&gt; 12 plt.figtext()
+
+
+    TypeError: figtext() missing 3 required positional arguments: &#39;x&#39;, &#39;y&#39;, and &#39;s&#39;</code></pre>
     <figure>
-    <img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_18_0.png" alt="" /><figcaption>png</figcaption>
+    <img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_18_1.png" alt="" /><figcaption>png</figcaption>
     </figure>
     <pre class="python"><code>def model7(obs_vals, obs_idx):
         x = sample(&#39;x&#39;, d.expand([100]))
@@ -174,12 +186,14 @@
     samples = mcmc.get_samples()
 
     x_points = np.repeat(np.arange(100)[None, :], samples[&#39;x&#39;].shape[0], axis=0)
-    plt.scatter(x_points.flatten(), samples[&#39;x&#39;].flatten(), color=&#39;darkblue&#39;, alpha=0.01, s=10);</code></pre>
-    <pre><code>sample: 100%|██████████| 1200/1200 [00:03&lt;00:00, 375.87it/s, 127 steps of size 6.49e-02. acc. prob=0.84]</code></pre>
+    plt.scatter(x_points.flatten(), samples[&#39;x&#39;].flatten(), color=&#39;darkblue&#39;, alpha=0.01, s=10)
+    plt.plot(x_points[0], samples[&#39;x&#39;].mean(axis=0), color=&#39;crimson&#39;, lw=2, label=&#39;Mean&#39;)
+    plt.legend();</code></pre>
+    <pre><code>sample: 100%|██████████| 1200/1200 [00:03&lt;00:00, 376.06it/s, 127 steps of size 6.49e-02. acc. prob=0.84]</code></pre>
     <figure>
     <img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_19_1.png" alt="" /><figcaption>png</figcaption>
     </figure>
-    <p>With the observations added back in:</p>
+    <p>With the observations added back in you can see how the function finds it easier to catch up with sudden rises than falls due to the prior on adjacent values.</p>
     <pre class="python"><code>def model8(obs_vals, obs_idx):
         x = sample(&#39;x&#39;, d.expand([100]))
         sample(&#39;x_dependence&#39;, d_dep, obs=x[1:] - x[:-1])
@@ -191,8 +205,10 @@
 
     x_points = np.repeat(np.arange(100)[None, :], samples[&#39;x&#39;].shape[0], axis=0)
     plt.scatter(x_points.flatten(), samples[&#39;x&#39;].flatten(), color=&#39;darkblue&#39;, alpha=0.01, s=10)
-    plt.scatter(obs_idx, obs_vals, label=&#39;observed values&#39;, color=&#39;crimson&#39;, s=20);</code></pre>
-    <pre><code>sample: 100%|██████████| 1200/1200 [00:02&lt;00:00, 493.73it/s, 255 steps of size 5.76e-02. acc. prob=0.88]</code></pre>
+    plt.plot(x_points[0], samples[&#39;x&#39;].mean(axis=0), color=&#39;crimson&#39;, lw=2, label=&#39;Mean&#39;)
+    plt.scatter(obs_idx, obs_vals, label=&#39;Observed values&#39;, color=&#39;crimson&#39;, s=20)
+    plt.legend();</code></pre>
+    <pre><code>sample: 100%|██████████| 1200/1200 [00:02&lt;00:00, 446.14it/s, 255 steps of size 5.76e-02. acc. prob=0.88]</code></pre>
     <figure>
     <img src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_21_1.png" alt="" /><figcaption>png</figcaption>
     </figure>
