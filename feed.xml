@@ -7,6 +7,13 @@
   <atom:link href="https://hessammehr.github.io/feed.xml" rel="self" type="application/rss+xml" />
   <language>en-us</language>
 <item>
+      <title>Simple generation of locally constrained values in `numpyro`</title>
+      <link>https://hessammehr.github.io/blog/posts/2024-12-26-locally-constrained.html</link>
+      <guid>https://hessammehr.github.io/blog/posts/2024-12-26-locally-constrained.html</guid>
+      <pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate>
+      <description>Just a simple experiment using `numpyro` to simulate values from a function with locally constrained values. This is often achieved using Gaussian processed but I thought it would be interesting to try something a bit more intuitive, plus priors on the points themselves and their interdependence can be anything, not just normal distributions. </description>
+    </item>
+<item>
       <title>A rant against macros</title>
       <link>https://hessammehr.github.io/blog/posts/2020-06-14-rant-against-macros.html</link>
       <guid>https://hessammehr.github.io/blog/posts/2020-06-14-rant-against-macros.html</guid>
