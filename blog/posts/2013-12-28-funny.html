@@ -29,10 +29,6 @@
 <p>From <a href="http://journal.stuffwithstuff.com/2013/07/18/javascript-isnt-scheme">here</a>.</p></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
     <script>
-      // Remove leading spaces from code blocks (pandoc artefact)
-      document.querySelectorAll("pre code").forEach((block) => {
-        block.textContent = block.textContent.replace(/^( {4})/gm, "");
-      });
       hljs.highlightAll();
     </script>
   </body>

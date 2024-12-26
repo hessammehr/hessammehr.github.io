@@ -126,10 +126,6 @@ butten.connect_activate(clone!(@weak window =&gt; move |_| {
 <p>Bottom line (and I’m happy to be proven wrong): macros are an unsustainable convenience. They are never good enough to justify the readability/maintainability/tooling headaches.</p></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
     <script>
-      // Remove leading spaces from code blocks (pandoc artefact)
-      document.querySelectorAll("pre code").forEach((block) => {
-        block.textContent = block.textContent.replace(/^( {4})/gm, "");
-      });
       hljs.highlightAll();
     </script>
   </body>
