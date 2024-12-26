@@ -15,16 +15,27 @@ jobs:
       - name: Install Pandoc
         run: sudo apt-get install pandoc xmlstarlet
 
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+
+      - name: Set up Python
+        run: uv python install
+
       - name: Download Primer CSS and Highlight.js themes
         run: |
           curl -O https://unpkg.com/@primer/css/dist/primer.css
           curl -o light.css https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/github.min.css
           curl -o dark.css https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/night-owl.min.css
 
+      - name: Convert blog notebooks
+        run: |
+          for file in $(find ./blog/notebooks -name "*.ipynb"); do
+            uv run --no-dev jupyter nbconvert --to markdown "$file" --output-dir ./blog/posts
+          done
       - name: Generate RSS feed
         run: |
           cp feed.template.xml feed.xml
-          
+
           for file in $(find ./blog/posts -name "*.md" | sort -r); do
             date=$(basename "$file" | cut -d- -f1,2,3)
             title=$(sed -n '1s/^# //p' "$file")
@@ -47,16 +58,16 @@ jobs:
       - name: Generate blog index
         run: |
           cp blog/index.template.md blog/index.md
-          
+
           for file in $(find ./blog/posts -name "*.md" | sort -r); do
             date=$(basename "$file" | cut -d- -f1,2,3)
             title=$(sed -n '1s/^# //p' "$file")
             filename=$(basename "$file")
             echo "| $date | [$title]" >> blog/index.md
           done
-          
+
           echo "" >> blog/index.md
-          
+
           for file in $(find ./blog/posts -name "*.md" | sort -r); do
             title=$(sed -n '1s/^# //p' "$file")
             filename=$(basename "$file")
