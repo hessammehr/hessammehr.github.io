@@ -15,7 +15,7 @@ from numpyro.infer import MCMC, NUTS
 
 sns.set_theme('notebook', 'ticks', font='Arial')
 
-plt.rcParams['figure.dpi'] = 150
+plt.rcParams['figure.dpi'] = 200
 ```
 
 First, baseline: Independent draws from a normal distribution.
@@ -23,17 +23,21 @@ First, baseline: Independent draws from a normal distribution.
 
 ```python
 def model1():
-    x = sample('x', dist.Normal().expand([100]))
+    x = sample("x", dist.Normal().expand([100]))
 
 
 mcmc = MCMC(NUTS(model1), num_warmup=1000, num_samples=100)
 mcmc.run(jax.random.PRNGKey(0))
 samples = mcmc.get_samples()
 
-plt.plot(samples['x'].T, color='darkblue', alpha=0.01);
+x_points = np.repeat(np.arange(100)[None, :], samples["x"].shape[0], axis=0)
+plt.scatter(
+    x_points.flatten(), samples["x"].flatten(), color="darkblue", alpha=0.01, s=10
+)
+plt.gca().set(xlabel="Spatial/temporal dimension", ylabel="Observable");
 ```
 
-    sample: 100%|██████████| 1100/1100 [00:00<00:00, 1402.57it/s, 7 steps of size 4.46e-01. acc. prob=0.86]
+    sample: 100%|██████████| 1100/1100 [00:00<00:00, 1656.79it/s, 7 steps of size 4.46e-01. acc. prob=0.86]
 
 
 
@@ -58,10 +62,12 @@ mcmc = MCMC(NUTS(model2), num_warmup=1000, num_samples=100)
 mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
 samples = mcmc.get_samples()
 
-plt.plot(samples['x'].T, color='darkblue', alpha=0.01);
+plt.scatter(x_points.flatten(), samples['x'].flatten(), color='darkblue', alpha=0.01, s=10);
+plt.scatter(obs_idx, obs_vals, label='Observed values', color='crimson', s=20)
+plt.legend();
 ```
 
-    sample: 100%|██████████| 1100/1100 [00:00<00:00, 1582.71it/s, 15 steps of size 4.02e-01. acc. prob=0.90]
+    sample: 100%|██████████| 1100/1100 [00:00<00:00, 1624.28it/s, 15 steps of size 4.02e-01. acc. prob=0.90]
 
 
 
@@ -84,10 +90,12 @@ mcmc = MCMC(NUTS(model3), num_warmup=1000, num_samples=100)
 mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
 samples = mcmc.get_samples()
 
-plt.plot(samples['x'].T, color='darkblue', alpha=0.01);
+plt.scatter(x_points.flatten(), samples['x'].flatten(), color='darkblue', alpha=0.01, s=10)
+plt.scatter(obs_idx, obs_vals, label='Observed values', color='crimson', s=20)
+plt.legend();
 ```
 
-    sample: 100%|██████████| 1100/1100 [00:01<00:00, 906.00it/s, 63 steps of size 8.62e-02. acc. prob=0.84]  
+    sample: 100%|██████████| 1100/1100 [00:01<00:00, 903.87it/s, 63 steps of size 8.62e-02. acc. prob=0.84] 
 
 
 
@@ -110,10 +118,12 @@ mcmc = MCMC(NUTS(model4), num_warmup=1000, num_samples=100)
 mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
 samples = mcmc.get_samples()
 
-plt.plot(samples['x'].T, color='darkblue', alpha=0.01);
+plt.plot(samples['x'].T, color='darkblue', alpha=0.01)
+plt.scatter(obs_idx, obs_vals, label='Observed values', color='crimson', s=20)
+plt.legend();
 ```
 
-    sample: 100%|██████████| 1100/1100 [00:01<00:00, 897.50it/s, 63 steps of size 9.88e-02. acc. prob=0.89] 
+    sample: 100%|██████████| 1100/1100 [00:01<00:00, 1011.04it/s, 63 steps of size 9.88e-02. acc. prob=0.89]
 
 
 
@@ -159,7 +169,7 @@ x_points = np.repeat(np.arange(100)[None, :], samples['x'].shape[0], axis=0)
 plt.scatter(x_points.flatten(), samples['x'].flatten(), color='darkblue', alpha=0.01, s=10);
 ```
 
-    sample: 100%|██████████| 1200/1200 [00:00<00:00, 1542.65it/s, 15 steps of size 1.68e-01. acc. prob=0.83]
+    sample: 100%|██████████| 1200/1200 [00:00<00:00, 1610.28it/s, 15 steps of size 1.68e-01. acc. prob=0.83]
 
 
 
@@ -181,10 +191,12 @@ mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
 samples = mcmc.get_samples()
 
 x_points = np.repeat(np.arange(100)[None, :], samples['x'].shape[0], axis=0)
-plt.scatter(x_points.flatten(), samples['x'].flatten(), color='darkblue', alpha=0.01, s=10);
+plt.scatter(x_points.flatten(), samples['x'].flatten(), color='darkblue', alpha=0.01, s=10)
+plt.scatter(obs_idx, obs_vals, label='Observed values', color='crimson', s=20)
+plt.legend();
 ```
 
-    sample: 100%|██████████| 1200/1200 [00:00<00:00, 1277.60it/s, 15 steps of size 1.48e-01. acc. prob=0.87]
+    sample: 100%|██████████| 1200/1200 [00:00<00:00, 1463.46it/s, 15 steps of size 1.48e-01. acc. prob=0.87]
 
 
 
@@ -207,10 +219,13 @@ mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
 samples = mcmc.get_samples()
 
 x_points = np.repeat(np.arange(100)[None, :], samples['x'].shape[0], axis=0)
-plt.scatter(x_points.flatten(), samples['x'].flatten(), color='darkblue', alpha=0.01, s=10);
+# plt.scatter(x_points.flatten(), samples['x'].flatten(), color='darkblue', alpha=0.01, s=10)
+plt.scatter(obs_idx, obs_vals, label='Observed values', color='crimson', s=20, zorder=10)
+plt.plot(samples['x'].T, color='darkblue', alpha=0.01)
+plt.legend();
 ```
 
-    sample: 100%|██████████| 1200/1200 [00:03<00:00, 339.54it/s, 255 steps of size 2.30e-02. acc. prob=0.88]
+    sample: 100%|██████████| 1200/1200 [00:03<00:00, 356.29it/s, 255 steps of size 2.30e-02. acc. prob=0.88]
 
 
 
@@ -228,32 +243,16 @@ d_dep = dist.MixtureSameFamily(
     dist.Normal(loc=jnp.array([0, 0.5]), scale=0.1)
 )
 
-# plot PDF
 x = jnp.linspace(-1, 1, 200)
 y = np.exp(d_dep.log_prob(x))
 
 plt.fill_between(x, y, alpha=0.3, color='darkblue')
 plt.gca().set(xlabel='x', ylabel='PDF', title='$x_i - x_{i-1}$ prior');
-plt.figtext()
 ```
 
 
-    ---------------------------------------------------------------------------
-
-    TypeError                                 Traceback (most recent call last)
-
-    Cell In[10], line 12
-         10 plt.fill_between(x, y, alpha=0.3, color='darkblue')
-         11 plt.gca().set(xlabel='x', ylabel='PDF', title='$x_i - x_{i-1}$ prior');
-    ---> 12 plt.figtext()
-
-
-    TypeError: figtext() missing 3 required positional arguments: 'x', 'y', and 's'
-
-
-
     
-![png](2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_18_1.png)
+![png](2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_18_0.png)
     
 
 
@@ -267,13 +266,12 @@ mcmc = MCMC(NUTS(model7), num_warmup=1000, num_samples=200)
 mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
 samples = mcmc.get_samples()
 
-x_points = np.repeat(np.arange(100)[None, :], samples['x'].shape[0], axis=0)
 plt.scatter(x_points.flatten(), samples['x'].flatten(), color='darkblue', alpha=0.01, s=10)
 plt.plot(x_points[0], samples['x'].mean(axis=0), color='crimson', lw=2, label='Mean')
 plt.legend();
 ```
 
-    sample: 100%|██████████| 1200/1200 [00:03<00:00, 376.06it/s, 127 steps of size 6.49e-02. acc. prob=0.84]
+    sample: 100%|██████████| 1200/1200 [00:03<00:00, 396.09it/s, 127 steps of size 6.49e-02. acc. prob=0.84]
 
 
 
@@ -295,14 +293,13 @@ mcmc = MCMC(NUTS(model8), num_warmup=1000, num_samples=200)
 mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
 samples = mcmc.get_samples()
 
-x_points = np.repeat(np.arange(100)[None, :], samples['x'].shape[0], axis=0)
 plt.scatter(x_points.flatten(), samples['x'].flatten(), color='darkblue', alpha=0.01, s=10)
 plt.plot(x_points[0], samples['x'].mean(axis=0), color='crimson', lw=2, label='Mean')
 plt.scatter(obs_idx, obs_vals, label='Observed values', color='crimson', s=20)
 plt.legend();
 ```
 
-    sample: 100%|██████████| 1200/1200 [00:02<00:00, 446.14it/s, 255 steps of size 5.76e-02. acc. prob=0.88]
+    sample: 100%|██████████| 1200/1200 [00:02<00:00, 497.90it/s, 255 steps of size 5.76e-02. acc. prob=0.88]
 
 
 
