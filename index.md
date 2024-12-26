@@ -47,11 +47,10 @@ For an up-to-date list check out my [personal projects](https://github.com/hessa
 ### Opportunities
 I am always keen to welcome motivated individuals from a range of technical backgrounds into the group. Please refer to the [my group's website](https://mehr-research.science/opportunities-engagement/) for a list of current opportunities.
 
-<!-- [CV]: https://hessammehr.github.io/CV.html -->
 [CV]: CV.html
 [CV publications]: CV.html#publications
 [CV PDF]: https://drive.google.com/u/0/uc?id=16xHJQQshijyGfEfSn_kpNxpLe9xHZPfx
-[Blog]: https://hessammehr.github.io/blog
+[Blog]: blog
 [GitHub]: https://github.com/hessammehr
 [Twitter/X]: https://twitter.com/hessammehr
 [Email]: mailto:Hessam.Mehr@glasgow.ac.uk
