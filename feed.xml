@@ -7,6 +7,13 @@
   <atom:link href="https://hessammehr.github.io/feed.xml" rel="self" type="application/rss+xml" />
   <language>en-us</language>
 <item>
+      <title></title>
+      <link>https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html</link>
+      <guid>https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html</guid>
+      <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
+      <description>Is it possible to use a generative process to model microscope images like this (and is it worth the effort?) </description>
+    </item>
+<item>
       <title>Simple generation of locally constrained values in `numpyro`</title>
       <link>https://hessammehr.github.io/blog/posts/2024-12-26-locally-constrained.html</link>
       <guid>https://hessammehr.github.io/blog/posts/2024-12-26-locally-constrained.html</guid>
