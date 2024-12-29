@@ -48,7 +48,7 @@ Focus areas: Digital signal processing, photonic crystals.
 
 ## Selected publications
 
-Highlights among **35 primary research** papers (**h-index: 13**; 650+ citations; full list available on [ORCiD] & [Google Scholar])
+Highlights among **35 primary research** papers (**h-index: 13**; 660+ citations; full list available on [ORCiD] & [Google Scholar])
 
 ### ▶ Operational considerations for approximating Molecular Assembly by Fourier transform mass spectrometry
 Weiss, G. M.; Asche, S.; Mclain, H.; Chung, A. H.; [Mehr, S. H. M.]{.underline}; Cronin, L.; Graham, H.
