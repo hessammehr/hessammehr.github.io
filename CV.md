@@ -50,6 +50,12 @@ Focus areas: Digital signal processing, photonic crystals.
 
 Highlights among **35 primary research** papers (**h-index: 13**; 660+ citations; full list available on [ORCiD] & [Google Scholar])
 
+### ▶ Digital discovery and the new experimental frontier
+[Mehr, S. H. M.]{.underline} 
+*Under review*, **2025** ([10.31219/osf.io/sf2j5](https://doi.org/10.31219/osf.io/sf2j5))
+
+> Given the growing interest in machine learning and automation in chemistry, will future chemistry mostly involve massive robotic chemistry farms to harvest information and AI models to ingest it? I make the case that 
+
 ### ▶ Operational considerations for approximating Molecular Assembly by Fourier transform mass spectrometry
 Weiss, G. M.; Asche, S.; Mclain, H.; Chung, A. H.; [Mehr, S. H. M.]{.underline}; Cronin, L.; Graham, H.
 *Frontiers in Astronomy and Earth Sciences*, **2024** ([10.3389/fspas.2024.1485483](https://doi.org/10.3389/fspas.2024.1485483))
