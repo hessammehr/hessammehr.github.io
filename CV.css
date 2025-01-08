@@ -38,18 +38,6 @@ h2 {
     border-bottom: 2px solid #eee;
 }
 
-h3 {
-    margin-bottom: 0.2em;
-    font-size: 1em;
-    font-weight: bold;
-    text-align: left;
-}
-
-h3 + p {
-    margin-top: 0;
-    margin-bottom: 0.2em;
-}
-
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -85,12 +73,20 @@ em {
 }
 
 h3 {
+    font-size: 1em;
+    font-weight: bold;
+    text-align: left;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     flex-wrap: wrap;
     width: 100%;
     margin: 0;
+}
+
+h3 + p {
+    margin-top: 0;
+    margin-bottom: 0.2em;
 }
 
 h3 span {
