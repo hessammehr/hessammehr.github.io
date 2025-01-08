@@ -54,7 +54,7 @@ Highlights among **35 primary research** papers (**h-index: 13**; 660+ citations
 [Mehr, S. H. M.]{.underline} 
 *Under review*, **2025** ([10.31219/osf.io/sf2j5](https://doi.org/10.31219/osf.io/sf2j5))
 
-> Given the growing interest in machine learning and automation in chemistry, will future chemistry mostly involve massive robotic chemistry farms to harvest information and AI models to ingest it? I make the case that 
+> Given the growing interest in machine learning and automation in chemistry, will future chemistry mostly involve massive robotic chemistry farms to harvest information and AI models to ingest it? I argue that we shouldn't be constrained by these particular *drop-in* applications of AI and automation in chemistry, and that their full potential lies in the development of richer experimental paradigms.
 
 ### ▶ Operational considerations for approximating Molecular Assembly by Fourier transform mass spectrometry
 Weiss, G. M.; Asche, S.; Mclain, H.; Chung, A. H.; [Mehr, S. H. M.]{.underline}; Cronin, L.; Graham, H.
