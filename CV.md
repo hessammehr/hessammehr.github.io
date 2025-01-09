@@ -52,7 +52,7 @@ Highlights among **35 primary research** papers (**h-index: 13**; 660+ citations
 
 ### ▶ Digital discovery and the new experimental frontier
 [Mehr, S. H. M.]{.underline} 
-*Under review*, **2025** ([10.31219/osf.io/sf2j5](https://doi.org/10.31219/osf.io/sf2j5))
+*Under review*, **2025** (preprint: [10.31219/osf.io/sf2j5](https://doi.org/10.31219/osf.io/sf2j5))
 
 > Growing interest in machine learning and automation in chemistry raises the question of whether future chemistry will be "lab-free" or be reduced to massive robotic chemistry farms to harvest information and AI models to ingest it. I argue that we shouldn't be constrained by these immediate applications, and that digitisation's full potential lies in a third direction: exploring richer experimental paradigms.
 
