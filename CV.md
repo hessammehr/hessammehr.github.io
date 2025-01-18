@@ -60,9 +60,9 @@ Highlights among **35 primary research** papers (**h-index: 13**; 660+ citations
 Weiss, G. M.; Asche, S.; Mclain, H.; Chung, A. H.; [Mehr, S. H. M.]{.underline}; Cronin, L.; Graham, H.
 *Frontiers in Astronomy and Earth Sciences*, **2024** ([10.3389/fspas.2024.1485483](https://doi.org/10.3389/fspas.2024.1485483))
 
-> This NASA collaboration deploys my [RecursiveMA algorithm](#recursiveMA) in the context of finding evidence of extra-terrestrial life via tandem mass spectrometry.
+> This NASA collaboration deploys my [RecursiveMA algorithm](#recursiveMA) in the context of finding evidence of extra-terrestrial life in tandem mass spectrometry data.
 
-### ▶ In situ synthesis within micron-sized soft chemical reactors created via programmable aerosol chemistry
+### ▶ *In situ* synthesis within micron-sized hydrogel reactors created *via* programmable aerosol chemistry
 Zhang, L.; [Mehr, S. H. M.]{.underline}
 *Digital Discovery*, **2024** ([10.1039/D4DD00139G](https://doi.org/10.1039/D4DD00139G))
 
