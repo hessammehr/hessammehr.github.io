@@ -8,10 +8,19 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -19,51 +28,120 @@
 <header id="title-block-header">
 <h1 class="title">Hessam Mehr</h1>
 </header>
-<h1 id="chemistry-information-discovery">Chemistry <span id="arrow">⟷</span> Information <span id="arrow">⟷</span> Discovery</h1>
+<h1 id="chemistry-information-discovery">Chemistry <span
+id="arrow">⟷</span> Information <span id="arrow">⟷</span> Discovery</h1>
 <h2 id="s.-hessam-m.-mehr">S. Hessam M. Mehr</h2>
 <div id="under_title">
 Leverhulme Early Career Research Fellow, University of Glasgow
 </div>
 <div id="under_title">
-<a href="CV.html">CV</a> <a href="blog">Blog</a> <a href="https://github.com/hessammehr">GitHub</a> <a href="https://twitter.com/hessammehr">Twitter/X</a> <a href="mailto:Hessam.Mehr@glasgow.ac.uk">Email</a> <a href="https://mehr-research.science">Group website</a>
+<a href="CV.html">CV</a> <a href="blog">Blog</a> <a
+href="https://github.com/hessammehr">GitHub</a> <a
+href="https://twitter.com/hessammehr">Twitter/X</a> <a
+href="mailto:Hessam.Mehr@glasgow.ac.uk">Email</a> <a
+href="https://mehr-research.science">Group website</a>
 </div>
 <p><img src="rings.png" class="logo" /></p>
-<p>Investigating information and automation as gateways to new discovery paradigms in chemistry.</p>
+<p>Investigating information and automation as gateways to new discovery
+paradigms in chemistry.</p>
 <h3 id="writing-and-projects">Writing and projects</h3>
 <ul>
-<li><a href="https://mehr-research.science/archives">Mehr Research blog</a> My group’s blog, featuring posts by current and past members</li>
-<li><a href="https://0101chem.science">0101chem</a> companion website to my <em>Digital chemistry for digital natives</em> outreach project, funded by the <a href="https://www.rsc.org">Royal Society of Chemistry</a></li>
-<li><em><a href="https://sound-chemistry.science/">Sound Chemistry</a></em> Royal Society of Edinburgh workshop that I organised in March 2024 with a focus on novel modalities for chemical containers, e.g. acoustic confinement</li>
-<li><a href="blog">Personal blog</a> Personal takes and hobby project covering chemistry, programming and electronics (<a href="/feed.xml">RSS feed</a>)</li>
+<li><a href="https://mehr-research.science/archives">Mehr Research
+blog</a> My group’s blog, featuring posts by current and past
+members</li>
+<li><a href="https://0101chem.science">0101chem</a> companion website to
+my <em>Digital chemistry for digital natives</em> outreach project,
+funded by the <a href="https://www.rsc.org">Royal Society of
+Chemistry</a></li>
+<li><em><a href="https://sound-chemistry.science/">Sound
+Chemistry</a></em> Royal Society of Edinburgh workshop that I organised
+in March 2024 with a focus on novel modalities for chemical containers,
+e.g. acoustic confinement</li>
+<li><a href="blog">Personal blog</a> Personal takes and hobby project
+covering chemistry, programming and electronics (<a href="/feed.xml">RSS
+feed</a>)</li>
 </ul>
 <h3 id="publications">Publications</h3>
-<p>For more context on current research projects and related publications see my <a href="https://mehr-research.science/research/#publications">group’s research page</a> or my <a href="CV.html#publications">CV</a>. For a complete list see <a href="https://scholar.google.com/citations?user=HeyhCHEAAAAJ">my Google Scholar</a> or <a href="https://orcid.org/0000-0001-7710-3102">ORCiD profile</a>.</p>
+<p>For more context on current research projects and related
+publications see my <a
+href="https://mehr-research.science/research/#publications">group’s
+research page</a> or my <a href="CV.html#publications">CV</a>. For a
+complete list see <a
+href="https://scholar.google.com/citations?user=HeyhCHEAAAAJ">my Google
+Scholar</a> or <a href="https://orcid.org/0000-0001-7710-3102">ORCiD
+profile</a>.</p>
 <h3 id="recorded-talks">Recorded talks</h3>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=LdGD7-9-e5A">Building robot chemists with micro:bit</a> <br/> Lightning talk, <em>micro:bit LIVE</em>, <strong>2021</strong></li>
-<li><a href="https://drive.google.com/u/0/uc?export=download&amp;id=1I7gghfB4_kOd7AKrNqMFcO9DsrId9hpp">A lingua franca for robot chemists</a> (slides) <br/> <em>ScotCHEM Early Career Research Seminar</em>, <strong>2020</strong></li>
-<li><a href="https://www.youtube.com/watch?v=q8n8XD-cB90">An alcohol? What are the chances? Knowledge-based and probabilistic models in chemistry</a> <br/> <em>PyMCon</em>, <strong>2020</strong></li>
-<li><a href="https://www.youtube.com/watch?v=QhPdqUG2mRg">Saving lives with Julia</a> <br/> <em>JuliaCon</em>, <strong>2018</strong></li>
+<li><a href="https://www.youtube.com/watch?v=LdGD7-9-e5A">Building robot
+chemists with micro:bit</a> <br/> Lightning talk, <em>micro:bit
+LIVE</em>, <strong>2021</strong></li>
+<li><a
+href="https://drive.google.com/u/0/uc?export=download&amp;id=1I7gghfB4_kOd7AKrNqMFcO9DsrId9hpp">A
+lingua franca for robot chemists</a> (slides) <br/> <em>ScotCHEM Early
+Career Research Seminar</em>, <strong>2020</strong></li>
+<li><a href="https://www.youtube.com/watch?v=q8n8XD-cB90">An alcohol?
+What are the chances? Knowledge-based and probabilistic models in
+chemistry</a> <br/> <em>PyMCon</em>, <strong>2020</strong></li>
+<li><a href="https://www.youtube.com/watch?v=QhPdqUG2mRg">Saving lives
+with Julia</a> <br/> <em>JuliaCon</em>, <strong>2018</strong></li>
 </ul>
 <h3 id="code">Code</h3>
-<p>For an up-to-date list check out my <a href="https://github.com/hessammehr">personal projects</a> and my <a href="https://github.com/MehrResearch">research group’s projects</a> on GitHub.</p>
+<p>For an up-to-date list check out my <a
+href="https://github.com/hessammehr">personal projects</a> and my <a
+href="https://github.com/MehrResearch">research group’s projects</a> on
+GitHub.</p>
 <ul>
-<li><a href="https://github.com/hessammehr/femto_edit">FemtoEdit</a> A minimal, keyboard-first WYSIWYG editor for web pages</li>
-<li><a href="https://github.com/MehrResearch/microbit_sensornet">microbit_sensornet</a> Browser dashboard and <a href="https://makecode.microbit.org/05783-02185-24551-63527">accompanying MakeCode sketch</a> for aggregating sensor readings from a swarm of micro:bits over Web Bluetooth</li>
-<li><a href="https://github.com/hessammehr/recursiveMA">RecursiveMA</a> Algorithm for inferring the complexity of a given molecule from tandem mass spectrometry (MS<sup>2</sup>, MS<sup>3</sup>, …) data</li>
-<li><a href="https://github.com/hessammehr/Delphi">Delphi</a> A standard interface for storing, sampling/fitting, and comparing probabilistic models for interpreting scientific experiments</li>
-<li><a href="https://gitlab.com/croningroup/chemputer/xdl">XDL</a> A hardware-independent chemical programming language ([see publication][10.1126/science.abc2986])</li>
-<li><a href="https://github.com/hessammehr/Logic.jl">Logic.jl</a> Early sketch of a typed logic programming system embedded in Julia</li>
-<li><a href="https://github.com/hessammehr/liquid_rules">liquid_rules</a> (Prolog) and <a href="https://github.com/hessammehr/liquid_rules_ddlog">liquid_rules_ddlog</a> (Differential Datalog) Proof-of-concept declarative scheduler for robotic liquid handling</li>
-<li><a href="https://hessammehr.github.io/coalescence">coalescence</a> Demonstration of peak coalescence in NMR (<a href="https://github.com/hessammehr/coalescence">source code</a>) (JS)</li>
-<li><a href="https://github.com/hessammehr/molsketch-cljs">molsketch-cljs</a> Cross-platfrom 2D molecular structure drawing program (ClojureScript)</li>
-<li><a href="https://github.com/hessammehr/NMR.jl">NMR.jl</a> Processing, visualization and analysis of NMR spectra (Julia)</li>
-<li><a href="https://github.com/hessammehr/pyMPB">pyMPB</a> Python interface to MIT Photonic Bands (MPB)</li>
-<li><a href="https://github.com/hessammehr/SolidStateNMR.jl">SolidStateNMR.jl</a> Simulation of solid-state NMR spectra from calculated shielding matrix</li>
-<li><a href="https://github.com/hessammehr/vim-gaussian">vim-gaussian</a> Gaussian syntax highlighting for vim</li>
-<li><a href="https://github.com/hessammehr/XRD.jl">XRD.jl</a> Utility functions for X-ray diffraction (Julia)</li>
+<li><a href="https://github.com/hessammehr/femto_edit">FemtoEdit</a> A
+minimal, keyboard-first WYSIWYG editor for web pages</li>
+<li><a
+href="https://github.com/MehrResearch/microbit_sensornet">microbit_sensornet</a>
+Browser dashboard and <a
+href="https://makecode.microbit.org/05783-02185-24551-63527">accompanying
+MakeCode sketch</a> for aggregating sensor readings from a swarm of
+micro:bits over Web Bluetooth</li>
+<li><a href="https://github.com/hessammehr/recursiveMA">RecursiveMA</a>
+Algorithm for inferring the complexity of a given molecule from tandem
+mass spectrometry (MS<sup>2</sup>, MS<sup>3</sup>, …) data</li>
+<li><a href="https://github.com/hessammehr/Delphi">Delphi</a> A standard
+interface for storing, sampling/fitting, and comparing probabilistic
+models for interpreting scientific experiments</li>
+<li><a href="https://gitlab.com/croningroup/chemputer/xdl">XDL</a> A
+hardware-independent chemical programming language ([see
+publication][10.1126/science.abc2986])</li>
+<li><a href="https://github.com/hessammehr/Logic.jl">Logic.jl</a> Early
+sketch of a typed logic programming system embedded in Julia</li>
+<li><a
+href="https://github.com/hessammehr/liquid_rules">liquid_rules</a>
+(Prolog) and <a
+href="https://github.com/hessammehr/liquid_rules_ddlog">liquid_rules_ddlog</a>
+(Differential Datalog) Proof-of-concept declarative scheduler for
+robotic liquid handling</li>
+<li><a href="https://hessammehr.github.io/coalescence">coalescence</a>
+Demonstration of peak coalescence in NMR (<a
+href="https://github.com/hessammehr/coalescence">source code</a>)
+(JS)</li>
+<li><a
+href="https://github.com/hessammehr/molsketch-cljs">molsketch-cljs</a>
+Cross-platfrom 2D molecular structure drawing program
+(ClojureScript)</li>
+<li><a href="https://github.com/hessammehr/NMR.jl">NMR.jl</a>
+Processing, visualization and analysis of NMR spectra (Julia)</li>
+<li><a href="https://github.com/hessammehr/pyMPB">pyMPB</a> Python
+interface to MIT Photonic Bands (MPB)</li>
+<li><a
+href="https://github.com/hessammehr/SolidStateNMR.jl">SolidStateNMR.jl</a>
+Simulation of solid-state NMR spectra from calculated shielding
+matrix</li>
+<li><a
+href="https://github.com/hessammehr/vim-gaussian">vim-gaussian</a>
+Gaussian syntax highlighting for vim</li>
+<li><a href="https://github.com/hessammehr/XRD.jl">XRD.jl</a> Utility
+functions for X-ray diffraction (Julia)</li>
 </ul>
 <h3 id="opportunities">Opportunities</h3>
-<p>I am always keen to welcome motivated individuals from a range of technical backgrounds into the group. Please refer to the <a href="https://mehr-research.science/opportunities-engagement/">my group’s website</a> for a list of current opportunities.</p>
+<p>I am always keen to welcome motivated individuals from a range of
+technical backgrounds into the group. Please refer to the <a
+href="https://mehr-research.science/opportunities-engagement/">my
+group’s website</a> for a list of current opportunities.</p>
 </body>
 </html>

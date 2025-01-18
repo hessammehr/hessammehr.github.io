@@ -24,8 +24,11 @@
     />
   </head>
   <body>
-    <div class="container-lg px-3 my-5 markdown-body"><h1 id="trialing-generative-processes-for-chemical-microscopy-part-1">Trialing generative processes for chemical microscopy (part 1)</h1>
-<p>Is it possible to use a generative process to model microscope images like this (and is it worth the effort?)</p>
+    <div class="container-lg px-3 my-5 markdown-body"><h1
+id="trialing-generative-processes-for-chemical-microscopy-part-1">Trialing
+generative processes for chemical microscopy (part 1)</h1>
+<p>Is it possible to use a generative process to model microscope images
+like this (and is it worth the effort?)</p>
 <pre class="python"><code>import jax
 import jax.numpy as jnp
 import matplotlib.pyplot as plt
@@ -45,9 +48,13 @@ plt.rcParams[&#39;figure.dpi&#39;] = 200</code></pre>
 img = img.resize((img.width // 2, img.height // 2))
 img</code></pre>
 <figure>
-<img src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_2_0.png" alt="" /><figcaption>png</figcaption>
+<img
+src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_2_0.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
 </figure>
-<p>Try a couple of different colour spaces in case something interesting stands out.</p>
+<p>Try a couple of different colour spaces in case something interesting
+stands out.</p>
 <pre class="python"><code>from skimage import color
 
 img_array = np.array(img)
@@ -62,7 +69,10 @@ for i, (ax, title) in enumerate(zip(axes, [&#39;L channel&#39;, &#39;a channel&#
 
 plt.tight_layout()</code></pre>
 <figure>
-<img src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_4_0.png" alt="" /><figcaption>png</figcaption>
+<img
+src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_4_0.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
 </figure>
 <pre class="python"><code>hsv_img = color.rgb2hsv(img_array)
 
@@ -75,7 +85,10 @@ for i, (ax, title) in enumerate(zip(axes, [&#39;H channel&#39;, &#39;S channel&#
 
 plt.tight_layout()</code></pre>
 <figure>
-<img src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_5_0.png" alt="" /><figcaption>png</figcaption>
+<img
+src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_5_0.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
 </figure>
 <p>First approach, fixed number of droplets; model centres and radii</p>
 <pre class="python"><code>def model1(w, h, n_droplets):
@@ -102,7 +115,10 @@ for sample_no in range(5):
         ax.add_artist(circle)</code></pre>
 <pre><code>sample: 100%|██████████| 1100/1100 [00:09&lt;00:00, 112.09it/s, 15 steps of size 3.08e-01. acc. prob=0.84]</code></pre>
 <figure>
-<img src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_7_1.png" alt="" /><figcaption>png</figcaption>
+<img
+src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_7_1.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
 </figure>
 <pre class="python"><code>def model2(w, h, n_droplets):
     # Sample droplet locations and sizes
@@ -141,7 +157,10 @@ for i in range(100):
     ax.add_artist(circle)</code></pre>
 <pre><code>sample: 100%|██████████| 1100/1100 [00:14&lt;00:00, 74.39it/s, 15 steps of size 2.52e-01. acc. prob=0.86] </code></pre>
 <figure>
-<img src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_8_1.png" alt="" /><figcaption>png</figcaption>
+<img
+src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_8_1.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
 </figure>
 <pre class="python"><code>def model2(w, h, n_droplets):
     # Sample droplet locations and sizes
@@ -168,9 +187,13 @@ for i, ax in enumerate(axes):
     ax.imshow(1 - samples[&#39;val&#39;][i], cmap=&#39;gray&#39;)</code></pre>
 <pre><code>sample: 100%|██████████| 510/510 [00:06&lt;00:00, 78.12it/s, 15 steps of size 3.10e-01. acc. prob=0.85] </code></pre>
 <figure>
-<img src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_9_1.png" alt="" /><figcaption>png</figcaption>
+<img
+src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_9_1.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
 </figure>
-<p>Not a bad generative process to start with. Now let’s just fit the hue channel …</p>
+<p>Not a bad generative process to start with. Now let’s just fit the
+hue channel …</p>
 <pre class="python"><code>def model3(w, h, n_droplets, channel, error_scale):
     # Sample droplet locations and sizes
     bg = sample(&quot;bg&quot;, dist.Uniform(0, 1))
@@ -206,12 +229,23 @@ fig.colorbar(axes[-1].imshow(hsv_img[:,:,0], cmap=&#39;gray&#39;), ax=axes[-1], 
 axes[-1].set_title(&#39;Ground truth&#39;)
 fig.tight_layout()</code></pre>
 <figure>
-<img src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_16_0.png" alt="" /><figcaption>png</figcaption>
+<img
+src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_16_0.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
 </figure>
-<p>Not a bad start. Most of the brightests spots have been fitted. I am surprised thought that a lot of the amplitudes are almost zero. At the end of the day, optimisations where pieces have to move into the right place first are tricky and I have no reason to believe that this is a global optimum, despite having spent a while trying to tease out a better outcome.</p>
+<p>Not a bad start. Most of the brightests spots have been fitted. I am
+surprised thought that a lot of the amplitudes are almost zero. At the
+end of the day, optimisations where pieces have to move into the right
+place first are tricky and I have no reason to believe that this is a
+global optimum, despite having spent a while trying to tease out a
+better outcome.</p>
 <pre class="python"><code>sns.histplot(samples[&#39;amplitude&#39;].flatten(), bins=50);</code></pre>
 <figure>
-<img src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_18_0.png" alt="" /><figcaption>png</figcaption>
+<img
+src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_18_0.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
 </figure></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
     <script>

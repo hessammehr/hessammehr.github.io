@@ -8,10 +8,19 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <link rel="stylesheet" href="/style.css" />
 </head>
@@ -35,31 +44,45 @@
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">2024-12-28</td>
-<td style="text-align: left;"><a href="/blog/posts/2024-12-28-droplet-generative-process.html">Trialing generative processes for chemical microscopy (part 1)</a></td>
+<td style="text-align: left;"><a
+href="/blog/posts/2024-12-28-droplet-generative-process.html">Trialing
+generative processes for chemical microscopy (part 1)</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">2024-12-26</td>
-<td style="text-align: left;"><a href="/blog/posts/2024-12-26-locally-constrained.html">Simple generation of locally constrained values in <code>numpyro</code></a></td>
+<td style="text-align: left;"><a
+href="/blog/posts/2024-12-26-locally-constrained.html">Simple generation
+of locally constrained values in <code>numpyro</code></a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">2020-06-14</td>
-<td style="text-align: left;"><a href="/blog/posts/2020-06-14-rant-against-macros.html">A rant against macros</a></td>
+<td style="text-align: left;"><a
+href="/blog/posts/2020-06-14-rant-against-macros.html">A rant against
+macros</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">2020-05-24</td>
-<td style="text-align: left;"><a href="/blog/posts/2020-05-24-lazy-interactive-optimization.html">The case for lazy computation and interactive optimization</a></td>
+<td style="text-align: left;"><a
+href="/blog/posts/2020-05-24-lazy-interactive-optimization.html">The
+case for lazy computation and interactive optimization</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">2019-04-07</td>
-<td style="text-align: left;"><a href="/blog/posts/2019-04-07-fertile-land-at-the-confluence-of-staged-programming-and-typed-logic-programming.html">Fertile land at the confluence of staged programming and (typed) logic programming — Part 1</a></td>
+<td style="text-align: left;"><a
+href="/blog/posts/2019-04-07-fertile-land-at-the-confluence-of-staged-programming-and-typed-logic-programming.html">Fertile
+land at the confluence of staged programming and (typed) logic
+programming — Part 1</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">2013-12-28</td>
-<td style="text-align: left;"><a href="/blog/posts/2013-12-28-funny.html">Funny</a></td>
+<td style="text-align: left;"><a
+href="/blog/posts/2013-12-28-funny.html">Funny</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">2013-12-23</td>
-<td style="text-align: left;"><a href="/blog/posts/2013-12-23-a-new-way-of-doing-chemistry.html">A new way of doing chemistry</a></td>
+<td style="text-align: left;"><a
+href="/blog/posts/2013-12-23-a-new-way-of-doing-chemistry.html">A new
+way of doing chemistry</a></td>
 </tr>
 </tbody>
 </table>
