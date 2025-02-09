@@ -158,4 +158,12 @@ blockquote p {
         page-break-inside: avoid;
         break-inside: avoid;
     }
+
+    summary {
+        display: none;
+    }
+
+    details[open] summary {
+        display: block;
+    }
 }
