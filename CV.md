@@ -136,7 +136,7 @@ Annual Aerosol Science Conference, York, 2024
 Annual Aerosol Science Conference, Teddington, 2023
 
 ### Probablistic reasoning: From interpreting known chemistry to discovering the unknown
-ScotCHEM Computational Chemistry Symposium, Edinburgh, 2022
+Invited talk, ScotCHEM Computational Chemistry Symposium, Edinburgh, 2022
 
 ## Patents
 ### Automated chemical synthesis platform <span>GB, [WO2021219999 (A1)][GB-patent], **2021**; US [17/922,240][US-patent], **2023**</span>{#patent-chemputer}
