@@ -48,7 +48,7 @@ Focus areas: Digital signal processing, photonic crystals.
 
 ## Selected publications
 
-Highlights among **35 primary research** papers (**h-index: 13**; 660+ citations; full list available on [ORCiD] & [Google Scholar])
+Highlights among **33 primary research** papers (**h-index: 13**; 679 citations; full list available on [ORCiD] & [Google Scholar])
 
 ### ▶ Digital discovery and the new experimental frontier
 [Mehr, S. H. M.]{.underline} 
@@ -213,6 +213,14 @@ Chemical Studies is a University of Glasgow Chemistry stream aimed at distilling
 <h2 style="display: inline"> Full publication list </h2>
 </summary>
 
+### Programmable real-time execution of scientific experiments using a domain specific language for the Raspberry Pi Pico
+[Mehr, S. H. M.]{.underline}  
+*TechRxiv*  **2025**
+
+### A framework for general-purpose chemical synthesis in the aerosol phase and its automated implementation in an open hardware platform 
+J Wosik,  C Zhu, [Mehr, S. H. M.]{.underline}  
+*ChemRxiv*  **2025**
+    
 ### Digital discovery and the new experimental frontier 
 [Mehr, S. H. M.]{.underline}  
 *OSF Preprints*  **2025**
