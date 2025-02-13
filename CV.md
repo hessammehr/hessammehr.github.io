@@ -48,7 +48,7 @@ Focus areas: Digital signal processing, photonic crystals.
 
 ## Selected publications
 
-Highlights among **33 primary research** papers (**h-index: 13**; 679 citations; full list available on [ORCiD] & [Google Scholar])
+Highlights among **33 primary research** papers (**h-index: 13**; 677 citations; full list available on [ORCiD] & [Google Scholar])
 
 ### ▶ Digital discovery and the new experimental frontier
 [Mehr, S. H. M.]{.underline} 
@@ -68,9 +68,9 @@ Zhang, L.; [Mehr, S. H. M.]{.underline}
 
 > **Aerosol-generated hydrogel microdroplets as miniature self-assembled reactors:** Hydrogel matrices hold promise as a locus for inhomogeneous chemistry, especially in the micron range, where reactants and products can be transported via diffusion. In this work, we generated reactive microdroplets of sodium alginate which, upon contact with and cross-linking with a reagent-loaded solution of calcium ions, acted as hydrogel containers for subsequent *in situ* reactivity within them. *Featured on the front cover of December 2024 issue.*
 
-### ▶ CtrlAer: A MicroPython package and embedded domain specific language for real-time control of piezoelectric atomisers
+### ▶ Programmable real-time execution of scientific experiments using a domain specific language for the Raspberry Pi Pico
 [Mehr, S. H. M.]{.underline}
-*Under review*, ([preprint](https://github.com/MehrResearch/ctrlaer/actions/runs/11989164325/artifacts/2228303412))
+*Under review*, ([preprint](https://doi.org/10.36227/techrxiv.173896967.76043093/v1))
 
 ### ▶ Constructing the Molecular Tree of Life using Assembly Theory and Mass Spectrometry
 Kahana, A.; MacLeod, A.; [Mehr, S. H. M.]{.underline}, Sharma, A. et al.
