@@ -46,15 +46,20 @@ From doped silicon to superconductors, the ability to fine-tune materials' elect
 ### BSc – Electrical Engineering <span> Sharif University of Technology, Iran | 2005–2009 </span>
 Focus areas: Digital signal processing, photonic crystals.
 
-## Selected publications
+## Research highlights
 
-Highlights among **33 primary research** papers (**h-index: 13**; 677 citations; full list available on [ORCiD] & [Google Scholar])
+Highlights among **27 primary research** papers (**h-index: 13**; 680+ citations; full list available on [ORCiD] & [Google Scholar])
+
+### ▶ A framework for general-purpose chemical synthesis in the aerosol phase and its automated implementation in an open hardware platform
+Wosik, J.; Zhu, C.; [Mehr, S. H. M.]{.underline}, *Under review*, **2025** (preprint: [10.26434/chemrxiv-2025-mkmn0](https://doi.org/10.26434/chemrxiv-2025-mkmn0))
+
+> Chemistry is a science founded not just by questions and hypotheses but practical needs and experimental possibilities that shape and bias our enquiries. This paper lays the conceptual foundations and provides a practical laboratory implementation of general-purpose chemical synthesis in aerosols. Synthesis in microdroplets has historically been difficult to reconcile with traditional laboratory workflows, hence hardly explored in synthetic chemistry. Tackling these issues using new hardware and analytics, this work provides access to vast reactivity information and chemical phenomena at different lengths scales, as well as an arena for the development of new green synthesis methodology.
 
 ### ▶ Digital discovery and the new experimental frontier
 [Mehr, S. H. M.]{.underline} 
-*Under review*, **2025** (preprint: [10.31219/osf.io/sf2j5](https://doi.org/10.31219/osf.io/sf2j5))
+Accepted for publication in *Digital Discovery*, **2025**
 
-> Growing interest in machine learning and automation in chemistry raises the question of whether future chemistry will be "lab-free" or be reduced to massive robotic chemistry farms to harvest information and AI models to ingest it. I argue that we shouldn't be constrained by these immediate applications, and that digitisation's full potential lies in a third direction: exploring richer experimental paradigms.
+> Growing interest in machine learning and automation in chemistry raises the question of whether future chemistry will be "lab-free" or be reduced to massive robotic chemistry farms to harvest information and AI models to ingest it. I explore possibilities beyond these extremes, where by enabling exploration richer experimental spaces digitisation unlocks a third, more exciting, direction.
 
 ### ▶ Operational considerations for approximating Molecular Assembly by Fourier transform mass spectrometry
 Weiss, G. M.; Asche, S.; Mclain, H.; Chung, A. H.; [Mehr, S. H. M.]{.underline}; Cronin, L.; Graham, H.
@@ -62,19 +67,19 @@ Weiss, G. M.; Asche, S.; Mclain, H.; Chung, A. H.; [Mehr, S. H. M.]{.underline};
 
 > This NASA collaboration deploys my [RecursiveMA algorithm](#recursiveMA) in the context of finding evidence of extra-terrestrial life in tandem mass spectrometry data.
 
-### ▶ *In situ* synthesis within micron-sized hydrogel reactors created *via* programmable aerosol chemistry
+### ▶ In situ synthesis within micron-sized hydrogel reactors created via programmable aerosol chemistry
 Zhang, L.; [Mehr, S. H. M.]{.underline}
 *Digital Discovery*, **2024** ([10.1039/D4DD00139G](https://doi.org/10.1039/D4DD00139G))
 
 > **Aerosol-generated hydrogel microdroplets as miniature self-assembled reactors:** Hydrogel matrices hold promise as a locus for inhomogeneous chemistry, especially in the micron range, where reactants and products can be transported via diffusion. In this work, we generated reactive microdroplets of sodium alginate which, upon contact with and cross-linking with a reagent-loaded solution of calcium ions, acted as hydrogel containers for subsequent *in situ* reactivity within them. *Featured on the front cover of December 2024 issue.*
 
-### ▶ Programmable real-time execution of scientific experiments using a domain specific language for the Raspberry Pi Pico
+<!-- ### ▶ Programmable real-time execution of scientific experiments using a domain specific language for the Raspberry Pi Pico
 [Mehr, S. H. M.]{.underline}
-*Under review*, ([preprint](https://doi.org/10.36227/techrxiv.173896967.76043093/v1))
+*Under review*, ([preprint](https://doi.org/10.36227/techrxiv.173896967.76043093/v1)) -->
 
-### ▶ Constructing the Molecular Tree of Life using Assembly Theory and Mass Spectrometry
+<!-- ### ▶ Constructing the Molecular Tree of Life using Assembly Theory and Mass Spectrometry
 Kahana, A.; MacLeod, A.; [Mehr, S. H. M.]{.underline}, Sharma, A. et al.
-*Under review* ([preprint](https://doi.org/10.48550/arXiv.2408.09305))
+*Under review* ([preprint](https://doi.org/10.48550/arXiv.2408.09305)) -->
 
 ### ▶ Reaction blueprints and logical control flow for parallelized chiral synthesis in the Chemputer
 Šiaučiulis, M.; Knittl-Frank, C.; [Mehr, S. H. M]{.underline}; Clarke, E.; Cronin, L.
@@ -86,7 +91,7 @@ Kahana, A.; MacLeod, A.; [Mehr, S. H. M.]{.underline}, Sharma, A. et al.
 Jirasek, M.; Sharma, A.; Bame, J.; [Mehr, S. H. M.]{.underline}, et al.
 *ACS Cent. Sci.*, **2024** ([10.1021/acscentsci.4c00120](https://doi.org/10.1021/acscentsci.4c00120))
 
-> Tandem mass spectrometry is a formidable tool for analysing complex mixtures of unknown compounds, e.g. exoplanet samples, but pinpointing compounds of interest without extrapolating from currently known species remains a challenge. My contribution to this paper, the *recursive molecular assembly* ([RecursiveMA](https://github.com/hessammehr/recursiveMA)) algorithm, searches tandem MS dataset for evidence of shared molecular building blocks to differentiate complex molecules from those that are simply large.
+> Tandem mass spectrometry is a formidable tool for analysing complex mixtures of unknown compounds, e.g. exoplanet samples, but pinpointing compounds of interest without extrapolating from currently known species remains a challenge. In this collaboration with the Cronin Group, I devised a recursive algorithm ([RecursiveMA](https://github.com/hessammehr/recursiveMA)) that searches tandem MS dataset for evidence of shared molecular building blocks, quantitatively differentiating complex molecules from those that are simply large.
 
 ### ▶ Digitizing chemical discovery with a Bayesian explorer for interpreting reactivity data
 [Mehr, S. H. M.]{.underline}; Caramelli, D.; Cronin, L.
