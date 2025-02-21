@@ -53,13 +53,13 @@ Highlights among **27 primary research** papers (**h-index: 13**; 680+ citations
 ### ▶ A framework for general-purpose chemical synthesis in the aerosol phase and its automated implementation in an open hardware platform
 Wosik, J.; Zhu, C.; [Mehr, S. H. M.]{.underline}, *Under review*, **2025** (preprint: [10.26434/chemrxiv-2025-mkmn0](https://doi.org/10.26434/chemrxiv-2025-mkmn0))
 
-> Chemistry is a science founded not just by questions and hypotheses but practical needs and experimental possibilities that shape and bias our enquiries. Seeking to broaden the frontiers open to exploration by embracing a new reaction medium, this paper lays the conceptual foundations and provides a practical laboratory implementation of general-purpose chemical synthesis in aerosols. Synthesis in microdroplets has historically been difficult to reconcile with traditional laboratory workflows, hence hardly explored in synthetic chemistry. Tackling these issues using new hardware and analytics, it provides access to vast reactivity information and chemical phenomena at different lengths scales, as well as an arena for the development of new green synthesis methodology.
+> **Building blocks for synthetic chemistry in aerosols:** Chemistry is a science founded not just by questions and hypotheses but practical needs and experimental possibilities that shape and bias our enquiries. Seeking to broaden the frontiers open to exploration by embracing a new reaction medium, this paper lays the conceptual foundations and provides a practical laboratory implementation of general-purpose chemical synthesis in aerosols. Synthesis in microdroplets has historically been difficult to reconcile with traditional laboratory workflows, hence hardly explored in synthetic chemistry. Tackling these issues using new hardware and analytics, it provides access to vast reactivity information and chemical phenomena at different lengths scales, as well as an arena for the development of new green synthesis methodology.
 
 ### ▶ Digital discovery and the new experimental frontier
 [Mehr, S. H. M.]{.underline} 
 Accepted for publication in *Digital Discovery*, **2025**
 
-> Growing interest in machine learning and automation in chemistry raises the question of whether future chemistry will be "lab-free" or reduced to massive robotic chemistry farms to harvest information and AI models to ingest it. I explore possibilities beyond these extremes, where enabling exploration of richer experimental spaces unlocks a third, more exciting, direction for  digitisation.
+> **Enriching rather than trivialising chemistry via digitisation:** Growing interest in machine learning and automation in chemistry raises the question of whether future chemistry will be "lab-free" or reduced to massive robotic chemistry farms to harvest information and AI models to ingest it. I explore possibilities beyond these extremes, where enabling exploration of richer experimental spaces unlocks a third, more exciting, direction for  digitisation.
 
 <!-- ### ▶ Operational considerations for approximating Molecular Assembly by Fourier transform mass spectrometry
 Weiss, G. M.; Asche, S.; Mclain, H.; Chung, A. H.; [Mehr, S. H. M.]{.underline}; Cronin, L.; Graham, H.
@@ -220,15 +220,15 @@ Chemical Studies is a University of Glasgow Chemistry stream aimed at distilling
 
 ### Programmable real-time execution of scientific experiments using a domain specific language for the Raspberry Pi Pico
 [Mehr, S. H. M.]{.underline}  
-*TechRxiv*  **2025**
+Under review,  **2025**
 
 ### A framework for general-purpose chemical synthesis in the aerosol phase and its automated implementation in an open hardware platform 
 J Wosik,  C Zhu, [Mehr, S. H. M.]{.underline}  
-*ChemRxiv*  **2025**
+Under review, **2025**
     
 ### Digital discovery and the new experimental frontier 
 [Mehr, S. H. M.]{.underline}  
-*OSF Preprints*  **2025**
+Accepted for publication in *Digital Discovery*, **2025**
     
 ### In situ synthesis within micron-sized hydrogel reactors created via programmable aerosol chemistry 
 L Zhang, [Mehr, S. H. M.]{.underline}  
