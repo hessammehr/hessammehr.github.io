@@ -99,7 +99,7 @@ Jirasek, M.; Sharma, A.; Bame, J.; [Mehr, S. H. M.]{.underline}, et al.
 
 > **A fresh take on AI in chemistry:** The applications of AI in chemistry are proliferating, yet instead of empowering expert chemists to undertake larger-scale experiments, most efforts supplant the chemist with data-hungry and opaque models. Bridging Bayesian probability and chemistry, we built a system that encodes and formalises chemists' intuition into a probabilistic model working in tandem with a robotic chemistry platform to explore large experimental spaces and plan next investigations.
 
-### ▶ Automated Qualitative and Quantitative Analysis of Complex Forensic Drug Samples using ¹H NMR
+### ▶ Automated Qualitative and Quantitative Analysis of Complex Forensic Drug Samples using ¹H NMR{#nmr}
 [Mehr, S. H. M.]{.underline}; Tang, A. W.; Laing, R. R.
 *Magn. Reson. Chem.*, **2023** ([10.1002/mrc.5265](https://doi.org/10.1002/mrc.5265))
 
@@ -161,7 +161,7 @@ With RSEd's support, I organised the [first workshop](#sound-chemistry) dedicate
 Via this grant, we explored the applications of acoustic fields to generating contact-free chemical reactors, fostering collaboration with leading European groups in Bristol, Pamplona, and Helsinki.
 
 ### Lord Kelvin / Adam Smith Leadership Fellowship (£100k) <span>University of Glasgow | 2022–2025</span>
-UofG's flagship LKAS Fellowship supports outstanding ECRs on the trajectory to becoming leaders in their field.
+UofG's flagship LKAS Fellowship supports outstanding ECRs on the trajectory to leadership in their field.
 
 ### Leverhulme Early Career Fellowship (£300k) <span>Leverhulme Trust | 2022–2025</span>
 My proposal *"Investigating the dark reactions present in chemical space"* focused on automated discovery of reactions remaining unknown due to inherent bias in current experimental technique. 
@@ -174,7 +174,7 @@ My proposal *"Investigating the dark reactions present in chemical space"* focus
 
 ### [University of Glasgow Shadow Board][Shadow Board] <span>Leadership | 2022–2025</span>
 
-Contributing to the board’s mission of being a "critical friend" to senior UofG management. I advocated for specific concerns of early-career researchers and initiated the conversation within the board about widening recruitment to under-represented groups in the University.
+Contributing to the board’s mission of being a "critical friend" to senior UofG management, I advocated for specific concerns of early-career researchers and initiated the conversation within the board about widening recruitment to under-represented groups in the University.
 
 ### [Nuffield Research Placements] <span> Mentorship & public engagement | 2023–2024 </span>
 Widening participation summer research placements for high school students.
@@ -197,10 +197,10 @@ This RSC Outreach Grant-supported workshop series introduced Glasgow high school
 
 Chemical Studies is a University of Glasgow Chemistry stream aimed at distilling the spectrum of skills and experience chemistry undergraduate in a format tailored to students ineligible for the full MSc. As a co-organiser of this innovative programme for the past two years, I mentored small groups of students through the formulation of a research question; guiding them towards a tractable laboratory implementation, followed by 4 intensive lab sessions culminating in a group dissertation and poster.
 
-### Year 2&3 MChem <span> Tutorials| 2022–25 </span>
+### Year 2&3 MChem <span> Tutorials | 2022–25 </span>
 
 
-### Year 1 Science Fundamentals (non-chemist cohort) <span> Lectures and revision tutorials| 2022–25 </span>
+### Year 1 Science Fundamentals (non-chemist cohort) <span> Lectures and revision tutorials | 2022–25 </span>
 
 ### Year 1 MChem <span> Synthesis laboratory | 2023–24 </span>
 
