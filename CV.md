@@ -91,7 +91,7 @@ Kahana, A.; MacLeod, A.; [Mehr, S. H. M.]{.underline}, Sharma, A. et al.
 Jirasek, M.; Sharma, A.; Bame, J.; [Mehr, S. H. M.]{.underline}, et al.
 *ACS Cent. Sci.*, **2024** ([10.1021/acscentsci.4c00120](https://doi.org/10.1021/acscentsci.4c00120))
 
-> Tandem mass spectrometry is a formidable tool for analysing complex mixtures of unknown compounds, e.g. exoplanet samples, but pinpointing compounds of interest without extrapolating from currently known species remains a challenge. In this collaboration with the Cronin Group, I devised a recursive algorithm ([RecursiveMA](https://github.com/hessammehr/recursiveMA)) that searches tandem MS dataset for evidence of shared molecular building blocks, quantitatively differentiating complex molecules from those that are simply large.
+> Tandem mass spectrometry is a formidable tool for analysing complex mixtures of unknown compounds, e.g. exoplanet samples, but pinpointing compounds of interest without extrapolating from currently known species remains a challenge. I contributed an algorithm ([RecursiveMA](https://github.com/hessammehr/recursiveMA)), now deployed in a [NASA study](#nasa-study), that searches tandem MS dataset for evidence of shared molecular building blocks, quantitatively differentiating complex from simply heavy molecules.
 
 ### ▶ Digitizing chemical discovery with a Bayesian explorer for interpreting reactivity data
 [Mehr, S. H. M.]{.underline}; Caramelli, D.; Cronin, L.
@@ -115,13 +115,13 @@ Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; [Mehr, 
 [Mehr, S. H. M.]{.underline}; Craven, M.; Leonov, A. I.; Keenan, G.; Cronin, L.
 *Science*, **2020** ([10.1126/science.abc2986](https://doi.org/10.1126/science.abc2986))
 
-> **Hardware-independent synthesis automation:** Digitising synthesis requires in-depth knowledge of vendor specific programming interfaces and lengthy development to adapt literature protocols to robotic execution. Our high-level hardware-independent chemical programming language XDL formalises the chemical literature's universal method for describing synthesis procedures in prose and translates these descriptions to robot-ready instructions.
+> **Hardware-independent synthesis automation:** Digitising synthesis requires in-depth knowledge of vendor specific programming interfaces and lengthy development to adapt literature protocols to robotic execution. Our high-level hardware-independent chemical programming language, χDL, formalises the prose description of synthesis procedures in the literature, translating them to instructions executable on any robotic platform.
 
 ### ▶ Stabilization of a Strained Heteroradialene by Peripheral Electron Delocalization
 [Mehr, S. H. M.]{.underline}; Patrick, B. O.; MacLachlan, M. J.
 *Org. Lett.*, **2016** ([10.1021/acs.orglett.6b00577](https://doi.org/10.1021/acs.orglett.6b00577))
 
-> **Aromaticity challenged:** Electronic structure effects in organic chemistry are traditionally understood as limited to immediately adjacent atoms or through-bond conjugation. Here we show that multi-centre electron delocalisation over a molecular framework can override such local effects, opening doors to molecules with unusual bonding and electronic properties.
+> **Aromaticity challenged:** We designed and synthesised a molecule that features conflicting electron delocalisation motifs — nominally aromatic but with strong peripheral resonance contributors — and steric interactions at odds with both delocalisation modes. The resulting structure is testament to the potential of eliciting exceptional properties from seemingly ordinary functional groups via molecular design, and represents a new strategy for molecular activation.
 
 ## Books
 ### Building a digital chemistry lab <span>Royal Society of Chemistry Books </span>
@@ -233,7 +233,7 @@ Accepted for publication in *Digital Discovery*, **2025**
 L Zhang, [Mehr, S. H. M.]{.underline}  
 *Digital Discovery* 3 (12), 2424-2433 **2024**
     
-### Operational considerations for approximating Molecular Assembly by Fourier transform mass spectrometry 
+### Operational considerations for approximating Molecular Assembly by Fourier transform mass spectrometry{#nasa-study}
 GM Weiss,  S Asche,  H Mclain,  AH Chung, [Mehr, S. H. M.]{.underline},  L Cronin,  ...  
 *Frontiers in Astronomy and Space Sciences* 11, 1485483 **2024**
     
