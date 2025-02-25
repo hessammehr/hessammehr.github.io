@@ -41,7 +41,7 @@ I devised a system combining signal processing algorithms with probability theor
 ## Education
 
 ### PhD – Chemistry <span> University of British Columbia, Canada | 2012–2017 </span>
-From doped silicon to superconductors, the ability to fine-tune materials' electronic structure has transformed the landscape of possible material properties. Translating this idea to the field of organic chemistry, I demonstrated how the interplay of molecular shape and electron delocalisation can modulate and even defy properties like aromaticity.
+From doped silicon to superconductors, fine-tuning of electronic structure has transformed the landscape of possible material properties. Translating this idea to organic chemistry, I demonstrated the interplay of molecular shape and electron delocalisation to modulate and even defy properties like aromaticity.
 
 ### BSc – Electrical Engineering <span> Sharif University of Technology, Iran | 2005–2009 </span>
 Focus areas: Digital signal processing, photonic crystals.
