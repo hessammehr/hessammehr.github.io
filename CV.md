@@ -71,7 +71,7 @@ Weiss, G. M.; Asche, S.; Mclain, H.; Chung, A. H.; [Mehr, S. H. M.]{.underline};
 Zhang, L.; [Mehr, S. H. M.]{.underline}
 *Digital Discovery*, **2024** ([10.1039/D4DD00139G](https://doi.org/10.1039/D4DD00139G))
 
-> **Aerosol-generated hydrogel microdroplets as miniature self-assembled reactors:** Hydrogel matrices hold promise as a locus for inhomogeneous chemistry, especially in the micron range, where reactants and products can be transported via diffusion. In this work, we generated reactive microdroplets of sodium alginate which, upon contact with and cross-linking with a reagent-loaded solution of calcium ions, acted as hydrogel containers for subsequent *in situ* reactivity within them. *Featured on the front cover of December 2024 issue.*
+> **Aerosol-generated hydrogel microdroplets as miniature self-assembled reactors:** Hydrogel matrices hold promise as a locus for inhomogeneous chemistry, especially in the micron range, where reactants and products can be transported via diffusion. In this work, we generated reactive microdroplets of sodium alginate which, upon contact with and cross-linking with a reagent-loaded solution of calcium ions, acted as hydrogel containers for subsequent *in situ* reactivity within them. *Featured on 2024/12 issue cover.*
 
 <!-- ### ▶ Programmable real-time execution of scientific experiments using a domain specific language for the Raspberry Pi Pico
 [Mehr, S. H. M.]{.underline}
@@ -121,7 +121,9 @@ Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; [Mehr, 
 [Mehr, S. H. M.]{.underline}; Patrick, B. O.; MacLachlan, M. J.
 *Org. Lett.*, **2016** ([10.1021/acs.orglett.6b00577](https://doi.org/10.1021/acs.orglett.6b00577))
 
-> **Aromaticity challenged:** We designed and synthesised a molecule that features conflicting electron delocalisation motifs — nominally aromatic but with strong peripheral resonance contributors — and steric interactions at odds with both delocalisation modes. The resulting structure is testament to the potential of eliciting exceptional properties from seemingly ordinary functional groups via molecular design, and represents a new strategy for molecular activation.
+> **Aromaticity challenged:** We designed & synthesised a molecule shaped by three conflicting forces — aromaticity, strong peripheral electron delocalisation and steric interactions at odds with both of these. The resulting structure demonstrates the power of molecular design to elicit exceptional properties from ordinary functional groups, and a new strategy for molecular activation.
+> 
+> ![Heteroradialene](images/Heteroradialene%20combined.svg)\
 
 ## Books
 ### Building a digital chemistry lab <span>Royal Society of Chemistry Books </span>
