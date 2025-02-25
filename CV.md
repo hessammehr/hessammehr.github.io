@@ -161,7 +161,7 @@ With RSEd's support, I organised the [first workshop](#sound-chemistry) dedicate
 Via this grant, we explored the applications of acoustic fields to generating contact-free chemical reactors, fostering collaboration with leading European groups in Bristol, Pamplona, and Helsinki.
 
 ### Lord Kelvin / Adam Smith Leadership Fellowship (£100k) <span>University of Glasgow | 2022–2025</span>
-UofG's flagship *Lord Kelvin / Adam Smith* (LKAS) Fellowship Scheme — established to support outstanding early-career researchers on the trajectory to becoming leaders in their field.
+UofG's flagship LKAS Fellowship supports outstanding ECRs on the trajectory to becoming leaders in their field.
 
 ### Leverhulme Early Career Fellowship (£300k) <span>Leverhulme Trust | 2022–2025</span>
 My proposal *"Investigating the dark reactions present in chemical space"* focused on automated discovery of reactions remaining unknown due to inherent bias in current experimental technique. 
