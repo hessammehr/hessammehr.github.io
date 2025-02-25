@@ -205,12 +205,11 @@ Chemical Studies is a University of Glasgow Chemistry stream aimed at distilling
 ### Year 1 MChem <span> Synthesis laboratory | 2023–24 </span>
 
 ## Supervision
-**Current:** **3** PhD students (including one jointly supervised with Computer Science); **1** MSc student; **1** research intern.
+**Current (5):** **3** PhD students (two jointly supervised with Computer Science and Chemistry); **1** MSc student; **1** research intern.
 
-**Past:** **2** MSc students; **5** Advanced Functional Materials PGT students; **1** Chemical Biology PGT student; **1** international post-graduate visiting student; **2** international exchange students; **2** interns.
+**Past (13):** **2** MSc students; **5** Advanced Functional Materials post-graduates; **1** Chemical Biology post-graduates; **1** international post-graduate visitor; **2** international exchange students; **2** interns.
 
-**Examination:** Examiner on **12** viva exams so far.
-
+**Examination:** Examiner on **12** vivas so far.
 
 <details>
 
