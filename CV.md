@@ -115,13 +115,13 @@ Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; [Mehr, 
 [Mehr, S. H. M.]{.underline}; Craven, M.; Leonov, A. I.; Keenan, G.; Cronin, L.
 *Science*, **2020** ([10.1126/science.abc2986](https://doi.org/10.1126/science.abc2986))
 
-> **Hardware-independent synthesis automation:** Digitising synthesis requires in-depth knowledge of vendor specific programming interfaces and lengthy development to adapt literature protocols to robotic execution. Our high-level hardware-independent chemical programming language XDL formalises the chemical literature's universal method for describing synthesis procedures in prose and translates these descriptions to robot-ready instructions.
+> **Hardware-independent synthesis automation:** Digitising synthesis requires in-depth knowledge of vendor specific programming interfaces and lengthy development to adapt literature protocols to robotic execution. Our high-level hardware-independent chemical programming language, χDL, formalises the prose description of synthesis procedures in the literature, translating them to instructions executable on any robotic platform.
 
 ### ▶ Stabilization of a Strained Heteroradialene by Peripheral Electron Delocalization
 [Mehr, S. H. M.]{.underline}; Patrick, B. O.; MacLachlan, M. J.
 *Org. Lett.*, **2016** ([10.1021/acs.orglett.6b00577](https://doi.org/10.1021/acs.orglett.6b00577))
 
-> **Aromaticity challenged:** Electronic structure effects in organic chemistry are traditionally understood as limited to immediately adjacent atoms or through-bond conjugation. Here we show that multi-centre electron delocalisation over a molecular framework can override such local effects, opening doors to molecules with unusual bonding and electronic properties.
+> **Aromaticity challenged:** We designed and synthesised a molecule that features conflicting electron delocalisation motifs — nominally aromatic but with strong peripheral resonance contributors — and steric interactions at odds with both delocalisation modes. The resulting structure is testament to the potential of eliciting exceptional properties from seemingly ordinary functional groups.
 
 ## Books
 ### Building a digital chemistry lab <span>Royal Society of Chemistry Books </span>
