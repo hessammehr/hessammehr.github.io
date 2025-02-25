@@ -82,7 +82,7 @@ Kahana, A.; MacLeod, A.; [Mehr, S. H. M.]{.underline}, Sharma, A. et al.
 *Under review* ([preprint](https://doi.org/10.48550/arXiv.2408.09305)) -->
 
 ### ▶ Reaction blueprints and logical control flow for parallelized chiral synthesis in the Chemputer
-Šiaučiulis, M.; Knittl-Frank, C.; [Mehr, S. H. M]{.underline}; Clarke, E.; Cronin, L.
+Šiaučiulis, M.; Knittl-Frank, C.; [Mehr, S. H. M]{.underline}; et al.
 *Nat. Chem.*, **2024** ([10.1038/s41467-024-54238-6](https://doi.org/10.1038/s41467-024-54238-6))
 
 > Early means of programming robotic modules for chemical synthesis show immense promise for deployment in research and industrial labs, but lack the fundamental constructs — re-usable reactions, parallel synthesis, and a higher-level representation of reagents and hardware — needed to tackle more ambitious synthetic challenges. I designed a first-class implementation of these constructs in the χDL 2.0 language whilst maintaining compatibility with the existing repertoire of procedures digitised via χDL 1.0.
