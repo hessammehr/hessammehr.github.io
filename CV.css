@@ -116,16 +116,10 @@ blockquote {
     padding: 0.7rem 1rem;
     margin: 0.5rem 0 1.5rem 0;
     text-align: justify;
-    display: flex;
-    gap: 0.5rem;
-}
-
-blockquote img {
-    max-width: 12rem;
 }
 
 .level1 blockquote {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 blockquote p {
