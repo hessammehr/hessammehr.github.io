@@ -1,6 +1,6 @@
-# Trialing generative processes for chemical microscopy (part 1)
+# Trialing generative processes for chemical microscopy (part 2)
 
-Is it possible to use a generative process to model microscope images (and is it worth the effort)?
+Last time we used a very rigid generative model (droplets modeled as gaussians). This time we'll use a learned representation of droplets.
 
 
 ```python
@@ -17,6 +17,8 @@ from numpyro.optim import Adam
 from PIL import Image
 
 plt.rcParams['figure.dpi'] = 200
+
+sns.set_theme(context='paper', style='ticks', font='Arial')
 ```
 
 
@@ -35,25 +37,26 @@ img
 
 
 
+For simplicity, we'll focus on modeling the H (hue) channel of the image.
+
 
 ```python
-# convert img to HSV space
 img_hsv = np.array(img.convert('HSV')) / 255.0
 
-plt.imshow(img_hsv[..., 2], cmap='gray')
+plt.imshow(img_hsv[..., 0], cmap='gray')
 plt.colorbar()
 ```
 
 
 
 
-    <matplotlib.colorbar.Colorbar at 0x150027f50>
+    <matplotlib.colorbar.Colorbar at 0x7861b29ea210>
 
 
 
 
     
-![png](2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative-process-2_3_1.png)
+![png](2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative-process-2_4_1.png)
     
 
 
@@ -111,47 +114,50 @@ def model(w, h, n_droplets, channel, types=10, mask_shape=(15, 15)):
 
 ```python
 guide = AutoNormal(model)
-svi = SVI(model, guide, Adam(0.02), Trace_ELBO())
+svi = SVI(model, guide, Adam(0.01), Trace_ELBO())
 
-svi_result = svi.run(jax.random.PRNGKey(0), 20000, img.width, img.height, 2000, img_hsv[..., 0])
+svi_result = svi.run(jax.random.PRNGKey(0), 100000, img.width, img.height, 2000, img_hsv[..., 0])
 samples_svi = guide.sample_posterior(jax.random.PRNGKey(0), svi_result.params, sample_shape=(100,))
-plt.plot(svi_result.losses)
+fig, ax = plt.subplots(figsize=(5, 2))
+ax.plot(svi_result.losses)
 ```
 
-    100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20000/20000 [07:46<00:00, 42.90it/s, init loss: 18243708.0000, avg. loss [19001-20000]: 1217140.7500]
+    100%|██████████| 100000/100000 [01:38<00:00, 1015.79it/s, init loss: 13266128.0000, avg. loss [95001-100000]: 447068.1562]
 
 
 
 
 
-    [<matplotlib.lines.Line2D at 0x38c647470>]
+    [<matplotlib.lines.Line2D at 0x78611a185820>]
 
 
 
 
     
-![png](2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative-process-2_5_2.png)
+![png](2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative-process-2_6_2.png)
     
 
 
 
 ```python
-plt.imshow(samples_svi['img'][0], cmap='gray')
+plt.imshow(samples_svi['img'].mean(axis=0), cmap='gray')
 plt.colorbar()
 ```
 
 
 
 
-    <matplotlib.colorbar.Colorbar at 0x38c6171d0>
+    <matplotlib.colorbar.Colorbar at 0x78610cf92bd0>
 
 
 
 
     
-![png](2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative-process-2_6_1.png)
+![png](2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative-process-2_7_1.png)
     
 
+
+Looks quite good!
 
 
 ```python
@@ -163,29 +169,31 @@ plt.scatter(samples_svi['x'][:100] * img_hsv.shape[1], samples_svi['y'][:100] * 
 
 
 
-    <matplotlib.collections.PathCollection at 0x38c6157c0>
+    <matplotlib.collections.PathCollection at 0x786118d06030>
 
 
 
 
     
-![png](2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative-process-2_7_1.png)
+![png](2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative-process-2_9_1.png)
     
 
 
+Most droplets are now detected — very nice!
 
-```python
-plt.scatter(samples_svi['x'][:100], samples_svi['y'][:100], s=4, alpha=0.01, c='red')
-```
-
-
-```python
-plt.scatter(samples_svi['x'].mean(axis=0), samples_svi['y'].mean(axis=0), s=4, alpha=0.1, c='red')
-```
+Let's have a look at the inferred droplet masks:
 
 
 ```python
-fig, axes = plt.subplots(samples_svi['mask'].shape[1], 1, figsize=(1, samples_svi['mask'].shape[1]), sharex=True)
+fig, axes = plt.subplots(1, samples_svi['mask'].shape[1], figsize=(samples_svi['mask'].shape[1], 1), sharey=True)
 for i, ax in enumerate(axes):
     ax.imshow(samples_svi['mask'].mean(axis=0)[i], cmap='gray', vmin=0, vmax=1)
 ```
+
+
+    
+![png](2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative-process-2_12_0.png)
+    
+
+
+This model took about 90 seconds to fit on a rusty RTX 2080. Still there is much that could be improved. If new samples include the same droplet types, only at different locations, the masks could be "frozen". Even better, we could use amortised inference for almost instant results. Definitely something to explore in the future.

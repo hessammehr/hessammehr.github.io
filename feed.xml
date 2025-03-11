@@ -7,11 +7,11 @@
   <atom:link href="https://hessammehr.github.io/feed.xml" rel="self" type="application/rss+xml" />
   <language>en-us</language>
 <item>
-      <title>Trialing generative processes for chemical microscopy (part 1)</title>
+      <title>Trialing generative processes for chemical microscopy (part 2)</title>
       <link>https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html</link>
       <guid>https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html</guid>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <description>Is it possible to use a generative process to model microscope images (and is it worth the effort)? </description>
+      <description>Last time we used a very rigid generative model (droplets modeled as gaussians). This time we'll use a learned representation of droplets. </description>
     </item>
 <item>
       <title>Trialing generative processes for chemical microscopy (part 1)</title>

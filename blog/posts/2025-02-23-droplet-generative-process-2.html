@@ -25,10 +25,11 @@
   </head>
   <body>
     <div class="container-lg px-3 my-5 markdown-body"><h1
-id="trialing-generative-processes-for-chemical-microscopy-part-1">Trialing
-generative processes for chemical microscopy (part 1)</h1>
-<p>Is it possible to use a generative process to model microscope images
-(and is it worth the effort)?</p>
+id="trialing-generative-processes-for-chemical-microscopy-part-2">Trialing
+generative processes for chemical microscopy (part 2)</h1>
+<p>Last time we used a very rigid generative model (droplets modeled as
+gaussians). This time we’ll use a learned representation of
+droplets.</p>
 <pre class="python"><code>import jax
 import jax.numpy as jnp
 import matplotlib.pyplot as plt
@@ -41,7 +42,9 @@ from numpyro.infer.autoguide import AutoNormal
 from numpyro.optim import Adam
 from PIL import Image
 
-plt.rcParams[&#39;figure.dpi&#39;] = 200</code></pre>
+plt.rcParams[&#39;figure.dpi&#39;] = 200
+
+sns.set_theme(context=&#39;paper&#39;, style=&#39;ticks&#39;, font=&#39;Arial&#39;)</code></pre>
 <pre class="python"><code>img = Image.open(&#39;data/example.jpg&#39;)
 img = img.resize((img.width // 4, img.height // 4))
 img</code></pre>
@@ -51,15 +54,16 @@ src="2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative
 alt="png" />
 <figcaption aria-hidden="true">png</figcaption>
 </figure>
-<pre class="python"><code># convert img to HSV space
-img_hsv = np.array(img.convert(&#39;HSV&#39;)) / 255.0
+<p>For simplicity, we’ll focus on modeling the H (hue) channel of the
+image.</p>
+<pre class="python"><code>img_hsv = np.array(img.convert(&#39;HSV&#39;)) / 255.0
 
-plt.imshow(img_hsv[..., 2], cmap=&#39;gray&#39;)
+plt.imshow(img_hsv[..., 0], cmap=&#39;gray&#39;)
 plt.colorbar()</code></pre>
-<pre><code>&lt;matplotlib.colorbar.Colorbar at 0x150027f50&gt;</code></pre>
+<pre><code>&lt;matplotlib.colorbar.Colorbar at 0x7861b29ea210&gt;</code></pre>
 <figure>
 <img
-src="2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative-process-2_3_1.png"
+src="2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative-process-2_4_1.png"
 alt="png" />
 <figcaption aria-hidden="true">png</figcaption>
 </figure>
@@ -111,48 +115,61 @@ alt="png" />
     diff = deterministic(&#39;diff&#39;, channel - img)
     sample(&#39;obs&#39;, dist.Normal(scale=0.05), obs=diff)</code></pre>
 <pre class="python"><code>guide = AutoNormal(model)
-svi = SVI(model, guide, Adam(0.02), Trace_ELBO())
+svi = SVI(model, guide, Adam(0.01), Trace_ELBO())
 
-svi_result = svi.run(jax.random.PRNGKey(0), 20000, img.width, img.height, 2000, img_hsv[..., 0])
+svi_result = svi.run(jax.random.PRNGKey(0), 100000, img.width, img.height, 2000, img_hsv[..., 0])
 samples_svi = guide.sample_posterior(jax.random.PRNGKey(0), svi_result.params, sample_shape=(100,))
-plt.plot(svi_result.losses)</code></pre>
-<pre><code>100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20000/20000 [07:46&lt;00:00, 42.90it/s, init loss: 18243708.0000, avg. loss [19001-20000]: 1217140.7500]
+fig, ax = plt.subplots(figsize=(5, 2))
+ax.plot(svi_result.losses)</code></pre>
+<pre><code>100%|██████████| 100000/100000 [01:38&lt;00:00, 1015.79it/s, init loss: 13266128.0000, avg. loss [95001-100000]: 447068.1562]
 
 
 
 
 
-[&lt;matplotlib.lines.Line2D at 0x38c647470&gt;]</code></pre>
+[&lt;matplotlib.lines.Line2D at 0x78611a185820&gt;]</code></pre>
 <figure>
 <img
-src="2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative-process-2_5_2.png"
+src="2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative-process-2_6_2.png"
 alt="png" />
 <figcaption aria-hidden="true">png</figcaption>
 </figure>
-<pre class="python"><code>plt.imshow(samples_svi[&#39;img&#39;][0], cmap=&#39;gray&#39;)
+<pre class="python"><code>plt.imshow(samples_svi[&#39;img&#39;].mean(axis=0), cmap=&#39;gray&#39;)
 plt.colorbar()</code></pre>
-<pre><code>&lt;matplotlib.colorbar.Colorbar at 0x38c6171d0&gt;</code></pre>
-<figure>
-<img
-src="2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative-process-2_6_1.png"
-alt="png" />
-<figcaption aria-hidden="true">png</figcaption>
-</figure>
-<pre class="python"><code>plt.imshow(img_hsv[:, :, 0]/255.0, cmap=&#39;gray&#39;)
-plt.colorbar()
-plt.scatter(samples_svi[&#39;x&#39;][:100] * img_hsv.shape[1], samples_svi[&#39;y&#39;][:100] * img_hsv.shape[0], s=4, alpha=0.01, c=&#39;red&#39;, marker=&#39;x&#39;)</code></pre>
-<pre><code>&lt;matplotlib.collections.PathCollection at 0x38c6157c0&gt;</code></pre>
+<pre><code>&lt;matplotlib.colorbar.Colorbar at 0x78610cf92bd0&gt;</code></pre>
 <figure>
 <img
 src="2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative-process-2_7_1.png"
 alt="png" />
 <figcaption aria-hidden="true">png</figcaption>
 </figure>
-<pre class="python"><code>plt.scatter(samples_svi[&#39;x&#39;][:100], samples_svi[&#39;y&#39;][:100], s=4, alpha=0.01, c=&#39;red&#39;)</code></pre>
-<pre class="python"><code>plt.scatter(samples_svi[&#39;x&#39;].mean(axis=0), samples_svi[&#39;y&#39;].mean(axis=0), s=4, alpha=0.1, c=&#39;red&#39;)</code></pre>
-<pre class="python"><code>fig, axes = plt.subplots(samples_svi[&#39;mask&#39;].shape[1], 1, figsize=(1, samples_svi[&#39;mask&#39;].shape[1]), sharex=True)
+<p>Looks quite good!</p>
+<pre class="python"><code>plt.imshow(img_hsv[:, :, 0]/255.0, cmap=&#39;gray&#39;)
+plt.colorbar()
+plt.scatter(samples_svi[&#39;x&#39;][:100] * img_hsv.shape[1], samples_svi[&#39;y&#39;][:100] * img_hsv.shape[0], s=4, alpha=0.01, c=&#39;red&#39;, marker=&#39;x&#39;)</code></pre>
+<pre><code>&lt;matplotlib.collections.PathCollection at 0x786118d06030&gt;</code></pre>
+<figure>
+<img
+src="2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative-process-2_9_1.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
+</figure>
+<p>Most droplets are now detected — very nice!</p>
+<p>Let’s have a look at the inferred droplet masks:</p>
+<pre class="python"><code>fig, axes = plt.subplots(1, samples_svi[&#39;mask&#39;].shape[1], figsize=(samples_svi[&#39;mask&#39;].shape[1], 1), sharey=True)
 for i, ax in enumerate(axes):
-    ax.imshow(samples_svi[&#39;mask&#39;].mean(axis=0)[i], cmap=&#39;gray&#39;, vmin=0, vmax=1)</code></pre></div>
+    ax.imshow(samples_svi[&#39;mask&#39;].mean(axis=0)[i], cmap=&#39;gray&#39;, vmin=0, vmax=1)</code></pre>
+<figure>
+<img
+src="2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative-process-2_12_0.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
+</figure>
+<p>This model took about 90 seconds to fit on a rusty RTX 2080. Still
+there is much that could be improved. If new samples include the same
+droplet types, only at different locations, the masks could be “frozen”.
+Even better, we could use amortised inference for almost instant
+results. Definitely something to explore in the future.</p></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
     <script>
       hljs.highlightAll();
