@@ -5,13 +5,8 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "jax==0.4.26",
-    "jax-metal>=0.1.0",
-    "jaxlib==0.4.26",
     "jupyterlab>=4.3.5",
     "nbconvert>=7.16.4",
-    "pillow>=11.0.0",
-    "scikit-image>=0.25.0",
 ]
 
 [dependency-groups]
@@ -24,4 +19,7 @@ dev = [
     "pandas>=2.2.3",
     "scipy>=1.15.2",
     "seaborn>=0.13.2",
+    "scikit-image>=0.25.0",
+    "pillow>=11.0.0",
+    "jax[cuda12]>=0.5.2",
 ]
