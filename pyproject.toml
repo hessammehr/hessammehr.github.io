@@ -3,8 +3,12 @@ name = "hessammehr-github-io"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
+    "jax==0.4.26",
+    "jax-metal>=0.1.0",
+    "jaxlib==0.4.26",
+    "jupyterlab>=4.3.5",
     "nbconvert>=7.16.4",
     "pillow>=11.0.0",
     "scikit-image>=0.25.0",
@@ -14,10 +18,10 @@ dependencies = [
 dev = [
     "ipykernel>=6.29.5",
     "ipywidgets>=8.1.5",
-    "matplotlib>=3.10.0",
-    "numpy>=2.2.1",
-    "numpyro>=0.16.1",
+    "matplotlib>=3.10.1",
+    "numpy>=2.2.3",
+    "numpyro>=0.17.0",
     "pandas>=2.2.3",
-    "scipy>=1.14.1",
+    "scipy>=1.15.2",
     "seaborn>=0.13.2",
 ]
