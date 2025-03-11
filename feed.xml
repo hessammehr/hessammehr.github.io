@@ -8,6 +8,13 @@
   <language>en-us</language>
 <item>
       <title>Trialing generative processes for chemical microscopy (part 1)</title>
+      <link>https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html</link>
+      <guid>https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html</guid>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <description>Is it possible to use a generative process to model microscope images (and is it worth the effort)? </description>
+    </item>
+<item>
+      <title>Trialing generative processes for chemical microscopy (part 1)</title>
       <link>https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html</link>
       <guid>https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html</guid>
       <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
