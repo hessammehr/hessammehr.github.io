@@ -57,7 +57,7 @@ Wosik, J.; Zhu, C.; [Mehr, S. H. M.]{.underline}, *Under review*, **2025** (prep
 
 ### ▶ Digital discovery and the new experimental frontier
 [Mehr, S. H. M.]{.underline} 
-Accepted for publication in *Digital Discovery*, **2025**
+[Accepted for publication in *Digital Discovery*](https://pubs.rsc.org/en/content/articlepdf/2025/DD/D5DD00029G), **2025**
 
 > **Enriching rather than trivialising chemistry via digitisation:** Growing interest in machine learning and automation in chemistry raises the question of whether future chemistry will be "lab-free" or reduced to massive robotic chemistry farms to harvest information and AI models to ingest it. I explore possibilities beyond these extremes, where enabling exploration of richer experimental spaces unlocks a third, more exciting, direction for  digitisation.
 
