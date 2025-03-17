@@ -57,7 +57,7 @@ Wosik, J.; Zhu, C.; [Mehr, S. H. M.]{.underline}, *Under review*, **2025** (prep
 
 ### ▶ Digital discovery and the new experimental frontier
 [Mehr, S. H. M.]{.underline} 
-[Accepted for publication in *Digital Discovery*](https://pubs.rsc.org/en/content/articlepdf/2025/DD/D5DD00029G), **2025**
+*Digital Discovery*, **2025** ([10.1039/D5DD00029G](https://doi.org/10.1039/D5DD00029G))
 
 > **Enriching rather than trivialising chemistry via digitisation:** Growing interest in machine learning and automation in chemistry raises the question of whether future chemistry will be "lab-free" or reduced to massive robotic chemistry farms to harvest information and AI models to ingest it. I explore possibilities beyond these extremes, where enabling exploration of richer experimental spaces unlocks a third, more exciting, direction for  digitisation.
 
@@ -121,7 +121,9 @@ Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; [Mehr, 
 [Mehr, S. H. M.]{.underline}; Patrick, B. O.; MacLachlan, M. J.
 *Org. Lett.*, **2016** ([10.1021/acs.orglett.6b00577](https://doi.org/10.1021/acs.orglett.6b00577))
 
-> **Aromaticity challenged:** Electronic structure effects in organic chemistry are traditionally understood as limited to immediately adjacent atoms or through-bond conjugation. Here we show that multi-centre electron delocalisation over a molecular framework can override such local effects, opening doors to molecules with unusual bonding and electronic properties.
+> **Aromaticity challenged:** We designed & synthesised a molecule shaped by three conflicting forces — aromaticity, strong peripheral electron delocalisation and steric interactions at odds with both of these. The resulting structure demonstrates the power of molecular design to elicit exceptional properties from ordinary functional groups, and a new strategy for molecular activation.
+> 
+> ![Heteroradialene](images/Heteroradialene%20combined.svg)\
 
 ## Books
 ### Building a digital chemistry lab <span>Royal Society of Chemistry Books </span>
@@ -228,7 +230,7 @@ Under review, **2025**
     
 ### Digital discovery and the new experimental frontier 
 [SHM Mehr]{.underline}  
-Accepted for publication in *Digital Discovery*, **2025**
+*Digital Discovery*, **2025**
     
 ### In situ synthesis within micron-sized hydrogel reactors created via programmable aerosol chemistry 
 L Zhang, [SHM Mehr]{.underline}  
