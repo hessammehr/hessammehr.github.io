@@ -48,7 +48,7 @@ Focus areas: Digital signal processing, photonic crystals.
 
 ## Research highlights
 
-Highlights among **27 primary research** papers (**h-index: 13**; 680+ citations; full list available on [ORCiD] & [Google Scholar])
+Highlights among **{{WORKS_COUNT}}** primary research papers (**h-index: {{H_INDEX}}**; {{CITATIONS}} citations; full list available on [ORCiD] & [Google Scholar])
 
 ### ▶ Programmable general-purpose chemical synthesis in the aerosol phase and its automated implementation in an open hardware platform
 Wosik, J.; Zhu, C.; [Mehr, S. H. M.]{.underline}, *Under review*, **2025** (preprint: [10.26434/chemrxiv-2025-mkmn0](https://doi.org/10.26434/chemrxiv-2025-mkmn0))

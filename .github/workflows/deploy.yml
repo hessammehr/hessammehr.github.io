@@ -21,6 +21,10 @@ jobs:
       - name: Set up Python
         run: uv python install
 
+      - name: Update Scholar and ORCiD metrics
+        run: |
+          cat CV.md | uv run update_metrics.py > CV.md.out
+
       - name: Download Primer CSS and Highlight.js themes
         run: |
           curl -O https://unpkg.com/@primer/css/dist/primer.css
@@ -85,7 +89,7 @@ jobs:
 
       - name: Convert CV markdown to HTML
         run: |
-          pandoc --section-divs -s CV.md -o CV.html
+          pandoc --section-divs -s CV.md.out -o CV.html
 
       - name: Convert blog index to HTML
         run: |
