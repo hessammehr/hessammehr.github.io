@@ -220,6 +220,10 @@ Chemical Studies is a University of Glasgow Chemistry stream aimed at distilling
 <h2 style="display: inline"> Full publication list </h2>
 </summary>
 
+### Accelerated investigation of complex reaction cascades via digital aerosol chemistry coupled to online mass spectrometry
+Zehua Li; [SHM Mehr]{.underline}
+ChemRxiv, **2025**
+
 ### Programmable real-time execution of scientific experiments using a domain specific language for the Raspberry Pi Pico
 [SHM Mehr]{.underline}  
 Under review,  **2025**
