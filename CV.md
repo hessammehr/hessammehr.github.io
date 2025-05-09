@@ -48,7 +48,7 @@ Focus areas: Digital signal processing, photonic crystals.
 
 ## Research highlights
 
-Highlights among **28 primary research** papers (**h-index: 14**; 709 citations; full list available on [ORCiD] & [Google Scholar])
+Highlights among **29 primary research** papers (**h-index: 14**; 720 citations; [full list](#full-publication-list)) include:
 
 ### ▶ Programmable general-purpose chemical synthesis in the aerosol phase and its automated implementation in an open hardware platform
 Wosik, J.; Zhu, C.; [Mehr, S. H. M.]{.underline}, *Under review*, **2025** (preprint: [10.26434/chemrxiv-2025-mkmn0](https://doi.org/10.26434/chemrxiv-2025-mkmn0))
@@ -181,7 +181,7 @@ Contributing to the board’s mission of being a "critical friend" to senior Uof
 ### [Nuffield Research Placements] <span> Mentorship & public engagement | 2023–2024 </span>
 Widening participation summer research placements for high school students.
 
-### [Hack the ARC & ARC MakerSpace][Hack the ARC] <span>Public engagement | 2024</span>
+### [Hack the ARC][Hack the ARC] & [ARC MakerSpace][ARC MakerSpace] <span>Public engagement | 2024</span>
 
 Used a £2,500 grant from UofG ARC to curate a series of pop-up hacker/maker stations. The versatility of these stations — covering drag-and-drop programming of embedded microcontroller board, prototyping tools and electronic circuits — combines with larger investment in ARC maker tools to enable a wide range of researcher-led outreach activities.
 
@@ -195,16 +195,16 @@ This RSC Outreach Grant-supported workshop series introduced Glasgow high school
 
 ## Teaching
 
-### Chemical Studies <span> Leadership, mentorship & hands-on workshop implementation | 2023–25 </span>
+### Chemical Studies <span> Leadership, mentorship & hands-on workshop implementation | 2023–2025 </span>
 
 Chemical Studies is a University of Glasgow Chemistry stream aimed at distilling the spectrum of skills and experience chemistry undergraduate in a format tailored to students ineligible for the full MSc. As a co-organiser of this innovative programme for the past two years, I mentored small groups of students through the formulation of a research question; guiding them towards a tractable laboratory implementation, followed by 4 intensive lab sessions culminating in a group dissertation and poster.
 
-### Year 2&3 MChem <span> Tutorials| 2022–25 </span>
+### Year 2&3 MChem <span> Tutorials| 2022–2025 </span>
 
 
-### Year 1 Science Fundamentals (non-chemist cohort) <span> Lectures and revision tutorials| 2022–25 </span>
+### Year 1 Science Fundamentals (non-chemist cohort) <span> Lectures and revision tutorials| 2022–2025 </span>
 
-### Year 1 MChem <span> Synthesis laboratory | 2023–24 </span>
+### Year 1 MChem <span> Synthesis laboratory | 2023–2024 </span>
 
 ## Supervision
 **Current:** **3** PhD students (including one jointly supervised with Computer Science); **1** MSc student; **1** research intern.
@@ -217,38 +217,38 @@ Chemical Studies is a University of Glasgow Chemistry stream aimed at distilling
 <details>
 
 <summary>
-<h2 style="display: inline"> Full publication list </h2>
+<h2 style="display: inline" id="full-publication-list"> Full publication list </h2>
 </summary>
 
-### Accelerated investigation of complex reaction cascades via digital aerosol chemistry coupled to online mass spectrometry
+### [Accelerated investigation of complex reaction cascades via digital aerosol chemistry coupled to online mass spectrometry](https://doi.org/10.26434/chemrxiv-2025-g4hcg) 
 Zehua Li; [SHM Mehr]{.underline}
 Under review, **2025**
 
-### Programmable real-time execution of scientific experiments using a domain specific language for the Raspberry Pi Pico
+### [Programmable real-time execution of scientific experiments using a domain specific language for the Raspberry Pi Pico](https://doi.org/10.1016/j.softx.2025.102175) 
 [SHM Mehr]{.underline}  
-*SoftwareX* (in press),  **2025**
+*SoftwareX*, 30, 102175,  **2025**
 
-### Programmable general-purpose chemical synthesis in the aerosol phase and its automated implementation in an open hardware platform 
+### [Programmable general-purpose chemical synthesis in the aerosol phase and its automated implementation in an open hardware platform](https://doi.org/10.26434/chemrxiv-2025-mkmn0) 
 J. Wosik,  C. Zhu, [SHM Mehr]{.underline}  
 Under review, **2025**
     
-### Digital discovery and the new experimental frontier 
+### [Digital discovery and the new experimental frontier](https://doi.org/10.1039/D5DD00029G) 
 [SHM Mehr]{.underline}  
-*Digital Discovery*, **2025**
+*Digital Discovery*, 4 (4), 892–895, **2025**
     
-### In situ synthesis within micron-sized hydrogel reactors created via programmable aerosol chemistry 
+### [In situ synthesis within micron-sized hydrogel reactors created via programmable aerosol chemistry](https://doi.org/10.1039/D4DD00139G) 
 L Zhang, [SHM Mehr]{.underline}  
-*Digital Discovery* 3 (12), 2424-2433 **2024**
+*Digital Discovery* 3 (12), 2424–2433 **2024**
     
-### Operational considerations for approximating Molecular Assembly by Fourier transform mass spectrometry 
+### [Operational considerations for approximating Molecular Assembly by Fourier transform mass spectrometry](https://doi.org/10.3389/fspas.2024.1485483) 
 GM Weiss,  S Asche,  H Mclain,  AH Chung, [SHM Mehr]{.underline},  L Cronin,  ...  
 *Frontiers in Astronomy and Space Sciences* 11, 1485483 **2024**
     
-### Reaction blueprints and logical control flow for parallelized chiral synthesis in the Chemputer 
+### [Reaction blueprints and logical control flow for parallelized chiral synthesis in the Chemputer](https://doi.org/10.1038/s41467-024-54238-6) 
 M Šiaučiulis,  C Knittl-Frank, [SHM Mehr]{.underline},  E Clarke,  L Cronin  
 *Nature Communications* 15 (1), 10261 **2024**
     
-### Constructing the Molecular Tree of Life using Assembly Theory and Mass Spectrometry 
+### [Constructing the Molecular Tree of Life using Assembly Theory and Mass Spectrometry](https://doi.org/10.48550/arXiv.2408.09305) 
 A Kahana,  A MacLeod, [SHM Mehr]{.underline},  A Sharma,  E Carrick,  M Jirasek,  S Walker,  ...  
 *arXiv preprint arXiv:* 2408.09305 **2024**
     
@@ -256,19 +256,19 @@ A Kahana,  A MacLeod, [SHM Mehr]{.underline},  A Sharma,  E Carrick,  M Jirasek,
 G Weiss,  J Sacks, [SHM Mehr]{.underline},  L Rutter,  L Cronin,  H Graham  
 *Astrobiology Science Conference*  **2024**
     
-### Evidence of Selection in Mineral Mediated Polymerization Reactions Executed in a Robotic Chemputer System 
+### [Evidence of Selection in Mineral Mediated Polymerization Reactions Executed in a Robotic Chemputer System](https://doi.org/10.1002/syst.202400006) 
 S Asche,  RW Pow, [SHM Mehr]{.underline},  GJT Cooper,  A Sharma,  L Cronin  
 *ChemSystemsChem* 6 (3), e202400006 **2024**
     
-### Investigating and Quantifying Molecular Complexity Using Assembly Theory and Spectroscopy 
+### [Investigating and Quantifying Molecular Complexity Using Assembly Theory and Spectroscopy](https://doi.org/10.1021/acscentsci.4c00120) 
 M Jirasek,  A Sharma,  JR Bame, [SHM Mehr]{.underline},  N Bell,  SM Marshall,  C Mathis,  ...  
 *ACS Central Science* 10 (5), 1054-1064 **2024**
     
-### An integrated self-optimizing programmable chemical synthesis and reaction engine 
+### [An integrated self-optimizing programmable chemical synthesis and reaction engine](https://doi.org/10.1038/s41467-024-45444-3) 
 AI Leonov,  AJS Hammer,  S Lach, [SHM Mehr]{.underline},  D Caramelli,  D Angelone,  ...  
 *Nature Communications* 15 (1), 1240 **2024**
     
-### Detection of Micron-Sized Chemical Droplets Using a Commodity Digital Camera Setup 
+### [Detection of Micron-Sized Chemical Droplets Using a Commodity Digital Camera Setup](https://doi.org/10.26434/chemrxiv-2023-swkp8) 
 H Jiang, [SHM Mehr]{.underline}  
 *ChemRxiv*  **2023**
     
@@ -364,6 +364,7 @@ PD Frischmann, [SHM Mehr]{.underline},  BO Patrick,  F Lelj,  MJ MacLachlan
 [Digital chemistry for digital natives]: https://0101chem.science/
 [Sound Chemistry]: https://sound-chemistry.science/
 [Hack the ARC]: https://www.gla.ac.uk/research/arc/researchersandstaff/hackthearc/thehackersarc/
+[ARC MakerSpace]: https://www.gla.ac.uk/research/arc/researchersandstaff/arcmakerspace/
 [Nuffield Research Placements]: https://www.nuffieldresearchplacements.org/
 [Shadow Board]: https://www.gla.ac.uk/myglasgow/staff/shadowboard/
 [GB-patent]: https://worldwide.espacenet.com/publicationDetails/biblio?FT=D&date=20211104&DB=EPODOC&locale=en_EP&CC=WO&NR=2021219999A1&KC=A1&ND=5
