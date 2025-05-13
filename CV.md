@@ -276,23 +276,19 @@ H Jiang, [SHM Mehr]{.underline}
 L Cronin,  M Hessam,  M Craven,  A Leonov  
 *US Patent App.* 17/922,240 **2023**
     
-### Digitizing chemical discovery with a Bayesian explorer for interpreting reactivity data 
+### [Digitizing chemical discovery with a Bayesian explorer for interpreting reactivity data](https://doi.org/10.1073/pnas.2220045120) 
 [SHM Mehr]{.underline},  D Caramelli,  L Cronin  
 *Proceedings of the National Academy of Sciences* 120 (17), e2220045120 **2023**
     
-### Automated qualitative and quantitative analysis of complex forensic drug samples using 1H NMR 
+### [Automated qualitative and quantitative analysis of complex forensic drug samples using 1H NMR](https://doi.org/10.1002/mrc.5265) 
 [SHM Mehr]{.underline},  AW Tang,  RR Laing  
 *Magnetic Resonance in Chemistry* 61 (2), 95-105 **2023**
     
-### Code and Data for Digitization and validation of a chemical synthesis literature database in the ChemPU 
-L Cronin,  S Rohrbach,  M Siauciulis,  G Chisholm,  M Saleeb, [SHM Mehr]{.underline},  ...  
-*Zenodo*  **2022**
-    
-### Digitization and validation of a chemical synthesis literature database in the ChemPU 
+### [Digitization and validation of a chemical synthesis literature database in the ChemPU](https://doi.org/10.1126/science.abo0058) 
 S Rohrbach,  M Šiaučiulis,  G Chisholm,  PA Pirvan,  M Saleeb, [SHM Mehr]{.underline},  ...  
 *Science* 377 (6602), 172-180 **2022**
     
-### Discovering new chemistry with an autonomous robotic platform driven by a reactivity-seeking neural network 
+### [Discovering new chemistry with an autonomous robotic platform driven by a reactivity-seeking neural network](https://doi.org/10.1021/acscentsci.1c00435) 
 D Caramelli,  JM Granda, [SHM Mehr]{.underline},  D Cambié,  AB Henson,  L Cronin  
 *ACS Central Science* 7 (11), 1821-1830 **2021**
     
@@ -300,51 +296,47 @@ D Caramelli,  JM Granda, [SHM Mehr]{.underline},  D Cambié,  AB Henson,  L Cron
 L Cronin, [SHM Mehr]{.underline},  M Craven,  A Leonov  
 *GB Patent WO* 2021219999 (A1) **2021**
     
-### Digitizing chemistry using the chemical processing unit: from synthesis to discovery 
+### [Digitizing chemistry using the chemical processing unit: from synthesis to discovery](https://doi.org/10.1021/acs.accounts.0c00674) 
 L Wilbraham, [SHM Mehr]{.underline},  L Cronin  
 *Accounts of Chemical Research* 54 (2), 253-262 **2020**
     
-### A universal system for digitization and automatic execution of the chemical synthesis literature 
+### [A universal system for digitization and automatic execution of the chemical synthesis literature](https://doi.org/10.1126/science.abc2986) 
 [SHM Mehr]{.underline},  M Craven,  AI Leonov,  G Keenan,  L Cronin  
 *Science* 370 (6512), 101-108 **2020**
     
-### Benchmarking results and the XDL XML schema. 
-[SHM Mehr]{.underline},  M Craven,  A Leonov,  K Graham,  L Cronin  
-*Zenodo*  **2020**
-    
-### Intuition-enabled machine learning beats the competition when joint human-robot teams perform inorganic chemical experiments 
+### [Intuition-enabled machine learning beats the competition when joint human-robot teams perform inorganic chemical experiments](https://doi.org/10.1021/acs.jcim.9b00304) 
 V Duros,  J Grizou,  A Sharma, [SHM Mehr]{.underline},  A Bubliauskas,  P Frei,  HN Miras,  ...  
 *Journal of chemical information and modeling* 59 (6), 2664-2671 **2019**
     
-### Catalyst: the metaphysics of chemical reactivity 
+### [Catalyst: the metaphysics of chemical reactivity](https://doi.org/10.1016/j.chempr.2018.07.008) 
 L Cronin, [SHM Mehr]{.underline},  JM Granda  
 *Chem* 4 (8), 1759-1761 **2018**
     
-### Controlling ligand exchange through macrocyclization 
+### [Controlling ligand exchange through macrocyclization](https://doi.org/10.1021/acs.inorgchem.8b00031) 
 V Carta, [SHM Mehr]{.underline},  MJ MacLachlan  
 *Inorganic Chemistry* 57 (6), 3243-3253 **2018**
     
-### Tuning the tautomeric behavior of tris (salicylaldimines) 
+### [Tuning the tautomeric behavior of tris (salicylaldimines)](https://doi.org/10.1039/C7OB02058A) 
 [SHM Mehr]{.underline},  H Oshima,  V Carta,  BO Patrick,  NG White,  MJ MacLachlan  
 *Organic & Biomolecular Chemistry* 15 (39), 8418-8424 **2017**
     
-### Formylation of phenols using formamidine acetate 
+### [Formylation of phenols using formamidine acetate](https://doi.org/10.1039/C6OB02727J) 
 [SHM Mehr]{.underline},  H Depmeier,  K Fukuyama,  M Maghami,  MJ MacLachlan  
 *Organic & biomolecular chemistry* 15 (3), 581-583 **2017**
     
-### Stabilization of a strained heteroradialene by peripheral electron delocalization 
+### [Stabilization of a strained heteroradialene by peripheral electron delocalization](https://doi.org/10.1021/acs.orglett.6b00577) 
 [SHM Mehr]{.underline},  BO Patrick,  MJ MacLachlan  
 *Organic letters* 18 (8), 1840-1843 **2016**
     
-### Deuteration of aromatic rings under very mild conditions through keto-enamine tautomeric amplification 
+### [Deuteration of aromatic rings under very mild conditions through keto-enamine tautomeric amplification](https://doi.org/10.1021/acs.joc.5b00539) 
 [SHM Mehr]{.underline},  K Fukuyama,  S Bishop,  F Lelj,  MJ MacLachlan  
 *The Journal of Organic Chemistry* 80 (10), 5144-5150 **2015**
     
-### Novel PPV/mesoporous organosilica composites: influence of the host chirality on a conjugated polymer guest 
+### [Novel PPV/mesoporous organosilica composites: influence of the host chirality on a conjugated polymer guest](https://doi.org/10.1021/la4024597) 
 [SHM Mehr]{.underline},  M Giese,  H Qi,  KE Shopsowitz,  WY Hamad,  MJ MacLachlan  
 *Langmuir* 29 (40), 12579-12584 **2013**
     
-### Role of Entropy and Autosolvation in Dimerization and Complexation of C60 by Zn7 Metallocavitands 
+### [Role of Entropy and Autosolvation in Dimerization and Complexation of C60 by Zn7 Metallocavitands](https://doi.org/10.1021/ic202049t) 
 PD Frischmann, [SHM Mehr]{.underline},  BO Patrick,  F Lelj,  MJ MacLachlan  
 *Inorganic Chemistry* 51 (6), 3443-3453 **2012**
     
