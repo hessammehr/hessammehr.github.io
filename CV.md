@@ -130,6 +130,9 @@ Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; [Mehr, 
 [Mehr, S. H. M.]{.underline} Book proposal accepted with publication in the RSC Foundations Series expected in 2025.
 
 ## Selected talks and seminars
+### Creative use of time, space, and energy for accelerated chemical discovery
+Invited seminar, Department of Chemistry, King's College London, 2025
+
 ### Creative use of time, space, and energy for accelerated green chemical discovery
 Invited seminar, Institute of Chemical Sciences, Heriot–Watt University, 2025
 
