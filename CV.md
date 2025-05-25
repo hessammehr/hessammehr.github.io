@@ -48,7 +48,7 @@ Focus areas: Digital signal processing, photonic crystals.
 
 ## Research highlights
 
-Highlights among **29 primary research** papers (**h-index: 14**; 720 citations; [full list](#full-publication-list)) include:
+Highlights among **29 primary research** papers (**h-index: 14**; 731 citations; [full list](#full-publication-list)) include:
 
 ### ▶ Programmable general-purpose chemical synthesis in the aerosol phase and its automated implementation in an open hardware platform
 Wosik, J.; Zhu, C.; [Mehr, S. H. M.]{.underline}, *Under review*, **2025** (preprint: [10.26434/chemrxiv-2025-mkmn0](https://doi.org/10.26434/chemrxiv-2025-mkmn0))
@@ -130,11 +130,11 @@ Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; [Mehr, 
 [Mehr, S. H. M.]{.underline} Book proposal accepted with publication in the RSC Foundations Series expected in 2025.
 
 ## Selected talks and seminars
-### Creative use of time, space, and energy for accelerated chemical discovery
-Invited seminar, Department of Chemistry, King's College London, 2025
+### Invited seminar
+Department of Chemistry, King's College London, 2025
 
-### Creative use of time, space, and energy for accelerated green chemical discovery
-Invited seminar, Institute of Chemical Sciences, Heriot–Watt University, 2025
+### Invited seminar
+Institute of Chemical Sciences, Heriot–Watt University, 2025
 
 ### Time-Resolved Chemical Discovery in a Mass Spectrometer-Coupled Programmable Aerosol Reactor 
 Annual Aerosol Science Conference, York, 2024
@@ -223,130 +223,133 @@ Chemical Studies is a University of Glasgow Chemistry stream aimed at distilling
 <h2 style="display: inline" id="full-publication-list"> Full publication list </h2>
 </summary>
 
-### [Accelerated investigation of complex reaction cascades via digital aerosol chemistry coupled to online mass spectrometry](https://doi.org/10.26434/chemrxiv-2025-g4hcg) 
-Zehua Li; [SHM Mehr]{.underline}
+### [Rapid aerosol-phase synthesis of covalent organic framework coatings](https://doi.org/10.26434/chemrxiv-2025-tvnxb)  
+Zhang, L.; Chen, J.; [Mehr, S.H.M.]{.underline}  
 Under review, **2025**
 
-### [Programmable real-time execution of scientific experiments using a domain specific language for the Raspberry Pi Pico](https://doi.org/10.1016/j.softx.2025.102175) 
-[SHM Mehr]{.underline}  
-*SoftwareX*, 30, 102175,  **2025**
-
-### [Programmable general-purpose chemical synthesis in the aerosol phase and its automated implementation in an open hardware platform](https://doi.org/10.26434/chemrxiv-2025-mkmn0) 
-J. Wosik,  C. Zhu, [SHM Mehr]{.underline}  
+### [Accelerated investigation of complex reaction cascades via digital aerosol chemistry coupled to online mass spectrometry](https://doi.org/10.26434/chemrxiv-2025-g4hcg)  
+Li, Z.; [Mehr, S.H.M.]{.underline}  
 Under review, **2025**
-    
-### [Digital discovery and the new experimental frontier](https://doi.org/10.1039/D5DD00029G) 
-[SHM Mehr]{.underline}  
+
+### [Programmable real-time execution of scientific experiments using a domain specific language for the Raspberry Pi Pico](https://doi.org/10.1016/j.softx.2025.102175)  
+[Mehr, S.H.M.]{.underline}  
+*SoftwareX*, 30, 102175, **2025**
+
+### [Programmable general-purpose chemical synthesis in the aerosol phase and its automated implementation in an open hardware platform](https://doi.org/10.26434/chemrxiv-2025-mkmn0)  
+Wosik, J.; Zhu, C.; [Mehr, S.H.M.]{.underline}  
+Under review, **2025**
+
+### [Digital discovery and the new experimental frontier](https://doi.org/10.1039/D5DD00029G)  
+[Mehr, S.H.M.]{.underline}  
 *Digital Discovery*, 4 (4), 892–895, **2025**
-    
-### [In situ synthesis within micron-sized hydrogel reactors created via programmable aerosol chemistry](https://doi.org/10.1039/D4DD00139G) 
-L Zhang, [SHM Mehr]{.underline}  
-*Digital Discovery* 3 (12), 2424–2433 **2024**
-    
-### [Operational considerations for approximating Molecular Assembly by Fourier transform mass spectrometry](https://doi.org/10.3389/fspas.2024.1485483) 
-GM Weiss,  S Asche,  H Mclain,  AH Chung, [SHM Mehr]{.underline},  L Cronin,  ...  
-*Frontiers in Astronomy and Space Sciences* 11, 1485483 **2024**
-    
-### [Reaction blueprints and logical control flow for parallelized chiral synthesis in the Chemputer](https://doi.org/10.1038/s41467-024-54238-6) 
-M Šiaučiulis,  C Knittl-Frank, [SHM Mehr]{.underline},  E Clarke,  L Cronin  
-*Nature Communications* 15 (1), 10261 **2024**
-    
-### [Constructing the Molecular Tree of Life using Assembly Theory and Mass Spectrometry](https://doi.org/10.48550/arXiv.2408.09305) 
-A Kahana,  A MacLeod, [SHM Mehr]{.underline},  A Sharma,  E Carrick,  M Jirasek,  S Walker,  ...  
-*arXiv preprint arXiv:* 2408.09305 **2024**
-    
-### Assembly Theory and position-specific isotope analysis for distinguishing biotic and abiotic processes 
-G Weiss,  J Sacks, [SHM Mehr]{.underline},  L Rutter,  L Cronin,  H Graham  
-*Astrobiology Science Conference*  **2024**
-    
-### [Evidence of Selection in Mineral Mediated Polymerization Reactions Executed in a Robotic Chemputer System](https://doi.org/10.1002/syst.202400006) 
-S Asche,  RW Pow, [SHM Mehr]{.underline},  GJT Cooper,  A Sharma,  L Cronin  
-*ChemSystemsChem* 6 (3), e202400006 **2024**
-    
-### [Investigating and Quantifying Molecular Complexity Using Assembly Theory and Spectroscopy](https://doi.org/10.1021/acscentsci.4c00120) 
-M Jirasek,  A Sharma,  JR Bame, [SHM Mehr]{.underline},  N Bell,  SM Marshall,  C Mathis,  ...  
-*ACS Central Science* 10 (5), 1054-1064 **2024**
-    
-### [An integrated self-optimizing programmable chemical synthesis and reaction engine](https://doi.org/10.1038/s41467-024-45444-3) 
-AI Leonov,  AJS Hammer,  S Lach, [SHM Mehr]{.underline},  D Caramelli,  D Angelone,  ...  
-*Nature Communications* 15 (1), 1240 **2024**
-    
-### [Detection of Micron-Sized Chemical Droplets Using a Commodity Digital Camera Setup](https://doi.org/10.26434/chemrxiv-2023-swkp8) 
-H Jiang, [SHM Mehr]{.underline}  
-*ChemRxiv*  **2023**
-    
-### Automated chemical synthesis platform 
-L Cronin,  M Hessam,  M Craven,  A Leonov  
-*US Patent App.* 17/922,240 **2023**
-    
-### [Digitizing chemical discovery with a Bayesian explorer for interpreting reactivity data](https://doi.org/10.1073/pnas.2220045120) 
-[SHM Mehr]{.underline},  D Caramelli,  L Cronin  
-*Proceedings of the National Academy of Sciences* 120 (17), e2220045120 **2023**
-    
-### [Automated qualitative and quantitative analysis of complex forensic drug samples using 1H NMR](https://doi.org/10.1002/mrc.5265) 
-[SHM Mehr]{.underline},  AW Tang,  RR Laing  
-*Magnetic Resonance in Chemistry* 61 (2), 95-105 **2023**
-    
-### [Digitization and validation of a chemical synthesis literature database in the ChemPU](https://doi.org/10.1126/science.abo0058) 
-S Rohrbach,  M Šiaučiulis,  G Chisholm,  PA Pirvan,  M Saleeb, [SHM Mehr]{.underline},  ...  
-*Science* 377 (6602), 172-180 **2022**
-    
-### [Discovering new chemistry with an autonomous robotic platform driven by a reactivity-seeking neural network](https://doi.org/10.1021/acscentsci.1c00435) 
-D Caramelli,  JM Granda, [SHM Mehr]{.underline},  D Cambié,  AB Henson,  L Cronin  
-*ACS Central Science* 7 (11), 1821-1830 **2021**
-    
-### Automated Chemical Synthesis Platform 
-L Cronin, [SHM Mehr]{.underline},  M Craven,  A Leonov  
-*GB Patent WO* 2021219999 (A1) **2021**
-    
-### [Digitizing chemistry using the chemical processing unit: from synthesis to discovery](https://doi.org/10.1021/acs.accounts.0c00674) 
-L Wilbraham, [SHM Mehr]{.underline},  L Cronin  
-*Accounts of Chemical Research* 54 (2), 253-262 **2020**
-    
-### [A universal system for digitization and automatic execution of the chemical synthesis literature](https://doi.org/10.1126/science.abc2986) 
-[SHM Mehr]{.underline},  M Craven,  AI Leonov,  G Keenan,  L Cronin  
-*Science* 370 (6512), 101-108 **2020**
-    
-### [Intuition-enabled machine learning beats the competition when joint human-robot teams perform inorganic chemical experiments](https://doi.org/10.1021/acs.jcim.9b00304) 
-V Duros,  J Grizou,  A Sharma, [SHM Mehr]{.underline},  A Bubliauskas,  P Frei,  HN Miras,  ...  
-*Journal of chemical information and modeling* 59 (6), 2664-2671 **2019**
-    
-### [Catalyst: the metaphysics of chemical reactivity](https://doi.org/10.1016/j.chempr.2018.07.008) 
-L Cronin, [SHM Mehr]{.underline},  JM Granda  
-*Chem* 4 (8), 1759-1761 **2018**
-    
-### [Controlling ligand exchange through macrocyclization](https://doi.org/10.1021/acs.inorgchem.8b00031) 
-V Carta, [SHM Mehr]{.underline},  MJ MacLachlan  
-*Inorganic Chemistry* 57 (6), 3243-3253 **2018**
-    
-### [Tuning the tautomeric behavior of tris (salicylaldimines)](https://doi.org/10.1039/C7OB02058A) 
-[SHM Mehr]{.underline},  H Oshima,  V Carta,  BO Patrick,  NG White,  MJ MacLachlan  
-*Organic & Biomolecular Chemistry* 15 (39), 8418-8424 **2017**
-    
-### [Formylation of phenols using formamidine acetate](https://doi.org/10.1039/C6OB02727J) 
-[SHM Mehr]{.underline},  H Depmeier,  K Fukuyama,  M Maghami,  MJ MacLachlan  
-*Organic & biomolecular chemistry* 15 (3), 581-583 **2017**
-    
-### [Stabilization of a strained heteroradialene by peripheral electron delocalization](https://doi.org/10.1021/acs.orglett.6b00577) 
-[SHM Mehr]{.underline},  BO Patrick,  MJ MacLachlan  
-*Organic letters* 18 (8), 1840-1843 **2016**
-    
-### [Deuteration of aromatic rings under very mild conditions through keto-enamine tautomeric amplification](https://doi.org/10.1021/acs.joc.5b00539) 
-[SHM Mehr]{.underline},  K Fukuyama,  S Bishop,  F Lelj,  MJ MacLachlan  
-*The Journal of Organic Chemistry* 80 (10), 5144-5150 **2015**
-    
-### [Novel PPV/mesoporous organosilica composites: influence of the host chirality on a conjugated polymer guest](https://doi.org/10.1021/la4024597) 
-[SHM Mehr]{.underline},  M Giese,  H Qi,  KE Shopsowitz,  WY Hamad,  MJ MacLachlan  
-*Langmuir* 29 (40), 12579-12584 **2013**
-    
-### [Role of Entropy and Autosolvation in Dimerization and Complexation of C60 by Zn7 Metallocavitands](https://doi.org/10.1021/ic202049t) 
-PD Frischmann, [SHM Mehr]{.underline},  BO Patrick,  F Lelj,  MJ MacLachlan  
-*Inorganic Chemistry* 51 (6), 3443-3453 **2012**
-    
-### Influence of asymmetry on the band structure of photonic crystals 
-[SHM Mehr]{.underline},  S Khorasani  
-*Photonic and Phononic Crystal Materials and Devices X* 7609, 238-248 **2010**
-    
+
+### [In situ synthesis within micron-sized hydrogel reactors created via programmable aerosol chemistry](https://doi.org/10.1039/D4DD00139G)  
+Zhang, L.; [Mehr, S.H.M.]{.underline}  
+*Digital Discovery* 3 (12), 2424–2433, **2024**
+
+### [Operational considerations for approximating Molecular Assembly by Fourier transform mass spectrometry](https://doi.org/10.3389/fspas.2024.1485483)  
+Weiss, G.M.; Asche, S.; Mclain, H.; Chung, A.H.; [Mehr, S.H.M.]{.underline}; Cronin, L.; ...  
+*Frontiers in Astronomy and Space Sciences* 11, 1485483, **2024**
+
+### [Reaction blueprints and logical control flow for parallelized chiral synthesis in the Chemputer](https://doi.org/10.1038/s41467-024-54238-6)  
+Šiaučiulis, M.; Knittl-Frank, C.; [Mehr, S.H.M.]{.underline}; Clarke, E.; Cronin, L.  
+*Nature Communications* 15 (1), 10261, **2024**
+
+### [Constructing the Molecular Tree of Life using Assembly Theory and Mass Spectrometry](https://doi.org/10.48550/arXiv.2408.09305)  
+Kahana, A.; MacLeod, A.; [Mehr, S.H.M.]{.underline}; Sharma, A.; Carrick, E.; Jirasek, M.; Walker, S.; ...  
+*arXiv preprint arXiv:* 2408.09305, **2024**
+
+### Assembly Theory and position-specific isotope analysis for distinguishing biotic and abiotic processes  
+Weiss, G.; Sacks, J.; [Mehr, S.H.M.]{.underline}; Rutter, L.; Cronin, L.; Graham, H.  
+*Astrobiology Science Conference*, **2024**
+
+### [Evidence of Selection in Mineral Mediated Polymerization Reactions Executed in a Robotic Chemputer System](https://doi.org/10.1002/syst.202400006)  
+Asche, S.; Pow, R.W.; [Mehr, S.H.M.]{.underline}; Cooper, G.J.T.; Sharma, A.; Cronin, L.  
+*ChemSystemsChem* 6 (3), e202400006, **2024**
+
+### [Investigating and Quantifying Molecular Complexity Using Assembly Theory and Spectroscopy](https://doi.org/10.1021/acscentsci.4c00120)  
+Jirasek, M.; Sharma, A.; Bame, J.R.; [Mehr, S.H.M.]{.underline}; Bell, N.; Marshall, S.M.; Mathis, C.; ...  
+*ACS Central Science* 10 (5), 1054-1064, **2024**
+
+### [An integrated self-optimizing programmable chemical synthesis and reaction engine](https://doi.org/10.1038/s41467-024-45444-3)  
+Leonov, A.I.; Hammer, A.J.S.; Lach, S.; [Mehr, S.H.M.]{.underline}; Caramelli, D.; Angelone, D.; ...  
+*Nature Communications* 15 (1), 1240, **2024**
+
+### [Detection of Micron-Sized Chemical Droplets Using a Commodity Digital Camera Setup](https://doi.org/10.26434/chemrxiv-2023-swkp8)  
+Jiang, H.; [Mehr, S.H.M.]{.underline}  
+*ChemRxiv*, **2023**
+
+### Automated chemical synthesis platform  
+Cronin, L.; Mehr, H.; Craven, M.; Leonov, A.  
+*US Patent App.* 17/922,240, **2023**
+
+### [Digitizing chemical discovery with a Bayesian explorer for interpreting reactivity data](https://doi.org/10.1073/pnas.2220045120)  
+[Mehr, S.H.M.]{.underline}; Caramelli, D.; Cronin, L.  
+*Proceedings of the National Academy of Sciences* 120 (17), e2220045120, **2023**
+
+### [Automated qualitative and quantitative analysis of complex forensic drug samples using 1H NMR](https://doi.org/10.1002/mrc.5265)  
+[Mehr, S.H.M.]{.underline}; Tang, A.W.; Laing, R.R.  
+*Magnetic Resonance in Chemistry* 61 (2), 95-105, **2023**
+
+### [Digitization and validation of a chemical synthesis literature database in the ChemPU](https://doi.org/10.1126/science.abo0058)  
+Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; [Mehr, S.H.M.]{.underline}; ...  
+*Science* 377 (6602), 172-180, **2022**
+
+### [Discovering new chemistry with an autonomous robotic platform driven by a reactivity-seeking neural network](https://doi.org/10.1021/acscentsci.1c00435)  
+Caramelli, D.; Granda, J.M.; [Mehr, S.H.M.]{.underline}; Cambié, D.; Henson, A.B.; Cronin, L.  
+*ACS Central Science* 7 (11), 1821-1830, **2021**
+
+### Automated Chemical Synthesis Platform  
+Cronin, L.; [Mehr, H.]{.underline}; Craven, M.; Leonov, A.  
+*GB Patent WO* 2021219999 (A1), **2021**
+
+### [Digitizing chemistry using the chemical processing unit: from synthesis to discovery](https://doi.org/10.1021/acs.accounts.0c00674)  
+Wilbraham, L.; [Mehr, S.H.M.]{.underline}; Cronin, L.  
+*Accounts of Chemical Research* 54 (2), 253-262, **2020**
+
+### [A universal system for digitization and automatic execution of the chemical synthesis literature](https://doi.org/10.1126/science.abc2986)  
+[Mehr, S.H.M.]{.underline}; Craven, M.; Leonov, A.I.; Keenan, G.; Cronin, L.  
+*Science* 370 (6512), 101-108, **2020**
+
+### [Intuition-enabled machine learning beats the competition when joint human-robot teams perform inorganic chemical experiments](https://doi.org/10.1021/acs.jcim.9b00304)  
+Duros, V.; Grizou, J.; Sharma, A.; [Mehr, S.H.M.]{.underline}; Bubliauskas, A.; Frei, P.; Miras, H.N.; ...  
+*Journal of Chemical Information and Modeling* 59 (6), 2664-2671, **2019**
+
+### [Catalyst: the metaphysics of chemical reactivity](https://doi.org/10.1016/j.chempr.2018.07.008)  
+Cronin, L.; [Mehr, S.H.M.]{.underline}; Granda, J.M.  
+*Chem* 4 (8), 1759-1761, **2018**
+
+### [Controlling ligand exchange through macrocyclization](https://doi.org/10.1021/acs.inorgchem.8b00031)  
+Carta, V.; [Mehr, S.H.M.]{.underline}; MacLachlan, M.J.  
+*Inorganic Chemistry* 57 (6), 3243-3253, **2018**
+
+### [Tuning the tautomeric behavior of tris (salicylaldimines)](https://doi.org/10.1039/C7OB02058A)  
+[Mehr, S.H.M.]{.underline}; Oshima, H.; Carta, V.; Patrick, B.O.; White, N.G.; MacLachlan, M.J.  
+*Organic & Biomolecular Chemistry* 15 (39), 8418-8424, **2017**
+
+### [Formylation of phenols using formamidine acetate](https://doi.org/10.1039/C6OB02727J)  
+[Mehr, S.H.M.]{.underline}; Depmeier, H.; Fukuyama, K.; Maghami, M.; MacLachlan, M.J.  
+*Organic & Biomolecular Chemistry* 15 (3), 581-583, **2017**
+
+### [Stabilization of a strained heteroradialene by peripheral electron delocalization](https://doi.org/10.1021/acs.orglett.6b00577)  
+[Mehr, S.H.M.]{.underline}; Patrick, B.O.; MacLachlan, M.J.  
+*Organic Letters* 18 (8), 1840-1843, **2016**
+
+### [Deuteration of aromatic rings under very mild conditions through keto-enamine tautomeric amplification](https://doi.org/10.1021/acs.joc.5b00539)  
+[Mehr, S.H.M.]{.underline}; Fukuyama, K.; Bishop, S.; Lelj, F.; MacLachlan, M.J.  
+*The Journal of Organic Chemistry* 80 (10), 5144-5150, **2015**
+
+### [Novel PPV/mesoporous organosilica composites: influence of the host chirality on a conjugated polymer guest](https://doi.org/10.1021/la4024597)  
+[Mehr, S.H.M.]{.underline}; Giese, M.; Qi, H.; Shopsowitz, K.E.; Hamad, W.Y.; MacLachlan, M.J.  
+*Langmuir* 29 (40), 12579-12584, **2013**
+
+### [Role of Entropy and Autosolvation in Dimerization and Complexation of C60 by Zn7 Metallocavitands](https://doi.org/10.1021/ic202049t)  
+Frischmann, P.D.; [Mehr, S.H.M.]{.underline}; Patrick, B.O.; Lelj, F.; MacLachlan, M.J.  
+*Inorganic Chemistry* 51 (6), 3443-3453, **2012**
+
+### Influence of asymmetry on the band structure of photonic crystals  
+[Mehr, S.H.M.]{.underline}; Khorasani, S.  
+*Photonic and Phononic Crystal Materials and Devices X* 7609, 238-248, **2010**
 </details>
 
 [Google Scholar]: https://scholar.google.com/citations?user=HeyhCHEAAAAJ

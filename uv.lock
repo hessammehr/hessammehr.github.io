@@ -1943,14 +1943,14 @@ wheels = [
 
 [[package]]
 name = "tifffile"
-version = "2025.5.21"
+version = "2025.5.24"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "numpy" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/74/23/e42a6ffaf293472c5bbd8360335452f5a2b2d2f7e05cb671c34d12f4fca8/tifffile-2025.5.21.tar.gz", hash = "sha256:49d3ec73fa5aa8735e63626d9d982a7db029b3886da4b23796e1984b1f992b33", size = 368347, upload-time = "2025-05-22T03:19:13.699Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/3b/ff/ff138f6f1de2601ca3d05622f40e270952ea5c637bb89825faf4a737377f/tifffile-2025.5.24.tar.gz", hash = "sha256:b19612ba5d88d8fb206fe3677ab32ac5c1947a3c35a67176fe456663f8a7bc66", size = 368774, upload-time = "2025-05-24T06:45:59.822Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/8f/89/8df63629e3c9f71df59c2d795aa30248ebb4b8547df148145e373b0c8ce5/tifffile-2025.5.21-py3-none-any.whl", hash = "sha256:de06c487773796bf3ed9503525530f8d039c2db6e4bdafd4118b20ee8d3a338e", size = 229593, upload-time = "2025-05-22T03:19:11.614Z" },
+    { url = "https://files.pythonhosted.org/packages/f5/34/59df6d47b6a8203e1db8f9a0585faf4cd68918e4a860f3bcb57909b6099f/tifffile-2025.5.24-py3-none-any.whl", hash = "sha256:2d913e41356425a2eeb4dc06dcc7286193cfa65ae1dedb5f51f04f60cf06713d", size = 229868, upload-time = "2025-05-24T06:45:57.745Z" },
 ]
 
 [[package]]
