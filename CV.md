@@ -48,7 +48,7 @@ Focus areas: Digital signal processing, photonic crystals.
 
 ## Research highlights
 
-Highlights among **29 primary research** papers (**h-index: 14**; 731 citations; [full list](#full-publication-list)) include:
+Highlights among **29 primary research** papers (**h-index: 14**; 736 citations; [full list](#full-publication-list)) include:
 
 ### ▶ Programmable general-purpose chemical synthesis in the aerosol phase and its automated implementation in an open hardware platform
 Wosik, J.; Zhu, C.; [Mehr, S. H. M.]{.underline}, *Under review*, **2025** (preprint: [10.26434/chemrxiv-2025-mkmn0](https://doi.org/10.26434/chemrxiv-2025-mkmn0))
@@ -231,7 +231,7 @@ Under review, **2025**
 Li, Z.; [Mehr, S.H.M.]{.underline}  
 Under review, **2025**
 
-### [Programmable real-time execution of scientific experiments using a domain specific language for the Raspberry Pi Pico](https://doi.org/10.1016/j.softx.2025.102175)  
+### [CtrlAer: Programmable real-time execution of scientific experiments using a domain specific language for the Raspberry Pi Pico/Pico 2](https://doi.org/10.1016/j.softx.2025.102175)  
 [Mehr, S.H.M.]{.underline}  
 *SoftwareX*, 30, 102175, **2025**
 
