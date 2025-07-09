@@ -48,10 +48,10 @@ Focus areas: Digital signal processing, photonic crystals.
 
 ## Research highlights
 
-Highlights among **29 primary research** papers (**h-index: 14**; 736 citations; [full list](#full-publication-list)) include:
+Highlights among **25** primary research papers (h-index: **14**; **763** citations; [full list](#full-publication-list)):
 
-### ▶ Programmable general-purpose chemical synthesis in the aerosol phase and its automated implementation in an open hardware platform
-Wosik, J.; Zhu, C.; [Mehr, S. H. M.]{.underline}, *Under review*, **2025** (preprint: [10.26434/chemrxiv-2025-mkmn0](https://doi.org/10.26434/chemrxiv-2025-mkmn0))
+### ▶ Programmable aerosol chemistry coupled to chemical imaging establishes a new arena for automated chemical synthesis and discovery
+Wosik, J.; Zhu, C.; Li, Z.; [Mehr, S. H. M.]{.underline}, *Digital Discovery* **(in press)** (preprint: [10.26434/chemrxiv-2025-mkmn0](https://doi.org/10.26434/chemrxiv-2025-mkmn0))
 
 > **Building blocks for synthetic chemistry in aerosols:** This paper lays the conceptual foundations for, and provides a practical laboratory implementation of, general-purpose chemical synthesis in aerosols. Synthesis in microdroplets has historically been difficult to reconcile with traditional laboratory workflows, hence hardly explored in synthetic chemistry. Tackling these issues using new hardware and analytics, it provides access to vast reactivity information and chemical phenomena at different lengths scales, as well as an arena for the development of new green synthesis methodology.
 
@@ -231,13 +231,13 @@ Under review, **2025**
 Li, Z.; [Mehr, S.H.M.]{.underline}  
 Under review, **2025**
 
+### [Programmable aerosol chemistry coupled to chemical imaging establishes a new arena for automated chemical synthesis and discovery](https://doi.org/10.26434/chemrxiv-2025-mkmn0)  
+Wosik, J.; Zhu, C.; Li, Z.; [Mehr, S.H.M.]{.underline}  
+*Digital Discovery*, **2025**
+
 ### [CtrlAer: Programmable real-time execution of scientific experiments using a domain specific language for the Raspberry Pi Pico/Pico 2](https://doi.org/10.1016/j.softx.2025.102175)  
 [Mehr, S.H.M.]{.underline}  
 *SoftwareX*, 30, 102175, **2025**
-
-### [Programmable general-purpose chemical synthesis in the aerosol phase and its automated implementation in an open hardware platform](https://doi.org/10.26434/chemrxiv-2025-mkmn0)  
-Wosik, J.; Zhu, C.; [Mehr, S.H.M.]{.underline}  
-Under review, **2025**
 
 ### [Digital discovery and the new experimental frontier](https://doi.org/10.1039/D5DD00029G)  
 [Mehr, S.H.M.]{.underline}  
