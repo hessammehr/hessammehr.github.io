@@ -233,7 +233,7 @@ Under review, **2025**
 
 ### [Programmable aerosol chemistry coupled to chemical imaging establishes a new arena for automated chemical synthesis and discovery](https://doi.org/10.26434/chemrxiv-2025-mkmn0)  
 Wosik, J.; Zhu, C.; Li, Z.; [Mehr, S.H.M.]{.underline}  
-*Digital Discovery*, **2025**
+*Digital Discovery*, **(in press)**
 
 ### [CtrlAer: Programmable real-time execution of scientific experiments using a domain specific language for the Raspberry Pi Pico/Pico 2](https://doi.org/10.1016/j.softx.2025.102175)  
 [Mehr, S.H.M.]{.underline}  
