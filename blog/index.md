@@ -7,6 +7,7 @@ title: Hessam's blog
 
 | Date       | Title                                                                                          |
 |:-----------|:-----------------------------------------------------------------------------------------------|
+| 2025-07-21 | [Trialing probabilistic modelling for chemical microscopy (part 3)]
 | 2025-02-23 | [Trialing generative processes for chemical microscopy (part 2)]
 | 2024-12-28 | [Trialing generative processes for chemical microscopy (part 1)]
 | 2024-12-26 | [Simple generation of locally constrained values in `numpyro`]
@@ -16,6 +17,7 @@ title: Hessam's blog
 | 2013-12-28 | [Funny]
 | 2013-12-23 | [A new way of doing chemistry]
 
+[Trialing probabilistic modelling for chemical microscopy (part 3)]: /blog/posts/2025-07-21-droplet-generative-process-3.md
 [Trialing generative processes for chemical microscopy (part 2)]: /blog/posts/2025-02-23-droplet-generative-process-2.md
 [Trialing generative processes for chemical microscopy (part 1)]: /blog/posts/2024-12-28-droplet-generative-process.md
 [Simple generation of locally constrained values in `numpyro`]: /blog/posts/2024-12-26-locally-constrained.md
