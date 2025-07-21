@@ -7,11 +7,11 @@
   <atom:link href="https://hessammehr.github.io/feed.xml" rel="self" type="application/rss+xml" />
   <language>en-us</language>
 <item>
-      <title>Trialing probabilistic modelling for chemical microscopy (part 3)</title>
+      <title>Amortized probabilistic models for chemical microscopy</title>
       <link>https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html</link>
       <guid>https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html</guid>
       <pubDate>Mon, 21 Jul 2025 00:00:00 +0000</pubDate>
-      <description>Can we used an amortized model to speed up inference in our droplet microscopy model? </description>
+      <description>### Can we used an amortized model to speed up inference in our droplet microscopy model? </description>
     </item>
 <item>
       <title>Trialing generative processes for chemical microscopy (part 2)</title>

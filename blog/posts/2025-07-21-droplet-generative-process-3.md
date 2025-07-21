@@ -1,6 +1,10 @@
-# Trialing probabilistic modelling for chemical microscopy (part 3)
+# Amortized probabilistic models for chemical microscopy
 
-Can we used an amortized model to speed up inference in our droplet microscopy model?
+### Can we used an amortized model to speed up inference in our droplet microscopy model?
+
+My last go using a probabilistic model to analyze a microscope image seemed to work well enough, but I wanted to take a more flexible approach to modelling the appearance of droplets without having to roll out a more sophisticated physical model. Also, it seemed impractical to require a beefy GPU and minutes of compute for a single image.
+
+I've been meaning to experiment with *amortized* inference a bit more recently. The idea is that instead of all latent variables being inferred, a small model (think a miniature multi-layer perceptron) is trained to predict a subset of these variables. We are interested in inferring droplet locations and compositions, not so much about rendering the droplets themselves. This approach can give the best of both worlds, a mechanistic interpretable model for the parts that we care about or are easy to reason about, and an data-driven, learned representation for the complex, inherently introspectable parts.
 
 
 ```python
@@ -24,6 +28,8 @@ plt.rcParams['figure.dpi'] = 200
 sns.set_theme(context='paper', style='ticks', font='Arial')
 ```
 
+We'll use the same delightful microscope image as last time, part of the experiments that went into our [latest paper](https://doi.org/10.1039/D5DD00100E).
+
 
 ```python
 img = Image.open('data/example.jpg')
@@ -31,25 +37,23 @@ img = img.resize((img.width // 4, img.height // 4))
 img
 ```
 
-For simplicity, we'll focus on modeling the H (hue) channel of the image.
+
+
+
+    
+![png](2025-07-21-droplet-generative-process-3_files/2025-07-21-droplet-generative-process-3_3_0.png)
+    
+
+
 
 
 ```python
-img_hsv = np.array(img.convert('HSV')) / 255.0
-
-plt.imshow(img_hsv[..., 0], cmap='gray')
-plt.colorbar()
+img = np.array(img) / 255.0
 ```
 
 
 ```python
 class DropletOpticsModel(nn.Module):
-    """
-    Neural network model for amortized inference of droplet optics.
-    
-    Takes pixel background values, distance from droplet, droplet radius,
-    and droplet composition to predict new pixel values.
-    """
     hidden_dims: tuple = (32, 16, 8)
     
     @nn.compact
@@ -109,10 +113,86 @@ print(f"\nModel summary:")
 print(model.tabulate(key, dummy_background, dummy_dx, dummy_dy, dummy_radius, dummy_composition))
 ```
 
+    dummy_background.shape=(32, 3), dummy_dx.shape=(32, 1), dummy_dy.shape=(32, 1), dummy_radius.shape=(32, 1), dummy_composition.shape=(32, 10)
+    Input background shape: (32, 3)
+    Output pixel values shape: (32, 3)
+    Output range: [0.260, 0.897]
+    
+    Model summary:
+    
+    [3m                           DropletOpticsModel Summary                           [0m
+    ┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┓
+    ┃[1m [0m[1mpath    [0m[1m [0m┃[1m [0m[1mmodule        [0m[1m [0m┃[1m [0m[1minputs        [0m[1m [0m┃[1m [0m[1moutputs       [0m[1m [0m┃[1m [0m[1mparams        [0m[1m [0m┃
+    ┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━┩
+    │          │ DropletOptics… │ -              │ [2mfloat32[0m[32,3]  │                │
+    │          │                │ [2mfloat32[0m[32,3]  │                │                │
+    │          │                │ -              │                │                │
+    │          │                │ [2mfloat32[0m[32,1]  │                │                │
+    │          │                │ -              │                │                │
+    │          │                │ [2mfloat32[0m[32,1]  │                │                │
+    │          │                │ -              │                │                │
+    │          │                │ [2mfloat32[0m[32,1]  │                │                │
+    │          │                │ -              │                │                │
+    │          │                │ [2mfloat32[0m[32,10] │                │                │
+    ├──────────┼────────────────┼────────────────┼────────────────┼────────────────┤
+    │ hidden_0 │ Dense          │ [2mfloat32[0m[32,16] │ [2mfloat32[0m[32,32] │ bias:          │
+    │          │                │                │                │ [2mfloat32[0m[32]    │
+    │          │                │                │                │ kernel:        │
+    │          │                │                │                │ [2mfloat32[0m[16,32] │
+    │          │                │                │                │                │
+    │          │                │                │                │ [1m544 [0m[1;2m(2.2 KB)[0m   │
+    ├──────────┼────────────────┼────────────────┼────────────────┼────────────────┤
+    │ ln_0     │ LayerNorm      │ [2mfloat32[0m[32,32] │ [2mfloat32[0m[32,32] │ bias:          │
+    │          │                │                │                │ [2mfloat32[0m[32]    │
+    │          │                │                │                │ scale:         │
+    │          │                │                │                │ [2mfloat32[0m[32]    │
+    │          │                │                │                │                │
+    │          │                │                │                │ [1m64 [0m[1;2m(256 B)[0m     │
+    ├──────────┼────────────────┼────────────────┼────────────────┼────────────────┤
+    │ hidden_1 │ Dense          │ [2mfloat32[0m[32,32] │ [2mfloat32[0m[32,16] │ bias:          │
+    │          │                │                │                │ [2mfloat32[0m[16]    │
+    │          │                │                │                │ kernel:        │
+    │          │                │                │                │ [2mfloat32[0m[32,16] │
+    │          │                │                │                │                │
+    │          │                │                │                │ [1m528 [0m[1;2m(2.1 KB)[0m   │
+    ├──────────┼────────────────┼────────────────┼────────────────┼────────────────┤
+    │ ln_1     │ LayerNorm      │ [2mfloat32[0m[32,16] │ [2mfloat32[0m[32,16] │ bias:          │
+    │          │                │                │                │ [2mfloat32[0m[16]    │
+    │          │                │                │                │ scale:         │
+    │          │                │                │                │ [2mfloat32[0m[16]    │
+    │          │                │                │                │                │
+    │          │                │                │                │ [1m32 [0m[1;2m(128 B)[0m     │
+    ├──────────┼────────────────┼────────────────┼────────────────┼────────────────┤
+    │ hidden_2 │ Dense          │ [2mfloat32[0m[32,16] │ [2mfloat32[0m[32,8]  │ bias:          │
+    │          │                │                │                │ [2mfloat32[0m[8]     │
+    │          │                │                │                │ kernel:        │
+    │          │                │                │                │ [2mfloat32[0m[16,8]  │
+    │          │                │                │                │                │
+    │          │                │                │                │ [1m136 [0m[1;2m(544 B)[0m    │
+    ├──────────┼────────────────┼────────────────┼────────────────┼────────────────┤
+    │ ln_2     │ LayerNorm      │ [2mfloat32[0m[32,8]  │ [2mfloat32[0m[32,8]  │ bias:          │
+    │          │                │                │                │ [2mfloat32[0m[8]     │
+    │          │                │                │                │ scale:         │
+    │          │                │                │                │ [2mfloat32[0m[8]     │
+    │          │                │                │                │                │
+    │          │                │                │                │ [1m16 [0m[1;2m(64 B)[0m      │
+    ├──────────┼────────────────┼────────────────┼────────────────┼────────────────┤
+    │ output   │ Dense          │ [2mfloat32[0m[32,8]  │ [2mfloat32[0m[32,3]  │ bias:          │
+    │          │                │                │                │ [2mfloat32[0m[3]     │
+    │          │                │                │                │ kernel:        │
+    │          │                │                │                │ [2mfloat32[0m[8,3]   │
+    │          │                │                │                │                │
+    │          │                │                │                │ [1m27 [0m[1;2m(108 B)[0m     │
+    ├──────────┼────────────────┼────────────────┼────────────────┼────────────────┤
+    │[1m [0m[1m        [0m[1m [0m│[1m [0m[1m              [0m[1m [0m│[1m [0m[1m              [0m[1m [0m│[1m [0m[1m         Total[0m[1m [0m│[1m [0m[1m1,347 [0m[1;2m(5.4 KB)[0m[1m [0m│
+    └──────────┴────────────────┴────────────────┴────────────────┴────────────────┘
+    [1m                                                                                [0m
+    [1m                        Total Parameters: 1,347 [0m[1;2m(5.4 KB)[0m[1m                        [0m
+    
+    
 
-```python
-dummy_background.shape
-```
+
+What ended up working in the end is when each pixel refers to its closest droplet for colour. Not ideal but it keeps the memory requirement manageable.
 
 
 ```python
@@ -134,7 +214,260 @@ def model_with_nn(img, n_droplets, types=10):
     
     # Sample background per channel
     with plate("channels", n_channels):
-        bg = sample("bg", dist.Uniform(0, 1))
+        bg = sample("bg", dist.Uniform(0, 1).expand((n_channels,)))
+
+    # Sample droplet parameters
+    with plate("droplets", n_droplets):
+        x = sample("x", dist.Uniform(0, w))
+        y = sample("y", dist.Uniform(0, h))
+        r = sample("r", dist.LogNormal(0, 0.5))
+        with plate("types", types):
+            composition = sample("composition", dist.Uniform(0, 1)).T
+
+    model = DropletOpticsModel()
+
+    # Initialize background image
+    prediction = jnp.broadcast_to(bg, (h, w, n_channels))
+    nn_params = model.init(key, 
+                           jnp.zeros((h * w, n_channels)), 
+                           jnp.zeros((h * w, 1)),
+                           jnp.zeros((h * w, 1)),
+                           jnp.zeros((h * w, 1)),
+                           jnp.zeros((h * w, types)))    
+    nn_params = tree_to_dists(nn_params, path='nn_params')
+
+    distance = ((x_coords[..., None] - x) / r)**2 + ((y_coords[..., None] - y) / r)**2
+    nearest = jnp.argmin(distance, axis=-1)
+
+    # Calculate relative distances from droplet center
+    dx = (x_coords - x[nearest]) / r[nearest]  # Normalized by radius
+    dy = (y_coords - y[nearest]) / r[nearest]  # Normalized by radius
+
+
+    # Flatten spatial dimensions for neural network processing
+    dx_flat = dx.flatten()[:, None]
+    dy_flat = dy.flatten()[:, None]
+    r_flat = r[nearest].flatten()[:, None]
+
+    
+    # Repeat background and composition for all pixels
+    bg_flat = prediction.reshape(-1, n_channels)
+    comp_flat = composition[nearest, :].reshape(-1, types)
+    
+    # Apply neural network to get new pixel values
+    prediction = model.apply(nn_params, bg_flat, dx_flat, dy_flat, r_flat, comp_flat)
+    
+    # Reshape back to image dimensions
+    prediction = prediction.reshape(h, w, n_channels)
+    
+    prediction = jnp.clip(prediction, 0, 1)
+    prediction = deterministic('prediction', prediction)
+    diff = deterministic('diff', img - prediction)
+    sample('obs', dist.Normal(scale=0.05), obs=diff)
+    # print(f"{x_coords.shape=}, {y_coords.shape=}, {x.shape=}, {y.shape=}, {r.shape=}, {composition.shape=}, {distance.shape=}, {nearest.shape=}, {dx.shape=}, {dy.shape=}, {dx_flat.shape=}, {dy_flat.shape=}, {r_flat.shape=}, {bg_flat.shape=}, {comp_flat.shape=}, {prediction.shape=}")
+    return nn_params
+```
+
+
+```python
+tr = trace(seed(model_with_nn, 0)).get_trace(img, 1000, types=5)
+nn_params = seed(model_with_nn, 0)(img, 1000, types=5)
+{k: v['value'].shape for k, v in tr.items() if 'value' in v}
+```
+
+
+
+
+    {'channels': (3,),
+     'bg': (3,),
+     'droplets': (1000,),
+     'x': (1000,),
+     'y': (1000,),
+     'r': (1000,),
+     'types': (5,),
+     'composition': (5, 1000),
+     'nn_params/params/hidden_0/kernel': (11, 32),
+     'nn_params/params/hidden_0/bias': (32,),
+     'nn_params/params/ln_0/scale': (32,),
+     'nn_params/params/ln_0/bias': (32,),
+     'nn_params/params/hidden_1/kernel': (32, 16),
+     'nn_params/params/hidden_1/bias': (16,),
+     'nn_params/params/ln_1/scale': (16,),
+     'nn_params/params/ln_1/bias': (16,),
+     'nn_params/params/hidden_2/kernel': (16, 8),
+     'nn_params/params/hidden_2/bias': (8,),
+     'nn_params/params/ln_2/scale': (8,),
+     'nn_params/params/ln_2/bias': (8,),
+     'nn_params/params/output/kernel': (8, 3),
+     'nn_params/params/output/bias': (3,),
+     'prediction': (380, 507, 3),
+     'diff': (380, 507, 3),
+     'obs': (380, 507, 3)}
+
+
+
+
+```python
+guide = AutoNormal(model_with_nn)
+svi = SVI(model_with_nn, guide, Adam(0.01), Trace_ELBO())
+
+svi_result = svi.run(jax.random.PRNGKey(0), 100000, img, 800, types=3)
+samples_svi = guide.sample_posterior(jax.random.PRNGKey(0), svi_result.params, sample_shape=(100,))
+fig, ax = plt.subplots(figsize=(5, 2))
+ax.plot(svi_result.losses)
+```
+
+    100%|██████████| 100000/100000 [08:35<00:00, 193.87it/s, init loss: 6371727.5000, avg. loss [95001-100000]: -854501.1250]
+
+
+
+
+
+    [<matplotlib.lines.Line2D at 0x721bf0302960>]
+
+
+
+
+    
+![png](2025-07-21-droplet-generative-process-3_files/2025-07-21-droplet-generative-process-3_10_2.png)
+    
+
+
+
+```python
+plt.imshow(samples_svi['prediction'].mean(axis=0))
+```
+
+
+
+
+    <matplotlib.image.AxesImage at 0x721cd022ff80>
+
+
+
+
+    
+![png](2025-07-21-droplet-generative-process-3_files/2025-07-21-droplet-generative-process-3_11_1.png)
+    
+
+
+Not a bad reconstruction, and this time we capture color as well.
+
+
+```python
+samples_svi['composition'][:1].shape
+```
+
+
+
+
+    (1, 3, 800)
+
+
+
+
+```python
+plt.imshow(img)
+
+plt.scatter(samples_svi['x'][0], samples_svi['y'][0], s=4, alpha=1.0, c=samples_svi['composition'][0].T, marker='x')
+```
+
+
+
+
+    <matplotlib.collections.PathCollection at 0x721c10238f80>
+
+
+
+
+    
+![png](2025-07-21-droplet-generative-process-3_files/2025-07-21-droplet-generative-process-3_14_1.png)
+    
+
+
+Droplet composition seems nicely consistent with the image.
+
+## Other attempts
+
+A couple of other approaches that didn't quite work.
+
+### Fully flattened model with aggregation
+
+Two issues: memory use and how to aggregate the results at the end.
+
+
+```python
+def model_with_nn(img, n_droplets, types=10):
+    h, w, n_channels = img.shape
+    
+    # Create coordinate grids
+    y_coords, x_coords = jnp.mgrid[:h, :w]
+    
+    # Sample background per channel
+    with plate("channels", n_channels):
+        bg = sample("bg", dist.Uniform(0, 1).expand((n_channels,)))
+
+    # Sample droplet parameters
+    with plate("droplets", n_droplets):
+        x = sample("x", dist.Uniform(0, w))
+        y = sample("y", dist.Uniform(0, h))
+        r = sample("r", dist.LogNormal(0, 0.5))
+        with plate("types", types):
+            composition = sample("composition", dist.Uniform(0, 1)).T
+
+    model = DropletOpticsModel()
+
+    # Initialize background image
+    bg = jnp.broadcast_to(bg, (h, w, n_channels))
+    nn_params = model.init(key, 
+                           jnp.zeros((h * w, n_channels)), 
+                           jnp.zeros((h * w, 1)),
+                           jnp.zeros((h * w, 1)),
+                           jnp.zeros((h * w, 1)),
+                           jnp.zeros((h * w, types)))    
+    nn_params = tree_to_dists(nn_params, path='nn_params')
+    
+    # Calculate relative distances from droplet center
+    dx = (x_coords[..., None] - x) / r  # Normalized by radius
+    dy = (y_coords[..., None] - y) / r  # Normalized by radius
+
+    # Flatten spatial dimensions for neural network processing
+    dx_flat = dx.flatten()[:, None]
+    dy_flat = dy.flatten()[:, None]
+    r_flat = jnp.broadcast_to(r, (h, w, n_droplets)).flatten()[:, None]
+    
+    # Repeat background and composition for all pixels
+    bg_flat = jnp.broadcast_to(bg[:, :, None, :], (h, w, n_droplets, n_channels)).reshape(-1, n_channels)
+    comp_flat = jnp.broadcast_to(composition, (h * w, n_droplets, types)).reshape(-1, types)
+    
+    # Apply neural network to get new pixel values
+    new_pixels = model.apply(nn_params, bg_flat, dx_flat, dy_flat, r_flat, comp_flat)
+    
+    # Reshape back to image dimensions
+    new_pixels = new_pixels.reshape(h, w, n_channels)
+    
+    # Update prediction (could be additive or replacement - using replacement here)
+    prediction = new_pixels
+    
+    prediction = jnp.clip(prediction, 0, 1)
+    prediction = deterministic('prediction', prediction)
+    diff = deterministic('diff', img - prediction)
+    sample('obs', dist.Normal(scale=0.05), obs=diff)
+```
+
+### Iterative with `lax.scan`
+
+
+```python
+def model_with_nn(img, n_droplets, types=10):
+    h, w, n_channels = img.shape
+    
+    # Create coordinate grids
+    y_coords, x_coords = jnp.mgrid[:h, :w]
+    
+    # Sample background per channel
+    with plate("channels", n_channels):
+        bg = sample("bg", dist.Uniform(0, 1).expand((n_channels,)))
 
     # Sample droplet parameters
     with plate("droplets", n_droplets):
@@ -154,88 +487,37 @@ def model_with_nn(img, n_droplets, types=10):
                            jnp.zeros((h * w, 1)),
                            jnp.zeros((h * w, 1)),
                            jnp.zeros((h * w, types)))    
-    nn_params = tree_to_dists(nn_params)
+    nn_params = tree_to_dists(nn_params, path='nn_params')
     # For each droplet, compute its effect using the neural network
-    for i in range(n_droplets):
+    def apply_droplet(carry, droplet_params):
+        current_prediction = carry
+        x_i, y_i, r_i, comp_i = droplet_params
+        
         # Calculate relative distances from droplet center
-        dx = (x_coords - x[i]) / r[i]  # Normalized by radius
-        dy = (y_coords - y[i]) / r[i]  # Normalized by radius
+        dx = (x_coords - x_i) / r_i  # Normalized by radius
+        dy = (y_coords - y_i) / r_i  # Normalized by radius
         
         # Flatten spatial dimensions for neural network processing
         dx_flat = dx.flatten()[:, None]
         dy_flat = dy.flatten()[:, None]
-        r_flat = jnp.full((h * w, 1), r[i])
+        r_flat = jnp.full((h * w, 1), r_i)
         
         # Repeat background and composition for all pixels
-        bg_flat = jnp.broadcast_to(prediction.reshape(-1, n_channels), (h * w, n_channels))
-        comp_flat = jnp.broadcast_to(composition[:, i], (h * w, types))
+        bg_flat = current_prediction.reshape(-1, n_channels)
+        comp_flat = jnp.broadcast_to(comp_i, (h * w, types))
         
-        # print(f"{bg_flat.shape=}, {dx_flat.shape=}, {dy_flat.shape=}, {r_flat.shape=}, {comp_flat.shape=}")
         # Apply neural network to get new pixel values
         new_pixels = model.apply(nn_params, bg_flat, dx_flat, dy_flat, r_flat, comp_flat)
         
         # Reshape back to image dimensions
         new_pixels = new_pixels.reshape(h, w, n_channels)
         
-        # Update prediction (could be additive or replacement - using replacement here)
-        prediction = new_pixels
+        return new_pixels, None
     
+    prediction, _ = jax.lax.scan(apply_droplet, prediction, (x, y, r, composition.T))
     prediction = jnp.clip(prediction, 0, 1)
     prediction = deterministic('prediction', prediction)
     diff = deterministic('diff', img - prediction)
     sample('obs', dist.Normal(scale=0.05), obs=diff)
     return nn_params
 ```
-
-
-```python
-# Test the integrated model
-test_img = jnp.ones((50, 50, 3)) * 0.5  # Small test image
-
-# Use the neural network parameters from the model we initialized earlier
-tr = trace(seed(model_with_nn, 0)).get_trace(test_img, 3, types=5)
-nn_params = seed(model_with_nn, 0)(test_img, 3, types=5)
-{k: v['value'].shape for k, v in tr.items() if 'value' in v}
-```
-
-
-```python
-mcmc = MCMC( NUTS(model_with_nn), num_warmup=1000, num_samples=1000)
-mcmc.run(jax.random.PRNGKey(0), test_img, 3, types=5)
-```
-
-
-```python
-tr = trace(seed(model, 0)).get_trace(np.array(img), 15)
-{k: v['value'].shape for k, v in tr.items() if 'value' in v}
-```
-
-
-```python
-guide = AutoNormal(model)
-svi = SVI(model, guide, Adam(0.01), Trace_ELBO())
-
-svi_result = svi.run(jax.random.PRNGKey(0), 100000, img.width, img.height, 2000, img_hsv[..., 0])
-samples_svi = guide.sample_posterior(jax.random.PRNGKey(0), svi_result.params, sample_shape=(100,))
-fig, ax = plt.subplots(figsize=(5, 2))
-ax.plot(svi_result.losses)
-```
-
-
-```python
-plt.imshow(samples_svi['img'].mean(axis=0), cmap='gray')
-plt.colorbar()
-```
-
-Looks quite good!
-
-
-```python
-plt.imshow(img_hsv[:, :, 0]/255.0, cmap='gray')
-plt.colorbar()
-plt.scatter(samples_svi['x'][:100] * img_hsv.shape[1], samples_svi['y'][:100] * img_hsv.shape[0], s=4, alpha=0.01, c='red', marker='x')
-```
-
-Most droplets are now detected — very nice!
-
-Let's have a look at the inferred droplet masks:
