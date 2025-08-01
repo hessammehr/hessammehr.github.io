@@ -22,5 +22,5 @@ dev = [
     "seaborn>=0.13.2",
     "scikit-image>=0.25.0",
     "pillow>=11.0.0",
-    "jax[cuda12]>=0.5.2",
+    "jax[cuda12]<0.7",
 ]
