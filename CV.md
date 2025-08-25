@@ -226,10 +226,11 @@ Chemical Studies is a University of Glasgow Chemistry stream aimed at distilling
 <h2 style="display: inline" id="full-publication-list"> Full publication list </h2>
 </summary>
 
-1. [Generation of microstructured composite materials via aerosol conglomeration of polymer particles](https://doi.org/10.26434/chemrxiv-2025-hzsnv)
+1. [Generation of microstructured composite materials via aerosol conglomeration of polymer particles](https://doi.org/10.26434/chemrxiv-2025-hzsnv)  
+Zhang, L.; [Mehr, S.H.M.]{.underline}  
 *ChemRxiv*, **2025**
 
-3. [Rapid aerosol-phase synthesis of covalent organic framework coatings](https://doi.org/10.26434/chemrxiv-2025-tvnxb)  
+1. [Rapid aerosol-phase synthesis of covalent organic framework coatings](https://doi.org/10.26434/chemrxiv-2025-tvnxb)  
 Zhang, L.; Chen, J.; [Mehr, S.H.M.]{.underline}  
 Under review, **2025**
 
