@@ -48,7 +48,7 @@ Focus areas: Digital signal processing, photonic crystals.
 
 ## Research highlights
 
-Highlights among **25** peer-reviewed primary research papers (h-index: **14**; **788** citations; [full list](#full-publication-list)):
+Highlights among **25** peer-reviewed primary research papers (h-index: **14**; **814** citations; [full list](#full-publication-list)):
 
 ### ▶ Programmable aerosol chemistry coupled to chemical imaging establishes a new arena for automated chemical synthesis and discovery
 Wosik, J.; Zhu, C.; Li, Z.; [Mehr, S. H. M.]{.underline}, *Digital Discovery*, **2025** ([10.1039/D5DD00100E](https://doi.org/10.1039/D5DD00100E))
@@ -130,6 +130,9 @@ Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; [Mehr, 
 [Mehr, S. H. M.]{.underline} Book proposal accepted with publication in the RSC Foundations Series expected in 2025.
 
 ## Selected talks and seminars
+### Invited speaker
+[Interdisciplinary Micro Nano and Molecular Systems Symposium](https://pfringberg.wordpress.com/), Schloss Ringberg, 2025
+
 ### Invited seminar
 Department of Chemistry, King's College London, 2025
 
@@ -223,11 +226,15 @@ Chemical Studies is a University of Glasgow Chemistry stream aimed at distilling
 <h2 style="display: inline" id="full-publication-list"> Full publication list </h2>
 </summary>
 
-30. [Rapid aerosol-phase synthesis of covalent organic framework coatings](https://doi.org/10.26434/chemrxiv-2025-tvnxb)  
+1. [Generation of microstructured composite materials via aerosol conglomeration of polymer particles](https://doi.org/10.26434/chemrxiv-2025-hzsnv)  
+Zhang, L.; [Mehr, S.H.M.]{.underline}  
+*ChemRxiv*, **2025**
+
+1. [Rapid aerosol-phase synthesis of covalent organic framework coatings](https://doi.org/10.26434/chemrxiv-2025-tvnxb)  
 Zhang, L.; Chen, J.; [Mehr, S.H.M.]{.underline}  
 Under review, **2025**
 
-29. [Accelerated investigation of complex reaction cascades via digital aerosol chemistry coupled to online mass spectrometry](https://doi.org/10.26434/chemrxiv-2025-g4hcg)  
+1. [Accelerated investigation of complex reaction cascades via digital aerosol chemistry coupled to online mass spectrometry](https://doi.org/10.26434/chemrxiv-2025-g4hcg)  
 Li, Z.; [Mehr, S.H.M.]{.underline}  
 Under review, **2025**
 
