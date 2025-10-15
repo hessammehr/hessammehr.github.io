@@ -7,6 +7,13 @@
   <atom:link href="https://hessammehr.github.io/feed.xml" rel="self" type="application/rss+xml" />
   <language>en-us</language>
 <item>
+      <title>Live variational inference</title>
+      <link>https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html</link>
+      <guid>https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html</guid>
+      <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
+      <description>This is mostly to show two possibilities: </description>
+    </item>
+<item>
       <title>Amortized probabilistic models for chemical microscopy</title>
       <link>https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html</link>
       <guid>https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html</guid>

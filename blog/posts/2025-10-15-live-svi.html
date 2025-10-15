@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Hessam's blog RSS Feed"
+      href="/feed.xml"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/primer.css" />
+    <link
+      rel="stylesheet"
+      href="/light.css"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="stylesheet"
+      href="/dark.css"
+      media="(prefers-color-scheme: dark)"
+    />
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body"><h1
+id="live-variational-inference">Live variational inference</h1>
+<p>This is mostly to show two possibilities:</p>
+<ul>
+<li>The ability to update the data going into a model in the course of
+running variational inference. Imagine you are accumulating data as you
+go, or (this is more technical/hacky) you find that your multimodal
+distributions get locked into a specific mode that the optimiser cannot
+escape and are looking for a way to “ease into” the right mode by
+e.g. tightening your Dirichlet concentration factor gradually as you
+go.</li>
+<li>Inspect model predictions and loss in real time.</li>
+</ul>
+<p>The key is using the <code>SVI.update</code> call, which I have
+avoided so far for the convenience of <code>SVI.run</code>. A batch of
+steps can be take in a jitted loop for performance and the loss
+monitored for convergence every time a parameter/input data is
+changed.</p>
+<p>With <code>matplotlib</code> you need to use an interactive backend
+like <code>qt</code> or <code>osx</code> and add a
+<code>plt.pause(...)</code> call in the loop to make sure there is a
+chance to re-render the figure. Super useful and something I didn’t know
+about (thanks ChatGPT).</p>
+<p>A minimal example below, where the concentration parameter for a
+Dirichlet prior to a categorical observation is varied smoothly from 1.0
+(i.e. flat) to 0.1 (pretty pointy at the extremes).</p>
+<pre class="python"><code>%matplotlib osx</code></pre>
+<pre><code>UsageError: Invalid GUI request &#39;macosx&#39;, valid ones are:dict_keys([&#39;inline&#39;, &#39;nbagg&#39;, &#39;webagg&#39;, &#39;notebook&#39;, &#39;ipympl&#39;, &#39;widget&#39;, None, &#39;qt&#39;, &#39;qt5&#39;, &#39;qt6&#39;, &#39;wx&#39;, &#39;tk&#39;, &#39;gtk&#39;, &#39;gtk3&#39;, &#39;osx&#39;, &#39;asyncio&#39;])</code></pre>
+<pre class="python"><code>import jax
+import jax.numpy as jnp
+import numpy as np
+import numpyro
+import numpyro.distributions as dist
+import seaborn as sns
+from matplotlib import pyplot as plt
+from numpyro.infer import SVI, Trace_ELBO, autoguide
+from numpyro.optim import Adam
+from tqdm import tqdm
+
+sns.set_theme(
+    &quot;talk&quot;, &quot;ticks&quot;, font=&quot;Arial&quot;, font_scale=1.0, rc={&quot;svg.fonttype&quot;: &quot;none&quot;}
+)
+
+num_steps = 100
+
+
+def model(alpha_scale):
+    alpha = jnp.ones(12) * alpha_scale
+    theta = numpyro.sample(&quot;theta&quot;, dist.Dirichlet(alpha))
+    numpyro.sample(&quot;obs1&quot;, dist.Categorical(theta), obs=jnp.array([2,2,2,2,2,5,5,5]))
+
+guide = autoguide.AutoNormal(model)
+
+optimizer = Adam(1e-3)
+svi = SVI(model, guide, optimizer, loss=Trace_ELBO())
+
+rng_key = jax.random.PRNGKey(0)
+state = svi.init(
+    rng_key,
+    alpha_scale=1.0,
+)
+
+
+@jax.jit
+def run_stage(state, init_loss, alpha_scale):
+    def body_fn(i, val):
+        return svi.update(val[0], alpha_scale)
+
+    return jax.lax.fori_loop(0, 100, body_fn, (state, init_loss))
+
+
+f, (a1, a2) = plt.subplots(nrows=2, sharex=True)
+a1.set(ylabel=&quot;ELBO loss&quot;)
+a2.set(xlabel=&quot;SVI batch&quot;, ylabel=r&quot;$\theta$ (posterior)&quot;)
+f.tight_layout()
+for i in tqdm(range(num_steps)):
+    alpha_scale = 0.02 ** (i / num_steps)
+    a1.set_title(f&quot;$\\alpha$: {alpha_scale:.2f}&quot;)
+    while True:
+        # Run SVI steps until convergence
+        init_loss = svi.evaluate(state, alpha_scale)
+        state, loss = run_stage(state, init_loss, alpha_scale)
+        if jnp.abs(loss - init_loss) / np.abs(init_loss) &lt; 0.02:
+            break
+    params = svi.get_params(state)
+    a1.scatter([i], loss, c=&quot;k&quot;, s=5)
+    posterior = guide.sample_posterior(rng_key, params)
+    theta = posterior[&quot;theta&quot;]
+    a2.scatter(i * np.ones_like(theta), theta, c=np.arange(12), s=5)
+    # This is really important to get live updates.
+    plt.pause(0.01)
+
+f.savefig(&quot;2025-10-15-live-svi_result.svg&quot;)
+print(&quot;Posterior theta mean:&quot;, posterior[&quot;theta&quot;])
+plt.close()</code></pre>
+<pre><code>100%|██████████| 100/100 [00:06&lt;00:00, 14.36it/s]
+
+
+Posterior theta mean: [1.26911415e-08 7.69821611e-08 6.65301085e-01 7.23654193e-06
+ 1.26773830e-06 2.86240101e-01 2.82157103e-10 9.47567692e-04
+ 2.23408958e-10 4.75026183e-02 6.67153069e-11 5.59603919e-09]</code></pre>
+<p>Not sure if the result will show up as expected when this notebook is
+converted to HTML but it looks very nice and it’s good to be able to see
+it converge.</p>
+<figure>
+<img src="2025-10-15-live-svi_plot.svg" alt="The result" />
+<figcaption aria-hidden="true">The result</figcaption>
+</figure></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
