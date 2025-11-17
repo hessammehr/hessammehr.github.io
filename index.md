@@ -5,7 +5,7 @@ title: Hessam Mehr
 # Chemistry <span id="arrow">⟷</span> Information <span id="arrow">⟷</span> Discovery
 ## S. Hessam M. Mehr
 <div id="under_title"> Leverhulme Early Career Research Fellow, University of Glasgow </div>
-<div id="under_title"> [CV] [Blog] [GitHub] [Twitter/X] [Email] [Group website] </div>
+<div id="under_title"> [CV] [Blog] [GitHub] [LinkedIn] [Email] [Group website] </div>
 
 ![](rings.png){.logo}
 
@@ -52,7 +52,7 @@ I am always keen to welcome motivated individuals from a range of technical back
 [CV PDF]: https://drive.google.com/u/0/uc?id=16xHJQQshijyGfEfSn_kpNxpLe9xHZPfx
 [Blog]: blog
 [GitHub]: https://github.com/hessammehr
-[Twitter/X]: https://twitter.com/hessammehr
+[LinkedIn]: http://linkedin.com/in/hessammehr
 [Email]: mailto:Hessam.Mehr@glasgow.ac.uk
 [Group website]: https://mehr-research.science
 [Google Scholar]: https://scholar.google.com/citations?user=HeyhCHEAAAAJ
