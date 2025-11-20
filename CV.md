@@ -191,7 +191,7 @@ Widening participation summer research placements for high school students.
 
 Used a £2,500 grant from UofG ARC to curate a series of pop-up hacker/maker stations. The versatility of these stations — covering drag-and-drop programming of embedded microcontroller board, prototyping tools and electronic circuits — combines with larger investment in ARC maker tools to enable a wide range of researcher-led outreach activities.
 
-### [Sound Chemistry] <span>Workshop | 2024</span>{#sound-chemistry}
+### [Sound Chemistry] <span>Workshop organisation | 2024</span>{#sound-chemistry}
 
 Conceived and organised a workshop bringing together four European institutions (Heidelberg, Navarre, Bristol, Cardiff) at the forefront of new techniques for confinement of matter, with the central question of whether future chemical reactions could be contained and manipulated using software, e.g. via acoustic fields, rather than glassware.
 
@@ -203,7 +203,7 @@ This RSC Outreach Grant-supported workshop series introduced Glasgow high school
 
 ### Chemical Studies <span> Leadership, mentorship & hands-on workshop implementation | 2023–2025 </span>
 
-Chemical Studies is a University of Glasgow Chemistry stream aimed at distilling the spectrum of skills and experience chemistry undergraduate in a format tailored to students ineligible for the full MSc. As a co-organiser of this innovative programme for the past two years, I mentored small groups of students through the formulation of a research question; guiding them towards a tractable laboratory implementation, followed by 4 intensive lab sessions culminating in a group dissertation and poster.
+Chemical Studies is a University of Glasgow Chemistry stream aimed at distilling the spectrum of skills and experience of a chemistry undergraduate degree into a format tailored to students unable to proceed with the full MSc. As a co-organiser of this innovative programme for 2023–24 and 2024–25, I mentored small groups of students through the formulation of a research question and planning a tractable laboratory implementation, followed by 4 intensive lab sessions culminating in a group dissertation and poster.
 
 ### Year 2&3 MChem <span> Tutorials| 2022–2025 </span>
 
