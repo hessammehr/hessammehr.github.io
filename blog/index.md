@@ -7,6 +7,7 @@ title: Hessam's blog
 
 | Date       | Title                                                                                          |
 |:-----------|:-----------------------------------------------------------------------------------------------|
+| 2025-11-26 | [Reparameterizing distributions in numpyro]
 | 2025-10-15 | [Live variational inference]
 | 2025-07-21 | [Amortized probabilistic models for chemical microscopy]
 | 2025-02-23 | [Trialing generative processes for chemical microscopy (part 2)]
@@ -18,6 +19,7 @@ title: Hessam's blog
 | 2013-12-28 | [Funny]
 | 2013-12-23 | [A new way of doing chemistry]
 
+[Reparameterizing distributions in numpyro]: /blog/posts/2025-11-26-reparam.md
 [Live variational inference]: /blog/posts/2025-10-15-live-svi.md
 [Amortized probabilistic models for chemical microscopy]: /blog/posts/2025-07-21-droplet-generative-process-3.md
 [Trialing generative processes for chemical microscopy (part 2)]: /blog/posts/2025-02-23-droplet-generative-process-2.md

@@ -7,6 +7,13 @@
   <atom:link href="https://hessammehr.github.io/feed.xml" rel="self" type="application/rss+xml" />
   <language>en-us</language>
 <item>
+      <title>Reparameterizing distributions in numpyro</title>
+      <link>https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html</link>
+      <guid>https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html</guid>
+      <pubDate>Wed, 26 Nov 2025 00:00:00 +0000</pubDate>
+      <description>Every single time I've tried to "chance" it with probabilistic methods I am once again reminded that you can't treat them like a black box. The following is a self-contained example of a pathological case so simple it almost feels like it should just work, and yet it fails miserably without intervention (in this case by reparameterizing the distributions). Part of me wonders if this all just means we need better tools or whether we just have to accept the fundamental complexity and model defensively. </description>
+    </item>
+<item>
       <title>Live variational inference</title>
       <link>https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html</link>
       <guid>https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html</guid>
