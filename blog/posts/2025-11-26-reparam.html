@@ -35,7 +35,9 @@ miserably without intervention (in this case by reparameterizing the
 distributions). Part of me wonders if this all just means we need better
 tools or whether we just have to accept the fundamental complexity and
 model defensively.</p>
-<pre class="python"><code>import seaborn as sns
+<pre class="python"><code>import numpy as np
+import pandas as pd
+import seaborn as sns
 from jax import lax
 from jax import numpy as jnp
 from jax.random import PRNGKey
@@ -67,7 +69,7 @@ def solve_cat(cat_0, k_d, dt, n):
 
 plt.plot(solve(1.0, 1.0, jnp.ones((1000,)), 0.01))
 plt.plot(solve_cat(1.0, 1.0, 0.02, 1000))</code></pre>
-<pre><code>[&lt;matplotlib.lines.Line2D at 0x11cd56540&gt;]</code></pre>
+<pre><code>[&lt;matplotlib.lines.Line2D at 0x132ea1a60&gt;]</code></pre>
 <figure>
 <img src="2025-11-26-reparam_files/2025-11-26-reparam_3_1.png"
 alt="png" />
@@ -76,12 +78,12 @@ alt="png" />
 <p>Now a simple model, first without worrying about measurement error.
 We’ll use both MCMC and SVI.</p>
 <pre class="python"><code>def model(a_0, cat_0, dt, n):
-    k = sample(&#39;k&#39;, dist.LogNormal(0.0, 0.5))
-    k_d = sample(&#39;k_d&#39;, dist.LogNormal(-3.0, 0.5))
+    k = sample(&#39;k&#39;, dist.LogNormal(0.0, 1.0))
+    k_d = sample(&#39;k_d&#39;, dist.LogNormal(-2.0, 1.0))
     cats = deterministic(&#39;cat&#39;, solve_cat(cat_0, k_d, dt, n))
     a_n = deterministic(&#39;a_n&#39;, solve(a_0, k, cats, dt))
 
-args = (1.0, 1.0, 0.01, 500)
+args = (1.0, 0.1, 0.01, 500)
 mcmc = MCMC(NUTS(model), num_warmup=1000, num_samples=100)
 mcmc.run(PRNGKey(0), *args)
 mcmc_samples = mcmc.get_samples()
@@ -90,8 +92,8 @@ guide = autoguide.AutoNormal(model)
 svi = SVI(model, guide, Adam(0.01), Trace_ELBO())
 svi_result = svi.run(PRNGKey(1), 2000, *args)
 svi_samples = guide.sample_posterior(PRNGKey(0), svi_result.params, sample_shape=(100,))</code></pre>
-<pre><code>sample: 100%|██████████| 1100/1100 [00:00&lt;00:00, 2349.69it/s, 1 steps of size 8.00e-01. acc. prob=0.93]
-100%|██████████| 2000/2000 [00:00&lt;00:00, 7287.78it/s, init loss: 26.6421, avg. loss [1901-2000]: 0.0119]</code></pre>
+<pre><code>sample: 100%|██████████| 1100/1100 [00:00&lt;00:00, 1685.64it/s, 3 steps of size 9.31e-01. acc. prob=0.92]
+100%|██████████| 2000/2000 [00:00&lt;00:00, 4384.19it/s, init loss: 7.5166, avg. loss [1901-2000]: 0.0118]</code></pre>
 <pre class="python"><code>f, (a1, a2) = plt.subplots(ncols=2, sharey=True, figsize=(10, 4))
 a1.set_title(&#39;MCMC&#39;)
 a2.set_title(&#39;SVI&#39;)
@@ -120,13 +122,13 @@ because we are not making an observation. What’s notable about this
 <code>a_draw</code> variable is that it has a very narrow distribution
 (<span class="math inline"><em>σ</em></span> = 0.02).</p>
 <pre class="python"><code>def model(a_0, cat_0, dt, n, err):
-    k = sample(&#39;k&#39;, dist.LogNormal(0.0, 0.5))
-    k_d = sample(&#39;k_d&#39;, dist.LogNormal(-5.0, 0.5))
+    k = sample(&#39;k&#39;, dist.LogNormal(0.0, 1.0))
+    k_d = sample(&#39;k_d&#39;, dist.LogNormal(-2.0, 1.0))
     cats = deterministic(&#39;cat&#39;, solve_cat(cat_0, k_d, dt, n))
     a_n = deterministic(&#39;a_n&#39;, solve(a_0, k, cats, dt))
     a_draw = sample(&#39;a_draw&#39;, dist.LogNormal(jnp.log(a_n), err))
 
-args = (1.0, 1.0, 0.01, 500, 0.02)
+args = (1.0, 0.1, 0.01, 500, 0.05)
 mcmc = MCMC(NUTS(model), num_warmup=1000, num_samples=100)
 mcmc.run(PRNGKey(0), *args)
 mcmc_samples = mcmc.get_samples()
@@ -135,8 +137,8 @@ guide = autoguide.AutoNormal(model)
 svi = SVI(model, guide, Adam(0.01), Trace_ELBO())
 svi_result = svi.run(PRNGKey(1), 2000, *args)
 svi_samples = guide.sample_posterior(PRNGKey(0), svi_result.params, sample_shape=(100,))</code></pre>
-<pre><code>sample: 100%|██████████| 1100/1100 [00:01&lt;00:00, 663.80it/s, 63 steps of size 4.19e-02. acc. prob=0.92]
-100%|██████████| 2000/2000 [00:00&lt;00:00, 3496.48it/s, init loss: 6657175.0000, avg. loss [1901-2000]: 1581.4250]</code></pre>
+<pre><code>sample: 100%|██████████| 1100/1100 [00:02&lt;00:00, 470.02it/s, 63 steps of size 4.88e-02. acc. prob=0.92]
+100%|██████████| 2000/2000 [00:00&lt;00:00, 2674.99it/s, init loss: 139124.0000, avg. loss [1901-2000]: 26.2503]</code></pre>
 <pre class="python"><code>f, (a1, a2) = plt.subplots(ncols=2, sharey=True, figsize=(10, 4))
 a1.set_title(&#39;MCMC&#39;)
 a2.set_title(&#39;SVI&#39;)
@@ -149,7 +151,7 @@ meas_line, *_ = a1.plot(mcmc_samples[&#39;a_draw&#39;].T, c=&#39;k&#39;, alpha=0
 meas_line.set_alpha(1)
 a2.plot(svi_samples[&#39;a_n&#39;].T, c=&#39;b&#39;, alpha=0.1)
 a2.plot(svi_samples[&#39;cat&#39;].T, c=&#39;r&#39;, alpha=0.1)
-a2.plot(svi_samples[&#39;a_draw&#39;].T, c=&#39;k&#39;, alpha=0.02)
+a2.plot(svi_samples[&#39;a_draw&#39;].T, c=&#39;k&#39;, alpha=0.05)
 f.legend(handles=[a_line, cat_line, meas_line])
 a_line.set_alpha(0.1)
 cat_line.set_alpha(0.1)
@@ -160,9 +162,10 @@ alt="png" />
 <figcaption aria-hidden="true">png</figcaption>
 </figure>
 <p>Yes, not looking good at all. We were expecting the exact sample
-plots! Increasing the number of samples, warmup, SVI steps doesn’t help
-either. The culprit is clearly the narrow distribution as increasing its
-std to 1.0 everything goes back to normal.</p>
+plots! I tried increasing the number of samples, warmup and SVI steps
+and those didn’t help either. The culprit is clearly the narrow
+distribution of <code>a_draw</code> as increasing its std to 1.0
+everything goes back to normal.</p>
 <p>After a bit of head scratching, it turns out there is a way to fix
 this without rewriting the model and manually de-centering/scaling. This
 happens on the level of the <code>Normal</code> distributions being
@@ -180,15 +183,15 @@ away from so that’s where <code>TransformReparam</code> comes in.</p>
 }
 
 def model(a_0, cat_0, dt, n, err):
-    k = sample(&#39;k&#39;, dist.LogNormal(0.0, 0.5))
-    k_d = sample(&#39;k_d&#39;, dist.LogNormal(-5.0, 0.5))
+    k = sample(&#39;k&#39;, dist.LogNormal(0.0, 1.0))
+    k_d = sample(&#39;k_d&#39;, dist.LogNormal(-2.0, 1.0))
     cats = deterministic(&#39;cat&#39;, solve_cat(cat_0, k_d, dt, n))
     a_n = deterministic(&#39;a_n&#39;, solve(a_0, k, cats, dt))
     a_draw = sample(&#39;a_draw&#39;, dist.LogNormal(jnp.log(a_n), err))
 
 model = handlers.reparam(model, reparam_config)
 
-args = (1.0, 1.0, 0.01, 500, 0.02)
+args = (1.0, 0.1, 0.01, 500, 0.05)
 mcmc = MCMC(NUTS(model), num_warmup=1000, num_samples=100)
 mcmc.run(PRNGKey(0), *args)
 mcmc_samples = mcmc.get_samples()
@@ -197,8 +200,8 @@ guide = autoguide.AutoNormal(model)
 svi = SVI(model, guide, Adam(0.01), Trace_ELBO())
 svi_result = svi.run(PRNGKey(1), 2000, *args)
 svi_samples = guide.sample_posterior(PRNGKey(0), svi_result.params, sample_shape=(100,))</code></pre>
-<pre><code>sample: 100%|██████████| 1100/1100 [00:00&lt;00:00, 1678.97it/s, 15 steps of size 3.03e-01. acc. prob=0.89]
-100%|██████████| 2000/2000 [00:00&lt;00:00, 4569.60it/s, init loss: 1233.4703, avg. loss [1901-2000]: 2.5142]</code></pre>
+<pre><code>sample: 100%|██████████| 1100/1100 [00:00&lt;00:00, 1229.30it/s, 15 steps of size 3.03e-01. acc. prob=0.89]
+100%|██████████| 2000/2000 [00:00&lt;00:00, 3245.90it/s, init loss: 1233.4703, avg. loss [1901-2000]: 2.5142]</code></pre>
 <pre class="python"><code>f, (a1, a2) = plt.subplots(ncols=2, sharey=True, figsize=(10, 4))
 a1.set_title(&#39;MCMC&#39;)
 a2.set_title(&#39;SVI&#39;)
@@ -222,16 +225,232 @@ alt="png" />
 <figcaption aria-hidden="true">png</figcaption>
 </figure>
 <p>Beautiful! The latent concentrations are now exactly as before and we
-also have a nice extra variable showing measurement with error.</p>
+also have a nice extra variable showing measurement with error. How
+about a quick look at the sampled values of <span
+class="math inline"><em>k</em></span> and <span
+class="math inline"><em>k</em><sub><em>d</em></sub></span>, which should
+ideally be uncorrelated and have a lognormal marginal, i.e. each is
+lognormally distributed irrespective of the other one.</p>
+<pre class="python"><code>def posterior_df(samples):
+    dfs = []
+
+    for var, vals in samples.items():
+        dfs.append(pd.DataFrame(samples[var]).melt().rename(columns={&quot;value&quot;: var})[[var]])
+    
+    return pd.concat([dfs[0], *[df.iloc[:, 0] for df in dfs[1:]]], axis=1)
+
+sns.jointplot(posterior_df(mcmc_samples), x=&#39;k&#39;, y=&#39;k_d&#39;, kind=&#39;kde&#39;, fill=True)
+plt.gca().set(ylabel=&#39;$k_d$&#39;, xlabel=&#39;$k$&#39;)
+plt.gca().set_xlim(left=0.0)
+plt.gca().set_ylim(bottom=0.0);</code></pre>
+<figure>
+<img src="2025-11-26-reparam_files/2025-11-26-reparam_14_0.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
+</figure>
+<p>Nice, normal as expected!</p>
 <p>You will notice a quirk: I had to know that the name of the
-underlying <code>Normal</code> site Now one downside of using this
+underlying <code>Normal</code> sites. And one downside of using this
 automatic reparameterisation is that <code>TransformReparam</code>
 doesn’t currently support observations. That’s fine though, you can
 split the sampled and observed parts (the observed part won’t need
 reparameterising as it won’t need to be sampled).</p>
-<p>Anyway, depending on your background this may seem very dense or
-trivial and I wish there was more time to expand and properly discuss
-but that will have to wait util another time.</p></div>
+<h2 id="adding-support-for-observations">Adding support for
+observations</h2>
+<p>Visualising the prior predictive, i.e. what’s predicted solely from
+our priors without observing anything is nice but not that exciting. It
+took some trial and error to find the right combination of types and
+effect handlers to do this but the solution is to use a masked
+distribution. Here is how it works:</p>
+<ol type="1">
+<li>For any unobserved values in <code>a_draw</code> that need imputing
+(i.e. drawing from the prior predictive rather than observing), we can
+continue to use our reparamterized <code>TransformedDistribution</code>,
+but masked so the log probability of the any observed sites is ignored.
+Essentially, you are still sampling them but not accounting for their
+log probability, since we are later going to observe them.</li>
+<li>For any observed values in <code>a_draw_obs</code>, reparameterizing
+is not necessary, since we are not going to sample them. We apply the
+opposite mask: observed values simply add to our overall joint log
+probability without having to be sampled; unobserved values are also
+observed from the imputed values but their log probs are ignored because
+we mask them. This is because we already calculated their log prob in
+the <code>a_draw</code> site.</li>
+</ol>
+<p>I have to confess that this took a while to get right. Especially
+because some of the types don’t compose very well, so for example
+<code>TransformedDistribution(MaskedDistribution(...))</code> is not
+supported but using a <code>mask</code> handler works.</p>
+<pre class="python"><code>reparam_config = {
+    &#39;k&#39;: reparam.TransformReparam(),
+    &#39;k_d&#39;: reparam.TransformReparam(),
+    &#39;a_draw&#39;: reparam.TransformReparam(),
+    &#39;k_base&#39;: reparam.LocScaleReparam(0),
+    &#39;k_d_base&#39;: reparam.LocScaleReparam(0),
+    &#39;a_draw_base&#39;: reparam.LocScaleReparam(0),
+}
+
+def model(a_0, cat_0, dt, n, err, obs):
+    has_obs = ~jnp.isnan(obs)
+    k = sample(&#39;k&#39;, dist.LogNormal(0.0, 1.0))
+    k_d = sample(&#39;k_d&#39;, dist.LogNormal(-2.0, 1.0))
+    cats = deterministic(&#39;cat&#39;, solve_cat(cat_0, k_d, dt, n))
+    a_n = deterministic(&#39;a_n&#39;, solve(a_0, k, cats, dt))
+    with handlers.mask(mask=~has_obs):
+        d = dist.Normal(jnp.log(a_n), err)
+    a_draw = sample(&#39;a_draw&#39;, dist.TransformedDistribution(d, dist.transforms.ExpTransform()))
+    obs = jnp.where(has_obs, obs, a_draw)
+    a_draw_combined = deterministic(&#39;a_draw_combined&#39;, obs)
+    a_draw_obs = sample(&#39;a_draw_obs&#39;, dist.LogNormal(jnp.log(a_n), err).mask(has_obs), obs=obs)
+
+def infer(model, args, guide=None):
+    mcmc = MCMC(NUTS(model), num_warmup=2000, num_samples=100)
+    mcmc.run(PRNGKey(0), *args)
+    mcmc_samples = mcmc.get_samples()
+
+    guide = guide or autoguide.AutoNormal(model)
+    svi = SVI(model, guide, Adam(0.01), Trace_ELBO())
+    svi_result = svi.run(PRNGKey(1), 10000, *args)
+    svi_samples = guide.sample_posterior(PRNGKey(0), svi_result.params, sample_shape=(100,))
+    return locals()
+
+
+model = handlers.reparam(model, reparam_config)
+
+obs = np.full((500,), np.nan)
+args = (1.0, 0.1, 0.01, 500, 0.05, obs)
+
+results = infer(model, args)</code></pre>
+<pre><code>sample: 100%|██████████| 2100/2100 [00:01&lt;00:00, 1092.37it/s, 15 steps of size 3.03e-01. acc. prob=0.85]
+100%|██████████| 10000/10000 [00:01&lt;00:00, 5173.40it/s, init loss: 1233.4703, avg. loss [9501-10000]: 2.4468]</code></pre>
+<p>Sampling from the prior predictive, i.e. when the observations are
+all <code>np.nan</code>.</p>
+<pre class="python"><code>def plot_samples(mcmc_samples, svi_samples, obs):
+    f, (a1, a2) = plt.subplots(ncols=2, sharey=True, figsize=(12, 5))
+    a1.set_title(&#39;MCMC&#39;)
+    a2.set_title(&#39;SVI&#39;)
+    has_obs = ~jnp.isnan(obs)
+
+
+    a_line, *_ = a1.plot(mcmc_samples[&#39;a_n&#39;].T, c=&#39;b&#39;, alpha=0.1, label=&#39;[A]&#39;)
+    a_line.set_alpha(1)
+    cat_line, *_ = a1.plot(mcmc_samples[&#39;cat&#39;].T, c=&#39;r&#39;, alpha=0.1, label=&#39;[cat]&#39;)
+    cat_line.set_alpha(1)
+    meas_line, *_ = a1.plot(mcmc_samples[&#39;a_draw_combined&#39;].T, c=&#39;y&#39;, alpha=0.05, label=&#39;[A] measured&#39;, zorder=-1)
+    meas_line.set_alpha(1)
+    a2.plot(svi_samples[&#39;a_n&#39;].T, c=&#39;b&#39;, alpha=0.1)
+    a2.plot(svi_samples[&#39;cat&#39;].T, c=&#39;r&#39;, alpha=0.1)
+    a2.plot(svi_samples[&#39;a_draw_combined&#39;].T, c=&#39;y&#39;, alpha=0.05, zorder=-1)
+    f.legend(handles=[a_line, cat_line, meas_line])
+    a1.scatter(jnp.nonzero(has_obs)[0], obs[has_obs], c=&#39;k&#39;, zorder=10)
+    a2.scatter(jnp.nonzero(has_obs)[0], obs[has_obs], c=&#39;k&#39;, zorder=10)
+    a1.set(ylim=(-0.1,1.1))
+    a_line.set_alpha(0.1)
+    cat_line.set_alpha(0.1)
+    meas_line.set_alpha(0.05)
+    return f
+
+plot_samples(results[&#39;mcmc_samples&#39;], results[&#39;svi_samples&#39;], obs)
+plt.tight_layout()</code></pre>
+<figure>
+<img src="2025-11-26-reparam_files/2025-11-26-reparam_20_0.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
+</figure>
+<p>Now let’s supply a single observation, specifically one that suggests
+the reaction is faster than predicted by most trajectories. In the
+posterior we would expect to see either a higher than anticipated <span
+class="math inline"><em>k</em></span> or a lower than anticipated <span
+class="math inline"><em>k</em><sub><em>d</em></sub></span> and the two
+should be positively <strong>correlated</strong>.</p>
+<pre class="python"><code>obs[100] = 0.6
+
+args = (1.0, 0.1, 0.01, 500, 0.05, obs)
+
+results = infer(model, args)
+
+plot_samples(results[&#39;mcmc_samples&#39;], results[&#39;svi_samples&#39;], obs)
+plt.tight_layout()</code></pre>
+<pre><code>sample: 100%|██████████| 2100/2100 [00:02&lt;00:00, 868.05it/s, 15 steps of size 3.08e-01. acc. prob=0.85] 
+100%|██████████| 10000/10000 [00:02&lt;00:00, 4996.71it/s, init loss: 1234.0802, avg. loss [9501-10000]: 3.8389]</code></pre>
+<figure>
+<img src="2025-11-26-reparam_files/2025-11-26-reparam_22_1.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
+</figure>
+<pre class="python"><code>all_data = pd.concat([
+    posterior_df(results[&#39;mcmc_samples&#39;])[[&#39;k&#39;, &#39;k_d&#39;]].assign(Method=&#39;MCMC&#39;),
+    posterior_df(results[&#39;svi_samples&#39;])[[&#39;k&#39;, &#39;k_d&#39;]].assign(Method=&#39;SVI&#39;),
+    ], ignore_index=True)
+sns.kdeplot(all_data, x=&#39;k&#39;, y=&#39;k_d&#39;, hue=&quot;Method&quot;, fill=True)
+plt.gca().set(xlabel=&#39;$k$&#39;, ylabel=&#39;$k_d$&#39;)</code></pre>
+<pre><code>[Text(0.5, 0, &#39;$k$&#39;), Text(0, 0.5, &#39;$k_d$&#39;)]</code></pre>
+<figure>
+<img src="2025-11-26-reparam_files/2025-11-26-reparam_23_1.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
+</figure>
+<p>And here we go, a very different picture now, and as expected the
+<code>AutoNormal</code> SVI guide fails to capture the correlation
+between <span class="math inline"><em>k</em></span> and <span
+class="math inline"><em>k</em><sub><em>d</em></sub></span>. A full rank
+multivariate normal should be able to handle this, albeit taking about
+10x as long as MCMC. For some reason
+<code>autoguide.AutoLowRankMultivariateNormal(rank=2)</code> doesn’t
+seem to do the trick.</p>
+<p>A more advanced option to get the best of both worlds would be
+creating a separate full-rank guide for <span
+class="math inline"><em>k</em></span> and <span
+class="math inline"><em>k</em><sub><em>d</em></sub></span> then using a
+simple <code>AutoNormal</code> for the rest (specifically
+<code>a_draw</code>) using <code>AutoGuideList</code>.</p>
+<pre class="python"><code># &quot;Easy&quot; but slow and doesn&#39;t really scale
+# results = infer(model, args, autoguide.AutoMultivariateNormal(model))
+
+# More involved but very fast
+guide = autoguide.AutoGuideList(model)
+guide.append(autoguide.AutoNormal(handlers.block(model, expose=[&#39;a_draw_base_decentered&#39;])))
+guide.append(autoguide.AutoMultivariateNormal(handlers.block(model, expose=[&#39;k_base_decentered&#39;, &#39;k_d_base_decentered&#39;])))
+results = infer(model, args, guide)</code></pre>
+<pre><code>sample: 100%|██████████| 2100/2100 [00:02&lt;00:00, 932.25it/s, 15 steps of size 3.08e-01. acc. prob=0.85]  
+100%|██████████| 10000/10000 [00:02&lt;00:00, 4894.64it/s, init loss: 1272.4036, avg. loss [9501-10000]: 3.7564]</code></pre>
+<p>This is more involved and it seems like <code>AutoGuideList</code>
+doesn’t deal with deterministic sites, so we have derive them manually.
+I had to read a lot of numpyro’s source code to figure out how.</p>
+<pre class="python"><code>from numpyro.infer.util import soft_vmap
+
+def predictive(sample):
+    with handlers.seed(rng_seed=PRNGKey(0)):
+        with handlers.substitute(data=sample):
+            return {k: v[&#39;value&#39;] for k, v in handlers.trace(model).get_trace(*args).items()}
+
+results[&#39;svi_samples&#39;].update(soft_vmap(predictive, results[&#39;svi_samples&#39;]))</code></pre>
+<pre class="python"><code>all_data = pd.concat([
+    posterior_df(results[&#39;mcmc_samples&#39;])[[&#39;k&#39;, &#39;k_d&#39;]].assign(Method=&#39;MCMC&#39;),
+    posterior_df(results[&#39;svi_samples&#39;])[[&#39;k&#39;, &#39;k_d&#39;]].assign(Method=&#39;SVI&#39;),
+    ], ignore_index=True)
+sns.kdeplot(all_data, x=&#39;k&#39;, y=&#39;k_d&#39;, hue=&quot;Method&quot;, fill=True)
+plt.gca().set(xlabel=&#39;$k$&#39;, ylabel=&#39;$k_d$&#39;)</code></pre>
+<pre><code>[Text(0.5, 0, &#39;$k$&#39;), Text(0, 0.5, &#39;$k_d$&#39;)]</code></pre>
+<figure>
+<img src="2025-11-26-reparam_files/2025-11-26-reparam_28_1.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
+</figure>
+<p>And here we go!</p>
+<pre class="python"><code>plot_samples(results[&#39;mcmc_samples&#39;], results[&#39;svi_samples&#39;], obs)
+plt.tight_layout()</code></pre>
+<figure>
+<img src="2025-11-26-reparam_files/2025-11-26-reparam_30_0.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
+</figure>
+<p>I hope this was fun to explore together. Very happy to chat if you
+have any suggestions or questions. This experiment was motivated by my
+upcoming RSC book on digital chemistry, as part of which I am hoping to
+present probabilistic programming as a powerful data interpretation aid
+for experimentalists working with automated platforms that can generate
+a wealth of experimental data.</p></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
     <script>
       hljs.highlightAll();
