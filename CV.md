@@ -226,7 +226,12 @@ Chemical Studies is a University of Glasgow Chemistry stream aimed at distilling
 <summary>
 <h2 style="display: inline" id="full-publication-list"> Full publication list </h2>
 </summary>
-1. [TideScript: A Domain Specific Language for Peptide Chemistry](https://doi.org/10.1145/3759429.3762627)  
+
+1. [Modulation of reactivity in microdroplets via solvent vapour pressure](https://doi.org/10.26434/chemrxiv-2025-zvj8z)  
+Li, Z.; Jarzabek, B.; [Mehr, S.H.M.]{.underline}  
+*ChemRxiv*, **2025**
+
+2. [TideScript: A Domain Specific Language for Peptide Chemistry](https://doi.org/10.1145/3759429.3762627)  
 Morris, N.; Archibald, B.; [Mehr, S.H.M.]{.underline}  
 ACM SIGPLAN 2025 Onward!, **2025**
 
