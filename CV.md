@@ -8,18 +8,17 @@ css: CV.css
 <div class="contact-grid">
 <div class="contact-left">
 
-Leverhulme Early Career Fellow  
-[Hessam.Mehr@glasgow.ac.uk][email]  
-School of Chemistry, University of Glasgow  
-Advanced Research Centre, Office 576  
-11 Chapel Lane, Glasgow, UK G11 6EW
+Lecturer in Chemistry and AI for Science  
+[Hessam.Mehr@kcl.ac.uk][email]  
+Department of Chemistry, King's College London  
+Strand, London WC2R 2LS
 
 </div>
 <div class="contact-right">
 
 [mehr-research.science] / [hessammehr.github.io]  
 [orcid.org/0000-0001-7710-3102][ORCiD]  
-[Google Scholar] / [UofG Profile]  
+[Google Scholar] / [LinkedIn]  
 GitHub: [hessammehr][github] / [MehrResearch][group-github]
 
 </div>
@@ -29,8 +28,10 @@ GitHub: [hessammehr][github] / [MehrResearch][group-github]
 
 ## Employment
 
+### Lecturer in Chemistry and AI for Science <span> King's College London, UK | Incoming (2026–) </span>
+
 ### Leverhulme Early Career Fellow <span> University of Glasgow, UK | 2022–2025 </span>
-My fellowship leverages automation and computational modelling to radically expand the gamut of interpretable experimental regimes in chemistry, with chemistry in aerosols as a first paradigm. I have created a modular, digitally controlled aerosol reactor — the first of its kind — and championed its adoption as a medium for chemical synthesis and discovery. Applications ranging from materials chemistry to antimicrobial discovery are being pursued within my group and via collaborations.
+My fellowship leveraged automation and computational modelling to radically expand the gamut of interpretable experimental regimes in chemistry, with chemistry in aerosols as a first paradigm. I created a modular, digitally controlled aerosol reactor — the first of its kind — and championed its adoption as a medium for chemical synthesis and discovery. Applications ranging from materials chemistry to antimicrobial discovery are being pursued within my group and via collaborations.
 
 ### Post-doctoral Researcher <span> Cronin Group, University of Glasgow, UK | 2018–2022 </span>
 Focus areas include (i) the digitisation of synthetic chemistry, leading to [two](#chempu) [Science papers](#xdl) and commercialisation via a [patent](#patent-chemputer) that now underpins a £40M spin-out company; and (ii) algorithmic discovery of new reactivity via automated platforms integrating online analytical instruments.
@@ -48,7 +49,7 @@ Focus areas: Digital signal processing, photonic crystals.
 
 ## Research highlights
 
-Highlights among **25** peer-reviewed primary research papers (h-index: **14**; **814** citations; [full list](#full-publication-list)):
+Highlights among **33** peer-reviewed primary research papers (h-index: **14**; **900** citations; [full list](#full-publication-list)):
 
 ### ▶ Programmable aerosol chemistry coupled to chemical imaging establishes a new arena for automated chemical synthesis and discovery
 Wosik, J.; Zhu, C.; Li, Z.; [Mehr, S. H. M.]{.underline}, *Digital Discovery*, **2025** ([10.1039/D5DD00100E](https://doi.org/10.1039/D5DD00100E))
@@ -213,11 +214,11 @@ Chemical Studies is a University of Glasgow Chemistry stream aimed at distilling
 ### Year 1 MChem <span> Synthesis laboratory | 2023–2024 </span>
 
 ## Supervision
-**Current:** **3** PhD students (including one jointly supervised with Computer Science); **1** MSc student; **1** research intern.
+**Current:** **4** PhD students (including two with joint supervised).
 
-**Past:** **2** MSc students; **5** Advanced Functional Materials PGT students; **1** Chemical Biology PGT student; **1** international post-graduate visiting student; **2** international exchange students; **2** interns.
+**Past:** **2** MSc students; **5** Advanced Functional Materials PGT students; **2** Chemical Biology PGT student; **1** international post-graduate visiting student; **2** international exchange students; **3** interns.
 
-**Examination:** Examiner on **12** viva exams so far.
+**Examination:** Examiner on **17** viva exams.
 
 
 <details>
@@ -225,11 +226,16 @@ Chemical Studies is a University of Glasgow Chemistry stream aimed at distilling
 <summary>
 <h2 style="display: inline" id="full-publication-list"> Full publication list </h2>
 </summary>
-1. [TideScript: A Domain Specific Language for Peptide Chemistry](https://doi.org/10.1145/3759429.3762627)  
+
+1. [Modulation of reactivity in microdroplets via solvent vapour pressure](https://doi.org/10.26434/chemrxiv-2025-zvj8z)  
+Li, Z.; Jarzabek, B.; [Mehr, S.H.M.]{.underline}  
+*ChemRxiv*, **2025**
+
+2. [TideScript: A Domain Specific Language for Peptide Chemistry](https://doi.org/10.1145/3759429.3762627)  
 Morris, N.; Archibald, B.; [Mehr, S.H.M.]{.underline}  
 ACM SIGPLAN 2025 Onward!, **2025**
 
-2. [Generation of microstructured composite materials via aerosol conglomeration of polymer particles](https://doi.org/10.26434/chemrxiv-2025-hzsnv)  
+1. [Generation of microstructured composite materials via aerosol conglomeration of polymer particles](https://doi.org/10.26434/chemrxiv-2025-hzsnv)  
 Zhang, L.; [Mehr, S.H.M.]{.underline}  
 *ChemRxiv*, **2025**
 
@@ -355,8 +361,8 @@ Frischmann, P.D.; [Mehr, S.H.M.]{.underline}; Patrick, B.O.; Lelj, F.; MacLachla
 
 [Google Scholar]: https://scholar.google.com/citations?user=HeyhCHEAAAAJ
 [ORCiD]: https://orcid.org/0000-0001-7710-3102
-[UofG Profile]: https://www.gla.ac.uk/schools/chemistry/staff/hessammehr
-[email]: mailto:Hessam.Mehr@glasgow.ac.uk
+[LinkedIn]: https://linkedin.com/in/hessammehr
+[email]: mailto:Hessam.Mehr@kcl.ac.uk
 [mehr-research.science]: https://mehr-research.science/
 [hessammehr.github.io]: https://hessammehr.github.io/
 [micro:bit talk]: https://www.youtube.com/watch?v=LdGD7-9-e5A
