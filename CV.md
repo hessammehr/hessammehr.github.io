@@ -9,9 +9,9 @@ css: CV.css
 <div class="contact-left">
 
 Lecturer in Chemistry and AI for Science  
-[Hessam.Mehr@kcl.ac.uk][email]  
 Department of Chemistry, King's College London  
-Strand, London WC2R 2LS
+Strand, London WC2R 2LS  
+[Hessam.Mehr@kcl.ac.uk][email]
 
 </div>
 <div class="contact-right">
