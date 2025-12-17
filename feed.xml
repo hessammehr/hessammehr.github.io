@@ -7,6 +7,13 @@
   <atom:link href="https://hessammehr.github.io/feed.xml" rel="self" type="application/rss+xml" />
   <language>en-us</language>
 <item>
+      <title>Using `uv` projects on a network share</title>
+      <link>https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html</link>
+      <guid>https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html</guid>
+      <pubDate>Wed, 17 Dec 2025 00:00:00 +0000</pubDate>
+      <description>The wondeful [`uv`](https://astral.sh/uv) has a strong preference for virtual environments that are placed within a project tree rather than kept centrally *a la* conda. One unfortunate consequence of this is for projects stored on network shares, for us usually data analysis scripts and Jupyter/marimo notebooks for visualisation and as dashboards. Simply `uv add`ing `numpy` alone will dump heaps of tiny files into the folder and completely overwhelm our network share (normally OneDrive since we get 1 TB free as part of 365). </description>
+    </item>
+<item>
       <title>Reparameterizing distributions in numpyro</title>
       <link>https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html</link>
       <guid>https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html</guid>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Hessam's blog RSS Feed"
+      href="/feed.xml"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/primer.css" />
+    <link
+      rel="stylesheet"
+      href="/light.css"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="stylesheet"
+      href="/dark.css"
+      media="(prefers-color-scheme: dark)"
+    />
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body"><h1
+id="using-uv-projects-on-a-network-share">Using <code>uv</code> projects
+on a network share</h1>
+<p>The wondeful <a href="https://astral.sh/uv"><code>uv</code></a> has a
+strong preference for virtual environments that are placed within a
+project tree rather than kept centrally <em>a la</em> conda. One
+unfortunate consequence of this is for projects stored on network
+shares, for us usually data analysis scripts and Jupyter/marimo
+notebooks for visualisation and as dashboards. Simply
+<code>uv add</code>ing <code>numpy</code> alone will dump heaps of tiny
+files into the folder and completely overwhelm our network share
+(normally OneDrive since we get 1 TB free as part of 365).</p>
+<p>A little trick to avoid this situation, while still being able to use
+<code>pyproject.toml</code> to specify dependencies via <code>uv</code>.
+Here it goes.</p>
+<ol type="1">
+<li><code>uv init --bare</code> to initialise your
+<code>pyproject.toml</code> if it doesn’t already exist.</li>
+<li><code>uv add --no-sync &lt;dependencies&gt;</code>, the key is
+<code>--no-sync</code> so <code>uv</code> doesn’t make a
+<code>.venv</code> folder and install packages there.</li>
+<li><code>uvx --with-requirements pyproject.toml &lt;program that you want to run&gt;</code>.
+Here are a few examples:
+<ul>
+<li><code>uvx --with-requirements pyproject.toml marimo edit</code></li>
+<li><code>uvx --with-requirements pyproject.toml jupyter lab</code></li>
+<li><code>uvx --with-requirements pyproject.toml ipython</code></li>
+<li><code>uvx --with-requirements pyproject.toml python script.py</code></li>
+</ul></li>
+</ol>
+<p>You might be tempted to run <code>uv run script.py</code>. Don’t!
+That’s going to create a virtual environment in the project folder.
+Either use the last example above or the nifty <code>--isolated</code>
+flag: <code>uv run --isolated script.py</code>.</p>
+<p>And just like that, the most frustration-free Python workflow that I
+am aware of.</p></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
