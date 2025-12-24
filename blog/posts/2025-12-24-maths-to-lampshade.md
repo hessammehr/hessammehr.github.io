@@ -18,11 +18,9 @@ Something like this with big gentle ondulations on top of which small jittery ri
 ## Trying (and failing) 3D with OnShape
 Desmos helpfully allows export to SVG, which I then converted to DXF in Inkscape so it can be imported into OnShape. DXF files can be added to OnShape sketches directly. So far so good. Creating the loft object in OnShape proved challenging though. A loft is pretty much what I described earlier, the volume or surface created as one 2D profile is interpolated to another. In this case, the second profile is just a point placed above the initial one. Something like this:
 
-![alt text](../images/profiles.png)
+![alt text](../images/profiles.png)![alt text](../images/onshape-loft.png)
 
-The loft tool provide a few nice settings, specifically the initial and final angle of approach to each profile. I want the shape to rise straight from the 2D contour and form a tangent to the final point. This way the top will form a nice dome rather than a sharp spike:
-
-![alt text](../images/onshape-loft.png)
+The loft tool provide a few nice settings, specifically the initial and final angle of approach to each profile. I want the shape to rise straight from the 2D contour and form a tangent to the final point. This way the top will form a nice dome rather than a sharp spike.
 
 This complex organic-looking profile, made up of 1047 points, doesn't really seem to fit OnShape's main usecase. The loft operation kept failing to process (although it looks nice) and froze a couple of times too.
 
