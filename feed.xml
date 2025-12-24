@@ -7,6 +7,13 @@
   <atom:link href="https://hessammehr.github.io/feed.xml" rel="self" type="application/rss+xml" />
   <language>en-us</language>
 <item>
+      <title>3D printed lampshade from a formula</title>
+      <link>https://hessammehr.github.io/blog/posts/2025-12-24-maths-to-lampshade.html</link>
+      <guid>https://hessammehr.github.io/blog/posts/2025-12-24-maths-to-lampshade.html</guid>
+      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
+      <description>I've been playing with translucent PLA for lighting projects at home. Earlier this year, I built a diffuser/housing for our Lidl LED strip, since the light from the exposed LEDs was too cool and jarring. The design files are on OnShape, although they might need tweaking for the exact strip and required installation area. </description>
+    </item>
+<item>
       <title>Using `uv` projects on a network share</title>
       <link>https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html</link>
       <guid>https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html</guid>

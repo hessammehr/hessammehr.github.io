@@ -7,6 +7,7 @@ title: Hessam's blog
 
 | Date       | Title                                                                                          |
 |:-----------|:-----------------------------------------------------------------------------------------------|
+| 2025-12-24 | [3D printed lampshade from a formula]
 | 2025-12-17 | [Using `uv` projects on a network share]
 | 2025-11-26 | [Reparameterizing distributions in numpyro]
 | 2025-10-15 | [Live variational inference]
@@ -20,6 +21,7 @@ title: Hessam's blog
 | 2013-12-28 | [Funny]
 | 2013-12-23 | [A new way of doing chemistry]
 
+[3D printed lampshade from a formula]: /blog/posts/2025-12-24-maths-to-lampshade.md
 [Using `uv` projects on a network share]: /blog/posts/2025-12-17-uv-on-network-shares.md
 [Reparameterizing distributions in numpyro]: /blog/posts/2025-11-26-reparam.md
 [Live variational inference]: /blog/posts/2025-10-15-live-svi.md
