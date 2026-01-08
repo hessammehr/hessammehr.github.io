@@ -105,3 +105,25 @@ figure img {
 figcaption {
     display: none;
 }
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+    margin: 1em 0;
+    width: 60vw;
+    margin-left: calc(50% - 30vw);
+}
+
+.gallery img {
+    flex: 1 1 auto;
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: contain;
+    margin: 0;
+}
+
+.gallery > p {
+    display: contents;
+}
