@@ -6,96 +6,236 @@
   <link>https://hessammehr.github.io/blog/</link>
   <atom:link href="https://hessammehr.github.io/feed.xml" rel="self" type="application/rss+xml" />
   <language>en-us</language>
-<item>
-      <title>3D printed lampshade from a formula</title>
-      <link>https://hessammehr.github.io/blog/posts/2025-12-24-maths-to-lampshade.html</link>
-      <guid>https://hessammehr.github.io/blog/posts/2025-12-24-maths-to-lampshade.html</guid>
-      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
-      <description>I've been playing with translucent PLA for lighting projects at home. Earlier this year, I built a diffuser/housing for our Lidl LED strip, since the light from the exposed LEDs was too cool and jarring. The design files are on OnShape, although they might need tweaking for the exact strip and required installation area. </description>
-    </item>
-<item>
-      <title>Using `uv` projects on a network share</title>
-      <link>https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html</link>
-      <guid>https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html</guid>
-      <pubDate>Wed, 17 Dec 2025 00:00:00 +0000</pubDate>
-      <description>The wondeful [`uv`](https://astral.sh/uv) has a strong preference for virtual environments that are placed within a project tree rather than kept centrally *a la* conda. One unfortunate consequence of this is for projects stored on network shares, for us usually data analysis scripts and Jupyter/marimo notebooks for visualisation and as dashboards. Simply `uv add`ing `numpy` alone will dump heaps of tiny files into the folder and completely overwhelm our network share (normally OneDrive since we get 1 TB free as part of 365). </description>
-    </item>
-<item>
-      <title>Reparameterizing distributions in numpyro</title>
-      <link>https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html</link>
-      <guid>https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html</guid>
-      <pubDate>Wed, 26 Nov 2025 00:00:00 +0000</pubDate>
-      <description>Every single time I've tried to "chance" it with probabilistic methods I am once again reminded that you can't treat them like a black box. The following is a self-contained example of a pathological case so simple it almost feels like it should just work, and yet it fails miserably without intervention (in this case by reparameterizing the distributions). Part of me wonders if this all just means we need better tools or whether we just have to accept the fundamental complexity and model defensively. </description>
-    </item>
-<item>
-      <title>Live variational inference</title>
-      <link>https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html</link>
-      <guid>https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html</guid>
-      <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
-      <description>This is mostly to show two possibilities: </description>
-    </item>
-<item>
-      <title>Amortized probabilistic models for chemical microscopy</title>
-      <link>https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html</link>
-      <guid>https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html</guid>
-      <pubDate>Mon, 21 Jul 2025 00:00:00 +0000</pubDate>
-      <description>### Can we used an amortized model to speed up inference in our droplet microscopy model? </description>
-    </item>
-<item>
-      <title>Trialing generative processes for chemical microscopy (part 2)</title>
-      <link>https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html</link>
-      <guid>https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html</guid>
-      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <description>Last time we used a very rigid generative model (droplets modeled as gaussians). This time we'll use a learned representation of droplets. </description>
-    </item>
-<item>
-      <title>Trialing generative processes for chemical microscopy (part 1)</title>
-      <link>https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html</link>
-      <guid>https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html</guid>
-      <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
-      <description>Is it possible to use a generative process to model microscope images like this (and is it worth the effort?) </description>
-    </item>
-<item>
-      <title>Simple generation of locally constrained values in `numpyro`</title>
-      <link>https://hessammehr.github.io/blog/posts/2024-12-26-locally-constrained.html</link>
-      <guid>https://hessammehr.github.io/blog/posts/2024-12-26-locally-constrained.html</guid>
-      <pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate>
-      <description>Just a simple experiment using `numpyro` to simulate values from a function with locally constrained values. This is often achieved using Gaussian processed but I thought it would be interesting to try something a bit more intuitive, plus priors on the points themselves and their interdependence can be anything, not just normal distributions. </description>
-    </item>
-<item>
-      <title>A rant against macros</title>
-      <link>https://hessammehr.github.io/blog/posts/2020-06-14-rant-against-macros.html</link>
-      <guid>https://hessammehr.github.io/blog/posts/2020-06-14-rant-against-macros.html</guid>
-      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
-      <description>I used to be a huge fan of macros. I remember reading SICP and being amazed that you could use the language to generate and transform code. How cool is that? First a couple of examples: Clojure's `core.async` library includes a `go` macro that lets you launch goroutine-like tasks without having to change the language. </description>
-    </item>
-<item>
-      <title>The case for lazy computation and interactive optimization</title>
-      <link>https://hessammehr.github.io/blog/posts/2020-05-24-lazy-interactive-optimization.html</link>
-      <guid>https://hessammehr.github.io/blog/posts/2020-05-24-lazy-interactive-optimization.html</guid>
-      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
-      <description>Since 2018, my colleague [Dario] and I have been working on a probabilistic model of chemical reactivity. In a nutshell, this model can take reactivity observations between a bunch of compounds and interpret them as manifestations of properties and their mutual reactivities. The [Markov chain Monte carlo] implementation of this model in [PyMC3] was quite fast to start but over time we have expanded the model and now with all the bells and whistles sampling can take close to a day. </description>
-    </item>
-<item>
-      <title>Fertile land at the confluence of staged programming and (typed) logic programming — Part 1</title>
-      <link>https://hessammehr.github.io/blog/posts/2019-04-07-fertile-land-at-the-confluence-of-staged-programming-and-typed-logic-programming.html</link>
-      <guid>https://hessammehr.github.io/blog/posts/2019-04-07-fertile-land-at-the-confluence-of-staged-programming-and-typed-logic-programming.html</guid>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      <description>I recently started sketching out a logic programming library called </description>
-    </item>
-<item>
-      <title>Funny</title>
-      <link>https://hessammehr.github.io/blog/posts/2013-12-28-funny.html</link>
-      <guid>https://hessammehr.github.io/blog/posts/2013-12-28-funny.html</guid>
-      <pubDate>Sat, 28 Dec 2013 00:00:00 +0000</pubDate>
-      <description>... Likewise, claiming JS is homoiconic because you can eval strings of code </description>
-    </item>
-<item>
-      <title>A new way of doing chemistry</title>
-      <link>https://hessammehr.github.io/blog/posts/2013-12-23-a-new-way-of-doing-chemistry.html</link>
-      <guid>https://hessammehr.github.io/blog/posts/2013-12-23-a-new-way-of-doing-chemistry.html</guid>
-      <pubDate>Mon, 23 Dec 2013 00:00:00 +0000</pubDate>
-      <description>I've been thinking about a new way of doing chemistry. Take for example the </description>
-    </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2013-12-23-a-new-way-of-doing-chemistry.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2013-12-23-a-new-way-of-doing-chemistry.html.html</guid>
+    <pubDate>Mon, 23 Dec 2013 00:00:00 +0000</pubDate>
+    <description></description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2013-12-28-funny.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2013-12-28-funny.html.html</guid>
+    <pubDate>Sat, 28 Dec 2013 00:00:00 +0000</pubDate>
+    <description></description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2019-04-07-fertile-land-at-the-confluence-of-staged-programming-and-typed-logic-programming.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2019-04-07-fertile-land-at-the-confluence-of-staged-programming-and-typed-logic-programming.html.html</guid>
+    <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+    <description></description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2020-05-24-lazy-interactive-optimization.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2020-05-24-lazy-interactive-optimization.html.html</guid>
+    <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
+    <description></description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2020-06-14-rant-against-macros.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2020-06-14-rant-against-macros.html.html</guid>
+    <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
+    <description>  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2025-12-24-maths-to-lampshade.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2025-12-24-maths-to-lampshade.html.html</guid>
+    <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
+    <description></description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2024-12-26-locally-constrained.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2024-12-26-locally-constrained.html.html</guid>
+    <pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate>
+    <description>plt.scatter(obs_idx, obs_vals, label=  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html.html</guid>
+    <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
+    <description>fig, ax = plt.subplots() </description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html.html</guid>
+    <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+    <description></description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html.html</guid>
+    <pubDate>Mon, 21 Jul 2025 00:00:00 +0000</pubDate>
+    <description>model = DropletOpticsModel() </description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html.html</guid>
+    <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
+    <description></description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html.html</guid>
+    <pubDate>Wed, 26 Nov 2025 00:00:00 +0000</pubDate>
+    <description>guide = autoguide.AutoGuideList(model) </description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html.html</guid>
+    <pubDate>Wed, 17 Dec 2025 00:00:00 +0000</pubDate>
+    <description></description>
+  </item>
+</channel>amp;#39;Observed values</channel>amp;#39;, color=</channel>amp;#39;crimson</channel>amp;#39;, s=20, zorder=10) </description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html.html</guid>
+    <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
+    <description>fig, ax = plt.subplots() </description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html.html</guid>
+    <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+    <description></description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html.html</guid>
+    <pubDate>Mon, 21 Jul 2025 00:00:00 +0000</pubDate>
+    <description>model = DropletOpticsModel() </description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html.html</guid>
+    <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
+    <description></description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html.html</guid>
+    <pubDate>Wed, 26 Nov 2025 00:00:00 +0000</pubDate>
+    <description>guide = autoguide.AutoGuideList(model) </description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html.html</guid>
+    <pubDate>Wed, 17 Dec 2025 00:00:00 +0000</pubDate>
+    <description></description>
+  </item>
+</channel>lt;p</channel>gt;And we see that Turing has sampled both </channel>lt;code</channel>gt;y</channel>lt;/code</channel>gt; and </description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2025-12-24-maths-to-lampshade.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2025-12-24-maths-to-lampshade.html.html</guid>
+    <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
+    <description></description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2024-12-26-locally-constrained.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2024-12-26-locally-constrained.html.html</guid>
+    <pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate>
+    <description>plt.scatter(obs_idx, obs_vals, label=  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html.html</guid>
+    <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
+    <description>fig, ax = plt.subplots() </description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html.html</guid>
+    <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+    <description></description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html.html</guid>
+    <pubDate>Mon, 21 Jul 2025 00:00:00 +0000</pubDate>
+    <description>model = DropletOpticsModel() </description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html.html</guid>
+    <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
+    <description></description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html.html</guid>
+    <pubDate>Wed, 26 Nov 2025 00:00:00 +0000</pubDate>
+    <description>guide = autoguide.AutoGuideList(model) </description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html.html</guid>
+    <pubDate>Wed, 17 Dec 2025 00:00:00 +0000</pubDate>
+    <description></description>
+  </item>
+</channel>amp;#39;Observed values</channel>amp;#39;, color=</channel>amp;#39;crimson</channel>amp;#39;, s=20, zorder=10) </description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html.html</guid>
+    <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
+    <description>fig, ax = plt.subplots() </description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html.html</guid>
+    <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+    <description></description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html.html</guid>
+    <pubDate>Mon, 21 Jul 2025 00:00:00 +0000</pubDate>
+    <description>model = DropletOpticsModel() </description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html.html</guid>
+    <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
+    <description></description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html.html</guid>
+    <pubDate>Wed, 26 Nov 2025 00:00:00 +0000</pubDate>
+    <description>guide = autoguide.AutoGuideList(model) </description>
+  </item>
+  <item>
+    <title></title>
+    <link>https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html</link>
+    <guid>https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html.html</guid>
+    <pubDate>Wed, 17 Dec 2025 00:00:00 +0000</pubDate>
+    <description></description>
+  </item>
 </channel>
 </rss>

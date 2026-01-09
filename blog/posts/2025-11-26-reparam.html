@@ -46,6 +46,9 @@ from numpyro import deterministic, handlers, sample
 from numpyro import distributions as dist
 from numpyro.infer import MCMC, NUTS, SVI, Trace_ELBO, autoguide, reparam
 from numpyro.optim import Adam
+from matplotlib_inline.backend_inline import set_matplotlib_formats
+
+set_matplotlib_formats(&#39;svg&#39;)
 
 sns.set_theme(&#39;talk&#39;, &#39;ticks&#39;, font=&#39;Arial&#39;, font_scale=1.0, rc={&#39;svg.fonttype&#39;: &#39;none&#39;})</code></pre>
 <h2 id="problem-setting">Problem setting</h2>
@@ -69,11 +72,11 @@ def solve_cat(cat_0, k_d, dt, n):
 
 plt.plot(solve(1.0, 1.0, jnp.ones((1000,)), 0.01))
 plt.plot(solve_cat(1.0, 1.0, 0.02, 1000))</code></pre>
-<pre><code>[&lt;matplotlib.lines.Line2D at 0x132ea1a60&gt;]</code></pre>
+<pre><code>[&lt;matplotlib.lines.Line2D at 0x1185b9f40&gt;]</code></pre>
 <figure>
-<img src="2025-11-26-reparam_files/2025-11-26-reparam_3_1.png"
-alt="png" />
-<figcaption aria-hidden="true">png</figcaption>
+<img src="2025-11-26-reparam_files/2025-11-26-reparam_3_1.svg"
+alt="svg" />
+<figcaption aria-hidden="true">svg</figcaption>
 </figure>
 <p>Now a simple model, first without worrying about measurement error.
 We’ll use both MCMC and SVI.</p>
@@ -92,8 +95,8 @@ guide = autoguide.AutoNormal(model)
 svi = SVI(model, guide, Adam(0.01), Trace_ELBO())
 svi_result = svi.run(PRNGKey(1), 2000, *args)
 svi_samples = guide.sample_posterior(PRNGKey(0), svi_result.params, sample_shape=(100,))</code></pre>
-<pre><code>sample: 100%|██████████| 1100/1100 [00:00&lt;00:00, 1685.64it/s, 3 steps of size 9.31e-01. acc. prob=0.92]
-100%|██████████| 2000/2000 [00:00&lt;00:00, 4384.19it/s, init loss: 7.5166, avg. loss [1901-2000]: 0.0118]</code></pre>
+<pre><code>sample: 100%|██████████| 1100/1100 [00:00&lt;00:00, 1791.63it/s, 3 steps of size 9.31e-01. acc. prob=0.92]
+100%|██████████| 2000/2000 [00:00&lt;00:00, 7085.99it/s, init loss: 7.5166, avg. loss [1901-2000]: 0.0118]</code></pre>
 <pre class="python"><code>f, (a1, a2) = plt.subplots(ncols=2, sharey=True, figsize=(10, 4))
 a1.set_title(&#39;MCMC&#39;)
 a2.set_title(&#39;SVI&#39;)
@@ -108,9 +111,9 @@ f.legend(handles=[a_line, cat_line])
 a_line.set_alpha(0.1)
 cat_line.set_alpha(0.1)</code></pre>
 <figure>
-<img src="2025-11-26-reparam_files/2025-11-26-reparam_6_0.png"
-alt="png" />
-<figcaption aria-hidden="true">png</figcaption>
+<img src="2025-11-26-reparam_files/2025-11-26-reparam_6_0.svg"
+alt="svg" />
+<figcaption aria-hidden="true">svg</figcaption>
 </figure>
 <p>Very nice, we get a range of <span
 class="math inline">[<em>A</em>]</span> trajectories based on possible
@@ -137,8 +140,8 @@ guide = autoguide.AutoNormal(model)
 svi = SVI(model, guide, Adam(0.01), Trace_ELBO())
 svi_result = svi.run(PRNGKey(1), 2000, *args)
 svi_samples = guide.sample_posterior(PRNGKey(0), svi_result.params, sample_shape=(100,))</code></pre>
-<pre><code>sample: 100%|██████████| 1100/1100 [00:02&lt;00:00, 470.02it/s, 63 steps of size 4.88e-02. acc. prob=0.92]
-100%|██████████| 2000/2000 [00:00&lt;00:00, 2674.99it/s, init loss: 139124.0000, avg. loss [1901-2000]: 26.2503]</code></pre>
+<pre><code>sample: 100%|██████████| 1100/1100 [00:02&lt;00:00, 549.16it/s, 63 steps of size 4.88e-02. acc. prob=0.92]
+100%|██████████| 2000/2000 [00:00&lt;00:00, 3172.51it/s, init loss: 139124.0000, avg. loss [1901-2000]: 26.2503]</code></pre>
 <pre class="python"><code>f, (a1, a2) = plt.subplots(ncols=2, sharey=True, figsize=(10, 4))
 a1.set_title(&#39;MCMC&#39;)
 a2.set_title(&#39;SVI&#39;)
@@ -157,9 +160,9 @@ a_line.set_alpha(0.1)
 cat_line.set_alpha(0.1)
 meas_line.set_alpha(0.02)</code></pre>
 <figure>
-<img src="2025-11-26-reparam_files/2025-11-26-reparam_9_0.png"
-alt="png" />
-<figcaption aria-hidden="true">png</figcaption>
+<img src="2025-11-26-reparam_files/2025-11-26-reparam_9_0.svg"
+alt="svg" />
+<figcaption aria-hidden="true">svg</figcaption>
 </figure>
 <p>Yes, not looking good at all. We were expecting the exact sample
 plots! I tried increasing the number of samples, warmup and SVI steps
@@ -200,8 +203,8 @@ guide = autoguide.AutoNormal(model)
 svi = SVI(model, guide, Adam(0.01), Trace_ELBO())
 svi_result = svi.run(PRNGKey(1), 2000, *args)
 svi_samples = guide.sample_posterior(PRNGKey(0), svi_result.params, sample_shape=(100,))</code></pre>
-<pre><code>sample: 100%|██████████| 1100/1100 [00:00&lt;00:00, 1229.30it/s, 15 steps of size 3.03e-01. acc. prob=0.89]
-100%|██████████| 2000/2000 [00:00&lt;00:00, 3245.90it/s, init loss: 1233.4703, avg. loss [1901-2000]: 2.5142]</code></pre>
+<pre><code>sample: 100%|██████████| 1100/1100 [00:00&lt;00:00, 1576.36it/s, 15 steps of size 3.03e-01. acc. prob=0.89]
+100%|██████████| 2000/2000 [00:00&lt;00:00, 4285.20it/s, init loss: 1233.4703, avg. loss [1901-2000]: 2.5142]</code></pre>
 <pre class="python"><code>f, (a1, a2) = plt.subplots(ncols=2, sharey=True, figsize=(10, 4))
 a1.set_title(&#39;MCMC&#39;)
 a2.set_title(&#39;SVI&#39;)
@@ -220,9 +223,9 @@ a_line.set_alpha(0.1)
 cat_line.set_alpha(0.1)
 meas_line.set_alpha(0.02)</code></pre>
 <figure>
-<img src="2025-11-26-reparam_files/2025-11-26-reparam_12_0.png"
-alt="png" />
-<figcaption aria-hidden="true">png</figcaption>
+<img src="2025-11-26-reparam_files/2025-11-26-reparam_12_0.svg"
+alt="svg" />
+<figcaption aria-hidden="true">svg</figcaption>
 </figure>
 <p>Beautiful! The latent concentrations are now exactly as before and we
 also have a nice extra variable showing measurement with error. How
@@ -244,9 +247,9 @@ plt.gca().set(ylabel=&#39;$k_d$&#39;, xlabel=&#39;$k$&#39;)
 plt.gca().set_xlim(left=0.0)
 plt.gca().set_ylim(bottom=0.0);</code></pre>
 <figure>
-<img src="2025-11-26-reparam_files/2025-11-26-reparam_14_0.png"
-alt="png" />
-<figcaption aria-hidden="true">png</figcaption>
+<img src="2025-11-26-reparam_files/2025-11-26-reparam_14_0.svg"
+alt="svg" />
+<figcaption aria-hidden="true">svg</figcaption>
 </figure>
 <p>Nice, normal as expected!</p>
 <p>You will notice a quirk: I had to know that the name of the
@@ -321,8 +324,8 @@ obs = np.full((500,), np.nan)
 args = (1.0, 0.1, 0.01, 500, 0.05, obs)
 
 results = infer(model, args)</code></pre>
-<pre><code>sample: 100%|██████████| 2100/2100 [00:01&lt;00:00, 1092.37it/s, 15 steps of size 3.03e-01. acc. prob=0.85]
-100%|██████████| 10000/10000 [00:01&lt;00:00, 5173.40it/s, init loss: 1233.4703, avg. loss [9501-10000]: 2.4468]</code></pre>
+<pre><code>sample: 100%|██████████| 2100/2100 [00:01&lt;00:00, 1359.92it/s, 15 steps of size 3.03e-01. acc. prob=0.85]
+100%|██████████| 10000/10000 [00:01&lt;00:00, 5709.20it/s, init loss: 1233.4703, avg. loss [9501-10000]: 2.4468]</code></pre>
 <p>Sampling from the prior predictive, i.e. when the observations are
 all <code>np.nan</code>.</p>
 <pre class="python"><code>def plot_samples(mcmc_samples, svi_samples, obs):
@@ -353,9 +356,9 @@ all <code>np.nan</code>.</p>
 plot_samples(results[&#39;mcmc_samples&#39;], results[&#39;svi_samples&#39;], obs)
 plt.tight_layout()</code></pre>
 <figure>
-<img src="2025-11-26-reparam_files/2025-11-26-reparam_20_0.png"
-alt="png" />
-<figcaption aria-hidden="true">png</figcaption>
+<img src="2025-11-26-reparam_files/2025-11-26-reparam_20_0.svg"
+alt="svg" />
+<figcaption aria-hidden="true">svg</figcaption>
 </figure>
 <p>Now let’s supply a single observation, specifically one that suggests
 the reaction is faster than predicted by most trajectories. In the
@@ -371,12 +374,12 @@ results = infer(model, args)
 
 plot_samples(results[&#39;mcmc_samples&#39;], results[&#39;svi_samples&#39;], obs)
 plt.tight_layout()</code></pre>
-<pre><code>sample: 100%|██████████| 2100/2100 [00:02&lt;00:00, 868.05it/s, 15 steps of size 3.08e-01. acc. prob=0.85] 
-100%|██████████| 10000/10000 [00:02&lt;00:00, 4996.71it/s, init loss: 1234.0802, avg. loss [9501-10000]: 3.8389]</code></pre>
+<pre><code>sample: 100%|██████████| 2100/2100 [00:01&lt;00:00, 1255.81it/s, 15 steps of size 3.08e-01. acc. prob=0.85]
+100%|██████████| 10000/10000 [00:01&lt;00:00, 5971.33it/s, init loss: 1234.0802, avg. loss [9501-10000]: 3.8389]</code></pre>
 <figure>
-<img src="2025-11-26-reparam_files/2025-11-26-reparam_22_1.png"
-alt="png" />
-<figcaption aria-hidden="true">png</figcaption>
+<img src="2025-11-26-reparam_files/2025-11-26-reparam_22_1.svg"
+alt="svg" />
+<figcaption aria-hidden="true">svg</figcaption>
 </figure>
 <pre class="python"><code>all_data = pd.concat([
     posterior_df(results[&#39;mcmc_samples&#39;])[[&#39;k&#39;, &#39;k_d&#39;]].assign(Method=&#39;MCMC&#39;),
@@ -386,9 +389,9 @@ sns.kdeplot(all_data, x=&#39;k&#39;, y=&#39;k_d&#39;, hue=&quot;Method&quot;, fi
 plt.gca().set(xlabel=&#39;$k$&#39;, ylabel=&#39;$k_d$&#39;)</code></pre>
 <pre><code>[Text(0.5, 0, &#39;$k$&#39;), Text(0, 0.5, &#39;$k_d$&#39;)]</code></pre>
 <figure>
-<img src="2025-11-26-reparam_files/2025-11-26-reparam_23_1.png"
-alt="png" />
-<figcaption aria-hidden="true">png</figcaption>
+<img src="2025-11-26-reparam_files/2025-11-26-reparam_23_1.svg"
+alt="svg" />
+<figcaption aria-hidden="true">svg</figcaption>
 </figure>
 <p>And here we go, a very different picture now, and as expected the
 <code>AutoNormal</code> SVI guide fails to capture the correlation
@@ -412,8 +415,8 @@ guide = autoguide.AutoGuideList(model)
 guide.append(autoguide.AutoNormal(handlers.block(model, expose=[&#39;a_draw_base_decentered&#39;])))
 guide.append(autoguide.AutoMultivariateNormal(handlers.block(model, expose=[&#39;k_base_decentered&#39;, &#39;k_d_base_decentered&#39;])))
 results = infer(model, args, guide)</code></pre>
-<pre><code>sample: 100%|██████████| 2100/2100 [00:02&lt;00:00, 932.25it/s, 15 steps of size 3.08e-01. acc. prob=0.85]  
-100%|██████████| 10000/10000 [00:02&lt;00:00, 4894.64it/s, init loss: 1272.4036, avg. loss [9501-10000]: 3.7564]</code></pre>
+<pre><code>sample: 100%|██████████| 2100/2100 [00:01&lt;00:00, 1313.56it/s, 15 steps of size 3.08e-01. acc. prob=0.85]
+100%|██████████| 10000/10000 [00:01&lt;00:00, 5945.90it/s, init loss: 1272.4036, avg. loss [9501-10000]: 3.7564]</code></pre>
 <p>This is more involved and it seems like <code>AutoGuideList</code>
 doesn’t deal with deterministic sites, so we have derive them manually.
 I had to read a lot of numpyro’s source code to figure out how.</p>
@@ -433,17 +436,17 @@ sns.kdeplot(all_data, x=&#39;k&#39;, y=&#39;k_d&#39;, hue=&quot;Method&quot;, fi
 plt.gca().set(xlabel=&#39;$k$&#39;, ylabel=&#39;$k_d$&#39;)</code></pre>
 <pre><code>[Text(0.5, 0, &#39;$k$&#39;), Text(0, 0.5, &#39;$k_d$&#39;)]</code></pre>
 <figure>
-<img src="2025-11-26-reparam_files/2025-11-26-reparam_28_1.png"
-alt="png" />
-<figcaption aria-hidden="true">png</figcaption>
+<img src="2025-11-26-reparam_files/2025-11-26-reparam_28_1.svg"
+alt="svg" />
+<figcaption aria-hidden="true">svg</figcaption>
 </figure>
 <p>And here we go!</p>
 <pre class="python"><code>plot_samples(results[&#39;mcmc_samples&#39;], results[&#39;svi_samples&#39;], obs)
 plt.tight_layout()</code></pre>
 <figure>
-<img src="2025-11-26-reparam_files/2025-11-26-reparam_30_0.png"
-alt="png" />
-<figcaption aria-hidden="true">png</figcaption>
+<img src="2025-11-26-reparam_files/2025-11-26-reparam_30_0.svg"
+alt="svg" />
+<figcaption aria-hidden="true">svg</figcaption>
 </figure>
 <p>I hope this was fun to explore together. Very happy to chat if you
 have any suggestions or questions. This experiment was motivated by my
