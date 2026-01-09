@@ -34,7 +34,7 @@ $(OUT_DIR)/blog/posts/%.md: blog/notebooks/%.ipynb | $(OUT_DIR)/blog/posts
 
 # .html posts from .md
 $(OUT_DIR)/blog/posts/%.html: $(OUT_DIR)/blog/posts/%.md $(OUT_DIR)/primer.css $(OUT_DIR)/light.css $(OUT_DIR)/dark.css
-	pandoc -s "$<" --template=_template.html --syntax-highlighting=none -o "$@"
+	pandoc -s "$<" --template=_template.html --syntax-highlighting=none --mathjax -o "$@"
 
 $(OUT_DIR)/feed.xml: $(ALL_HTMLS)
 	echo $(ALL_HTMLS) && \
