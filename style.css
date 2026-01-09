@@ -99,7 +99,7 @@ figure {
 }
 
 figure img {
-    width: max(60%, 400px);
+    max-width: 100%;
 }
 
 figcaption {
