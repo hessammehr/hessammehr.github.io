@@ -12,8 +12,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install Pandoc
-        run: sudo apt-get install pandoc xmlstarlet
+      - name: Install runtime dependencies
+        run: sudo apt-get update && sudo apt-get install -y pandoc
 
       - name: Install uv
         uses: astral-sh/setup-uv@v4
@@ -21,91 +21,12 @@ jobs:
       - name: Set up Python
         run: uv python install
 
-      - name: Download Primer CSS and Highlight.js themes
-        run: |
-          curl -O https://unpkg.com/@primer/css/dist/primer.css
-          curl -o light.css https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/github.min.css
-          curl -o dark.css https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/night-owl.min.css
-
-      - name: Convert blog notebooks
-        run: |
-          for file in $(find ./blog/notebooks -name "*.ipynb"); do
-            uv run --no-dev jupyter nbconvert --to markdown "$file" --output-dir ./blog/posts
-          done
-      - name: Generate RSS feed
-        run: |
-          cp feed.template.xml feed.xml
-
-          for file in $(find ./blog/posts -name "*.md" | sort -r); do
-            date=$(basename "$file" | cut -d- -f1,2,3)
-            title=$(sed -n '1s/^# //p' "$file")
-            formatted_date=$(date -d "$date" --rfc-822)
-            
-            # Extract first non-empty paragraph after h1 as description
-            description=$(awk 'BEGIN{p=0} /^# /{p=1;next} p==1&&NF>0{printf "%s ", $0;exit}' "$file" | xmlstarlet escape)
-            
-            # Insert item before closing </channel> tag
-            sed -i "/<\/channel>/i \
-              <item>\n\
-                <title>$title</title>\n\
-                <link>https://hessammehr.github.io/blog/posts/$(basename ${file%.md}.html)</link>\n\
-                <guid>https://hessammehr.github.io/blog/posts/$(basename ${file%.md}.html)</guid>\n\
-                <pubDate>$formatted_date</pubDate>\n\
-                <description>$description</description>\n\
-              </item>" feed.xml
-          done
-
-      - name: Generate blog index
-        run: |
-          cp blog/index.template.md blog/index.md
-
-          for file in $(find ./blog/posts -name "*.md" | sort -r); do
-            date=$(basename "$file" | cut -d- -f1,2,3)
-            title=$(sed -n '1s/^# //p' "$file")
-            filename=$(basename "$file")
-            echo "| $date | [$title]" >> blog/index.md
-          done
-
-          echo "" >> blog/index.md
-
-          for file in $(find ./blog/posts -name "*.md" | sort -r); do
-            title=$(sed -n '1s/^# //p' "$file")
-            filename=$(basename "$file")
-            echo "[$title]: /blog/posts/$filename" >> blog/index.md
-          done
-
-      - name: Convert blog Markdown files to HTML
-        run: |
-          for file in $(find ./blog/posts -name "*.md"); do
-            pandoc -s "$file" \
-              --template=_template.html \
-              --no-highlight \
-              -o "${file%.md}.html"
-          done
-
-      - name: Convert CV markdown to HTML
-        run: |
-          pandoc --section-divs -s CV.md -o CV.html
-
-      - name: Convert blog index to HTML
-        run: |
-          pandoc -s blog/index.md \
-            -c /style.css \
-            --lua-filter=<(echo '
-              function Link(el)
-                el.target = el.target:gsub("%.md$", ".html")
-                return el
-              end
-            ') \
-            -o blog/index.html
-
-      - name: Convert main index.md to HTML
-        run: |
-          pandoc -s index.md -c style.css -o index.html
+      - name: Build site
+        run: make build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: master
-          publish_dir: ./
+          publish_dir: .build
