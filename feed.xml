@@ -1,269 +1,2007 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-<channel>
-  <title>Hessam's blog</title>
-  <description>Personal takes and hobby projects covering chemistry, programming and electronics</description>
-  <link>https://hessammehr.github.io/blog/</link>
-  <atom:link href="https://hessammehr.github.io/feed.xml" rel="self" type="application/rss+xml" />
-  <language>en-us</language>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2013-12-23-a-new-way-of-doing-chemistry.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2013-12-23-a-new-way-of-doing-chemistry.html.html</guid>
-    <pubDate>Mon, 23 Dec 2013 00:00:00 +0000</pubDate>
-    <description></description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2013-12-28-funny.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2013-12-28-funny.html.html</guid>
-    <pubDate>Sat, 28 Dec 2013 00:00:00 +0000</pubDate>
-    <description></description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2019-04-07-fertile-land-at-the-confluence-of-staged-programming-and-typed-logic-programming.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2019-04-07-fertile-land-at-the-confluence-of-staged-programming-and-typed-logic-programming.html.html</guid>
-    <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-    <description></description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2020-05-24-lazy-interactive-optimization.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2020-05-24-lazy-interactive-optimization.html.html</guid>
-    <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
-    <description></description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2020-06-14-rant-against-macros.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2020-06-14-rant-against-macros.html.html</guid>
-    <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
-    <description>  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2025-12-24-maths-to-lampshade.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2025-12-24-maths-to-lampshade.html.html</guid>
-    <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
-    <description></description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2024-12-26-locally-constrained.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2024-12-26-locally-constrained.html.html</guid>
-    <pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate>
-    <description>plt.scatter(obs_idx, obs_vals, label=  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html.html</guid>
-    <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
-    <description>fig, ax = plt.subplots() </description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html.html</guid>
-    <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-    <description></description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html.html</guid>
-    <pubDate>Mon, 21 Jul 2025 00:00:00 +0000</pubDate>
-    <description>model = DropletOpticsModel() </description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html.html</guid>
-    <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
-    <description></description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html.html</guid>
-    <pubDate>Wed, 26 Nov 2025 00:00:00 +0000</pubDate>
-    <description>guide = autoguide.AutoGuideList(model) </description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html.html</guid>
-    <pubDate>Wed, 17 Dec 2025 00:00:00 +0000</pubDate>
-    <description></description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2026-01-09-nicer-plots.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2026-01-09-nicer-plots.html.html</guid>
-    <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
-    <description></description>
-  </item>
-</channel>amp;#39;Observed values</channel>amp;#39;, color=</channel>amp;#39;crimson</channel>amp;#39;, s=20, zorder=10) </description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html.html</guid>
-    <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
-    <description>fig, ax = plt.subplots() </description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html.html</guid>
-    <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-    <description></description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html.html</guid>
-    <pubDate>Mon, 21 Jul 2025 00:00:00 +0000</pubDate>
-    <description>model = DropletOpticsModel() </description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html.html</guid>
-    <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
-    <description></description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html.html</guid>
-    <pubDate>Wed, 26 Nov 2025 00:00:00 +0000</pubDate>
-    <description>guide = autoguide.AutoGuideList(model) </description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html.html</guid>
-    <pubDate>Wed, 17 Dec 2025 00:00:00 +0000</pubDate>
-    <description></description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2026-01-09-nicer-plots.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2026-01-09-nicer-plots.html.html</guid>
-    <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
-    <description></description>
-  </item>
-</channel>lt;p</channel>gt;And we see that Turing has sampled both </channel>lt;code</channel>gt;y</channel>lt;/code</channel>gt; and </description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2025-12-24-maths-to-lampshade.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2025-12-24-maths-to-lampshade.html.html</guid>
-    <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
-    <description></description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2024-12-26-locally-constrained.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2024-12-26-locally-constrained.html.html</guid>
-    <pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate>
-    <description>plt.scatter(obs_idx, obs_vals, label=  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html.html</guid>
-    <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
-    <description>fig, ax = plt.subplots() </description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html.html</guid>
-    <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-    <description></description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html.html</guid>
-    <pubDate>Mon, 21 Jul 2025 00:00:00 +0000</pubDate>
-    <description>model = DropletOpticsModel() </description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html.html</guid>
-    <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
-    <description></description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html.html</guid>
-    <pubDate>Wed, 26 Nov 2025 00:00:00 +0000</pubDate>
-    <description>guide = autoguide.AutoGuideList(model) </description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html.html</guid>
-    <pubDate>Wed, 17 Dec 2025 00:00:00 +0000</pubDate>
-    <description></description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2026-01-09-nicer-plots.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2026-01-09-nicer-plots.html.html</guid>
-    <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
-    <description></description>
-  </item>
-</channel>amp;#39;Observed values</channel>amp;#39;, color=</channel>amp;#39;crimson</channel>amp;#39;, s=20, zorder=10) </description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html.html</guid>
-    <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
-    <description>fig, ax = plt.subplots() </description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html.html</guid>
-    <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-    <description></description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html.html</guid>
-    <pubDate>Mon, 21 Jul 2025 00:00:00 +0000</pubDate>
-    <description>model = DropletOpticsModel() </description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html.html</guid>
-    <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
-    <description></description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html.html</guid>
-    <pubDate>Wed, 26 Nov 2025 00:00:00 +0000</pubDate>
-    <description>guide = autoguide.AutoGuideList(model) </description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html.html</guid>
-    <pubDate>Wed, 17 Dec 2025 00:00:00 +0000</pubDate>
-    <description></description>
-  </item>
-  <item>
-    <title></title>
-    <link>https://hessammehr.github.io/blog/posts/2026-01-09-nicer-plots.html</link>
-    <guid>https://hessammehr.github.io/blog/posts/2026-01-09-nicer-plots.html.html</guid>
-    <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
-    <description></description>
-  </item>
-</channel>
-</rss>
+<?xml version='1.0' encoding='utf-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><title>Hessam's blog</title><link href="https://hessammehr.github.io/blog/" rel="alternate" /><link href="https://hessammehr.github.io/feed.xml" rel="self" /><id>https://hessammehr.github.io/</id><author><name>Hessam Mehr</name></author><updated>2026-01-09T00:00:00+00:00</updated><entry><title>A little snippet for nicer plots using matplotlib</title><link href="https://hessammehr.github.io/blog/posts/2026-01-09-nicer-plots.html" rel="alternate" /><id>https://hessammehr.github.io/blog/posts/2026-01-09-nicer-plots.html</id><published>2026-01-09T00:00:00+00:00</published><updated>2026-01-09T00:00:00+00:00</updated><summary type="html">&lt;h1&gt;A little snippet
+for nicer plots using matplotlib&lt;/h1&gt;
+&lt;p&gt;If you’ve seen previous blog posts (or read any of our &lt;a href="https://scholar.google.com/citations?user=HeyhCHEAAAAJ"&gt;group
+papers&lt;/a&gt;) you may have noticed the plots have a consistent look.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import seaborn as sns
+from matplotlib import pyplot as plt&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The default matplotlib look&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;plt.plot([1,2,5,3])&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[&amp;lt;matplotlib.lines.Line2D at 0x11530e960&amp;gt;]&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2026-01-09-nicer-plots_files/2026-01-09-nicer-plots_3_1.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Not bad but try the following now&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from matplotlib_inline.backend_inline import set_matplotlib_formats
+set_matplotlib_formats('svg')
+
+sns.set_theme('talk', 'ticks', font='Arial', font_scale=1.0, rc={'svg.fonttype': 'none'})&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;plt.plot([1,2,5,3])&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[&amp;lt;matplotlib.lines.Line2D at 0x1154e8ce0&amp;gt;]&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="svg" src="2026-01-09-nicer-plots_files/2026-01-09-nicer-plots_6_1.svg"/&gt;
+&lt;figcaption&gt;svg&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;An added perk is that the plot is now embedded in your notebook as
+SVG so if you export to Markdown/HTML they will stay nice and
+crisp.&lt;/p&gt;</summary></entry><entry><title>3D printed lampshade from a formula</title><link href="https://hessammehr.github.io/blog/posts/2025-12-24-maths-to-lampshade.html" rel="alternate" /><id>https://hessammehr.github.io/blog/posts/2025-12-24-maths-to-lampshade.html</id><published>2025-12-24T00:00:00+00:00</published><updated>2025-12-24T00:00:00+00:00</updated><summary type="html">&lt;h1&gt;3D printed lampshade from a
+formula&lt;/h1&gt;
+&lt;p&gt;I’ve been playing with translucent PLA for lighting projects at home.
+Earlier this year, I built a diffuser/housing for our Lidl LED strip,
+since the light from the exposed LEDs was too cool and jarring. The
+design files are on OnShape, although they might need tweaking for the
+exact strip and required installation area.&lt;/p&gt;
+&lt;div&gt;
+&lt;p&gt;&lt;img alt="alt text" src="../images/livarno-led.png"/&gt; &lt;img alt="alt text" src="../images/rail-design.png"/&gt; &lt;img alt="alt text" src="../images/kitchen-lights.jpeg"/&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;A few viral videos have recently popped up in my YouTube feed showing
+bespoke 3D-printed lampshades. These ondulating membranes struck me as a
+surface that would arise from sweeping 2D profile as it’s raised and
+rotated through space. Making one from scratch seemed like a fun
+challenge (not to mention a nice Christmas present!).&lt;/p&gt;
+&lt;h2&gt;2D profile&lt;/h2&gt;
+&lt;p&gt;I started by graphing the following equation in &lt;a href="https://www.desmos.com/calculator/ramwof22yn"&gt;Desmos&lt;/a&gt; (link
+will take you to the formula).&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;\[ r = \cos(5\theta) + 0.2\cos(9\theta) +
+0.05\cos(200\theta) + 4\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Something like this with big gentle ondulations on top of which small
+jittery ridges are overlapped.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="alt text" src="../images/graph.png"/&gt;
+&lt;figcaption&gt;alt text&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h2&gt;Trying (and failing) 3D with
+OnShape&lt;/h2&gt;
+&lt;p&gt;Desmos helpfully allows export to SVG, which I then converted to DXF
+in Inkscape so it can be imported into OnShape. DXF files can be added
+to OnShape sketches directly. So far so good. Creating the loft object
+in OnShape proved challenging though. A loft is pretty much what I
+described earlier, the volume or surface created as one 2D profile is
+interpolated to another. In this case, the second profile is just a
+point placed above the initial one. Something like this:&lt;/p&gt;
+&lt;div&gt;
+&lt;p&gt;&lt;img alt="alt text" src="../images/profiles.png"/&gt;&lt;img alt="alt text" src="../images/onshape-loft.png"/&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The loft tool provide a few nice settings, specifically the initial
+and final angle of approach to each profile. I want the shape to rise
+straight from the 2D contour and form a tangent to the final point. This
+way the top will form a nice dome rather than a sharp spike.&lt;/p&gt;
+&lt;p&gt;This complex organic-looking profile, made up of 1047 points, doesn’t
+really seem to fit OnShape’s main usecase. The loft operation kept
+failing to process (although it looks nice) and froze a couple of times
+too.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="alt text" src="../images/onshape-error.png"/&gt;
+&lt;figcaption&gt;alt text&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;At this point, I had another idea. Since the point coordinates are
+known, it shouldn’t be too hard to create the shape in Python. This is
+not something I had done before, so I asked ChatGPT for advice. It gave
+me a script, which I was able to modify (&lt;a href="https://github.com/hessammehr/lampshades"&gt;repo here&lt;/a&gt;) to create
+the transition to a single point at the top (essentially scaling the
+profile depending on height). The results is a massive 70+MB STL file,
+which is currently printing …&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="alt text" src="../images/lampshade-printing.jpeg"/&gt;
+&lt;figcaption&gt;alt text&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;Update: &lt;/strong&gt; I’ve converted the Jupyter notebook to
+marimo so it’s easier to visualise the cross section and profile of the
+generated lampshade. You don’t even need to install Python to run this
+code, it will run directly in the browser using WebAssembly (&lt;a href="https://marimo.app/#code/JYWwDg9gTgLgBCAhlUEBQaD6mDmBTAOzykRjwBNMB3YGACzgF44AiABgDoBGADg4BYWaRGDBMEyVBwCCogBQBKDGgACIsBwDGeADY605PADM4mRQC40ca3FCRYcKHis270eAQCu4AJ5xEAM5wBGAu1m4OAB4gOhx4ME54HACiOngghDAAKon+QclZYXBGUBAgcAF0Iro+HPhl8VB+EfAAChA6PjgQBEUtcAmgeJV94O7B8VTQANaRo-bwAZrAYD7z4wF4iABG0AR5FQQBGDbFpeVIMGA6EDA6wNu2Yw6r17cH1zDrDkgoIBAHf4nGwBI4cTYwTD0dJ4OQsGCIHTTFgAGlYMGAmmmAVRxR6MEYLGkKERuKM+MwS0ReEYXA4bDRUE0jAA3iwAgA3HAcckEGAwHxgPAscysAg9YUAXyUpycME8UH2BTR7U63QIaP+aJCaM+jLwaMGGRGGDUoi0un0hhMZi1wTAup0MAUllO1sccmhCJdRVOAGJHIAQAkYgc0EACgDACOQAVkAHcAKQCgBABqBOcABMYcjcgAnPHk6n6dHM1G02w2HmU-xfTY5Qr9iEtOGY3AAFQDOjxRAKOBJuDp1v2xsBHMDr1dnt9wsDhuZuSltijjveif8enKN3GOBgUpGYBpOTkH2nU4sABK8TrQWhFU01OKiE0MGgeKgcB0iB8xDgVA7Tjg5FsIJxSgJB7k2ADyGAAIEQIbQBgBJ8xAgExKmqDghGPGsL0VQcAgAR1gA9uzbOR+17BsdmHMjJ2jacNACYACAPOiODAYAFA49cbDHIJmAokgCHwUi0TTFi2LRTg2C4GUbHIXjB3uI4wAfWEGTgLg0S4MsZOsKB5KgT0l0CHS4EifSgjbGcmx4kyfHMliGKYmyikiOzxAbaCH2mOQAG0zLROyAF00UQSIoMYABaaSiiMNE5EQDT-DTbtmE+cFPG2N4YGHWCOgCRg0zRXccAYgAvGkczRfhONOBLWJuGA5H8uA7JMxA03q24DwCXUdz3WE5Jqmx-g4cBYkYsgSEfYAOVhNKcE0IxFBM2scO3ZD+rRVzjlNdQLT0AxNzMZV7X1I9ZM3G5EEoTkcEwZT6HuiAJuHW77tIOhRWgqBuwigA+QcCHIZASB8V1MNYFgMIh5JIgSB9svbPBimAPSPB6CL0jAAU4AAHgehhyEJDgSZYAHECBxxsKOfx9jkAA5FFkv8KBQeraxkLgAANABNLdnr5IJGLgABlAA1ABxOBPE2V9PAIWgAg4dm4GkAIAm8YYka3D7AP8HQnGuvxIKWOUoIoOA5AaoJOYAGTgMMQCQIGAgUNEf0xBhLk0Dsgh8CAFRRtJlYhyHocw0p3mYApWOQTY5DegmFDqRoIC6pQVYA5h6YlFXyVfXRbH2SOYA4WhiAsFXTmAExdA4BFuQCa5aDhSUWAUHyosCphmBYAmRSriHb0p5g69IQZthTxqWHIXEoZM0Pq5MNImOHw84ABthwcXxes4dinyEHnftkN6YVZr-89Zzoht8XkhzbgMXEU8PBklZ6A4Rz4IMaxnH8d1omAByEmHBAEA3JPLACwtrziwluhDOocAyw3ho+fWOhgjeG2MQAIABubWu40h6xYAAWVMi1OA9tIjkMoeQkBuIAgAi8BkFAmgKgJC2OUKCpkGQ+AZJEDSPgNIgJVkw+SYFGpIDAHIIwV0YD6h5IxYGeg5BQBYJ3JMgUAD8AAdcgLZtEcF0UmAAPuorRRjcSHiGphC+K85CiO7AAUjgKJAAhMwLeR9HCIAfk-HQL836lAMiwAA8uQACTCsGvk5mGaAkECCkC1ngOGU0yAARKGUUWksdb0HgSrbG8l+Kg3sd4Hq-4BRCkYDIiApBk5OFQkKOQUURIIIhgGc8-xZoOx6JsTQngMRdPIJ4Zut4yBBAPlTTpyNkkjNoA7G4jkcD8wmrYEw25hiZEzjXIwhSNCKURNyYCIB7EaEgkYJaBSQphXymwN2-hrm0gXjYaYeA8BiD4hoOgnksS+R8jkF+wV-zbKCADLgeAIrZkCk86wBTxAFJ8i8t5gVz4mAbPsnQhzoDHPhWwbuEUtzZU7lwKFeN1LguzLfUOsLUqEvMF3YEEdqYEuOLKamygzQaG0Add0ZhVRdB6NqB0W4+ppENH8YYdAtqtVvu6SAaoeiYGQFsTA2g+SlGAOQOQBTRQNiBiDD8v0AbymuHgHy1TSCCo4Hq1mH5AqUpsFQmlAQfLmAksi0OfgnUus0u6iG-D3IaFKMoyIaIorQpalwANHAg06DkD4UN0VQ6IHEJwWill6LeCagOQRcB8X+rbD4cNmhHWWzpAuAA9JbAAbPSAcXZiK4UzVm3s-CG1ZoLZGvNkaC3WOPJoT1pba2VrkDWhcbZ60OSbX4Xsgi21UI7bm0y3aWq9tZfKHCiBLX6p8L5YtaJ+2AvIBUmk5rnRcWsO6epiAxp4BVQsigT1OiKTmtlHVGhrWg21KKCahrAbAxtWDFWUNw7HgAKoK3zuUZAmgV44HoFTAI17m6CTgJzZNMHwwWzlT4Z9IcIbastozZmNB6AB3gEMkZiSAKEAApACaeHMLnnXTTexTNk5AahirAMmwcAZD5G+QgcGvkqx41G9FmKQInI4GcpaDYOTfO8j5S5zKfK4qhVc8KtyNP5UTRDXZHAvkIh+T5VT9JAUzlKZmnjCgoUqyfAidBzBnX0tDgiKA+B4AfI4IpJuKlSL0kNLcRE2oJzSRdfSrjRdJpysSfrHoSzrzYefSrMjUbf47tYy4u5R7BQntkeGgAVim-J2U72Yb3nJhTvllM4sCrZ0O+dbCGiLnAQgmsSBkE9MgDz50d4e0IeKeACcfIFe7rjZg8BcYVBG6FqF9qd5FaTMwLgXil5wCK39ZgdjrPzZ3jYIrW3CAJzwDgX66lVsQxPlsM+e3pbiE9Iu51o3uzDqe7Nx7I3u69jBVFaM4bThkZ8sAbuzA5Cdulg2gpZXwKfYnJ4AcUOMMw8W+pX1jLmOof6ee-8m5SgIjIJgVyTUwZ-u3YaIyopT2-t1f+0Gu3NBon07OMcdyPKMUMp2cNp4o3bt+Qz3NARAU+TKZoOraIcuVKpyrVa+xXJwBUHAU8HBCgMpxyYGANBoIPsqJaTAxo6ByBS-04ghOSc07J+fAgRAoCm7fVa2nH44DGLgNfA0KsOzABwHQSETtKeyJRCIzA75Px6W-XyAPrmgs6ChJryEJByB+5qXIoov6jQSuV+Kyou3gMqwloQYgiTxnfkSbAT33uEASt2-isjX4NZQCMCpL6RmXkATx1RxwjESrdKt3gR8Ftth+Dwp4a6QRPQkkEp4d8aTw3V+xsAHoiIi7W4qAqBvcEVF4FmnpZG0BgCZFIPPgg3YJnQVoD7C2fxxnwEQuW3Y-Iyiq4B8bm3cuJmMWt6blmyMGZsZZqDMpdg9wywdwfgSOFA+6mQTgAEOwqWwktyDGx4OemcuOnemAW+GI2gw460BCt6rkduH6BquaAM5uAGu2pw9McKIquBtQDSpquKXipCfEQeH42CXipU+mPmyk2g-makHuXuPuIAaIxC-23ERkHBjEvm3BkkgWDmMeUEce10QhIh1g6B+m6WcgcgpCbYjMcAAAzNlselUvll4o1sAHFKVOTt2MLG1swoknIKVCsPYWUjZL1rdkCp5LBMjKDqQvisAIutJHAMOj4epMoceK5JgHjuIG3gTkTtgf1KbpYRdiocQISn4doXAKKHIH4d9g2joVvGmCDqZD4BEe8G2HEfuCbDBNoKEacKoUDgOBQZkdkSEQ0SJIUaVF4jLnAKoY-hdChBqremvsMAzGHnInAMQqMWiMhDsvEJMcUPcGAKKLsB0L+uIj5GsRNHVmQTYEMfJD5GjovKYS1gJEJMEdJNsZhNsIEHgAuMwNMRCBOGkS7kkXAFcZsJGncecg8b2FkaFrkS8Y1kVsLCcbCPTK4W4ftvsKDijgEc4vTC8bVOIG8TcROAVgiTYI8MwMiQuL2AVr0BCZhKwlidcZGrifiQSW6EiSSaieieEKiu8DIisBcW4bsRwOoDRr5Juq8fuvVhSRDKyeyUDJyfuuLryXya1joJsMybdgGE4FvpsN+Iop3rSceAKaIByT5FyfztsGKeKTsSpErIKZqpqeLjyaEV0bsb0RzM-p-l5oELzjXi-vGuUrlkYUnuGhQXcTaa5OCFUEKKpgcacIwcEMwSHjtKHKoZgI6VEagegZiMMY6abuGrseIAxIYJgLsQzIwDocQowMQlMV8fEIwGpIyWAIwAAGKIibDhqqHiCRmOlWmrJL4m5y5cKDYu4SjMnv4tkDoUSIYAZZE95Oni6GFS63YXzdlOm+nVABlwDuIu7Sk1g+IKl+IBLvzBIACSQ5tMAE0Z5RWsIAMs8AVQXS14iGGQyy-GYY8s8AiARgk0CGSGik3I7cXikZk5MZgkaBKR8Zw4k5SZjZAOhZkIH5h2TEqhoRtZXm8mzevkqhaI75Q5upDWBpPYTmAxGZBpWZOZeZBZMxBI9x8QmAk5RUCxjA-yeArSO83GGIMAPsrxtwT45QfwlspUxZLomOD5KAKGC4T4zZr43FSybAJhz4QJxcFMQkYJi51geJ92MJTizxFJEAtx62LxEAHx625JEJwAKlhFIF25uJLxwAGlelxFBlmlAJBpbJ6pQpPkylaIxlDluKNR+pmB1lQotl9lqGiUxltmXiNFZ+DAiEHe5Q9hjAAAEhxdGYJeMVFPBPxR3ihsQlFF4ohFGc-vdmcf8bdmlaBahsBWZcvj8VlQ0SJa+GJd4oJKCeCXtrJdCX8XAHCWpSpWldGYZUpRpa1RlWSUZS1RAGAIVV+O1QScZeILleZXiZZW5Uab5F5TpQ5cSi5dYGqR5caXNYlOpX5aHPrmNZnnQBnkMJUHIHGZgYwPBfeKdUUh+NIgaSOa6T+r1BAJgflJWZKZRSrPrqNMQPgN+aXpgYoB9enruJEJgEclWQDdtenutM9cdYiBqokuRVAC-OGl0frtju6EgOzjVdYInLrL3IYAEP8AEBFDgCQGAPtbdEIJFhFDTdLLLDrCQBkJNEEDTRFO7ngGXgIeIPOGuJHrIRrvIVCJeCmtwIHsHtguIFpAuHAAGIxJoIbAqY1oTWnNCK+ALdBHgoYPLVsIrc+EYHgFQF+IMBJWkCyhDAQPdFQU9C9OINGGWNYAGGGGqnlB3qIIQruIYPcDjBMsbYJIQteXyHZt1kRYmZBNevECbk7NzaWLWjLTeHeDAtknxfQFwiEgACIqxUCIjR4p1YhEDqx67lDLYcCiRx0PGu4vj+AVCd6EJ15DEqwFYCyUgCiELMCl0BhcCMClCQIiSMAgC0BOBoi6GMBYKzToJyAix+k1BUXHgBis1vg1IAQABkDskByM+5uaNNKsSqWpkBz0e82G6oiqhsKqe9GqxOrsJW8k20i6qqCQ+9jZSCRwCoO+GVh9PQesAAwp-QAOqV1O0MRa78Zg2Skopf7JpTaeK3bUoqbmB0rEqNirAA3U201UiELJ3B3kbADh0Pms3S5RpICRBSbiZWpYparZTaaPLhpoNeGWypqjiYPpWTSYBh1M2R0gAvaOBX2thOa3hpCP2b34pXo3rxVO333oJ0ZXkBz8Z4OhzRnMDCMmrQ4PpJaMQvplIW37nW2Cwz3VzbnZy5yhwXxZ16BQh0CYjTD50BCF16ztkV0TImM53mN53DDWNR2bzMnYbiB8rqhyCOmhEBiT3VCdCvGeDnJfgkYMBEA4AH6DLyEUxwTa2F60xFxZ1QC7nAUIFGNDmPoDrYYcDbBhP60GQRSONmMWNWOF1oiN2MTN04Y0g1MW3QT1O6MQwTk5P5NQSYDpbSXeK+LPyvzrlwhblpMZP4XdJ6AiDgTaz7l4JQGeBwRlO52WOuM2PPgMRjQ1x+DXhka4avn+VwAbkmCFPhMCXUxBCHlOgrCELv1HCGiIAvLazvjubDDwAD7gNZNtMmD-n5P1AgBQi5Y9ysDEKT4Yg+M9ADwUk-MdADqEODkf6-N4BlBlIvI+CMDvggDbDAxwA4Cijcg72tM2I5OxLpP6a87QudBxBwzEDz5QCNhxLOrwOHqjn5YO3-ilBiAUZAHt5I4v0HOKOEIfl8XewMCSPwAB1fDjn6OPk3rKOUCqNEDwsm4ktyTaiW0bRpDaPZSEvwT82x4RHXTc21rpqsRPH2aIhyHQRC2Khm2YQ7UTax7a4dimP66G63aJmuSMCOkR57b-meskVeJ8He6F2MBBsCE+s7wW3i16SMBRssF6QRuLzms536vx6MDJuWsKHkCJunA6vbgTRwg-0l4Yj8HmC4ifVdNZ2TQlve7hr5t8hwg5DYN+3DBltoh2KfW7GrpYQY5o1rp1iWyY0agZyqB7RcpWhHRyBDuagQCuH2sSBY1FDbAwBQkIAQAcCeDAAFP9JPhMTvhYI6CEgiyIBdIixZC2y4gKowYWPovXpYvJqYCiifUzLuBwgYtgCoSGDgh3DtwrRMrLsagV4mijvmjjuHQ2hyAAeagSoztzvrswVeS+SfWVAQBUCKBogAe6ky7spjuWjgemCVz9uKjKAXzYAJIZDYBAssDYBDvYCQs2B7RI1MRKBAA"&gt;link&lt;/a&gt;).&lt;/p&gt;</summary></entry><entry><title>Using `uv` projects on a network share</title><link href="https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html" rel="alternate" /><id>https://hessammehr.github.io/blog/posts/2025-12-17-uv-on-network-shares.html</id><published>2025-12-17T00:00:00+00:00</published><updated>2025-12-17T00:00:00+00:00</updated><summary type="html">&lt;h1&gt;Using &lt;code&gt;uv&lt;/code&gt; projects
+on a network share&lt;/h1&gt;
+&lt;p&gt;The wondeful &lt;a href="https://astral.sh/uv"&gt;&lt;code&gt;uv&lt;/code&gt;&lt;/a&gt; has a
+strong preference for virtual environments that are placed within a
+project tree rather than kept centrally &lt;em&gt;a la&lt;/em&gt; conda. One
+unfortunate consequence of this is for projects stored on network
+shares, for us usually data analysis scripts and Jupyter/marimo
+notebooks for visualisation and as dashboards. Simply
+&lt;code&gt;uv add&lt;/code&gt;ing &lt;code&gt;numpy&lt;/code&gt; alone will dump heaps of tiny
+files into the folder and completely overwhelm our network share
+(normally OneDrive since we get 1 TB free as part of 365).&lt;/p&gt;
+&lt;p&gt;A little trick to avoid this situation, while still being able to use
+&lt;code&gt;pyproject.toml&lt;/code&gt; to specify dependencies via &lt;code&gt;uv&lt;/code&gt;.
+Here it goes.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;uv init --bare&lt;/code&gt; to initialise your
+&lt;code&gt;pyproject.toml&lt;/code&gt; if it doesn’t already exist.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uv add --no-sync &amp;lt;dependencies&amp;gt;&lt;/code&gt;, the key is
+&lt;code&gt;--no-sync&lt;/code&gt; so &lt;code&gt;uv&lt;/code&gt; doesn’t make a
+&lt;code&gt;.venv&lt;/code&gt; folder and install packages there.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uvx --with-requirements pyproject.toml &amp;lt;program that you want to run&amp;gt;&lt;/code&gt;.
+Here are a few examples:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;uvx --with-requirements pyproject.toml marimo edit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uvx --with-requirements pyproject.toml jupyter lab&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uvx --with-requirements pyproject.toml ipython&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uvx --with-requirements pyproject.toml python script.py&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You might be tempted to run &lt;code&gt;uv run script.py&lt;/code&gt;. Don’t!
+That’s going to create a virtual environment in the project folder.
+Either use the last example above or the nifty &lt;code&gt;--isolated&lt;/code&gt;
+flag: &lt;code&gt;uv run --isolated script.py&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;And just like that, the most frustration-free Python workflow that I
+am aware of.&lt;/p&gt;</summary></entry><entry><title>Reparameterizing distributions in numpyro</title><link href="https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html" rel="alternate" /><id>https://hessammehr.github.io/blog/posts/2025-11-26-reparam.html</id><published>2025-11-26T00:00:00+00:00</published><updated>2025-11-26T00:00:00+00:00</updated><summary type="html">&lt;h1&gt;Reparameterizing
+distributions in numpyro&lt;/h1&gt;
+&lt;p&gt;Every single time I’ve tried to “chance” it with probabilistic
+methods I am once again reminded that you can’t treat them like a black
+box. The following is a self-contained example of a pathological case so
+simple it almost feels like it should just work, and yet it fails
+miserably without intervention (in this case by reparameterizing the
+distributions). Part of me wonders if this all just means we need better
+tools or whether we just have to accept the fundamental complexity and
+model defensively.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import numpy as np
+import pandas as pd
+import seaborn as sns
+from jax import lax
+from jax import numpy as jnp
+from jax.random import PRNGKey
+from matplotlib import pyplot as plt
+from numpyro import deterministic, handlers, sample
+from numpyro import distributions as dist
+from numpyro.infer import MCMC, NUTS, SVI, Trace_ELBO, autoguide, reparam
+from numpyro.optim import Adam
+from matplotlib_inline.backend_inline import set_matplotlib_formats
+
+set_matplotlib_formats('svg')
+
+sns.set_theme('talk', 'ticks', font='Arial', font_scale=1.0, rc={'svg.fonttype': 'none'})&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Problem setting&lt;/h2&gt;
+&lt;p&gt;Consider a catalyzed reaction &lt;span&gt;\(A
+\xrightarrow{\mathrm{cat}} \cdots\)&lt;/span&gt; where the catalyst itself is
+slowly undergoing decomposition &lt;span&gt;\(\mathrm{cat}
+\rightarrow \cdots\)&lt;/span&gt;. Initial concentrations &lt;span&gt;\([A]_0\)&lt;/span&gt; and&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;\(\frac{d [A]}{d t} =
+-k[A][\mathrm{cat}]\)&lt;/span&gt;&lt;br/&gt;
+&lt;span&gt;\(\frac{d [\mathrm{cat}]}{d t} =
+-k_d[\mathrm{cat}]\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;A couple of simple helper functions to integrate these differential
+equations.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def solve(a_0, k, cats, dt):
+    return lax.scan(lambda a_n, cat: (a_n - dt * k * cat * a_n, a_n - dt * k * cat * a_n), a_0, cats)[1]
+
+def solve_cat(cat_0, k_d, dt, n):
+    return lax.scan(lambda cat_n, _: (cat_n - dt * k_d * cat_n, cat_n - dt * k_d * cat_n), cat_0, length=n)[1]
+    
+
+plt.plot(solve(1.0, 1.0, jnp.ones((1000,)), 0.01))
+plt.plot(solve_cat(1.0, 1.0, 0.02, 1000))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[&amp;lt;matplotlib.lines.Line2D at 0x1185b9f40&amp;gt;]&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="svg" src="2025-11-26-reparam_files/2025-11-26-reparam_3_1.svg"/&gt;
+&lt;figcaption&gt;svg&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Now a simple model, first without worrying about measurement error.
+We’ll use both MCMC and SVI.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def model(a_0, cat_0, dt, n):
+    k = sample('k', dist.LogNormal(0.0, 1.0))
+    k_d = sample('k_d', dist.LogNormal(-2.0, 1.0))
+    cats = deterministic('cat', solve_cat(cat_0, k_d, dt, n))
+    a_n = deterministic('a_n', solve(a_0, k, cats, dt))
+
+args = (1.0, 0.1, 0.01, 500)
+mcmc = MCMC(NUTS(model), num_warmup=1000, num_samples=100)
+mcmc.run(PRNGKey(0), *args)
+mcmc_samples = mcmc.get_samples()
+
+guide = autoguide.AutoNormal(model)
+svi = SVI(model, guide, Adam(0.01), Trace_ELBO())
+svi_result = svi.run(PRNGKey(1), 2000, *args)
+svi_samples = guide.sample_posterior(PRNGKey(0), svi_result.params, sample_shape=(100,))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;sample: 100%|██████████| 1100/1100 [00:00&amp;lt;00:00, 1791.63it/s, 3 steps of size 9.31e-01. acc. prob=0.92]
+100%|██████████| 2000/2000 [00:00&amp;lt;00:00, 7085.99it/s, init loss: 7.5166, avg. loss [1901-2000]: 0.0118]&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;f, (a1, a2) = plt.subplots(ncols=2, sharey=True, figsize=(10, 4))
+a1.set_title('MCMC')
+a2.set_title('SVI')
+
+a_line, *_ = a1.plot(mcmc_samples['a_n'].T, c='b', alpha=0.1, label='[A]')
+a_line.set_alpha(1)
+cat_line, *_ = a1.plot(mcmc_samples['cat'].T, c='r', alpha=0.1, label='[cat]')
+cat_line.set_alpha(1)
+a2.plot(svi_samples['a_n'].T, c='b', alpha=0.1)
+a2.plot(svi_samples['cat'].T, c='r', alpha=0.1)
+f.legend(handles=[a_line, cat_line])
+a_line.set_alpha(0.1)
+cat_line.set_alpha(0.1)&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="svg" src="2025-11-26-reparam_files/2025-11-26-reparam_6_0.svg"/&gt;
+&lt;figcaption&gt;svg&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Very nice, we get a range of &lt;span&gt;\([A]\)&lt;/span&gt;
+trajectories based on possible &lt;span&gt;\(k\)&lt;/span&gt;’s
+but also &lt;span&gt;\(k_d\)&lt;/span&gt;’s. But now let’s just
+sample simulate adding measurement error as a &lt;code&gt;LogNormal&lt;/code&gt;.
+The previous variables shouldn’t be affected because we are not making
+an observation. What’s notable about this &lt;code&gt;a_draw&lt;/code&gt; variable
+is that it has a very narrow distribution (&lt;span&gt;\(\sigma\)&lt;/span&gt; = 0.02).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def model(a_0, cat_0, dt, n, err):
+    k = sample('k', dist.LogNormal(0.0, 1.0))
+    k_d = sample('k_d', dist.LogNormal(-2.0, 1.0))
+    cats = deterministic('cat', solve_cat(cat_0, k_d, dt, n))
+    a_n = deterministic('a_n', solve(a_0, k, cats, dt))
+    a_draw = sample('a_draw', dist.LogNormal(jnp.log(a_n), err))
+
+args = (1.0, 0.1, 0.01, 500, 0.05)
+mcmc = MCMC(NUTS(model), num_warmup=1000, num_samples=100)
+mcmc.run(PRNGKey(0), *args)
+mcmc_samples = mcmc.get_samples()
+
+guide = autoguide.AutoNormal(model)
+svi = SVI(model, guide, Adam(0.01), Trace_ELBO())
+svi_result = svi.run(PRNGKey(1), 2000, *args)
+svi_samples = guide.sample_posterior(PRNGKey(0), svi_result.params, sample_shape=(100,))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;sample: 100%|██████████| 1100/1100 [00:02&amp;lt;00:00, 549.16it/s, 63 steps of size 4.88e-02. acc. prob=0.92]
+100%|██████████| 2000/2000 [00:00&amp;lt;00:00, 3172.51it/s, init loss: 139124.0000, avg. loss [1901-2000]: 26.2503]&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;f, (a1, a2) = plt.subplots(ncols=2, sharey=True, figsize=(10, 4))
+a1.set_title('MCMC')
+a2.set_title('SVI')
+
+a_line, *_ = a1.plot(mcmc_samples['a_n'].T, c='b', alpha=0.1, label='[A]')
+a_line.set_alpha(1)
+cat_line, *_ = a1.plot(mcmc_samples['cat'].T, c='r', alpha=0.1, label='[cat]')
+cat_line.set_alpha(1)
+meas_line, *_ = a1.plot(mcmc_samples['a_draw'].T, c='k', alpha=0.02, label='[A] measured')
+meas_line.set_alpha(1)
+a2.plot(svi_samples['a_n'].T, c='b', alpha=0.1)
+a2.plot(svi_samples['cat'].T, c='r', alpha=0.1)
+a2.plot(svi_samples['a_draw'].T, c='k', alpha=0.05)
+f.legend(handles=[a_line, cat_line, meas_line])
+a_line.set_alpha(0.1)
+cat_line.set_alpha(0.1)
+meas_line.set_alpha(0.02)&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="svg" src="2025-11-26-reparam_files/2025-11-26-reparam_9_0.svg"/&gt;
+&lt;figcaption&gt;svg&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Yes, not looking good at all. We were expecting the exact sample
+plots! I tried increasing the number of samples, warmup and SVI steps
+and those didn’t help either. The culprit is clearly the narrow
+distribution of &lt;code&gt;a_draw&lt;/code&gt; as increasing its std to 1.0
+everything goes back to normal.&lt;/p&gt;
+&lt;p&gt;After a bit of head scratching, it turns out there is a way to fix
+this without rewriting the model and manually de-centering/scaling. This
+happens on the level of the &lt;code&gt;Normal&lt;/code&gt; distributions being
+sampled with (&lt;span&gt;\(\mu = 0\)&lt;/span&gt; and &lt;span&gt;\(\sigma = 1.0\)&lt;/span&gt;) but the
+&lt;code&gt;LogNormal&lt;/code&gt; distribution is a further exponential transform
+away from so that’s where &lt;code&gt;TransformReparam&lt;/code&gt; comes in.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;reparam_config = {
+    'k': reparam.TransformReparam(),
+    'k_d': reparam.TransformReparam(),
+    'a_draw': reparam.TransformReparam(),
+    'k_base': reparam.LocScaleReparam(0),
+    'k_d_base': reparam.LocScaleReparam(0),
+    'a_draw_base': reparam.LocScaleReparam(0),
+}
+
+def model(a_0, cat_0, dt, n, err):
+    k = sample('k', dist.LogNormal(0.0, 1.0))
+    k_d = sample('k_d', dist.LogNormal(-2.0, 1.0))
+    cats = deterministic('cat', solve_cat(cat_0, k_d, dt, n))
+    a_n = deterministic('a_n', solve(a_0, k, cats, dt))
+    a_draw = sample('a_draw', dist.LogNormal(jnp.log(a_n), err))
+
+model = handlers.reparam(model, reparam_config)
+
+args = (1.0, 0.1, 0.01, 500, 0.05)
+mcmc = MCMC(NUTS(model), num_warmup=1000, num_samples=100)
+mcmc.run(PRNGKey(0), *args)
+mcmc_samples = mcmc.get_samples()
+
+guide = autoguide.AutoNormal(model)
+svi = SVI(model, guide, Adam(0.01), Trace_ELBO())
+svi_result = svi.run(PRNGKey(1), 2000, *args)
+svi_samples = guide.sample_posterior(PRNGKey(0), svi_result.params, sample_shape=(100,))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;sample: 100%|██████████| 1100/1100 [00:00&amp;lt;00:00, 1576.36it/s, 15 steps of size 3.03e-01. acc. prob=0.89]
+100%|██████████| 2000/2000 [00:00&amp;lt;00:00, 4285.20it/s, init loss: 1233.4703, avg. loss [1901-2000]: 2.5142]&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;f, (a1, a2) = plt.subplots(ncols=2, sharey=True, figsize=(10, 4))
+a1.set_title('MCMC')
+a2.set_title('SVI')
+
+a_line, *_ = a1.plot(mcmc_samples['a_n'].T, c='b', alpha=0.1, label='[A]')
+a_line.set_alpha(1)
+cat_line, *_ = a1.plot(mcmc_samples['cat'].T, c='r', alpha=0.1, label='[cat]')
+cat_line.set_alpha(1)
+meas_line, *_ = a1.plot(mcmc_samples['a_draw'].T, c='k', alpha=0.05, label='[A] measured')
+meas_line.set_alpha(1)
+a2.plot(svi_samples['a_n'].T, c='b', alpha=0.1)
+a2.plot(svi_samples['cat'].T, c='r', alpha=0.1)
+a2.plot(svi_samples['a_draw'].T, c='k', alpha=0.05)
+f.legend(handles=[a_line, cat_line, meas_line])
+a_line.set_alpha(0.1)
+cat_line.set_alpha(0.1)
+meas_line.set_alpha(0.02)&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="svg" src="2025-11-26-reparam_files/2025-11-26-reparam_12_0.svg"/&gt;
+&lt;figcaption&gt;svg&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Beautiful! The latent concentrations are now exactly as before and we
+also have a nice extra variable showing measurement with error. How
+about a quick look at the sampled values of &lt;span&gt;\(k\)&lt;/span&gt; and &lt;span&gt;\(k_d\)&lt;/span&gt;, which should ideally be uncorrelated
+and have a lognormal marginal, i.e. each is lognormally distributed
+irrespective of the other one.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def posterior_df(samples):
+    dfs = []
+
+    for var, vals in samples.items():
+        dfs.append(pd.DataFrame(samples[var]).melt().rename(columns={"value": var})[[var]])
+    
+    return pd.concat([dfs[0], *[df.iloc[:, 0] for df in dfs[1:]]], axis=1)
+
+sns.jointplot(posterior_df(mcmc_samples), x='k', y='k_d', kind='kde', fill=True)
+plt.gca().set(ylabel='$k_d$', xlabel='$k$')
+plt.gca().set_xlim(left=0.0)
+plt.gca().set_ylim(bottom=0.0);&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="svg" src="2025-11-26-reparam_files/2025-11-26-reparam_14_0.svg"/&gt;
+&lt;figcaption&gt;svg&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Nice, normal as expected!&lt;/p&gt;
+&lt;p&gt;You will notice a quirk: I had to know that the name of the
+underlying &lt;code&gt;Normal&lt;/code&gt; sites. And one downside of using this
+automatic reparameterisation is that &lt;code&gt;TransformReparam&lt;/code&gt;
+doesn’t currently support observations. That’s fine though, you can
+split the sampled and observed parts (the observed part won’t need
+reparameterising as it won’t need to be sampled).&lt;/p&gt;
+&lt;h2&gt;Adding support for
+observations&lt;/h2&gt;
+&lt;p&gt;Visualising the prior predictive, i.e. what’s predicted solely from
+our priors without observing anything is nice but not that exciting. It
+took some trial and error to find the right combination of types and
+effect handlers to do this but the solution is to use a masked
+distribution. Here is how it works:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;For any unobserved values in &lt;code&gt;a_draw&lt;/code&gt; that need imputing
+(i.e. drawing from the prior predictive rather than observing), we can
+continue to use our reparamterized &lt;code&gt;TransformedDistribution&lt;/code&gt;,
+but masked so the log probability of the any observed sites is ignored.
+Essentially, you are still sampling them but not accounting for their
+log probability, since we are later going to observe them.&lt;/li&gt;
+&lt;li&gt;For any observed values in &lt;code&gt;a_draw_obs&lt;/code&gt;, reparameterizing
+is not necessary, since we are not going to sample them. We apply the
+opposite mask: observed values simply add to our overall joint log
+probability without having to be sampled; unobserved values are also
+observed from the imputed values but their log probs are ignored because
+we mask them. This is because we already calculated their log prob in
+the &lt;code&gt;a_draw&lt;/code&gt; site.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I have to confess that this took a while to get right. Especially
+because some of the types don’t compose very well, so for example
+&lt;code&gt;TransformedDistribution(MaskedDistribution(...))&lt;/code&gt; is not
+supported but using a &lt;code&gt;mask&lt;/code&gt; handler works.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;reparam_config = {
+    'k': reparam.TransformReparam(),
+    'k_d': reparam.TransformReparam(),
+    'a_draw': reparam.TransformReparam(),
+    'k_base': reparam.LocScaleReparam(0),
+    'k_d_base': reparam.LocScaleReparam(0),
+    'a_draw_base': reparam.LocScaleReparam(0),
+}
+
+def model(a_0, cat_0, dt, n, err, obs):
+    has_obs = ~jnp.isnan(obs)
+    k = sample('k', dist.LogNormal(0.0, 1.0))
+    k_d = sample('k_d', dist.LogNormal(-2.0, 1.0))
+    cats = deterministic('cat', solve_cat(cat_0, k_d, dt, n))
+    a_n = deterministic('a_n', solve(a_0, k, cats, dt))
+    with handlers.mask(mask=~has_obs):
+        d = dist.Normal(jnp.log(a_n), err)
+    a_draw = sample('a_draw', dist.TransformedDistribution(d, dist.transforms.ExpTransform()))
+    obs = jnp.where(has_obs, obs, a_draw)
+    a_draw_combined = deterministic('a_draw_combined', obs)
+    a_draw_obs = sample('a_draw_obs', dist.LogNormal(jnp.log(a_n), err).mask(has_obs), obs=obs)
+
+def infer(model, args, guide=None):
+    mcmc = MCMC(NUTS(model), num_warmup=2000, num_samples=100)
+    mcmc.run(PRNGKey(0), *args)
+    mcmc_samples = mcmc.get_samples()
+
+    guide = guide or autoguide.AutoNormal(model)
+    svi = SVI(model, guide, Adam(0.01), Trace_ELBO())
+    svi_result = svi.run(PRNGKey(1), 10000, *args)
+    svi_samples = guide.sample_posterior(PRNGKey(0), svi_result.params, sample_shape=(100,))
+    return locals()
+
+
+model = handlers.reparam(model, reparam_config)
+
+obs = np.full((500,), np.nan)
+args = (1.0, 0.1, 0.01, 500, 0.05, obs)
+
+results = infer(model, args)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;sample: 100%|██████████| 2100/2100 [00:01&amp;lt;00:00, 1359.92it/s, 15 steps of size 3.03e-01. acc. prob=0.85]
+100%|██████████| 10000/10000 [00:01&amp;lt;00:00, 5709.20it/s, init loss: 1233.4703, avg. loss [9501-10000]: 2.4468]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Sampling from the prior predictive, i.e. when the observations are
+all &lt;code&gt;np.nan&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def plot_samples(mcmc_samples, svi_samples, obs):
+    f, (a1, a2) = plt.subplots(ncols=2, sharey=True, figsize=(12, 5))
+    a1.set_title('MCMC')
+    a2.set_title('SVI')
+    has_obs = ~jnp.isnan(obs)
+
+
+    a_line, *_ = a1.plot(mcmc_samples['a_n'].T, c='b', alpha=0.1, label='[A]')
+    a_line.set_alpha(1)
+    cat_line, *_ = a1.plot(mcmc_samples['cat'].T, c='r', alpha=0.1, label='[cat]')
+    cat_line.set_alpha(1)
+    meas_line, *_ = a1.plot(mcmc_samples['a_draw_combined'].T, c='y', alpha=0.05, label='[A] measured', zorder=-1)
+    meas_line.set_alpha(1)
+    a2.plot(svi_samples['a_n'].T, c='b', alpha=0.1)
+    a2.plot(svi_samples['cat'].T, c='r', alpha=0.1)
+    a2.plot(svi_samples['a_draw_combined'].T, c='y', alpha=0.05, zorder=-1)
+    f.legend(handles=[a_line, cat_line, meas_line])
+    a1.scatter(jnp.nonzero(has_obs)[0], obs[has_obs], c='k', zorder=10)
+    a2.scatter(jnp.nonzero(has_obs)[0], obs[has_obs], c='k', zorder=10)
+    a1.set(ylim=(-0.1,1.1))
+    a_line.set_alpha(0.1)
+    cat_line.set_alpha(0.1)
+    meas_line.set_alpha(0.05)
+    return f
+
+plot_samples(results['mcmc_samples'], results['svi_samples'], obs)
+plt.tight_layout()&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="svg" src="2025-11-26-reparam_files/2025-11-26-reparam_20_0.svg"/&gt;
+&lt;figcaption&gt;svg&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Now let’s supply a single observation, specifically one that suggests
+the reaction is faster than predicted by most trajectories. In the
+posterior we would expect to see either a higher than anticipated &lt;span&gt;\(k\)&lt;/span&gt; or a lower than anticipated &lt;span&gt;\(k_d\)&lt;/span&gt; and the two should be positively
+&lt;strong&gt;correlated&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;obs[100] = 0.6
+
+args = (1.0, 0.1, 0.01, 500, 0.05, obs)
+
+results = infer(model, args)
+
+plot_samples(results['mcmc_samples'], results['svi_samples'], obs)
+plt.tight_layout()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;sample: 100%|██████████| 2100/2100 [00:01&amp;lt;00:00, 1255.81it/s, 15 steps of size 3.08e-01. acc. prob=0.85]
+100%|██████████| 10000/10000 [00:01&amp;lt;00:00, 5971.33it/s, init loss: 1234.0802, avg. loss [9501-10000]: 3.8389]&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="svg" src="2025-11-26-reparam_files/2025-11-26-reparam_22_1.svg"/&gt;
+&lt;figcaption&gt;svg&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;pre&gt;&lt;code&gt;all_data = pd.concat([
+    posterior_df(results['mcmc_samples'])[['k', 'k_d']].assign(Method='MCMC'),
+    posterior_df(results['svi_samples'])[['k', 'k_d']].assign(Method='SVI'),
+    ], ignore_index=True)
+sns.kdeplot(all_data, x='k', y='k_d', hue="Method", fill=True)
+plt.gca().set(xlabel='$k$', ylabel='$k_d$')&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[Text(0.5, 0, '$k$'), Text(0, 0.5, '$k_d$')]&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="svg" src="2025-11-26-reparam_files/2025-11-26-reparam_23_1.svg"/&gt;
+&lt;figcaption&gt;svg&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;And here we go, a very different picture now, and as expected the
+&lt;code&gt;AutoNormal&lt;/code&gt; SVI guide fails to capture the correlation
+between &lt;span&gt;\(k\)&lt;/span&gt; and &lt;span&gt;\(k_d\)&lt;/span&gt;. A full rank multivariate normal
+should be able to handle this, albeit taking about 10x as long as MCMC.
+For some reason
+&lt;code&gt;autoguide.AutoLowRankMultivariateNormal(rank=2)&lt;/code&gt; doesn’t
+seem to do the trick.&lt;/p&gt;
+&lt;p&gt;A more advanced option to get the best of both worlds would be
+creating a separate full-rank guide for &lt;span&gt;\(k\)&lt;/span&gt; and &lt;span&gt;\(k_d\)&lt;/span&gt; then using a simple
+&lt;code&gt;AutoNormal&lt;/code&gt; for the rest (specifically &lt;code&gt;a_draw&lt;/code&gt;)
+using &lt;code&gt;AutoGuideList&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# "Easy" but slow and doesn't really scale
+# results = infer(model, args, autoguide.AutoMultivariateNormal(model))
+
+# More involved but very fast
+guide = autoguide.AutoGuideList(model)
+guide.append(autoguide.AutoNormal(handlers.block(model, expose=['a_draw_base_decentered'])))
+guide.append(autoguide.AutoMultivariateNormal(handlers.block(model, expose=['k_base_decentered', 'k_d_base_decentered'])))
+results = infer(model, args, guide)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;sample: 100%|██████████| 2100/2100 [00:01&amp;lt;00:00, 1313.56it/s, 15 steps of size 3.08e-01. acc. prob=0.85]
+100%|██████████| 10000/10000 [00:01&amp;lt;00:00, 5945.90it/s, init loss: 1272.4036, avg. loss [9501-10000]: 3.7564]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is more involved and it seems like &lt;code&gt;AutoGuideList&lt;/code&gt;
+doesn’t deal with deterministic sites, so we have derive them manually.
+I had to read a lot of numpyro’s source code to figure out how.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from numpyro.infer.util import soft_vmap
+
+def predictive(sample):
+    with handlers.seed(rng_seed=PRNGKey(0)):
+        with handlers.substitute(data=sample):
+            return {k: v['value'] for k, v in handlers.trace(model).get_trace(*args).items()}
+
+results['svi_samples'].update(soft_vmap(predictive, results['svi_samples']))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;all_data = pd.concat([
+    posterior_df(results['mcmc_samples'])[['k', 'k_d']].assign(Method='MCMC'),
+    posterior_df(results['svi_samples'])[['k', 'k_d']].assign(Method='SVI'),
+    ], ignore_index=True)
+sns.kdeplot(all_data, x='k', y='k_d', hue="Method", fill=True)
+plt.gca().set(xlabel='$k$', ylabel='$k_d$')&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[Text(0.5, 0, '$k$'), Text(0, 0.5, '$k_d$')]&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="svg" src="2025-11-26-reparam_files/2025-11-26-reparam_28_1.svg"/&gt;
+&lt;figcaption&gt;svg&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;And here we go!&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;plot_samples(results['mcmc_samples'], results['svi_samples'], obs)
+plt.tight_layout()&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="svg" src="2025-11-26-reparam_files/2025-11-26-reparam_30_0.svg"/&gt;
+&lt;figcaption&gt;svg&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;I hope this was fun to explore together. Very happy to chat if you
+have any suggestions or questions. This experiment was motivated by my
+upcoming RSC book on digital chemistry, as part of which I am hoping to
+present probabilistic programming as a powerful data interpretation aid
+for experimentalists working with automated platforms that can generate
+a wealth of experimental data.&lt;/p&gt;</summary></entry><entry><title>Live variational inference</title><link href="https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html" rel="alternate" /><id>https://hessammehr.github.io/blog/posts/2025-10-15-live-svi.html</id><published>2025-10-15T00:00:00+00:00</published><updated>2025-10-15T00:00:00+00:00</updated><summary type="html">&lt;h1&gt;Live variational inference&lt;/h1&gt;
+&lt;p&gt;This is mostly to show two possibilities:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The ability to update the data going into a model in the course of
+running variational inference. Imagine you are accumulating data as you
+go, or (this is more technical/hacky) you find that your multimodal
+distributions get locked into a specific mode that the optimiser cannot
+escape and are looking for a way to “ease into” the right mode by
+e.g. tightening your Dirichlet concentration factor gradually as you
+go.&lt;/li&gt;
+&lt;li&gt;Inspect model predictions and loss in real time.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The key is using the &lt;code&gt;SVI.update&lt;/code&gt; call, which I have
+avoided so far for the convenience of &lt;code&gt;SVI.run&lt;/code&gt;. A batch of
+steps can be take in a jitted loop for performance and the loss
+monitored for convergence every time a parameter/input data is
+changed.&lt;/p&gt;
+&lt;p&gt;With &lt;code&gt;matplotlib&lt;/code&gt; you need to use an interactive backend
+like &lt;code&gt;qt&lt;/code&gt; or &lt;code&gt;osx&lt;/code&gt; and add a
+&lt;code&gt;plt.pause(...)&lt;/code&gt; call in the loop to make sure there is a
+chance to re-render the figure. Super useful and something I didn’t know
+about (thanks ChatGPT).&lt;/p&gt;
+&lt;p&gt;A minimal example below, where the concentration parameter for a
+Dirichlet prior to a categorical observation is varied smoothly from 1.0
+(i.e. flat) to 0.1 (pretty pointy at the extremes).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;%matplotlib osx&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;UsageError: Invalid GUI request 'macosx', valid ones are:dict_keys(['inline', 'nbagg', 'webagg', 'notebook', 'ipympl', 'widget', None, 'qt', 'qt5', 'qt6', 'wx', 'tk', 'gtk', 'gtk3', 'osx', 'asyncio'])&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;import jax
+import jax.numpy as jnp
+import numpy as np
+import numpyro
+import numpyro.distributions as dist
+import seaborn as sns
+from matplotlib import pyplot as plt
+from numpyro.infer import SVI, Trace_ELBO, autoguide
+from numpyro.optim import Adam
+from tqdm import tqdm
+
+sns.set_theme(
+    "talk", "ticks", font="Arial", font_scale=1.0, rc={"svg.fonttype": "none"}
+)
+
+num_steps = 100
+
+
+def model(alpha_scale):
+    alpha = jnp.ones(12) * alpha_scale
+    theta = numpyro.sample("theta", dist.Dirichlet(alpha))
+    numpyro.sample("obs1", dist.Categorical(theta), obs=jnp.array([2,2,2,2,2,5,5,5]))
+
+guide = autoguide.AutoNormal(model)
+
+optimizer = Adam(1e-3)
+svi = SVI(model, guide, optimizer, loss=Trace_ELBO())
+
+rng_key = jax.random.PRNGKey(0)
+state = svi.init(
+    rng_key,
+    alpha_scale=1.0,
+)
+
+
+@jax.jit
+def run_stage(state, init_loss, alpha_scale):
+    def body_fn(i, val):
+        return svi.update(val[0], alpha_scale)
+
+    return jax.lax.fori_loop(0, 100, body_fn, (state, init_loss))
+
+
+f, (a1, a2) = plt.subplots(nrows=2, sharex=True)
+a1.set(ylabel="ELBO loss")
+a2.set(xlabel="SVI batch", ylabel=r"$\theta$ (posterior)")
+f.tight_layout()
+for i in tqdm(range(num_steps)):
+    alpha_scale = 0.02 ** (i / num_steps)
+    a1.set_title(f"$\\alpha$: {alpha_scale:.2f}")
+    while True:
+        # Run SVI steps until convergence
+        init_loss = svi.evaluate(state, alpha_scale)
+        state, loss = run_stage(state, init_loss, alpha_scale)
+        if jnp.abs(loss - init_loss) / np.abs(init_loss) &amp;lt; 0.02:
+            break
+    params = svi.get_params(state)
+    a1.scatter([i], loss, c="k", s=5)
+    posterior = guide.sample_posterior(rng_key, params)
+    theta = posterior["theta"]
+    a2.scatter(i * np.ones_like(theta), theta, c=np.arange(12), s=5)
+    # This is really important to get live updates.
+    plt.pause(0.01)
+
+f.savefig("2025-10-15-live-svi_result.svg")
+print("Posterior theta mean:", posterior["theta"])
+plt.close()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;100%|██████████| 100/100 [00:06&amp;lt;00:00, 14.36it/s]
+
+
+Posterior theta mean: [1.26911415e-08 7.69821611e-08 6.65301085e-01 7.23654193e-06
+ 1.26773830e-06 2.86240101e-01 2.82157103e-10 9.47567692e-04
+ 2.23408958e-10 4.75026183e-02 6.67153069e-11 5.59603919e-09]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Not sure if the result will show up as expected when this notebook is
+converted to HTML but it looks very nice and it’s good to be able to see
+it converge.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img alt="The result" src="2025-10-15-live-svi_plot.svg"/&gt;
+&lt;figcaption&gt;The result&lt;/figcaption&gt;
+&lt;/figure&gt;</summary></entry><entry><title>Amortized probabilistic models for chemical microscopy</title><link href="https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html" rel="alternate" /><id>https://hessammehr.github.io/blog/posts/2025-07-21-droplet-generative-process-3.html</id><published>2025-07-21T00:00:00+00:00</published><updated>2025-07-21T00:00:00+00:00</updated><summary type="html">&lt;h1&gt;Amortized
+probabilistic models for chemical microscopy&lt;/h1&gt;
+&lt;h3&gt;Can
+we used an amortized model to speed up inference in our droplet
+microscopy model?&lt;/h3&gt;
+&lt;p&gt;My last go using a probabilistic model to analyze a microscope image
+seemed to work well enough, but I wanted to take a more flexible
+approach to modelling the appearance of droplets without having to roll
+out a more sophisticated physical model. Also, it seemed impractical to
+require a beefy GPU and minutes of compute for a single image.&lt;/p&gt;
+&lt;p&gt;I’ve been meaning to experiment with &lt;em&gt;amortized&lt;/em&gt; inference a
+bit more recently. The idea is that instead of all latent variables
+being inferred, a small model (think a miniature multi-layer perceptron)
+is trained to predict a subset of these variables. We are interested in
+inferring droplet locations and compositions, not so much about
+rendering the droplets themselves. This approach can give the best of
+both worlds, a mechanistic interpretable model for the parts that we
+care about or are easy to reason about, and an data-driven, learned
+representation for the complex, inherently introspectable parts.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import jax
+import jax.numpy as jnp
+import jax.nn as jnn
+import flax.linen as nn
+import matplotlib.pyplot as plt
+import numpy as np
+import numpyro.distributions as dist
+import seaborn as sns
+from numpyro import deterministic, plate, sample
+from numpyro.handlers import seed, trace, substitute
+from numpyro.infer import SVI, Trace_ELBO, MCMC, NUTS
+from numpyro.infer.autoguide import AutoNormal
+from numpyro.optim import Adam
+from PIL import Image
+
+plt.rcParams['figure.dpi'] = 200
+
+sns.set_theme(context='paper', style='ticks', font='Arial')&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We’ll use the same delightful microscope image as last time, part of
+the experiments that went into our &lt;a href="https://doi.org/10.1039/D5DD00100E"&gt;latest paper&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;img = Image.open('data/example.jpg')
+img = img.resize((img.width // 4, img.height // 4))
+img&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2025-07-21-droplet-generative-process-3_files/2025-07-21-droplet-generative-process-3_3_0.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;pre&gt;&lt;code&gt;img = np.array(img) / 255.0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;class DropletOpticsModel(nn.Module):
+    hidden_dims: tuple = (32, 16, 8)
+    
+    @nn.compact
+    def __call__(self, background, dx, dy, radius, composition):
+        """
+        Args:
+            background: (batch, n_channels) - existing/background pixel values
+            dx: (batch, 1) - normalized distance from droplet center in x-direction
+            dy: (batch, 1) - normalized distance from droplet center in y-direction
+            radius: (batch, 1) - droplet radius
+            composition: (batch, n_composition_features) - droplet composition vector
+        
+        Returns:
+            new_pixel_value: (batch, n_channels) - predicted new pixel values
+        """
+        # Concatenate all input features
+        x = jnp.concatenate([background, dx, dy, radius, composition], axis=-1)
+
+        for i, dim in enumerate(self.hidden_dims):
+            x = nn.Dense(dim, name=f'hidden_{i}')(x)
+            x = nn.LayerNorm(name=f'ln_{i}')(x)
+            x = jnn.relu(x)
+        
+        # Output layer - predict change in pixel values
+        delta = nn.Dense(background.shape[-1], name='output')(x)
+        
+        # Add residual connection and apply sigmoid to keep values in [0, 1]
+        new_pixel_value = jnn.sigmoid(background + delta)
+        
+        return new_pixel_value
+
+# Initialize model
+model = DropletOpticsModel()
+
+# Test with dummy data
+key = jax.random.PRNGKey(42)
+batch_size, n_channels, n_composition = 32, 3, 10
+
+dummy_background = jax.random.uniform(key, (batch_size, n_channels))
+dummy_dx = jax.random.uniform(key, (batch_size, 1), minval=-1.0, maxval=1.0)
+dummy_dy = jax.random.uniform(key, (batch_size, 1), minval=-1.0, maxval=1.0)
+dummy_radius = jax.random.uniform(key, (batch_size, 1)) * 0.1  # Small radii
+dummy_composition = jax.random.uniform(key, (batch_size, n_composition))
+
+# Initialize parameters
+print(f"{dummy_background.shape=}, {dummy_dx.shape=}, {dummy_dy.shape=}, {dummy_radius.shape=}, {dummy_composition.shape=}")
+params = model.init(key, dummy_background, dummy_dx, dummy_dy, dummy_radius, dummy_composition)
+
+# Test forward pass
+output = model.apply(params, dummy_background, dummy_dx, dummy_dy, dummy_radius, dummy_composition)
+print(f"Input background shape: {dummy_background.shape}")
+print(f"Output pixel values shape: {output.shape}")
+print(f"Output range: [{output.min():.3f}, {output.max():.3f}]")
+
+# Print model summary
+print(f"\nModel summary:")
+print(model.tabulate(key, dummy_background, dummy_dx, dummy_dy, dummy_radius, dummy_composition))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;dummy_background.shape=(32, 3), dummy_dx.shape=(32, 1), dummy_dy.shape=(32, 1), dummy_radius.shape=(32, 1), dummy_composition.shape=(32, 10)
+Input background shape: (32, 3)
+Output pixel values shape: (32, 3)
+Output range: [0.260, 0.897]
+
+Model summary:
+
+                           DropletOpticsModel Summary                           
+┏━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┓
+┃ path     ┃ module         ┃ inputs         ┃ outputs        ┃ params         ┃
+┡━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━┩
+│          │ DropletOptics… │ -              │ float32[32,3]  │                │
+│          │                │ float32[32,3]  │                │                │
+│          │                │ -              │                │                │
+│          │                │ float32[32,1]  │                │                │
+│          │                │ -              │                │                │
+│          │                │ float32[32,1]  │                │                │
+│          │                │ -              │                │                │
+│          │                │ float32[32,1]  │                │                │
+│          │                │ -              │                │                │
+│          │                │ float32[32,10] │                │                │
+├──────────┼────────────────┼────────────────┼────────────────┼────────────────┤
+│ hidden_0 │ Dense          │ float32[32,16] │ float32[32,32] │ bias:          │
+│          │                │                │                │ float32[32]    │
+│          │                │                │                │ kernel:        │
+│          │                │                │                │ float32[16,32] │
+│          │                │                │                │                │
+│          │                │                │                │ 544 (2.2 KB)   │
+├──────────┼────────────────┼────────────────┼────────────────┼────────────────┤
+│ ln_0     │ LayerNorm      │ float32[32,32] │ float32[32,32] │ bias:          │
+│          │                │                │                │ float32[32]    │
+│          │                │                │                │ scale:         │
+│          │                │                │                │ float32[32]    │
+│          │                │                │                │                │
+│          │                │                │                │ 64 (256 B)     │
+├──────────┼────────────────┼────────────────┼────────────────┼────────────────┤
+│ hidden_1 │ Dense          │ float32[32,32] │ float32[32,16] │ bias:          │
+│          │                │                │                │ float32[16]    │
+│          │                │                │                │ kernel:        │
+│          │                │                │                │ float32[32,16] │
+│          │                │                │                │                │
+│          │                │                │                │ 528 (2.1 KB)   │
+├──────────┼────────────────┼────────────────┼────────────────┼────────────────┤
+│ ln_1     │ LayerNorm      │ float32[32,16] │ float32[32,16] │ bias:          │
+│          │                │                │                │ float32[16]    │
+│          │                │                │                │ scale:         │
+│          │                │                │                │ float32[16]    │
+│          │                │                │                │                │
+│          │                │                │                │ 32 (128 B)     │
+├──────────┼────────────────┼────────────────┼────────────────┼────────────────┤
+│ hidden_2 │ Dense          │ float32[32,16] │ float32[32,8]  │ bias:          │
+│          │                │                │                │ float32[8]     │
+│          │                │                │                │ kernel:        │
+│          │                │                │                │ float32[16,8]  │
+│          │                │                │                │                │
+│          │                │                │                │ 136 (544 B)    │
+├──────────┼────────────────┼────────────────┼────────────────┼────────────────┤
+│ ln_2     │ LayerNorm      │ float32[32,8]  │ float32[32,8]  │ bias:          │
+│          │                │                │                │ float32[8]     │
+│          │                │                │                │ scale:         │
+│          │                │                │                │ float32[8]     │
+│          │                │                │                │                │
+│          │                │                │                │ 16 (64 B)      │
+├──────────┼────────────────┼────────────────┼────────────────┼────────────────┤
+│ output   │ Dense          │ float32[32,8]  │ float32[32,3]  │ bias:          │
+│          │                │                │                │ float32[3]     │
+│          │                │                │                │ kernel:        │
+│          │                │                │                │ float32[8,3]   │
+│          │                │                │                │                │
+│          │                │                │                │ 27 (108 B)     │
+├──────────┼────────────────┼────────────────┼────────────────┼────────────────┤
+│          │                │                │          Total │ 1,347 (5.4 KB) │
+└──────────┴────────────────┴────────────────┴────────────────┴────────────────┘
+                                                                                
+                        Total Parameters: 1,347 (5.4 KB)                        &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;What ended up working in the end is when each pixel refers to its
+closest droplet for colour. Not ideal but it keeps the memory
+requirement manageable.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def tree_to_dists(tree, path=''):
+    if isinstance(tree, dict):
+        return {k: tree_to_dists(v, path + '/' + k) for k, v in tree.items()}
+    else:
+        # print(f"Sampling {path} with shape {tree.shape}")
+        return sample(path, dist.Normal().expand(tree.shape))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;def model_with_nn(img, n_droplets, types=10):
+    h, w, n_channels = img.shape
+    
+    # Create coordinate grids
+    y_coords, x_coords = jnp.mgrid[:h, :w]
+    
+    # Sample background per channel
+    with plate("channels", n_channels):
+        bg = sample("bg", dist.Uniform(0, 1).expand((n_channels,)))
+
+    # Sample droplet parameters
+    with plate("droplets", n_droplets):
+        x = sample("x", dist.Uniform(0, w))
+        y = sample("y", dist.Uniform(0, h))
+        r = sample("r", dist.LogNormal(0, 0.5))
+        with plate("types", types):
+            composition = sample("composition", dist.Uniform(0, 1)).T
+
+    model = DropletOpticsModel()
+
+    # Initialize background image
+    prediction = jnp.broadcast_to(bg, (h, w, n_channels))
+    nn_params = model.init(key, 
+                           jnp.zeros((h * w, n_channels)), 
+                           jnp.zeros((h * w, 1)),
+                           jnp.zeros((h * w, 1)),
+                           jnp.zeros((h * w, 1)),
+                           jnp.zeros((h * w, types)))    
+    nn_params = tree_to_dists(nn_params, path='nn_params')
+
+    distance = ((x_coords[..., None] - x) / r)**2 + ((y_coords[..., None] - y) / r)**2
+    nearest = jnp.argmin(distance, axis=-1)
+
+    # Calculate relative distances from droplet center
+    dx = (x_coords - x[nearest]) / r[nearest]  # Normalized by radius
+    dy = (y_coords - y[nearest]) / r[nearest]  # Normalized by radius
+
+
+    # Flatten spatial dimensions for neural network processing
+    dx_flat = dx.flatten()[:, None]
+    dy_flat = dy.flatten()[:, None]
+    r_flat = r[nearest].flatten()[:, None]
+
+    
+    # Repeat background and composition for all pixels
+    bg_flat = prediction.reshape(-1, n_channels)
+    comp_flat = composition[nearest, :].reshape(-1, types)
+    
+    # Apply neural network to get new pixel values
+    prediction = model.apply(nn_params, bg_flat, dx_flat, dy_flat, r_flat, comp_flat)
+    
+    # Reshape back to image dimensions
+    prediction = prediction.reshape(h, w, n_channels)
+    
+    prediction = jnp.clip(prediction, 0, 1)
+    prediction = deterministic('prediction', prediction)
+    diff = deterministic('diff', img - prediction)
+    sample('obs', dist.Normal(scale=0.05), obs=diff)
+    # print(f"{x_coords.shape=}, {y_coords.shape=}, {x.shape=}, {y.shape=}, {r.shape=}, {composition.shape=}, {distance.shape=}, {nearest.shape=}, {dx.shape=}, {dy.shape=}, {dx_flat.shape=}, {dy_flat.shape=}, {r_flat.shape=}, {bg_flat.shape=}, {comp_flat.shape=}, {prediction.shape=}")
+    return nn_params&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;tr = trace(seed(model_with_nn, 0)).get_trace(img, 1000, types=5)
+nn_params = seed(model_with_nn, 0)(img, 1000, types=5)
+{k: v['value'].shape for k, v in tr.items() if 'value' in v}&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;{'channels': (3,),
+ 'bg': (3,),
+ 'droplets': (1000,),
+ 'x': (1000,),
+ 'y': (1000,),
+ 'r': (1000,),
+ 'types': (5,),
+ 'composition': (5, 1000),
+ 'nn_params/params/hidden_0/kernel': (11, 32),
+ 'nn_params/params/hidden_0/bias': (32,),
+ 'nn_params/params/ln_0/scale': (32,),
+ 'nn_params/params/ln_0/bias': (32,),
+ 'nn_params/params/hidden_1/kernel': (32, 16),
+ 'nn_params/params/hidden_1/bias': (16,),
+ 'nn_params/params/ln_1/scale': (16,),
+ 'nn_params/params/ln_1/bias': (16,),
+ 'nn_params/params/hidden_2/kernel': (16, 8),
+ 'nn_params/params/hidden_2/bias': (8,),
+ 'nn_params/params/ln_2/scale': (8,),
+ 'nn_params/params/ln_2/bias': (8,),
+ 'nn_params/params/output/kernel': (8, 3),
+ 'nn_params/params/output/bias': (3,),
+ 'prediction': (380, 507, 3),
+ 'diff': (380, 507, 3),
+ 'obs': (380, 507, 3)}&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;guide = AutoNormal(model_with_nn)
+svi = SVI(model_with_nn, guide, Adam(0.01), Trace_ELBO())
+
+svi_result = svi.run(jax.random.PRNGKey(0), 100000, img, 800, types=3)
+samples_svi = guide.sample_posterior(jax.random.PRNGKey(0), svi_result.params, sample_shape=(100,))
+fig, ax = plt.subplots(figsize=(5, 2))
+ax.plot(svi_result.losses)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;100%|██████████| 100000/100000 [08:35&amp;lt;00:00, 193.87it/s, init loss: 6371727.5000, avg. loss [95001-100000]: -854501.1250]
+
+
+
+
+
+[&amp;lt;matplotlib.lines.Line2D at 0x721bf0302960&amp;gt;]&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2025-07-21-droplet-generative-process-3_files/2025-07-21-droplet-generative-process-3_10_2.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;pre&gt;&lt;code&gt;plt.imshow(samples_svi['prediction'].mean(axis=0))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;matplotlib.image.AxesImage at 0x721cd022ff80&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2025-07-21-droplet-generative-process-3_files/2025-07-21-droplet-generative-process-3_11_1.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Not a bad reconstruction, and this time we capture color as well.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;samples_svi['composition'][:1].shape&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;(1, 3, 800)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;plt.imshow(img)
+
+plt.scatter(samples_svi['x'][0], samples_svi['y'][0], s=4, alpha=1.0, c=samples_svi['composition'][0].T, marker='x')&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;matplotlib.collections.PathCollection at 0x721c10238f80&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2025-07-21-droplet-generative-process-3_files/2025-07-21-droplet-generative-process-3_14_1.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Droplet composition seems nicely consistent with the image.&lt;/p&gt;
+&lt;h2&gt;Other attempts&lt;/h2&gt;
+&lt;p&gt;A couple of other approaches that didn’t quite work.&lt;/p&gt;
+&lt;h3&gt;Fully flattened model
+with aggregation&lt;/h3&gt;
+&lt;p&gt;Two issues: memory use and how to aggregate the results at the
+end.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def model_with_nn(img, n_droplets, types=10):
+    h, w, n_channels = img.shape
+    
+    # Create coordinate grids
+    y_coords, x_coords = jnp.mgrid[:h, :w]
+    
+    # Sample background per channel
+    with plate("channels", n_channels):
+        bg = sample("bg", dist.Uniform(0, 1).expand((n_channels,)))
+
+    # Sample droplet parameters
+    with plate("droplets", n_droplets):
+        x = sample("x", dist.Uniform(0, w))
+        y = sample("y", dist.Uniform(0, h))
+        r = sample("r", dist.LogNormal(0, 0.5))
+        with plate("types", types):
+            composition = sample("composition", dist.Uniform(0, 1)).T
+
+    model = DropletOpticsModel()
+
+    # Initialize background image
+    bg = jnp.broadcast_to(bg, (h, w, n_channels))
+    nn_params = model.init(key, 
+                           jnp.zeros((h * w, n_channels)), 
+                           jnp.zeros((h * w, 1)),
+                           jnp.zeros((h * w, 1)),
+                           jnp.zeros((h * w, 1)),
+                           jnp.zeros((h * w, types)))    
+    nn_params = tree_to_dists(nn_params, path='nn_params')
+    
+    # Calculate relative distances from droplet center
+    dx = (x_coords[..., None] - x) / r  # Normalized by radius
+    dy = (y_coords[..., None] - y) / r  # Normalized by radius
+
+    # Flatten spatial dimensions for neural network processing
+    dx_flat = dx.flatten()[:, None]
+    dy_flat = dy.flatten()[:, None]
+    r_flat = jnp.broadcast_to(r, (h, w, n_droplets)).flatten()[:, None]
+    
+    # Repeat background and composition for all pixels
+    bg_flat = jnp.broadcast_to(bg[:, :, None, :], (h, w, n_droplets, n_channels)).reshape(-1, n_channels)
+    comp_flat = jnp.broadcast_to(composition, (h * w, n_droplets, types)).reshape(-1, types)
+    
+    # Apply neural network to get new pixel values
+    new_pixels = model.apply(nn_params, bg_flat, dx_flat, dy_flat, r_flat, comp_flat)
+    
+    # Reshape back to image dimensions
+    new_pixels = new_pixels.reshape(h, w, n_channels)
+    
+    # Update prediction (could be additive or replacement - using replacement here)
+    prediction = new_pixels
+    
+    prediction = jnp.clip(prediction, 0, 1)
+    prediction = deterministic('prediction', prediction)
+    diff = deterministic('diff', img - prediction)
+    sample('obs', dist.Normal(scale=0.05), obs=diff)&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Iterative with
+&lt;code&gt;lax.scan&lt;/code&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;def model_with_nn(img, n_droplets, types=10):
+    h, w, n_channels = img.shape
+    
+    # Create coordinate grids
+    y_coords, x_coords = jnp.mgrid[:h, :w]
+    
+    # Sample background per channel
+    with plate("channels", n_channels):
+        bg = sample("bg", dist.Uniform(0, 1).expand((n_channels,)))
+
+    # Sample droplet parameters
+    with plate("droplets", n_droplets):
+        x = sample("x", dist.Uniform(0, w))
+        y = sample("y", dist.Uniform(0, h))
+        r = sample("r", dist.LogNormal(0, 0.5))
+        with plate("types", types):
+            composition = sample("composition", dist.Uniform(0, 1))
+
+    model = DropletOpticsModel()
+
+    # Initialize background image
+    prediction = jnp.broadcast_to(bg, (h, w, n_channels))
+    nn_params = model.init(key, 
+                           jnp.zeros((h * w, n_channels)), 
+                           jnp.zeros((h * w, 1)),
+                           jnp.zeros((h * w, 1)),
+                           jnp.zeros((h * w, 1)),
+                           jnp.zeros((h * w, types)))    
+    nn_params = tree_to_dists(nn_params, path='nn_params')
+    # For each droplet, compute its effect using the neural network
+    def apply_droplet(carry, droplet_params):
+        current_prediction = carry
+        x_i, y_i, r_i, comp_i = droplet_params
+        
+        # Calculate relative distances from droplet center
+        dx = (x_coords - x_i) / r_i  # Normalized by radius
+        dy = (y_coords - y_i) / r_i  # Normalized by radius
+        
+        # Flatten spatial dimensions for neural network processing
+        dx_flat = dx.flatten()[:, None]
+        dy_flat = dy.flatten()[:, None]
+        r_flat = jnp.full((h * w, 1), r_i)
+        
+        # Repeat background and composition for all pixels
+        bg_flat = current_prediction.reshape(-1, n_channels)
+        comp_flat = jnp.broadcast_to(comp_i, (h * w, types))
+        
+        # Apply neural network to get new pixel values
+        new_pixels = model.apply(nn_params, bg_flat, dx_flat, dy_flat, r_flat, comp_flat)
+        
+        # Reshape back to image dimensions
+        new_pixels = new_pixels.reshape(h, w, n_channels)
+        
+        return new_pixels, None
+    
+    prediction, _ = jax.lax.scan(apply_droplet, prediction, (x, y, r, composition.T))
+    prediction = jnp.clip(prediction, 0, 1)
+    prediction = deterministic('prediction', prediction)
+    diff = deterministic('diff', img - prediction)
+    sample('obs', dist.Normal(scale=0.05), obs=diff)
+    return nn_params&lt;/code&gt;&lt;/pre&gt;</summary></entry><entry><title>Trialing generative processes for chemical microscopy (part 2)</title><link href="https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html" rel="alternate" /><id>https://hessammehr.github.io/blog/posts/2025-02-23-droplet-generative-process-2.html</id><published>2025-02-23T00:00:00+00:00</published><updated>2025-02-23T00:00:00+00:00</updated><summary type="html">&lt;h1&gt;Trialing
+generative processes for chemical microscopy (part 2)&lt;/h1&gt;
+&lt;p&gt;Last time we used a very rigid generative model (droplets modeled as
+gaussians). This time we’ll use a learned representation of
+droplets.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import jax
+import jax.numpy as jnp
+import matplotlib.pyplot as plt
+import numpy as np
+import numpyro.distributions as dist
+import seaborn as sns
+from numpyro import deterministic, plate, sample
+from numpyro.infer import SVI, Trace_ELBO
+from numpyro.infer.autoguide import AutoNormal
+from numpyro.optim import Adam
+from PIL import Image
+
+plt.rcParams['figure.dpi'] = 200
+
+sns.set_theme(context='paper', style='ticks', font='Arial')&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;img = Image.open('data/example.jpg')
+img = img.resize((img.width // 4, img.height // 4))
+img&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative-process-2_2_0.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;For simplicity, we’ll focus on modeling the H (hue) channel of the
+image.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;img_hsv = np.array(img.convert('HSV')) / 255.0
+
+plt.imshow(img_hsv[..., 0], cmap='gray')
+plt.colorbar()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;matplotlib.colorbar.Colorbar at 0x7861b29ea210&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative-process-2_4_1.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;pre&gt;&lt;code&gt;def model(w, h, n_droplets, channel, types=10, mask_shape=(15, 15)):
+    # Sample droplet locations and sizes
+    with plate("droplets", n_droplets):
+        x = sample("x", dist.Uniform(0, 1)) * (w - mask_shape[1] - 1)
+        y = sample("y", dist.Uniform(0, 1)) * (h - mask_shape[0] - 1)
+        with plate("types", types):
+            composition = sample("composition", dist.Uniform(0, 1))
+    mask = sample('mask', dist.Uniform(0, 1).expand((types, *mask_shape)))
+
+    # Instead of round, use floor and linear interpolation
+    x_floor = jnp.floor(x)
+    y_floor = jnp.floor(y)
+    x_frac = x - x_floor
+    y_frac = y - y_floor
+
+    dx = jnp.arange(mask_shape[1])[:, None, None]
+    dy = jnp.arange(mask_shape[0])[None, :, None]
+
+    # Generate coordinates for bilinear interpolation
+    x1 = x_floor[None, None, :].astype(int) + dx
+    x2 = x1 + 1
+    y1 = y_floor[None, None, :].astype(int) + dy
+    y2 = y1 + 1
+
+    # Calculate weights for bilinear interpolation
+    wx2 = x_frac[None, None, :]
+    wx1 = 1 - wx2
+    wy2 = y_frac[None, None, :]
+    wy1 = 1 - wy2
+
+    # Calculate droplet masks
+    droplet_masks = jnp.einsum('tn,thw-&amp;gt;hwn', composition, mask)
+
+    # Initialize background
+    bg = sample("bg", dist.Uniform(0, 1))
+    img = jnp.full((h, w), bg)
+
+    # Add droplets using bilinear interpolation
+    img = img.at[y1, x1].add(droplet_masks * (wx1 * wy1))
+    img = img.at[y1, x2].add(droplet_masks * (wx2 * wy1))
+    img = img.at[y2, x1].add(droplet_masks * (wx1 * wy2))
+    img = img.at[y2, x2].add(droplet_masks * (wx2 * wy2))
+
+    img = jnp.clip(img, 0, 1)
+    img = deterministic('img', img)
+    diff = deterministic('diff', channel - img)
+    sample('obs', dist.Normal(scale=0.05), obs=diff)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;guide = AutoNormal(model)
+svi = SVI(model, guide, Adam(0.01), Trace_ELBO())
+
+svi_result = svi.run(jax.random.PRNGKey(0), 100000, img.width, img.height, 2000, img_hsv[..., 0])
+samples_svi = guide.sample_posterior(jax.random.PRNGKey(0), svi_result.params, sample_shape=(100,))
+fig, ax = plt.subplots(figsize=(5, 2))
+ax.plot(svi_result.losses)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;100%|██████████| 100000/100000 [01:38&amp;lt;00:00, 1015.79it/s, init loss: 13266128.0000, avg. loss [95001-100000]: 447068.1562]
+
+
+
+
+
+[&amp;lt;matplotlib.lines.Line2D at 0x78611a185820&amp;gt;]&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative-process-2_6_2.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;pre&gt;&lt;code&gt;plt.imshow(samples_svi['img'].mean(axis=0), cmap='gray')
+plt.colorbar()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;matplotlib.colorbar.Colorbar at 0x78610cf92bd0&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative-process-2_7_1.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Looks quite good!&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;plt.imshow(img_hsv[:, :, 0]/255.0, cmap='gray')
+plt.colorbar()
+plt.scatter(samples_svi['x'][:100] * img_hsv.shape[1], samples_svi['y'][:100] * img_hsv.shape[0], s=4, alpha=0.01, c='red', marker='x')&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;matplotlib.collections.PathCollection at 0x786118d06030&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative-process-2_9_1.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Most droplets are now detected — very nice!&lt;/p&gt;
+&lt;p&gt;Let’s have a look at the inferred droplet masks:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;fig, axes = plt.subplots(1, samples_svi['mask'].shape[1], figsize=(samples_svi['mask'].shape[1], 1), sharey=True)
+for i, ax in enumerate(axes):
+    ax.imshow(samples_svi['mask'].mean(axis=0)[i], cmap='gray', vmin=0, vmax=1)&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2025-02-23-droplet-generative-process-2_files/2025-02-23-droplet-generative-process-2_12_0.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;This model took about 90 seconds to fit on a rusty RTX 2080. Still
+there is much that could be improved. If new samples include the same
+droplet types, only at different locations, the masks could be “frozen”.
+Even better, we could use amortised inference for almost instant
+results. Definitely something to explore in the future.&lt;/p&gt;</summary></entry><entry><title>Trialing generative processes for chemical microscopy (part 1)</title><link href="https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html" rel="alternate" /><id>https://hessammehr.github.io/blog/posts/2024-12-28-droplet-generative-process.html</id><published>2024-12-28T00:00:00+00:00</published><updated>2024-12-28T00:00:00+00:00</updated><summary type="html">&lt;h1&gt;Trialing
+generative processes for chemical microscopy (part 1)&lt;/h1&gt;
+&lt;p&gt;Is it possible to use a generative process to model microscope images
+like this (and is it worth the effort?)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import jax
+import jax.numpy as jnp
+import matplotlib.pyplot as plt
+import numpy as np
+import numpyro.distributions as dist
+import seaborn as sns
+from numpyro import deterministic, plate, sample
+from numpyro.infer import MCMC, NUTS, SVI, Trace_ELBO
+from numpyro.infer.autoguide import AutoNormal
+from numpyro.optim import Adam
+from PIL import Image
+
+sns.set_theme('notebook', 'ticks', font='Arial')
+
+plt.rcParams['figure.dpi'] = 200&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;img = Image.open('data/example.jpg')
+img = img.resize((img.width // 2, img.height // 2))
+img&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_2_0.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Try a couple of different colour spaces in case something interesting
+stands out.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from skimage import color
+
+img_array = np.array(img)
+lab_img = color.rgb2lab(img_array)
+
+fig, axes = plt.subplots(3, 1, figsize=(5, 10), sharex=True)
+
+for i, (ax, title) in enumerate(zip(axes, ['L channel', 'a channel', 'b channel'])):
+    im = ax.imshow(lab_img[:,:,i], cmap='gray')
+    ax.set_title(title)
+    fig.colorbar(im, ax=ax, fraction=0.03, pad=0.04)
+
+plt.tight_layout()&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_4_0.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;pre&gt;&lt;code&gt;hsv_img = color.rgb2hsv(img_array)
+
+fig, axes = plt.subplots(3, 1, figsize=(5, 10), sharex=True)
+
+for i, (ax, title) in enumerate(zip(axes, ['H channel', 'S channel', 'V channel'])):
+    im = ax.imshow(hsv_img[:,:,i], cmap='gray')
+    ax.set_title(title)
+    fig.colorbar(im, ax=ax, fraction=0.03, pad=0.04)
+
+plt.tight_layout()&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_5_0.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;First approach, fixed number of droplets; model centres and radii&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def model1(w, h, n_droplets):
+    with plate("droplets", n_droplets):
+        x = sample("x", dist.Uniform(0, w))
+        y = sample("y", dist.Uniform(0, h))
+        r = sample("r", dist.LogNormal(1.5, 0.75))
+
+
+mcmc = MCMC(NUTS(model1), num_warmup=1000, num_samples=100)
+mcmc.run(jax.random.PRNGKey(0), w=img.width, h=img.height, n_droplets=100)
+samples = mcmc.get_samples()
+
+fig, ax = plt.subplots()
+ax.imshow(np.ones_like(np.array(img)) * 255, cmap="gray")
+for sample_no in range(5):
+    for i in range(100):
+        circle = plt.Circle(
+            (samples["x"][sample_no][i], samples["y"][sample_no][i]),
+            samples["r"][sample_no][i],
+            color=plt.cm.tab10(sample_no),
+        )
+
+        ax.add_artist(circle)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;sample: 100%|██████████| 1100/1100 [00:09&amp;lt;00:00, 112.09it/s, 15 steps of size 3.08e-01. acc. prob=0.84]&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_7_1.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;pre&gt;&lt;code&gt;def model2(w, h, n_droplets):
+    # Sample droplet locations and sizes
+    with plate("droplets", n_droplets):
+        x = sample("x", dist.Uniform(0, w))
+        y = sample("y", dist.Uniform(0, h))
+        r = sample("r", dist.LogNormal(1.5, 0.75))
+        
+        # Sample HSV values for each droplet
+        h_val = sample("h", dist.Uniform(0, 1))
+        s_val = sample("s", dist.Beta(2, 2))
+        v_val = sample("v", dist.Beta(5, 2))  # Biased towards brighter values
+
+mcmc = MCMC(NUTS(model2), num_warmup=1000, num_samples=100)
+mcmc.run(jax.random.PRNGKey(0), w=img.width, h=img.height, n_droplets=100)
+samples = mcmc.get_samples()
+samples = {k: np.array(v) for k, v in samples.items()}
+
+# Visualize with HSV colors
+fig, ax = plt.subplots()
+ax.imshow(np.ones_like(np.array(img)) * 255, cmap="gray")
+for i in range(100):
+    circle = plt.Circle(
+        (samples["x"][0][i], samples["y"][0][i]),
+        samples["r"][0][i],
+        color=color.hsv2rgb(
+            np.array(
+                [
+                    samples["h"][0][i],
+                    samples["s"][0][i],
+                    samples["v"][0][i],
+                ]
+            )
+        ),
+    )
+    ax.add_artist(circle)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;sample: 100%|██████████| 1100/1100 [00:14&amp;lt;00:00, 74.39it/s, 15 steps of size 2.52e-01. acc. prob=0.86] &lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_8_1.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;pre&gt;&lt;code&gt;def model2(w, h, n_droplets):
+    # Sample droplet locations and sizes
+    with plate("droplets", n_droplets):
+        x = sample("x", dist.Uniform(0, w))
+        y = sample("y", dist.Uniform(0, h))
+        r = sample("r", dist.LogNormal(1.5, 0.75))
+        
+        with plate("pixels", w * h):
+            x_dist = jnp.abs(x - jnp.arange(w)[:, None])
+            y_dist = jnp.abs(y - jnp.arange(h)[:, None])
+            distance = jnp.sqrt(x_dist ** 2 + y_dist[:, None] ** 2)
+            val = deterministic('val', jnp.sum(jnp.exp(-distance ** 2 / (2 * r ** 2)), axis=-1))
+
+
+mcmc = MCMC(NUTS(model2), num_warmup=500, num_samples=10)
+mcmc.run(jax.random.PRNGKey(0), w=img.width, h=img.height, n_droplets=100)
+samples = mcmc.get_samples()
+samples = {k: np.array(v) for k, v in samples.items()}
+
+# show the first 3 samples
+fig, axes = plt.subplots(3, 1, figsize=(5, 10), sharex=True)
+for i, ax in enumerate(axes):
+    ax.imshow(1 - samples['val'][i], cmap='gray')&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;sample: 100%|██████████| 510/510 [00:06&amp;lt;00:00, 78.12it/s, 15 steps of size 3.10e-01. acc. prob=0.85] &lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_9_1.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Not a bad generative process to start with. Now let’s just fit the
+hue channel …&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def model3(w, h, n_droplets, channel, error_scale):
+    # Sample droplet locations and sizes
+    bg = sample("bg", dist.Uniform(0, 1))
+    with plate("droplets", n_droplets):
+        x = sample("x", dist.Uniform(0, 1))*w
+        y = sample("y", dist.Uniform(0, 1))*h
+        r = sample("r", dist.LogNormal(1.5, 0.75))
+        amplitude = sample("amplitude", dist.Uniform(0, 1))
+        
+        x_dist = jnp.abs(x - jnp.arange(w)[:, None])
+        y_dist = jnp.abs(y - jnp.arange(h)[:, None])
+        distance = jnp.sqrt(x_dist ** 2 + y_dist[:, None] ** 2)
+        val = deterministic('val', bg + jnp.sum(amplitude[None, None, :] * jnp.exp(-distance ** 2 / (2 * r ** 2)), axis=-1))
+        diff = deterministic('diff', val - channel)
+    sample('obs', dist.Normal(0, error_scale), obs=val - channel)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Fitting, instead of sampling&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;guide = AutoNormal(model3)
+svi = SVI(model3, guide, Adam(0.01), Trace_ELBO())
+svi_result = svi.run(jax.random.PRNGKey(0), 20000, img.width, img.height, 500, hsv_img[:,:,0], 0.05)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;100%|██████████| 20000/20000 [04:40&amp;lt;00:00, 71.43it/s, init loss: 19718028.0000, avg. loss [19001-20000]: 5279295.0000]&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;svi_result = svi.run(jax.random.PRNGKey(0), 50000, img.width, img.height, 500, hsv_img[:,:,0], 0.05, init_state=svi_result.state)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;  0%|          | 0/50000 [00:00&amp;lt;?, ?it/s]
+
+100%|██████████| 50000/50000 [11:36&amp;lt;00:00, 71.82it/s, init loss: 5101927.5000, avg. loss [47501-50000]: 5046932.5000]&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;samples = guide.sample_posterior(jax.random.PRNGKey(0), svi_result.params, sample_shape=(5,))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;fig, axes = plt.subplots(3, 1, figsize=(5, 10), sharex=True)
+fig.colorbar(axes[0].imshow(samples['val'][0], cmap='gray'), ax=axes[0], fraction=0.03, pad=0.04)
+axes[0].set_title('Prediction')
+fig.colorbar(axes[1].imshow(jnp.abs(samples['diff'][0]), cmap='gray'), ax=axes[1], fraction=0.03, pad=0.04)
+axes[1].set_title('Difference')
+fig.colorbar(axes[-1].imshow(hsv_img[:,:,0], cmap='gray'), ax=axes[-1], fraction=0.03, pad=0.04)
+axes[-1].set_title('Ground truth')
+fig.tight_layout()&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_16_0.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Not a bad start. Most of the brightests spots have been fitted. I am
+surprised thought that a lot of the amplitudes are almost zero. At the
+end of the day, optimisations where pieces have to move into the right
+place first are tricky and I have no reason to believe that this is a
+global optimum, despite having spent a while trying to tease out a
+better outcome.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sns.histplot(samples['amplitude'].flatten(), bins=50);&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_18_0.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;</summary></entry><entry><title>Simple generation of locally constrained values in `numpyro`</title><link href="https://hessammehr.github.io/blog/posts/2024-12-26-locally-constrained.html" rel="alternate" /><id>https://hessammehr.github.io/blog/posts/2024-12-26-locally-constrained.html</id><published>2024-12-26T00:00:00+00:00</published><updated>2024-12-26T00:00:00+00:00</updated><summary type="html">&lt;h1&gt;Simple
+generation of locally constrained values in &lt;code&gt;numpyro&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Just a simple experiment using &lt;code&gt;numpyro&lt;/code&gt; to simulate
+values from a function with locally constrained values. This is often
+achieved using Gaussian processed but I thought it would be interesting
+to try something a bit more intuitive, plus priors on the points
+themselves and their interdependence can be anything, not just normal
+distributions.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import jax
+import jax.numpy as jnp
+import matplotlib.pyplot as plt
+import numpy as np
+import numpyro.distributions as dist
+import seaborn as sns
+from numpyro import sample
+from numpyro.infer import MCMC, NUTS
+
+sns.set_theme('notebook', 'ticks', font='Arial')
+
+plt.rcParams['figure.dpi'] = 200&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;First, baseline: Independent draws from a normal distribution.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def model1():
+    x = sample("x", dist.Normal().expand([100]))
+
+
+mcmc = MCMC(NUTS(model1), num_warmup=1000, num_samples=100)
+mcmc.run(jax.random.PRNGKey(0))
+samples = mcmc.get_samples()
+
+x_points = np.repeat(np.arange(100)[None, :], samples["x"].shape[0], axis=0)
+plt.scatter(
+    x_points.flatten(), samples["x"].flatten(), color="darkblue", alpha=0.01, s=10
+)
+plt.gca().set(xlabel="Spatial/temporal dimension", ylabel="Observable");&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;sample: 100%|██████████| 1100/1100 [00:00&amp;lt;00:00, 1656.79it/s, 7 steps of size 4.46e-01. acc. prob=0.86]&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_3_1.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Adding some point observations …&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;obs_vals = jnp.array([3.3, -2.5, 4.9])
+obs_idx = jnp.array([20, 40, 75])
+
+def model2(obs_vals, obs_idx):
+    x = sample('x', dist.Normal().expand([100]))
+    sample('x_point_obs', dist.Normal(loc=obs_vals, scale=0.1), obs=x[obs_idx])
+
+
+mcmc = MCMC(NUTS(model2), num_warmup=1000, num_samples=100)
+mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
+samples = mcmc.get_samples()
+
+plt.scatter(x_points.flatten(), samples['x'].flatten(), color='darkblue', alpha=0.01, s=10);
+plt.scatter(obs_idx, obs_vals, label='Observed values', color='crimson', s=20)
+plt.legend();&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;sample: 100%|██████████| 1100/1100 [00:00&amp;lt;00:00, 1624.28it/s, 15 steps of size 4.02e-01. acc. prob=0.90]&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_5_1.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;“Observing” each point to be the average of previous and following
+points. This would be equivalent to adjusting the log-likelihood or
+adding a potential in other packages.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def model3(obs_vals, obs_idx):
+    x = sample('x', dist.Normal().expand([100]))
+    sample('x_dependence', dist.Normal(loc=(x[:-2]+x[2:])/2.0, scale=0.1), obs=x[1:-1])
+    sample('x_point_obs', dist.Normal(loc=obs_vals, scale=0.1), obs=x[obs_idx])
+
+
+mcmc = MCMC(NUTS(model3), num_warmup=1000, num_samples=100)
+mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
+samples = mcmc.get_samples()
+
+plt.scatter(x_points.flatten(), samples['x'].flatten(), color='darkblue', alpha=0.01, s=10)
+plt.scatter(obs_idx, obs_vals, label='Observed values', color='crimson', s=20)
+plt.legend();&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;sample: 100%|██████████| 1100/1100 [00:01&amp;lt;00:00, 903.87it/s, 63 steps of size 8.62e-02. acc. prob=0.84] &lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_7_1.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Slightly fancier — weighted relation to next/previous 2 points. I
+don’t notice a dramatic change with this 1:2:2:1 weighting but it would
+be interesting to add asymmetric constraints, etc. I suppose this could
+be useful for probabilistic low-pass filtering with sinc weights.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def model4(obs_vals, obs_idx):
+    x = sample('x', dist.Normal().expand([100]))
+    sample('x_pre_obs', dist.Normal(loc=(x[:-4]+2.0*x[1:-3]+2.0*x[3:-1]+x[4:])/6.0, scale=0.1), obs=x[2:-2])
+    sample('x_point_obs', dist.Normal(loc=obs_vals, scale=0.1), obs=x[obs_idx])
+
+
+mcmc = MCMC(NUTS(model4), num_warmup=1000, num_samples=100)
+mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
+samples = mcmc.get_samples()
+
+plt.plot(samples['x'].T, color='darkblue', alpha=0.01)
+plt.scatter(obs_idx, obs_vals, label='Observed values', color='crimson', s=20)
+plt.legend();&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;sample: 100%|██████████| 1100/1100 [00:01&amp;lt;00:00, 1011.04it/s, 63 steps of size 9.88e-02. acc. prob=0.89]&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_9_1.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Something a bit more interesting. Let’s change the “base”
+distribution to be bimodal and asymmetric. I have picked fairly broad
+humps so we have a fair shot at achieving good mixing.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mixing_distribution = dist.Categorical(jnp.array([0.3, 0.7]))
+component_distribution = dist.Normal(
+    loc=jnp.array([-3.0, 3.5]), scale=jnp.array([1.0, 1.5])
+)
+
+d = dist.MixtureSameFamily(mixing_distribution, component_distribution)
+
+x = jnp.linspace(-10, 10, 200)
+y = np.exp(d.log_prob(x))
+
+plt.fill_between(x, y, alpha=0.3, color='darkblue')
+plt.gca().set(xlabel='x', ylabel='PDF');&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_11_0.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;pre&gt;&lt;code&gt;def model5(obs_vals, obs_idx):
+    x = sample('x', d.expand([100]))
+
+mcmc = MCMC(NUTS(model5), num_warmup=1000, num_samples=200)
+mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
+samples = mcmc.get_samples()
+
+x_points = np.repeat(np.arange(100)[None, :], samples['x'].shape[0], axis=0)
+plt.scatter(x_points.flatten(), samples['x'].flatten(), color='darkblue', alpha=0.01, s=10);&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;sample: 100%|██████████| 1200/1200 [00:00&amp;lt;00:00, 1610.28it/s, 15 steps of size 1.68e-01. acc. prob=0.83]&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_12_1.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Adding back the observation constraints without dependence.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def model6(obs_vals, obs_idx):
+    x = sample('x', d.expand([100]))
+    sample('x_point_obs', dist.Normal(loc=obs_vals, scale=0.1), obs=x[obs_idx])
+
+mcmc = MCMC(NUTS(model6), num_warmup=1000, num_samples=200)
+mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
+samples = mcmc.get_samples()
+
+x_points = np.repeat(np.arange(100)[None, :], samples['x'].shape[0], axis=0)
+plt.scatter(x_points.flatten(), samples['x'].flatten(), color='darkblue', alpha=0.01, s=10)
+plt.scatter(obs_idx, obs_vals, label='Observed values', color='crimson', s=20)
+plt.legend();&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;sample: 100%|██████████| 1200/1200 [00:00&amp;lt;00:00, 1463.46it/s, 15 steps of size 1.48e-01. acc. prob=0.87]&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_14_1.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Finally, bringing back dependency on adjacent points …&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def model6(obs_vals, obs_idx):
+    x = sample('x', d.expand([100]))
+    sample('x_dependence', dist.Normal(loc=(x[:-2]+x[2:])/2.0, scale=0.1), obs=x[1:-1])
+    sample('x_point_obs', dist.Normal(loc=obs_vals, scale=0.1), obs=x[obs_idx])
+
+mcmc = MCMC(NUTS(model6), num_warmup=1000, num_samples=200)
+mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
+samples = mcmc.get_samples()
+
+x_points = np.repeat(np.arange(100)[None, :], samples['x'].shape[0], axis=0)
+# plt.scatter(x_points.flatten(), samples['x'].flatten(), color='darkblue', alpha=0.01, s=10)
+plt.scatter(obs_idx, obs_vals, label='Observed values', color='crimson', s=20, zorder=10)
+plt.plot(samples['x'].T, color='darkblue', alpha=0.01)
+plt.legend();&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;sample: 100%|██████████| 1200/1200 [00:03&amp;lt;00:00, 356.29it/s, 255 steps of size 2.30e-02. acc. prob=0.88]&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_16_1.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;And now just for fun, let’s try a bimodal dependency distribution,
+here essentially saying that each point is likely to be larger than its
+neighbor (or linger in the same ballpark).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;d_dep = dist.MixtureSameFamily(
+    mixing_distribution,
+    dist.Normal(loc=jnp.array([0, 0.5]), scale=0.1)
+)
+
+x = jnp.linspace(-1, 1, 200)
+y = np.exp(d_dep.log_prob(x))
+
+plt.fill_between(x, y, alpha=0.3, color='darkblue')
+plt.gca().set(xlabel='x', ylabel='PDF', title='$x_i - x_{i-1}$ prior');&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_18_0.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;pre&gt;&lt;code&gt;def model7(obs_vals, obs_idx):
+    x = sample('x', d.expand([100]))
+    sample('x_dependence', d_dep, obs=x[1:] - x[:-1])
+
+mcmc = MCMC(NUTS(model7), num_warmup=1000, num_samples=200)
+mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
+samples = mcmc.get_samples()
+
+plt.scatter(x_points.flatten(), samples['x'].flatten(), color='darkblue', alpha=0.01, s=10)
+plt.plot(x_points[0], samples['x'].mean(axis=0), color='crimson', lw=2, label='Mean')
+plt.legend();&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;sample: 100%|██████████| 1200/1200 [00:03&amp;lt;00:00, 396.09it/s, 127 steps of size 6.49e-02. acc. prob=0.84]&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_19_1.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;With the observations added back in you can see how the function
+finds it easier to catch up with sudden rises than falls due to the
+prior on adjacent values.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def model8(obs_vals, obs_idx):
+    x = sample('x', d.expand([100]))
+    sample('x_dependence', d_dep, obs=x[1:] - x[:-1])
+    sample('x_point_obs', dist.Normal(loc=obs_vals, scale=0.25), obs=x[obs_idx])
+
+mcmc = MCMC(NUTS(model8), num_warmup=1000, num_samples=200)
+mcmc.run(jax.random.PRNGKey(0), obs_vals, obs_idx)
+samples = mcmc.get_samples()
+
+plt.scatter(x_points.flatten(), samples['x'].flatten(), color='darkblue', alpha=0.01, s=10)
+plt.plot(x_points[0], samples['x'].mean(axis=0), color='crimson', lw=2, label='Mean')
+plt.scatter(obs_idx, obs_vals, label='Observed values', color='crimson', s=20)
+plt.legend();&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;sample: 100%|██████████| 1200/1200 [00:02&amp;lt;00:00, 497.90it/s, 255 steps of size 5.76e-02. acc. prob=0.88]&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;img alt="png" src="2024-12-26-locally-constrained_files/2024-12-26-locally-constrained_21_1.png"/&gt;
+&lt;figcaption&gt;png&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Very cool and I think quite useful for modelling
+chromatograms.&lt;/p&gt;</summary></entry><entry><title>A rant against macros</title><link href="https://hessammehr.github.io/blog/posts/2020-06-14-rant-against-macros.html" rel="alternate" /><id>https://hessammehr.github.io/blog/posts/2020-06-14-rant-against-macros.html</id><published>2020-06-14T00:00:00+00:00</published><updated>2020-06-14T00:00:00+00:00</updated><summary type="html">&lt;h1&gt;A rant against macros&lt;/h1&gt;
+&lt;p&gt;I used to be a huge fan of macros. I remember reading SICP and being
+amazed that you could use the language to generate and transform code.
+How cool is that? First a couple of examples: Clojure’s
+&lt;code&gt;core.async&lt;/code&gt; library includes a &lt;code&gt;go&lt;/code&gt; macro that
+lets you launch goroutine-like tasks without having to change the
+language.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;; https://github.com/clojure/core.async/blob/master/examples/walkthrough.clj
+(let [c1 (chan)
+      c2 (chan)]
+  (go (while true
+        (let [[v ch] (alts! [c1 c2])]
+          (println "Read" v "from" ch))))
+  (go (&amp;gt;! c1 "hi"))
+  (go (&amp;gt;! c2 "there")))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The Turing library lets you write probabilistic programs in Julia as
+if you’re using a dedicated probabilistic programming language
+(PPL):&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@model gdemo(x, y) = begin
+    # Assumptions
+    σ ~ InverseGamma(2,3)
+    μ ~ Normal(0,sqrt(σ))
+    # Observations
+    x ~ Normal(μ, sqrt(σ))
+    y ~ Normal(μ, sqrt(σ))
+end&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Fast forward to 2018 when I sat down with Chris Rackauckas before
+JuliaCon and he mentioned he’d been in touch with the Turing developers.
+I thought he bring up their PPL syntax and how it’s so wonderful that
+Julia lets you mold the language, but when I prompted him he said the
+macros have gotten in the way of using Turing as a library. He said
+functions and types were the way forward if you want things to
+compose.&lt;/p&gt;
+&lt;p&gt;Since then, I’ve written a couple of macros of my own and, powerful
+as they are, I have come to the conclusion that the problems I used them
+for were better handled by i) new or more expressive data structures,
+ii) plain old functions, iii) accepting a small amount of extra
+verbosity. In return you get, i) better interoperability, ii) code that
+is more explicit and easier to undestand, iii) much easier debugging,
+iv) a more robust design, v) much better support from your tools
+(&lt;em&gt;e.g.&lt;/em&gt; IDE, REPL).&lt;/p&gt;
+&lt;p&gt;Let’s look at a simpler model:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;using Distributions
+
+@model normal_model(x) = begin
+    # just a simple transformation; z is still observed, just like x
+    z = 2x
+    # sample y
+    y ~ Normal(0.0, 1.0)
+    # observe z
+    z ~ Normal(y, 1.0)
+end&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is what it expands to&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;quote
+    #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:348 =#
+    function var"##evaluator#371"(_rng::Random.AbstractRNG, _model::DynamicPPL.Model, _varinfo::DynamicPPL.AbstractVarInfo, _sampler::AbstractMCMC.AbstractSampler, _context::DynamicPPL.AbstractContext)
+        #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:355 =#
+        begin
+            x = (DynamicPPL.matchingvalue)(_sampler, _varinfo, _model.args.x)
+        end
+        #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:356 =#
+        begin
+            #= REPL[22]:1 =#
+            #= REPL[22]:2 =#
+            z = 2x
+            #= REPL[22]:3 =#
+            begin
+                var"##tmpright#363" = Normal(0.0, 1.0)
+                var"##tmpright#363" isa Union{Distribution, AbstractVector{&amp;lt;:Distribution}} || throw(ArgumentError("Right-hand side of a ~ must be subtype of Distribution or a vector of Distributions."))
+                var"##vn#365" = y
+                var"##inds#366" = ()
+                y = (DynamicPPL.tilde_assume)(_rng, _context, _sampler, var"##tmpright#363", var"##vn#365", var"##inds#366", _varinfo)
+            end
+            #= REPL[22]:4 =#
+            begin
+                var"##tmpright#367" = Normal(y, 1.0)
+                var"##tmpright#367" isa Union{Distribution, AbstractVector{&amp;lt;:Distribution}} || throw(ArgumentError("Right-hand side of a ~ must be subtype of Distribution or a vector of Distributions."))
+                var"##vn#369" = z
+                var"##inds#370" = ()
+                z = (DynamicPPL.tilde_assume)(_rng, _context, _sampler, var"##tmpright#367", var"##vn#369", var"##inds#370", _varinfo)
+            end
+        end
+    end
+    #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:359 =#
+    var"##generator#372"(x) = begin
+            #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:359 =#
+            (DynamicPPL.Model)(var"##evaluator#371", (DynamicPPL.namedtuple)(NamedTuple{(:x,), Tuple{Core.Typeof(x)}}, (x,)), (DynamicPPL.ModelGen){(:x,)}(var"##generator#372", NamedTuple()))
+        end
+    #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:360 =#
+    var"##generator#372"(; x) = begin
+            #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:344 =#
+            var"##generator#372"(x)
+        end
+    #= /home/group/.julia/packages/DynamicPPL/9OFG0/src/compiler.jl:362 =#
+    begin
+        $(Expr(:meta, :doc))
+        normal_model = (DynamicPPL.ModelGen){(:x,)}(var"##generator#372", NamedTuple())
+    end
+end&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And now to sample it:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sample(normal_model(3.0), NUTS(), 1000)
+
+# Summary Statistics
+#   parameters    mean     std  naive_se    mcse       ess   r_hat
+#   ──────────  ──────  ──────  ────────  ──────  ────────  ──────
+#            y  0.0096  1.0146    0.0454  0.0978  168.5831  0.9986
+#            z  0.0169  1.4692    0.0657  0.1204  158.7592  0.9992&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And we see that Turing has sampled both &lt;code&gt;y&lt;/code&gt; and
+&lt;code&gt;z&lt;/code&gt;, where &lt;code&gt;z&lt;/code&gt; should have been marked as
+deterministic and observed rather than sampled. Now, I’m sure this is
+well-documented somewhere but the point is that when you use a macro,
+your Julia code no longer functions the way you would expect. Worse, yet
+finding out why means being able to navigate the mess of generated
+symbols in the expanded version. And yes, the authors can fix this (if
+it’s actually a bug) but it doesn’t change the problem that the language
+inside that block is no longer Julia. You keep having to second guess
+yourself every time you reach for a new language feature.&lt;/p&gt;
+&lt;p&gt;Increasingly, macros, even nice hygienic ones remind me of the
+horrible mess that’s C/C++ macros: an untamed partial language with its
+own semantics that you need to learn and use, and how people have
+created whole programming languages in part to escape this ugly
+metalangauge problem. It’s true that homoiconic languages mostly get rid
+of the macro/preprocessor language, but the semantics of how language
+constucts behave within the macro and how they compose with other
+langauge features is still completely up to the programmer and, in my
+experience, quite hard to get right.&lt;/p&gt;
+&lt;p&gt;I see macros used in places that I find really troubling. I was
+writing a toy GTK application in Rust earlier today and learned that you
+need to use these weird macros to get memory management to play nicely
+with Rust.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;use glib::clone;
+
+let window = Rc::new(ApplicationWindow::new(app));
+
+# moving a weak reference to `window` into the closure
+butten.connect_activate(clone!(@weak window =&amp;gt; move |_| {
+    window.close(&amp;amp;button);
+}));&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I really don’t think introducing this metalanguage is a good idea at
+all. Also, how is this custom syntax supposed to be understood by the
+editor? Before &lt;code&gt;rust-analyzer&lt;/code&gt; my editor (VSCode + RLS) would
+give up with the macro and I would have to guess my way out. Things are
+better now that we have &lt;code&gt;rust-analyzer&lt;/code&gt; but I’m not even sure
+the Rust tooling is ever supposed to be able to make sense of this.&lt;/p&gt;
+&lt;p&gt;Bottom line (and I’m happy to be proven wrong): macros are an
+unsustainable convenience. They are never good enough to justify the
+readability/maintainability/tooling headaches.&lt;/p&gt;</summary></entry><entry><title>The case for lazy computation and interactive optimization</title><link href="https://hessammehr.github.io/blog/posts/2020-05-24-lazy-interactive-optimization.html" rel="alternate" /><id>https://hessammehr.github.io/blog/posts/2020-05-24-lazy-interactive-optimization.html</id><published>2020-05-24T00:00:00+00:00</published><updated>2020-05-24T00:00:00+00:00</updated><summary type="html">&lt;h1&gt;The case
+for lazy computation and interactive optimization&lt;/h1&gt;
+&lt;p&gt;Since 2018, my colleague &lt;a href="https://twitter.com/DarioCaramelli"&gt;Dario&lt;/a&gt; and I have been
+working on a probabilistic model of chemical reactivity. In a nutshell,
+this model can take reactivity observations between a bunch of compounds
+and interpret them as manifestations of properties and their mutual
+reactivities. The &lt;a href="https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo"&gt;Markov
+chain Monte carlo&lt;/a&gt; implementation of this model in &lt;a href="https://docs.pymc.io"&gt;PyMC3&lt;/a&gt; was quite fast to start but over
+time we have expanded the model and now with all the bells and whistles
+sampling can take close to a day.&lt;/p&gt;
+&lt;p&gt;Given these performance issues it was only natural to look at
+alternative implementations in my high performance language of choice,
+Julia. So, over the past year I have done maybe a dozen experiments,
+from a more or less equivalent high-level description in &lt;a href="https://turing.ml"&gt;Turing.jl&lt;/a&gt;, to encoding the log probability
+manually (on the CPU and the GPU) and using &lt;a href="https://github.com/tpapp/DynamicHMC.jl"&gt;DynamicHMC.jl&lt;/a&gt; and
+friends to sample, to using the HMC implementation in &lt;a href="https://github.com/TuringLang/AdvancedHMC.jl"&gt;AdvancedHMC.jl&lt;/a&gt;
+and hand coding the log probability + domain transformations. What has
+been surprising is that the performance gain hasn’t been nearly as large
+as I imagined it would be. In fact, my fastest implementation using
+AdvancedHMC is still only half as fast as the straightforward PyMC3
+implementation. There may be differences in the formulation of NUTS
+between the different packages, of course, so I don’t think this should
+be taken as representative. Just that it got me thinking about
+performance.&lt;/p&gt;
+&lt;p&gt;Yesterday, I started thinking about PyMC3’s backend, &lt;a href="http://www.deeplearning.net/software/theano/"&gt;Theano&lt;/a&gt;, and how
+it allows PyMC to be fast and expressive. Theano (and newer systems like
+TensorFlow) express computations as executable graphs of operations
+(&lt;em&gt;ops&lt;/em&gt; for short). In principle, evaluation of these graphs can
+entail any of the following:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Simply running an interpreted implementation of each
+&lt;em&gt;op&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Native code generation for all or part of the ops before
+execution.&lt;/li&gt;
+&lt;li&gt;Graph optimization, e.g. removing redundant ops or rewriting
+sequences of ops them with faster equivalents.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Libraries like Theano and TensorFlow have a fairly limited scope
+(numerical code) but I believe that borrowing certain of the above
+elements can make a great DSL for high performance computing in other
+domains. Specifically:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Computations described as graphs of ops.&lt;/li&gt;
+&lt;li&gt;Op-graph transformations, themselves described using #1. These
+transformations can be applied to a certain op or to all ops in a given
+scope (&lt;em&gt;e.g.&lt;/em&gt; children of a certain op, or ops matching a certain
+pattern).&lt;/li&gt;
+&lt;li&gt;Interpretive execution of the op graph.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Using this design, optimizations will be part of libraries that can
+be imported and applied to existing code &lt;em&gt;a la carte&lt;/em&gt; as opposed
+to hard-coded in the compiler/JIT. This model is somewhat similar to
+what Julia does, &lt;em&gt;i.e.&lt;/em&gt; interpretation and JIT compilation of
+code based on inferred type, but goes beyond building everything around
+the type system. Moreover, it can be implemented as a library in Julia,
+Python, or any language with bindings to codegen backend being targetted
+(if any).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update (2020-05-26):&lt;/strong&gt; Relevant discussion on the &lt;a href="https://discourse.julialang.org/t/idea-scope-rather-than-type-centric-composable-optimizations"&gt;Julia
+discourse&lt;/a&gt;. Forum users pointed out some of the promising
+developments in the area, e.g. &lt;a href="https://github.com/MikeInnes/Mjolnir.jl"&gt;Mjolnir&lt;/a&gt; and being
+able to &lt;a href="https://github.com/JuliaLang/julia/pull/33955"&gt;customize the
+compilation pipeline&lt;/a&gt; through parameterized interpretation.&lt;/p&gt;</summary></entry><entry><title>Fertile land at the confluence of staged programming and (typed) logic programming — Part 1</title><link href="https://hessammehr.github.io/blog/posts/2019-04-07-fertile-land-at-the-confluence-of-staged-programming-and-typed-logic-programming.html" rel="alternate" /><id>https://hessammehr.github.io/blog/posts/2019-04-07-fertile-land-at-the-confluence-of-staged-programming-and-typed-logic-programming.html</id><published>2019-04-07T00:00:00+00:00</published><updated>2019-04-07T00:00:00+00:00</updated><summary type="html">&lt;h1&gt;Fertile
+land at the confluence of staged programming and (typed) logic
+programming — Part 1&lt;/h1&gt;
+&lt;p&gt;I recently started sketching out a logic programming library called
+&lt;a href="https://github.com/hessammehr/Logic.jl"&gt;Logic.jl&lt;/a&gt; (it really
+is very much a sketch at the moment). As the name might imply, the
+library is implemented in Julia, which seems like an odd choice of
+implementation language. Choosing Julia and the twist on logic
+programming that I am aiming for are motivated by a particularly
+interesting confluence of ideas that I have become aware of in the past
+year and hope to describe in this blog post. I would love to hear your
+thoughts of course; just keep in mind that I am not a computer
+scientist.&lt;/p&gt;
+&lt;h2&gt;Idea
+#1: Staged programming and languages with first-class JIT compilation
+machinery&lt;/h2&gt;
+&lt;p&gt;There is no shortage of programming languages with just-in-time (JIT)
+accelerated virtual machines. Typical JITs are opaque: they step in at
+run time and speed up your code without you having to tell them
+anything. Increasingly, however, there are JITs of a different breed
+that, rather than stay hidden and opaque, work &lt;em&gt;in conjunction&lt;/em&gt;
+with the program, giving rise to a class of programming languages where
+application code can inspect and influence the various stages of code
+lowering as a &lt;em&gt;precise&lt;/em&gt; mechanism for on- demand code generation
+and behaviour adaptation. Using the notion of &lt;em&gt;staged
+programming&lt;/em&gt; , the various components of the runtime monolith (type
+checker, GC, codegen) can also be used in an &lt;em&gt;à la carte&lt;/em&gt;
+fashion, further blurring the line between compile and run time. I find
+this paradigm superior to the AST- level metaprogramming often
+encountered with LISP family languages. Where conventional JITs like
+HotSpot are often used to bridge the performance gap between
+bytecode-interpreted dynamically-typed languages like Python and
+statically-typed compiled languages like OCaml, staged programming,
+e.g. in Julia, also recovers some of the safety and expressive power of
+a sophisticated type system in an otherwise dynamically-typed
+environment.&lt;/p&gt;
+&lt;p&gt;The immediate trade-off is the overhead of including the full
+compiler toolchain with application code. The run time memory footprint
+would then resemble the equivalent of an AST/bytecode interpreter,
+libraries, and any compiler passes, including [possibly] the type system
+and codegen (e.g. LLVM). This is non-trivial and impractical in
+memory-constrained applications such as embedded systems. In principle
+at least, one can ahead-of-time compile the application and discard
+unused toolchain code as long as it can be inferred as unnecessary. That
+said, annotating/inferring dependencies between application code and the
+various pieces of compiler/runtime might require some effort.&lt;/p&gt;
+&lt;h3&gt;Staged programming in the
+wild&lt;/h3&gt;
+&lt;p&gt;Before we move on to Julia, let’s look at a few examples of
+programming langauges/environments that feature elements of staged
+programming. I suspect that there are many more such systems out there
+that I am not aware of.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://okmij.org/ftp/ML/MetaOCaml.html"&gt;MetaOCaml&lt;/a&gt; is
+described as an OCaml dialect for multi-stage programming. OCaml seems
+like a particularly good choice of language in my opinion, because a lot
+of the power afforded by its type system is challenged when dealing with
+data the structure of which is unknown until run time. Here for example
+is a (simplified) definition of the &lt;code&gt;json&lt;/code&gt; type from the
+OCaml package Yojson.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;type json = [
+  | `Assoc of (string * json) list
+  | `Bool of bool
+  | `Float of float
+  | `Int of int
+  | `List of json list
+  | `Null
+  | `String of string
+]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here is the Yojson package in use&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let doc = &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href="http://terralang.org/"&gt;Terra&lt;/a&gt;, essentially a
+metaprogramming system using Lua and LLVM aimed at low-level system
+programming.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;-- Terra allows the Lua interpreter and LLVM to interact.
+-- Lua code can invoke LLVM for code generation.
+-- LLVM can also call Lua, here to partially evaluate an expression.
+local a = 5
+terra sin5()
+    return [ math.sin(a) ]
+end
+
+-- output bitcode
+sin5:printpretty() 
+&amp;gt; output:
+&amp;gt; sin50 = terra() : {double}
+&amp;gt;    return -0.95892427466314
+&amp;gt; end
+
+-- example code from terralang.org&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Staged programming in Julia&lt;/h3&gt;
+&lt;p&gt;In my opinion Julia is the most successful implementation of the
+staged programming paradigm today. I say this based on the number of
+Julia users as well as how far it has taken the paradigm.&lt;/p&gt;
+&lt;p&gt;In Julia functions act as the basic unit of JIT compilation, with
+types guiding the process through a language feature called &lt;em&gt;multiple
+dispatch&lt;/em&gt;. Take the following simple function, for instance.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;""" sum(col)
+Return the sum of the elements of collection `col`
+"""
+function sum(col)
+    result = zero(eltype(col))
+    for elem in col
+        result += elem
+    end
+end&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;No code generation happens for this function until it is invoked,
+e.g. &lt;code&gt;sum([1,2,3])&lt;/code&gt;, at which point the type of its argument
+&lt;code&gt;Array{Int64, 1}&lt;/code&gt; recursively propagates through the body of
+the function. Much of the logic inside the function can be
+constant-folded given this concrete type. far from perfect.&lt;/p&gt;
+&lt;p&gt;The use of multiple dispatch as the primary driver of code generation
+in Julia seems to have worked out really well for the language. Still, I
+wonder if there are mechanisms that allow more expressive
+programming.&lt;/p&gt;
+&lt;p&gt;Julia was conceived as a programming language for high performance
+numerical calculations but, unlike other languages in its league like
+Matlab and Mathematica, its type system and compilation machinery appear
+to be applicable well beyond the realm of scientific computing, as
+demonstrated by projects like &lt;a href="https://github.com/jamii/imp"&gt;imp&lt;/a&gt; and &lt;a href="https://github.com/rbt-lang/DataKnots.jl"&gt;DataKnots.jl&lt;/a&gt; and &lt;a href="https://github.com/BioJulia/Automa.jl"&gt;Automa.jl&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Staged-programming is also known as multi&lt;/p&gt;
+&lt;h2&gt;First-class
+embedding of logic programming&lt;/h2&gt;
+&lt;p&gt;Having learned the functional paradigm, many people find it hard to
+go back to their old imperitive tools, which feel verbose and
+error-prone in comparison. My brief exposure to logic programming has
+left me with a similar feeling towards functional programming, namely
+the sense that logic programming allows solving the problem in a more
+direct and natural way. Just as functional programming seems removed
+from the physical reality of the computer because of its pervasive use
+of the function as a layer of indirection, logic programming’s symbolic
+variables and predicates provide a further layer of abstraction that
+allow the solution to be described by its properties rather than its
+realization from a given set of inputs.&lt;/p&gt;
+&lt;p&gt;Many Prolog users are familiar with the less-than-ideal
+interoperability of typical Prolog implementations with real-world code
+written in a language like Python. In a follow-up blog post I will try
+to explain how Julia’s multiple dispatch and staged programming
+facilitate embedding logic programming to bring most of its expressive
+power to Julia.&lt;/p&gt;</summary></entry><entry><title>Funny</title><link href="https://hessammehr.github.io/blog/posts/2013-12-28-funny.html" rel="alternate" /><id>https://hessammehr.github.io/blog/posts/2013-12-28-funny.html</id><published>2013-12-28T00:00:00+00:00</published><updated>2013-12-28T00:00:00+00:00</updated><summary type="html">&lt;h1&gt;Funny&lt;/h1&gt;
+&lt;p&gt;… Likewise, claiming JS is homoiconic because you can eval strings of
+code is nonsense. If that’s the only criteria for homoiconicity, then C
+is too, since you can treat an array of bytes as code and jump to
+it.&lt;/p&gt;
+&lt;p&gt;From &lt;a href="http://journal.stuffwithstuff.com/2013/07/18/javascript-isnt-scheme"&gt;here&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>A new way of doing chemistry</title><link href="https://hessammehr.github.io/blog/posts/2013-12-23-a-new-way-of-doing-chemistry.html" rel="alternate" /><id>https://hessammehr.github.io/blog/posts/2013-12-23-a-new-way-of-doing-chemistry.html</id><published>2013-12-23T00:00:00+00:00</published><updated>2013-12-23T00:00:00+00:00</updated><summary type="html">&lt;h1&gt;A new way of doing chemistry&lt;/h1&gt;
+&lt;p&gt;I’ve been thinking about a new way of doing chemistry. Take for
+example the case of growing crystals. In the more difficult cases, this
+involves trial and error using a number of educated guesses about the
+solvents and conditions. What if we had an algorithm that would decide
+the best procedure based on a database of molecular metrics, e.g.,
+dipole moment, molecular weight, melting point, decomposition
+temperature, functional groups, hydrogen bonding, etc. for solutes as
+well as solvents, trained on a series of successful/unsuccessful
+combinations, e.g., naphthalene from hot ethanol, macrocycle x from DMSO
++ ether by diffusion at room temperature, compound y from slow
+evaporation of hexanes solution?&lt;/p&gt;
+&lt;p&gt;This of course can be generalized to any chemical transformation.
+Publicly available databases like Org. Syn. can be mined for information
+that no one chemist can hope to memorize, significantly reducing the
+amount of trial and error in day-to-day chemistry.&lt;/p&gt;</summary></entry></feed>
