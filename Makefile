@@ -36,16 +36,8 @@ $(OUT_DIR)/blog/posts/%.md: blog/notebooks/%.ipynb | $(OUT_DIR)/blog/posts
 $(OUT_DIR)/blog/posts/%.html: $(OUT_DIR)/blog/posts/%.md $(OUT_DIR)/primer.css $(OUT_DIR)/light.css $(OUT_DIR)/dark.css
 	pandoc -s "$<" --template=_template.html --syntax-highlighting=none --mathjax -o "$@"
 
-$(OUT_DIR)/feed.xml: $(ALL_HTMLS)
-	echo $(ALL_HTMLS) && \
-	cp feed.template.xml $(OUT_DIR)/feed.xml && \
-	for file in $^; do \
-		date=$$(basename "$$file" | cut -d- -f1,2,3); \
-		title=$$(sed -n '1s/^# //p' "$$file"); \
-		formatted_date=$$(date -j -f "%Y-%m-%d" "$$date" "+%a, %d %b %Y 00:00:00 +0000" 2>/dev/null || date -d "$$date" --rfc-822 2>/dev/null || echo "$$date"); \
-		description=$$(awk 'BEGIN{p=0} /^# /{p=1;next} p==1&&NF>0{printf "%s ", $$0;exit}' "$$file" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g'); \
-		sed -i.bak "s|</channel>|  <item>\n    <title>$$title</title>\n    <link>https://hessammehr.github.io/blog/posts/$$(basename $$file)</link>\n    <guid>https://hessammehr.github.io/blog/posts/$$(basename $${file%.md}.html)</guid>\n    <pubDate>$$formatted_date</pubDate>\n    <description>$$description</description>\n  </item>\n</channel>|" $(OUT_DIR)/feed.xml; \
-	done
+$(OUT_DIR)/feed.xml: $(ALL_HTMLS) feed.template.xml scripts/generate_feed.py
+	uv run --no-project --with beautifulsoup4 python scripts/generate_feed.py $(ALL_HTMLS) > $@
 
 $(OUT_DIR)/blog/index.md: $(ALL_MDS) $(ALL_HTMLS) $(IMAGES)
 	cp blog/index.template.md $(OUT_DIR)/blog/index.md && \
