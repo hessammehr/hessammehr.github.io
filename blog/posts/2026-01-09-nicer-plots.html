@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Hessam's blog RSS Feed"
+      href="/feed.xml"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/primer.css" />
+    <link
+      rel="stylesheet"
+      href="/light.css"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="stylesheet"
+      href="/dark.css"
+      media="(prefers-color-scheme: dark)"
+    />
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body"><h1
+id="a-little-snippet-for-nicer-plots-using-matplotlib">A little snippet
+for nicer plots using matplotlib</h1>
+<p>If you’ve seen previous blog posts (or read any of our <a
+href="https://scholar.google.com/citations?user=HeyhCHEAAAAJ">group
+papers</a>) you may have noticed the plots have a consistent look.</p>
+<pre class="python"><code>import seaborn as sns
+from matplotlib import pyplot as plt</code></pre>
+<p>The default matplotlib look</p>
+<pre class="python"><code>plt.plot([1,2,5,3])</code></pre>
+<pre><code>[&lt;matplotlib.lines.Line2D at 0x11530e960&gt;]</code></pre>
+<figure>
+<img src="2026-01-09-nicer-plots_files/2026-01-09-nicer-plots_3_1.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
+</figure>
+<p>Not bad but try the following now</p>
+<pre class="python"><code>from matplotlib_inline.backend_inline import set_matplotlib_formats
+set_matplotlib_formats(&#39;svg&#39;)
+
+sns.set_theme(&#39;talk&#39;, &#39;ticks&#39;, font=&#39;Arial&#39;, font_scale=1.0, rc={&#39;svg.fonttype&#39;: &#39;none&#39;})</code></pre>
+<pre class="python"><code>plt.plot([1,2,5,3])</code></pre>
+<pre><code>[&lt;matplotlib.lines.Line2D at 0x1154e8ce0&gt;]</code></pre>
+<figure>
+<img src="2026-01-09-nicer-plots_files/2026-01-09-nicer-plots_6_1.svg"
+alt="svg" />
+<figcaption aria-hidden="true">svg</figcaption>
+</figure>
+<p>An added perk is that the plot is now embedded in your notebook as
+SVG so if you export to Markdown/HTML they will stay nice and
+crisp.</p></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
