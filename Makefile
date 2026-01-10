@@ -36,8 +36,8 @@ $(OUT_DIR)/blog/posts/%.md: blog/notebooks/%.ipynb | $(OUT_DIR)/blog/posts
 $(OUT_DIR)/blog/posts/%.html: $(OUT_DIR)/blog/posts/%.md $(OUT_DIR)/primer.css $(OUT_DIR)/light.css $(OUT_DIR)/dark.css
 	pandoc -s "$<" --template=_template.html --syntax-highlighting=none --mathjax -o "$@"
 
-$(OUT_DIR)/feed.xml: $(ALL_HTMLS) feed.template.xml scripts/generate_feed.py
-	uv run --no-project --with beautifulsoup4 python scripts/generate_feed.py $(ALL_HTMLS) > $@
+$(OUT_DIR)/feed.xml: $(ALL_MDS) scripts/generate_feed.py
+	uv run --no-project python scripts/generate_feed.py $(ALL_MDS) > $@
 
 $(OUT_DIR)/blog/index.md: $(ALL_MDS) $(ALL_HTMLS) $(IMAGES)
 	cp blog/index.template.md $(OUT_DIR)/blog/index.md && \
