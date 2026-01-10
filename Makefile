@@ -16,13 +16,16 @@ IMAGES := $(patsubst blog/images/%,$(OUT_DIR)/blog/images/%,$(wildcard blog/imag
 all: build
 
 $(OUT_DIR)/primer.css: | $(OUT_DIR)
-	curl -so $(OUT_DIR)/primer.css https://unpkg.com/@primer/css/dist/primer.css
+	curl -sfo $(OUT_DIR)/primer.css https://unpkg.com/@primer/css/dist/primer.css
 
 $(OUT_DIR)/light.css: | $(OUT_DIR)
-	curl -so $(OUT_DIR)/light.css https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/github.min.css
+	curl -sfo $(OUT_DIR)/light.css https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github.min.css
 
 $(OUT_DIR)/dark.css: | $(OUT_DIR)
-	curl -so $(OUT_DIR)/dark.css https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/github-dark.min.css
+	curl -sfo $(OUT_DIR)/dark.css https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css
+
+$(OUT_DIR)/highlight.min.js: | $(OUT_DIR)
+	curl -sfo $(OUT_DIR)/highlight.min.js https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js
 
 # Plain .md posts
 $(OUT_DIR)/blog/posts/%.md: blog/posts/%.md | $(OUT_DIR)/blog/posts
@@ -33,7 +36,7 @@ $(OUT_DIR)/blog/posts/%.md: blog/notebooks/%.ipynb | $(OUT_DIR)/blog/posts
 	$(NBCONVERT) --to markdown "$<" --output-dir $(OUT_DIR)/blog/posts
 
 # .html posts from .md
-$(OUT_DIR)/blog/posts/%.html: $(OUT_DIR)/blog/posts/%.md $(OUT_DIR)/primer.css $(OUT_DIR)/light.css $(OUT_DIR)/dark.css
+$(OUT_DIR)/blog/posts/%.html: $(OUT_DIR)/blog/posts/%.md $(OUT_DIR)/primer.css $(OUT_DIR)/light.css $(OUT_DIR)/dark.css $(OUT_DIR)/highlight.min.js
 	pandoc -s "$<" --template=_template.html --syntax-highlighting=none --mathjax -o "$@"
 
 $(OUT_DIR)/feed.xml: $(ALL_MDS) scripts/generate_feed.py
