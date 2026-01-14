@@ -128,7 +128,7 @@ Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; [Mehr, 
 
 ## Books
 ### Building a digital chemistry lab <span>Royal Society of Chemistry Books </span>
-[Mehr, S. H. M.]{.underline} Book proposal accepted with publication in the RSC Foundations Series expected in 2025.
+[Mehr, S. H. M.]{.underline} RSC Foundations Series, publication expected in 2026.
 
 ## Selected talks and seminars
 ### Invited speaker
