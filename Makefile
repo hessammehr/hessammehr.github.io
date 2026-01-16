@@ -8,8 +8,9 @@ NBCONVERT := uvx --from jupyter-core --with nbconvert jupyter nbconvert
 NOTEBOOKS := $(wildcard blog/notebooks/*.ipynb)
 NOTEBOOK_MDS := $(patsubst blog/notebooks/%.ipynb,$(OUT_DIR)/blog/posts/%.md,$(NOTEBOOKS))
 MDS := $(patsubst blog/posts/%.md,$(OUT_DIR)/blog/posts/%.md,$(wildcard blog/posts/*.md))
+HTMLS := $(patsubst blog/htmls/%.html,$(OUT_DIR)/blog/posts/%.html,$(wildcard blog/htmls/*.html))
 ALL_MDS := $(MDS) $(NOTEBOOK_MDS)
-ALL_HTMLS := $(patsubst %.md,%.html,$(ALL_MDS))
+ALL_HTMLS := $(patsubst %.md,%.html,$(ALL_MDS)) $(HTMLS)
 
 IMAGES := $(patsubst blog/images/%,$(OUT_DIR)/blog/images/%,$(wildcard blog/images/*))
 
@@ -31,6 +32,10 @@ $(OUT_DIR)/highlight.min.js: | $(OUT_DIR)
 $(OUT_DIR)/blog/posts/%.md: blog/posts/%.md | $(OUT_DIR)/blog/posts
 	cp "$<" $(OUT_DIR)/blog/posts/
 
+# HTML posts
+$(OUT_DIR)/blog/posts/%.html: blog/htmls/%.html | $(OUT_DIR)/blog/posts
+	cp "$<" $(OUT_DIR)/blog/posts/
+
 # .md posts from .ipynb
 $(OUT_DIR)/blog/posts/%.md: blog/notebooks/%.ipynb | $(OUT_DIR)/blog/posts
 	$(NBCONVERT) --to markdown "$<" --output-dir $(OUT_DIR)/blog/posts
@@ -42,26 +47,22 @@ $(OUT_DIR)/blog/posts/%.html: $(OUT_DIR)/blog/posts/%.md $(OUT_DIR)/primer.css $
 $(OUT_DIR)/feed.xml: $(ALL_MDS) scripts/generate_feed.py
 	uv run --no-project python scripts/generate_feed.py $(ALL_MDS) > $@
 
-$(OUT_DIR)/blog/index.md: $(ALL_MDS) $(ALL_HTMLS) $(IMAGES)
-	cp blog/index.template.md $(OUT_DIR)/blog/index.md && \
-	for file in $$(find $(OUT_DIR)/blog/posts -name "*.md" | sort -r); do \
+$(OUT_DIR)/blog/index.md: $(ALL_HTMLS) $(IMAGES)
+	cp blog/index.template.md $@ && \
+	for file in $$(echo "$(ALL_HTMLS)" | tr ' ' '\n' | sort -r); do \
 		date=$$(basename "$$file" | cut -d- -f1,2,3); \
-		title=$$(sed -n '1s/^# //p' "$$file"); \
+		mdfile="$${file%.html}.md"; \
+		if [ -f "$$mdfile" ]; then \
+			title=$$(sed -n '1s/^# //p' "$$mdfile"); \
+		else \
+			title=$$(sed -n 's/.*<title>\(.*\)<\/title>.*/\1/p' "$$file" | head -1); \
+		fi; \
 		filename=$$(basename "$$file"); \
-		echo "| $$date | [$$title]" >> $(OUT_DIR)/blog/index.md; \
-	done && \
-	echo "" >> $(OUT_DIR)/blog/index.md && \
-	for file in $$(find $(OUT_DIR)/blog/posts -name "*.md" | sort -r); do \
-		title=$$(sed -n '1s/^# //p' "$$file"); \
-		filename=$$(basename "$$file"); \
-		echo "[$$title]: /blog/posts/$$filename" >> $(OUT_DIR)/blog/index.md; \
+		echo "| $$date | [$$title](/blog/posts/$$filename)" >> $@; \
 	done
 
 $(OUT_DIR)/blog/index.html: $(OUT_DIR)/blog/index.md
-	cd $(OUT_DIR) && \
-	pandoc -s blog/index.md -c /style.css \
-		--lua-filter=<(echo 'function Link(el) el.target = el.target:gsub("%.md$$", ".html") return el end') \
-		-o blog/index.html
+	pandoc -s $< -c /style.css -o $@
 
 $(OUT_DIR)/CV.html: $(OUT_DIR)/primer.css CV.md
 	pandoc --section-divs -s CV.md -o $(OUT_DIR)/CV.html
