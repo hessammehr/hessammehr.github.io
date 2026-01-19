@@ -158,6 +158,9 @@ Cronin, L.; <span class="author-self">Mehr, H.</span>; Craven, M.; Leonov, A. I.
 
 ## Grants and awards
 
+### *Living proof* (£20k, Co-investigator) <span>Trust Everything Everywhere pre-programme discovery project | 2026</span>
+Investigating how complex molecular processes can be used as the basis for a molecular "chain of trust".
+
 ### Digital Discovery Emerging Investigator <span>RSC Digital Discovery Journal | 2025</span>
 Nominated as a Digital Discovery Emerging Investigator: "an up-and-coming researcher making a significant contribution to accelerated science using machine learning, robotics, AI or quantum computing". Invited to contribute to forthcoming themed collection.
 
