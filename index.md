@@ -1,13 +1,9 @@
----
-title: Hessam Mehr
----
-
 # Chemistry <span id="arrow">⟷</span> Information <span id="arrow">⟷</span> Discovery
-## S. Hessam M. Mehr
+## Hessam Mehr
 <div id="under_title"> Leverhulme Early Career Research Fellow, University of Glasgow </div>
 <div id="under_title"> [CV] [Blog] [GitHub] [LinkedIn] [Email] [Group website] </div>
 
-![](rings.png){.logo}
+![](rings.png){.logo .dark}
 
 Investigating information and automation as gateways to new discovery paradigms in chemistry.
 
@@ -16,6 +12,8 @@ Investigating information and automation as gateways to new discovery paradigms 
 - [0101chem] companion website to my *Digital chemistry for digital natives* outreach project, funded by the [Royal Society of Chemistry][RSC]
 - _[Sound Chemistry]_ Royal Society of Edinburgh workshop that I organised in March 2024 with a focus on novel modalities for chemical containers, e.g. acoustic confinement
 - [Personal blog][Blog] Personal takes and hobby project covering chemistry, programming and electronics ([RSS feed](/feed.xml))
+
+![](lines.svg){.dark}
 
 ### Publications
 For more context on current research projects and related publications see my [group's research page](https://mehr-research.science/research/#publications) or my [CV][CV publications]. For a complete list see [my Google Scholar][Google Scholar] or [ORCiD profile][ORCiD].

@@ -42,7 +42,8 @@ $(OUT_DIR)/blog/posts/%.md: blog/notebooks/%.ipynb | $(OUT_DIR)/blog/posts
 
 # .html posts from .md
 $(OUT_DIR)/blog/posts/%.html: $(OUT_DIR)/blog/posts/%.md $(OUT_DIR)/primer.css $(OUT_DIR)/light.css $(OUT_DIR)/dark.css $(OUT_DIR)/highlight.min.js
-	pandoc -s "$<" --template=_template.html --syntax-highlighting=none --mathjax -o "$@"
+	title=$$(sed -n '1s/^# //p' "$<"); \
+	pandoc -s "$<" --template=_template.html --syntax-highlighting=none --mathjax --metadata=pagetitle="$$title" -o "$@"
 
 $(OUT_DIR)/feed.xml: $(ALL_MDS) scripts/generate_feed.py
 	uv run --no-project python scripts/generate_feed.py $(ALL_MDS) > $@
@@ -71,8 +72,8 @@ $(OUT_DIR)/%: % | $(OUT_DIR)
 	@mkdir -p $(dir $@)
 	cp $< $@
 
-$(OUT_DIR)/index.html: index.md $(OUT_DIR)/primer.css $(OUT_DIR)/style.css $(OUT_DIR)/rings.png
-	pandoc -s $< -c style.css -o $@
+$(OUT_DIR)/index.html: index.md $(OUT_DIR)/primer.css $(OUT_DIR)/style.css $(OUT_DIR)/rings.png $(OUT_DIR)/lines.svg
+	pandoc -s $< -c style.css --metadata=pagetitle="Hessam Mehr" -o $@
 
 $(OUT_DIR):
 	mkdir -p $(OUT_DIR)

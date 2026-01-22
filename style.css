@@ -87,7 +87,7 @@ a:hover {
         color: #cb9c79;
     }
 
-    img.logo {
+    img.dark {
         filter: invert(1);
         mix-blend-mode: screen;
     }
