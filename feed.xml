@@ -144,7 +144,6 @@ which is currently printing …&lt;/p&gt;
 alt="Lampshade being 3D printed" /&gt;
 &lt;figcaption aria-hidden="true"&gt;Lampshade being 3D printed&lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;p&gt;&lt;strong&gt;Update: &lt;/strong&gt; Here is the finished product, not bad!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Update: &lt;/strong&gt; I’ve converted the Jupyter notebook to
 marimo so it’s easier to visualise the cross section and profile of the
 generated lampshade. You don’t even need to install Python to run this
