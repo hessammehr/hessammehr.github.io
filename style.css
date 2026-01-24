@@ -34,6 +34,10 @@ img.logo {
     mix-blend-mode: multiply;
 }
 
+img.hero {
+    max-width: 50%;
+}
+
 span#arrow {
     vertical-align: 0.1em;
 }
