@@ -42,8 +42,9 @@ $(OUT_DIR)/blog/posts/%.md: blog/notebooks/%.ipynb | $(OUT_DIR)/blog/posts
 
 # .html posts from .md
 $(OUT_DIR)/blog/posts/%.html: $(OUT_DIR)/blog/posts/%.md $(OUT_DIR)/primer.css $(OUT_DIR)/light.css $(OUT_DIR)/dark.css $(OUT_DIR)/highlight.min.js
-	title=$$(sed -n '1s/^# //p' "$<"); \
-	pandoc -s "$<" --template=_template.html --syntax-highlighting=none --mathjax --metadata=pagetitle="$$title" -o "$@"
+	title=$$(sed -n '1s/^# \(Draft: \)\{0,1\}//p' "$<"); \
+	sed '1s/^# Draft: /# [Draft]{.draft-title} /' "$<" | \
+	pandoc -s --template=_template.html --syntax-highlighting=none --mathjax --metadata=pagetitle="$$title" -o "$@"
 
 $(OUT_DIR)/feed.xml: $(ALL_MDS) scripts/generate_feed.py
 	uv run --no-project python scripts/generate_feed.py $(ALL_MDS) > $@
@@ -59,7 +60,12 @@ $(OUT_DIR)/blog/index.md: $(ALL_HTMLS) $(IMAGES)
 			title=$$(sed -n 's/.*<title>\(.*\)<\/title>.*/\1/p' "$$file" | head -1); \
 		fi; \
 		filename=$$(basename "$$file"); \
-		echo "| $$date | [$$title](/blog/posts/$$filename)" >> $@; \
+		if echo "$$title" | grep -q '^Draft: '; then \
+			title=$$(echo "$$title" | sed 's/^Draft: //'); \
+			echo "| $$date | <span class=\"draft-label\">Draft</span>[$$title](/blog/posts/$$filename)" >> $@; \
+		else \
+			echo "| $$date | [$$title](/blog/posts/$$filename)" >> $@; \
+		fi; \
 	done
 
 $(OUT_DIR)/blog/index.html: $(OUT_DIR)/blog/index.md

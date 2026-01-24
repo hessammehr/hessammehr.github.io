@@ -127,3 +127,23 @@ figcaption {
 .gallery > p {
     display: contents;
 }
+
+/* Draft post markers */
+.draft-label,
+.draft-title {
+    color: #b45309;
+    background-color: #fef3c7;
+    padding: 0.1em 0.4em;
+    border-radius: 0.25em;
+    font-size: 0.85em;
+    font-weight: 600;
+    margin-right: 0.4em;
+}
+
+@media (prefers-color-scheme: dark) {
+    .draft-label,
+    .draft-title {
+        color: #fbbf24;
+        background-color: #422006;
+    }
+}
