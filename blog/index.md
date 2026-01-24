@@ -7,8 +7,8 @@ title: Hessam's blog
 
 | Date       | Title                                                                                          |
 |:-----------|:-----------------------------------------------------------------------------------------------|
-| 2026-01-19 | [Evolving interactions with AI in 2026](/blog/posts/2026-01-19-ai-in-2026.html)
-| 2026-01-16 | [Thinking about aerosols probabilistically — Part 1: Evaporation](/blog/posts/2026-01-16-thinking-about-aerosols-probabilistically-part-1.html)
+| 2026-01-19 | <span class="draft-label">Draft</span>[Evolving interactions with AI in 2026](/blog/posts/2026-01-19-ai-in-2026.html)
+| 2026-01-16 | <span class="draft-label">Draft</span>[Thinking about aerosols probabilistically — Part 1: Evaporation](/blog/posts/2026-01-16-thinking-about-aerosols-probabilistically-part-1.html)
 | 2026-01-09 | [A little snippet for nicer plots using matplotlib](/blog/posts/2026-01-09-nicer-plots.html)
 | 2025-12-24 | [3D printed lampshade from a formula](/blog/posts/2025-12-24-maths-to-lampshade.html)
 | 2025-12-17 | [Using `uv` projects on a network share](/blog/posts/2025-12-17-uv-on-network-shares.html)
