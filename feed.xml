@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><title>Hessam's blog</title><link href="https://hessammehr.github.io/blog/" rel="alternate" /><link href="https://hessammehr.github.io/feed.xml" rel="self" /><id>https://hessammehr.github.io/</id><author><name>Hessam Mehr</name></author><updated>2026-01-19T00:00:00+00:00</updated><entry><title>Draft: Evolving interactions with AI in 2026</title><link href="https://hessammehr.github.io/blog/posts/2026-01-19-ai-in-2026.html" rel="alternate" /><id>https://hessammehr.github.io/blog/posts/2026-01-19-ai-in-2026.html</id><published>2026-01-19T00:00:00+00:00</published><updated>2026-01-19T00:00:00+00:00</updated><content type="html">&lt;h1 id="draft-evolving-interactions-with-ai-in-2026"&gt;Draft: Evolving
 interactions with AI in 2026&lt;/h1&gt;
 &lt;figure&gt;
-&lt;img src="https://hessammehr.github.io/blog/images/hessam-chatgpt.png"
+&lt;img src="https://hessammehr.github.io/blog/images/hessam-chatgpt.png" class="hero"
 alt="My 2025 year in summary according to ChatGPT" /&gt;
 &lt;figcaption aria-hidden="true"&gt;My 2025 year in summary according to
 ChatGPT&lt;/figcaption&gt;
@@ -74,6 +74,11 @@ alt="svg" /&gt;
 SVG so if you export to Markdown/HTML they will stay nice and crisp.&lt;/p&gt;
 </content></entry><entry><title>3D-printed mathematical lampshades</title><link href="https://hessammehr.github.io/blog/posts/2025-12-24-maths-to-lampshade.html" rel="alternate" /><id>https://hessammehr.github.io/blog/posts/2025-12-24-maths-to-lampshade.html</id><published>2025-12-24T00:00:00+00:00</published><updated>2025-12-24T00:00:00+00:00</updated><content type="html">&lt;h1 id="d-printed-mathematical-lampshades"&gt;3D-printed mathematical
 lampshades&lt;/h1&gt;
+&lt;figure&gt;
+&lt;img src="https://hessammehr.github.io/blog/images/lampshade-printed.jpeg" class="hero"
+alt="Finished lampshade" /&gt;
+&lt;figcaption aria-hidden="true"&gt;Finished lampshade&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;p&gt;I’ve been playing with translucent PLA for lighting projects at home.
 Earlier this year, I built a diffuser/housing for our Lidl LED strip,
 since the light from the exposed LEDs was too cool and jarring. The
@@ -140,10 +145,6 @@ alt="Lampshade being 3D printed" /&gt;
 &lt;figcaption aria-hidden="true"&gt;Lampshade being 3D printed&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;&lt;strong&gt;Update: &lt;/strong&gt; Here is the finished product, not bad!&lt;/p&gt;
-&lt;figure&gt;
-&lt;img src="https://hessammehr.github.io/blog/images/lampshade-printed.jpeg" alt="Finished lampshade" /&gt;
-&lt;figcaption aria-hidden="true"&gt;Finished lampshade&lt;/figcaption&gt;
-&lt;/figure&gt;
 &lt;p&gt;&lt;strong&gt;Update: &lt;/strong&gt; I’ve converted the Jupyter notebook to
 marimo so it’s easier to visualise the cross section and profile of the
 generated lampshade. You don’t even need to install Python to run this
