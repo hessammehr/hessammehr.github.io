@@ -72,8 +72,8 @@ alt="svg" /&gt;
 &lt;/figure&gt;
 &lt;p&gt;An added perk is that the plot is now embedded in your notebook as
 SVG so if you export to Markdown/HTML they will stay nice and crisp.&lt;/p&gt;
-</content></entry><entry><title>3D printed lampshade from a formula</title><link href="https://hessammehr.github.io/blog/posts/2025-12-24-maths-to-lampshade.html" rel="alternate" /><id>https://hessammehr.github.io/blog/posts/2025-12-24-maths-to-lampshade.html</id><published>2025-12-24T00:00:00+00:00</published><updated>2025-12-24T00:00:00+00:00</updated><content type="html">&lt;h1 id="d-printed-lampshade-from-a-formula"&gt;3D printed lampshade from a
-formula&lt;/h1&gt;
+</content></entry><entry><title>3D-printed mathematical lampshades</title><link href="https://hessammehr.github.io/blog/posts/2025-12-24-maths-to-lampshade.html" rel="alternate" /><id>https://hessammehr.github.io/blog/posts/2025-12-24-maths-to-lampshade.html</id><published>2025-12-24T00:00:00+00:00</published><updated>2025-12-24T00:00:00+00:00</updated><content type="html">&lt;h1 id="d-printed-mathematical-lampshades"&gt;3D-printed mathematical
+lampshades&lt;/h1&gt;
 &lt;p&gt;I’ve been playing with translucent PLA for lighting projects at home.
 Earlier this year, I built a diffuser/housing for our Lidl LED strip,
 since the light from the exposed LEDs was too cool and jarring. The
@@ -135,8 +135,14 @@ the transition to a single point at the top (essentially scaling the
 profile depending on height). The results is a massive 70+MB STL file,
 which is currently printing …&lt;/p&gt;
 &lt;figure&gt;
-&lt;img src="https://hessammehr.github.io/blog/images/lampshade-printing.jpeg" alt="alt text" /&gt;
-&lt;figcaption aria-hidden="true"&gt;alt text&lt;/figcaption&gt;
+&lt;img src="https://hessammehr.github.io/blog/images/lampshade-printing.jpeg"
+alt="Lampshade being 3D printed" /&gt;
+&lt;figcaption aria-hidden="true"&gt;Lampshade being 3D printed&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;Update: &lt;/strong&gt; Here is the finished product, not bad!&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src="https://hessammehr.github.io/blog/images/lampshade-printed.jpeg" alt="Finished lampshade" /&gt;
+&lt;figcaption aria-hidden="true"&gt;Finished lampshade&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;p&gt;&lt;strong&gt;Update: &lt;/strong&gt; I’ve converted the Jupyter notebook to
 marimo so it’s easier to visualise the cross section and profile of the
