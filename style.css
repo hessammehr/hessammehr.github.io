@@ -36,6 +36,7 @@ img.logo {
 
 img.hero {
     max-width: 50%;
+    border-radius: 25px;
 }
 
 span#arrow {
