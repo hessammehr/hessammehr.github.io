@@ -78,7 +78,7 @@ $(OUT_DIR)/%: % | $(OUT_DIR)
 	@mkdir -p $(dir $@)
 	cp $< $@
 
-$(OUT_DIR)/index.html: index.md $(OUT_DIR)/primer.css $(OUT_DIR)/style.css $(OUT_DIR)/rings.png $(OUT_DIR)/lines.svg
+$(OUT_DIR)/index.html: index.md $(OUT_DIR)/primer.css $(OUT_DIR)/style.css $(OUT_DIR)/rings.png $(OUT_DIR)/lines.svg $(OUT_DIR)/lampshade.jpeg
 	pandoc -s $< -c style.css --metadata=pagetitle="Hessam Mehr" -o $@
 
 $(OUT_DIR):
