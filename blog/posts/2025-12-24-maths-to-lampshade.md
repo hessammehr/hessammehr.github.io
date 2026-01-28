@@ -1,7 +1,7 @@
 # 3D-printed mathematical lampshades
 ![Finished lampshade](../images/lampshade-printed.jpeg){.hero}
 
-I've been playing with translucent PLA for lighting projects at home. Earlier this year, I built a diffuser/housing for our Lidl LED strip, since the light from the exposed LEDs was too cool and jarring. The design files are on OnShape, although they might need tweaking for the exact strip and required installation area.
+I've been playing with translucent PLA for lighting projects at home. Earlier this year, I built a diffuser/housing for our Lidl LED strip, since the light from the exposed LEDs was too cool and jarring. The design files are on [OnShape](https://cad.onshape.com/documents/e51f793089189f80c2f7aa1f/w/94e173d3c5332d1ee7327e7a/e/50d37d0328225b89bb78e092?renderMode=0&uiState=697a5c68c73367c11cdd50ff), although they might need tweaking for the exact strip and required installation area.
 
 :::{.gallery}
 ![alt text](../images/livarno-led.png)
