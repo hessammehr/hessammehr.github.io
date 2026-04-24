@@ -49,7 +49,7 @@ Focus areas: Digital signal processing, photonic crystals.
 
 ## Research highlights
 
-Highlights among **33** peer-reviewed primary research papers (h-index: **14**; **900** citations; [full list](#full-publication-list)):
+Highlights among **33** peer-reviewed primary research papers (h-index: **15**; **1000+** citations; [full list](#full-publication-list)):
 
 ### ▶ Programmable aerosol chemistry coupled to chemical imaging establishes a new arena for automated chemical synthesis and discovery
 Wosik, J.; Zhu, C.; Li, Z.; [Mehr, S. H. M.]{.underline}, *Digital Discovery*, **2025** ([10.1039/D5DD00100E](https://doi.org/10.1039/D5DD00100E))
