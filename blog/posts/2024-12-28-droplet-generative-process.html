@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trialing generative processes for chemical microscopy (part
+1)</title>
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Hessam's blog RSS Feed"
+      href="/feed.xml"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/primer.css" />
+    <link
+      rel="stylesheet"
+      href="/light.css"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="stylesheet"
+      href="/dark.css"
+      media="(prefers-color-scheme: dark)"
+    />
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body"><h1
+id="trialing-generative-processes-for-chemical-microscopy-part-1">Trialing
+generative processes for chemical microscopy (part 1)</h1>
+<p>Is it possible to use a generative process to model microscope images
+like this (and is it worth the effort?)</p>
+<pre class="python"><code>import jax
+import jax.numpy as jnp
+import matplotlib.pyplot as plt
+import numpy as np
+import numpyro.distributions as dist
+import seaborn as sns
+from numpyro import deterministic, plate, sample
+from numpyro.infer import MCMC, NUTS, SVI, Trace_ELBO
+from numpyro.infer.autoguide import AutoNormal
+from numpyro.optim import Adam
+from PIL import Image
+
+sns.set_theme(&#39;notebook&#39;, &#39;ticks&#39;, font=&#39;Arial&#39;)
+
+plt.rcParams[&#39;figure.dpi&#39;] = 200</code></pre>
+<pre class="python"><code>img = Image.open(&#39;data/example.jpg&#39;)
+img = img.resize((img.width // 2, img.height // 2))
+img</code></pre>
+<figure>
+<img
+src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_2_0.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
+</figure>
+<p>Try a couple of different colour spaces in case something interesting
+stands out.</p>
+<pre class="python"><code>from skimage import color
+
+img_array = np.array(img)
+lab_img = color.rgb2lab(img_array)
+
+fig, axes = plt.subplots(3, 1, figsize=(5, 10), sharex=True)
+
+for i, (ax, title) in enumerate(zip(axes, [&#39;L channel&#39;, &#39;a channel&#39;, &#39;b channel&#39;])):
+    im = ax.imshow(lab_img[:,:,i], cmap=&#39;gray&#39;)
+    ax.set_title(title)
+    fig.colorbar(im, ax=ax, fraction=0.03, pad=0.04)
+
+plt.tight_layout()</code></pre>
+<figure>
+<img
+src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_4_0.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
+</figure>
+<pre class="python"><code>hsv_img = color.rgb2hsv(img_array)
+
+fig, axes = plt.subplots(3, 1, figsize=(5, 10), sharex=True)
+
+for i, (ax, title) in enumerate(zip(axes, [&#39;H channel&#39;, &#39;S channel&#39;, &#39;V channel&#39;])):
+    im = ax.imshow(hsv_img[:,:,i], cmap=&#39;gray&#39;)
+    ax.set_title(title)
+    fig.colorbar(im, ax=ax, fraction=0.03, pad=0.04)
+
+plt.tight_layout()</code></pre>
+<figure>
+<img
+src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_5_0.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
+</figure>
+<p>First approach, fixed number of droplets; model centres and radii</p>
+<pre class="python"><code>def model1(w, h, n_droplets):
+    with plate(&quot;droplets&quot;, n_droplets):
+        x = sample(&quot;x&quot;, dist.Uniform(0, w))
+        y = sample(&quot;y&quot;, dist.Uniform(0, h))
+        r = sample(&quot;r&quot;, dist.LogNormal(1.5, 0.75))
+
+
+mcmc = MCMC(NUTS(model1), num_warmup=1000, num_samples=100)
+mcmc.run(jax.random.PRNGKey(0), w=img.width, h=img.height, n_droplets=100)
+samples = mcmc.get_samples()
+
+fig, ax = plt.subplots()
+ax.imshow(np.ones_like(np.array(img)) * 255, cmap=&quot;gray&quot;)
+for sample_no in range(5):
+    for i in range(100):
+        circle = plt.Circle(
+            (samples[&quot;x&quot;][sample_no][i], samples[&quot;y&quot;][sample_no][i]),
+            samples[&quot;r&quot;][sample_no][i],
+            color=plt.cm.tab10(sample_no),
+        )
+
+        ax.add_artist(circle)</code></pre>
+<pre><code>sample: 100%|██████████| 1100/1100 [00:09&lt;00:00, 112.09it/s, 15 steps of size 3.08e-01. acc. prob=0.84]</code></pre>
+<figure>
+<img
+src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_7_1.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
+</figure>
+<pre class="python"><code>def model2(w, h, n_droplets):
+    # Sample droplet locations and sizes
+    with plate(&quot;droplets&quot;, n_droplets):
+        x = sample(&quot;x&quot;, dist.Uniform(0, w))
+        y = sample(&quot;y&quot;, dist.Uniform(0, h))
+        r = sample(&quot;r&quot;, dist.LogNormal(1.5, 0.75))
+        
+        # Sample HSV values for each droplet
+        h_val = sample(&quot;h&quot;, dist.Uniform(0, 1))
+        s_val = sample(&quot;s&quot;, dist.Beta(2, 2))
+        v_val = sample(&quot;v&quot;, dist.Beta(5, 2))  # Biased towards brighter values
+
+mcmc = MCMC(NUTS(model2), num_warmup=1000, num_samples=100)
+mcmc.run(jax.random.PRNGKey(0), w=img.width, h=img.height, n_droplets=100)
+samples = mcmc.get_samples()
+samples = {k: np.array(v) for k, v in samples.items()}
+
+# Visualize with HSV colors
+fig, ax = plt.subplots()
+ax.imshow(np.ones_like(np.array(img)) * 255, cmap=&quot;gray&quot;)
+for i in range(100):
+    circle = plt.Circle(
+        (samples[&quot;x&quot;][0][i], samples[&quot;y&quot;][0][i]),
+        samples[&quot;r&quot;][0][i],
+        color=color.hsv2rgb(
+            np.array(
+                [
+                    samples[&quot;h&quot;][0][i],
+                    samples[&quot;s&quot;][0][i],
+                    samples[&quot;v&quot;][0][i],
+                ]
+            )
+        ),
+    )
+    ax.add_artist(circle)</code></pre>
+<pre><code>sample: 100%|██████████| 1100/1100 [00:14&lt;00:00, 74.39it/s, 15 steps of size 2.52e-01. acc. prob=0.86] </code></pre>
+<figure>
+<img
+src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_8_1.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
+</figure>
+<pre class="python"><code>def model2(w, h, n_droplets):
+    # Sample droplet locations and sizes
+    with plate(&quot;droplets&quot;, n_droplets):
+        x = sample(&quot;x&quot;, dist.Uniform(0, w))
+        y = sample(&quot;y&quot;, dist.Uniform(0, h))
+        r = sample(&quot;r&quot;, dist.LogNormal(1.5, 0.75))
+        
+        with plate(&quot;pixels&quot;, w * h):
+            x_dist = jnp.abs(x - jnp.arange(w)[:, None])
+            y_dist = jnp.abs(y - jnp.arange(h)[:, None])
+            distance = jnp.sqrt(x_dist ** 2 + y_dist[:, None] ** 2)
+            val = deterministic(&#39;val&#39;, jnp.sum(jnp.exp(-distance ** 2 / (2 * r ** 2)), axis=-1))
+
+
+mcmc = MCMC(NUTS(model2), num_warmup=500, num_samples=10)
+mcmc.run(jax.random.PRNGKey(0), w=img.width, h=img.height, n_droplets=100)
+samples = mcmc.get_samples()
+samples = {k: np.array(v) for k, v in samples.items()}
+
+# show the first 3 samples
+fig, axes = plt.subplots(3, 1, figsize=(5, 10), sharex=True)
+for i, ax in enumerate(axes):
+    ax.imshow(1 - samples[&#39;val&#39;][i], cmap=&#39;gray&#39;)</code></pre>
+<pre><code>sample: 100%|██████████| 510/510 [00:06&lt;00:00, 78.12it/s, 15 steps of size 3.10e-01. acc. prob=0.85] </code></pre>
+<figure>
+<img
+src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_9_1.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
+</figure>
+<p>Not a bad generative process to start with. Now let’s just fit the
+hue channel …</p>
+<pre class="python"><code>def model3(w, h, n_droplets, channel, error_scale):
+    # Sample droplet locations and sizes
+    bg = sample(&quot;bg&quot;, dist.Uniform(0, 1))
+    with plate(&quot;droplets&quot;, n_droplets):
+        x = sample(&quot;x&quot;, dist.Uniform(0, 1))*w
+        y = sample(&quot;y&quot;, dist.Uniform(0, 1))*h
+        r = sample(&quot;r&quot;, dist.LogNormal(1.5, 0.75))
+        amplitude = sample(&quot;amplitude&quot;, dist.Uniform(0, 1))
+        
+        x_dist = jnp.abs(x - jnp.arange(w)[:, None])
+        y_dist = jnp.abs(y - jnp.arange(h)[:, None])
+        distance = jnp.sqrt(x_dist ** 2 + y_dist[:, None] ** 2)
+        val = deterministic(&#39;val&#39;, bg + jnp.sum(amplitude[None, None, :] * jnp.exp(-distance ** 2 / (2 * r ** 2)), axis=-1))
+        diff = deterministic(&#39;diff&#39;, val - channel)
+    sample(&#39;obs&#39;, dist.Normal(0, error_scale), obs=val - channel)
+</code></pre>
+<p>Fitting, instead of sampling</p>
+<pre class="python"><code>guide = AutoNormal(model3)
+svi = SVI(model3, guide, Adam(0.01), Trace_ELBO())
+svi_result = svi.run(jax.random.PRNGKey(0), 20000, img.width, img.height, 500, hsv_img[:,:,0], 0.05)</code></pre>
+<pre><code>100%|██████████| 20000/20000 [04:40&lt;00:00, 71.43it/s, init loss: 19718028.0000, avg. loss [19001-20000]: 5279295.0000]</code></pre>
+<pre class="python"><code>svi_result = svi.run(jax.random.PRNGKey(0), 50000, img.width, img.height, 500, hsv_img[:,:,0], 0.05, init_state=svi_result.state)</code></pre>
+<pre><code>  0%|          | 0/50000 [00:00&lt;?, ?it/s]
+
+100%|██████████| 50000/50000 [11:36&lt;00:00, 71.82it/s, init loss: 5101927.5000, avg. loss [47501-50000]: 5046932.5000]</code></pre>
+<pre class="python"><code>samples = guide.sample_posterior(jax.random.PRNGKey(0), svi_result.params, sample_shape=(5,))</code></pre>
+<pre class="python"><code>fig, axes = plt.subplots(3, 1, figsize=(5, 10), sharex=True)
+fig.colorbar(axes[0].imshow(samples[&#39;val&#39;][0], cmap=&#39;gray&#39;), ax=axes[0], fraction=0.03, pad=0.04)
+axes[0].set_title(&#39;Prediction&#39;)
+fig.colorbar(axes[1].imshow(jnp.abs(samples[&#39;diff&#39;][0]), cmap=&#39;gray&#39;), ax=axes[1], fraction=0.03, pad=0.04)
+axes[1].set_title(&#39;Difference&#39;)
+fig.colorbar(axes[-1].imshow(hsv_img[:,:,0], cmap=&#39;gray&#39;), ax=axes[-1], fraction=0.03, pad=0.04)
+axes[-1].set_title(&#39;Ground truth&#39;)
+fig.tight_layout()</code></pre>
+<figure>
+<img
+src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_16_0.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
+</figure>
+<p>Not a bad start. Most of the brightests spots have been fitted. I am
+surprised thought that a lot of the amplitudes are almost zero. At the
+end of the day, optimisations where pieces have to move into the right
+place first are tricky and I have no reason to believe that this is a
+global optimum, despite having spent a while trying to tease out a
+better outcome.</p>
+<pre class="python"><code>sns.histplot(samples[&#39;amplitude&#39;].flatten(), bins=50);</code></pre>
+<figure>
+<img
+src="2024-12-28-droplet-generative-process_files/2024-12-28-droplet-generative-process_18_0.png"
+alt="png" />
+<figcaption aria-hidden="true">png</figcaption>
+</figure></div>
+    <script src="/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
