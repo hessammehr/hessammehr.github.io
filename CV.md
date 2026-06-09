@@ -28,10 +28,10 @@ GitHub: [hessammehr][github] / [MehrResearch][group-github]
 
 ## Employment
 
-### Lecturer in Chemistry and AI for Science <span> King's College London, UK | Incoming (2026–) </span>
+### Lecturer in Chemistry and AI for Science <span> King's College London, UK | 2026– </span>
 
 ### Leverhulme Early Career Fellow <span> University of Glasgow, UK | 2022–2025 </span>
-My fellowship leveraged automation and computational modelling to radically expand the gamut of interpretable experimental regimes in chemistry, with chemistry in aerosols as a first paradigm. I created a modular, digitally controlled aerosol reactor — the first of its kind — and championed its adoption as a medium for chemical synthesis and discovery. Applications ranging from materials chemistry to antimicrobial discovery are being pursued within my group and via collaborations.
+My fellowship leveraged automation and computational modelling to radically expand the gamut of interpretable experimental regimes in chemistry, with chemistry in aerosols as a first methodological foundation. I created a modular, digitally controlled aerosol reactor — the first of its kind — and championed its adoption as a medium for chemical synthesis and discovery. Applications ranging from materials chemistry to antimicrobial discovery were pursued within my group and via collaborations.
 
 ### Post-doctoral Researcher <span> Cronin Group, University of Glasgow, UK | 2018–2022 </span>
 Focus areas include (i) the digitisation of synthetic chemistry, leading to [two](#chempu) [Science papers](#xdl) and commercialisation via a [patent](#patent-chemputer) that now underpins a £40M spin-out company; and (ii) algorithmic discovery of new reactivity via automated platforms integrating online analytical instruments.
@@ -49,7 +49,7 @@ Focus areas: Digital signal processing, photonic crystals.
 
 ## Research highlights
 
-Highlights among **33** peer-reviewed primary research papers (h-index: **15**; **1000+** citations; [full list](#full-publication-list)):
+Highlights among **33** peer-reviewed primary research papers (h-index: **16**; **1000+** citations; [full list](#full-publication-list)):
 
 ### ▶ Programmable aerosol chemistry coupled to chemical imaging establishes a new arena for automated chemical synthesis and discovery
 Wosik, J.; Zhu, C.; Li, Z.; [Mehr, S. H. M.]{.underline}, *Digital Discovery*, **2025** ([10.1039/D5DD00100E](https://doi.org/10.1039/D5DD00100E))
@@ -230,11 +230,15 @@ Chemical Studies is a University of Glasgow Chemistry stream aimed at distilling
 <h2 style="display: inline" id="full-publication-list"> Full publication list </h2>
 </summary>
 
-1. [Modulation of reactivity in microdroplets via solvent vapour pressure](https://doi.org/10.26434/chemrxiv-2025-zvj8z)  
+1. [Generation of carbon particles from sucrose in a programmable aerosol reactor](https://doi.org/10.26434/chemrxiv.15003608/v1)  
+Ge, Y.; Li, Z.; [Mehr, S.H.M.]{.underline}  
+*ChemRxiv*, **2026**
+
+2. [Modulation of reactivity in microdroplets via solvent vapour pressure](https://doi.org/10.26434/chemrxiv-2025-zvj8z)  
 Li, Z.; Jarzabek, B.; [Mehr, S.H.M.]{.underline}  
 *ChemRxiv*, **2025**
 
-2. [TideScript: A Domain Specific Language for Peptide Chemistry](https://doi.org/10.1145/3759429.3762627)  
+1. [TideScript: A Domain Specific Language for Peptide Chemistry](https://doi.org/10.1145/3759429.3762627)  
 Morris, N.; Archibald, B.; [Mehr, S.H.M.]{.underline}  
 ACM SIGPLAN 2025 Onward!, **2025**
 
