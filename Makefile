@@ -71,8 +71,8 @@ $(OUT_DIR)/blog/index.md: $(ALL_HTMLS) $(IMAGES)
 $(OUT_DIR)/blog/index.html: $(OUT_DIR)/blog/index.md
 	pandoc -s $< -c /style.css -o $@
 
-$(OUT_DIR)/CV.html: $(OUT_DIR)/CV.css CV.md 
-	pandoc --section-divs -s CV.md -c CV.css -o $(OUT_DIR)/CV.html
+$(OUT_DIR)/CV.html: $(OUT_DIR)/CV.css CV.md CV.foot.html
+	pandoc --section-divs -s CV.md -c CV.css -A CV.foot.html -o $(OUT_DIR)/CV.html
 
 $(OUT_DIR)/%: % | $(OUT_DIR)
 	@mkdir -p $(dir $@)

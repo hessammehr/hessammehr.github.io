@@ -1,0 +1,87 @@
+<script>
+// CV curation: subtle hover checkboxes to hide items / collapse sections.
+//   Sections (## / section.level2)         -> "collapse" (header dimmed, children hidden)
+//   Items (### / #### entries + list <li>)  -> "hide"     (whole entry dimmed)
+// Checked = removed; on print, removed elements vanish entirely.
+(function () {
+  "use strict";
+
+  // Stable key for an element so curation state can later be persisted
+  // (see CV #6). Headings reuse pandoc's slug id; other elements derive
+  // a slug from their nearest section id + text content.
+  function slugify(text) {
+    return text
+      .toLowerCase()
+      .replace(/[^\w]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .slice(0, 64);
+  }
+
+  function keyFor(el, kind) {
+    if (el.id) return el.id;
+    var section = el.closest("section[id]");
+    var prefix = section ? section.id : kind;
+    return prefix + ":" + slugify(el.textContent || "");
+  }
+
+  // trigger: element the checkbox is placed in / revealed on hover.
+  // target:  element that receives the state class.
+  function addToggle(trigger, target, kind) {
+    if (trigger.querySelector(":scope > .cv-toggle")) return;
+
+    var box = document.createElement("input");
+    box.type = "checkbox";
+    box.className = "cv-toggle";
+    box.dataset.kind = kind;
+    box.dataset.key = keyFor(trigger, kind);
+    var label = kind === "section" ? "Collapse section" : "Hide item";
+    box.setAttribute("aria-label", label);
+    box.title = label;
+
+    var cls = kind === "section" ? "cv-collapsed" : "cv-hidden";
+    box.addEventListener("change", function () {
+      target.classList.toggle(cls, box.checked);
+    });
+    // Don't let a click on the checkbox follow a wrapping link.
+    box.addEventListener("click", function (e) {
+      e.stopPropagation();
+    });
+
+    trigger.prepend(box);
+  }
+
+  function init() {
+    // Collapsible top-level sections.
+    document.querySelectorAll("section.level2").forEach(function (sec) {
+      var h = sec.querySelector(":scope > h2");
+      if (h) addToggle(h, sec, "section");
+    });
+    // Hideable entries (### / ####).
+    document
+      .querySelectorAll("section.level3, section.level4")
+      .forEach(function (sec) {
+        var h = sec.querySelector(":scope > h3, :scope > h4");
+        if (h) addToggle(h, sec, "item");
+      });
+    // Hideable description blocks within entries (paragraphs, blockquotes).
+    document
+      .querySelectorAll(
+        "section.level3 > p, section.level3 > blockquote," +
+          "section.level4 > p, section.level4 > blockquote"
+      )
+      .forEach(function (el) {
+        addToggle(el, el, "item");
+      });
+    // Hideable publication / list entries.
+    document.querySelectorAll("li").forEach(function (li) {
+      addToggle(li, li, "item");
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+</script>

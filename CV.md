@@ -51,74 +51,74 @@ Focus areas: Digital signal processing, photonic crystals.
 
 Highlights among **33** peer-reviewed primary research papers (h-index: **16**; **1000+** citations; [full list](#full-publication-list)):
 
-### ▶ Programmable aerosol chemistry coupled to chemical imaging establishes a new arena for automated chemical synthesis and discovery
+### Programmable aerosol chemistry coupled to chemical imaging establishes a new arena for automated chemical synthesis and discovery
 Wosik, J.; Zhu, C.; Li, Z.; [Mehr, S. H. M.]{.underline}, *Digital Discovery*, **2025** ([10.1039/D5DD00100E](https://doi.org/10.1039/D5DD00100E))
 
 > **Building blocks for synthetic chemistry in aerosols:** This paper lays the conceptual foundations for, and provides a practical laboratory implementation of, general-purpose chemical synthesis in aerosols. Synthesis in microdroplets has historically been difficult to reconcile with traditional laboratory workflows, hence hardly explored in synthetic chemistry. Tackling these issues using new hardware and analytics, it provides access to vast reactivity information and chemical phenomena at different lengths scales, as well as an arena for the development of new green synthesis methodology.
 
-### ▶ Digital discovery and the new experimental frontier
+### Digital discovery and the new experimental frontier
 [Mehr, S. H. M.]{.underline} 
 *Digital Discovery*, **2025** ([10.1039/D5DD00029G](https://doi.org/10.1039/D5DD00029G))
 
 > **Enriching rather than trivialising chemistry via digitisation:** Growing interest in machine learning and automation in chemistry raises the question of whether future chemistry will be "lab-free" or reduced to massive robotic chemistry farms to harvest information and AI models to ingest it. I explore possibilities beyond these extremes, where enabling exploration of richer experimental spaces unlocks a third, more exciting, direction for  digitisation.
 
-<!-- ### ▶ Operational considerations for approximating Molecular Assembly by Fourier transform mass spectrometry
+<!-- ### Operational considerations for approximating Molecular Assembly by Fourier transform mass spectrometry
 Weiss, G. M.; Asche, S.; Mclain, H.; Chung, A. H.; [Mehr, S. H. M.]{.underline}; Cronin, L.; Graham, H.
 *Frontiers in Astronomy and Earth Sciences*, **2024** ([10.3389/fspas.2024.1485483](https://doi.org/10.3389/fspas.2024.1485483))
 
 > This NASA collaboration deploys my [RecursiveMA algorithm](#recursiveMA) in the context of finding evidence of extra-terrestrial life in tandem mass spectrometry data. -->
 
-### ▶ In situ synthesis within micron-sized hydrogel reactors created via programmable aerosol chemistry
+### In situ synthesis within micron-sized hydrogel reactors created via programmable aerosol chemistry
 Zhang, L.; [Mehr, S. H. M.]{.underline}
 *Digital Discovery*, **2024** ([10.1039/D4DD00139G](https://doi.org/10.1039/D4DD00139G))
 
 > **Aerosol-generated hydrogel microdroplets as miniature self-assembled reactors:** Hydrogel matrices hold promise as a locus for inhomogeneous chemistry, especially in the micron range, where reactants and products can be transported via diffusion. In this work, we generated reactive microdroplets of sodium alginate which, upon contact with and cross-linking with a reagent-loaded solution of calcium ions, acted as hydrogel containers for subsequent *in situ* reactivity within them. *Featured on the front cover of December 2024 issue.*
 
-<!-- ### ▶ Programmable real-time execution of scientific experiments using a domain specific language for the Raspberry Pi Pico
+<!-- ### Programmable real-time execution of scientific experiments using a domain specific language for the Raspberry Pi Pico
 [Mehr, S. H. M.]{.underline}
 *Under review*, ([preprint](https://doi.org/10.36227/techrxiv.173896967.76043093/v1)) -->
 
-<!-- ### ▶ Constructing the Molecular Tree of Life using Assembly Theory and Mass Spectrometry
+<!-- ### Constructing the Molecular Tree of Life using Assembly Theory and Mass Spectrometry
 Kahana, A.; MacLeod, A.; [Mehr, S. H. M.]{.underline}, Sharma, A. et al.
 *Under review* ([preprint](https://doi.org/10.48550/arXiv.2408.09305)) -->
 
-### ▶ Reaction blueprints and logical control flow for parallelized chiral synthesis in the Chemputer
+### Reaction blueprints and logical control flow for parallelized chiral synthesis in the Chemputer
 Šiaučiulis, M.; Knittl-Frank, C.; [Mehr, S. H. M]{.underline}; Clarke, E.; Cronin, L.
 *Nat. Commun.*, **2024** ([10.1038/s41467-024-54238-6](https://doi.org/10.1038/s41467-024-54238-6))
 
 > Early means of programming robotic modules for chemical synthesis show immense promise for deployment in research and industrial labs, but lack the fundamental constructs — re-usable reactions, parallel synthesis, and a higher-level representation of reagents and hardware — needed to tackle more ambitious synthetic challenges. I designed a first-class implementation of these constructs in the χDL 2.0 language whilst maintaining compatibility with the existing repertoire of procedures digitised via χDL 1.0.
 
-### ▶ Investigating and Quantifying Molecular Complexity Using Assembly Theory and Spectroscopy{#recursiveMA}
+### Investigating and Quantifying Molecular Complexity Using Assembly Theory and Spectroscopy{#recursiveMA}
 Jirasek, M.; Sharma, A.; Bame, J.; [Mehr, S. H. M.]{.underline}, et al.
 *ACS Cent. Sci.*, **2024** ([10.1021/acscentsci.4c00120](https://doi.org/10.1021/acscentsci.4c00120))
 
 > Tandem mass spectrometry is a formidable tool for analysing complex mixtures of unknown compounds, e.g. exoplanet samples, but pinpointing compounds of interest without extrapolating from currently known species remains a challenge. In this collaboration with the Cronin Group, I devised a recursive algorithm ([RecursiveMA](https://github.com/hessammehr/recursiveMA)) that searches tandem MS dataset for evidence of shared molecular building blocks, quantitatively differentiating complex molecules from those that are simply large.
 
-### ▶ Digitizing chemical discovery with a Bayesian explorer for interpreting reactivity data
+### Digitizing chemical discovery with a Bayesian explorer for interpreting reactivity data
 [Mehr, S. H. M.]{.underline}; Caramelli, D.; Cronin, L.
 *PNAS*, **2023** ([10.1073/pnas.2220045120](https://doi.org/10.1073/pnas.2220045120))
 
 > **A fresh take on AI in chemistry:** The applications of AI in chemistry are proliferating, yet instead of empowering expert chemists to undertake larger-scale experiments, most efforts supplant the chemist with data-hungry and opaque models. Bridging Bayesian probability and chemistry, we built a system that encodes and formalises chemists' intuition into a probabilistic model working in tandem with a robotic chemistry platform to explore large experimental spaces and plan next investigations.
 
-### ▶ Automated Qualitative and Quantitative Analysis of Complex Forensic Drug Samples using ¹H NMR
+### Automated Qualitative and Quantitative Analysis of Complex Forensic Drug Samples using ¹H NMR
 [Mehr, S. H. M.]{.underline}; Tang, A. W.; Laing, R. R.
 *Magn. Reson. Chem.*, **2023** ([10.1002/mrc.5265](https://doi.org/10.1002/mrc.5265))
 
 > **Digital signal processing and statistics to counter drug epidemics:** Developing bespoke analytical protocols for drug detection is resource intensive and time consuming, incompatible with tackling rapidly emerging crises, such as the fentanyl epidemic. At Health Canada, we demonstrated an automated <sup>1</sup>H NMR-based pipeline, based on advanced signal processing techniques and statistical inference, that can be applied to new analytes and sample types with little adaptation or method development.
 
-### ▶ Digitization and validation of a chemical synthesis literature database in the ChemPU{#chempu}
+### Digitization and validation of a chemical synthesis literature database in the ChemPU{#chempu}
 Rohrbach, S.; Šiaučiulis, M.; Chisholm, G.; Pirvan, P.-A.; Saleeb, M.; [Mehr, S. H. M.]{.underline}; et al.
 *Science*, **2022** ([10.1126/science.abo0058](https://doi.org/10.1126/science.abo0058))
 
 <!-- > **On-demand digital synthesis:** Just as the digitisation of music led to on-demand streaming services, we demonstrate how digitization of the chemical literature enables an automated synthesis platform to directly execute published procedures without human intervention. The work highlights the power of abstract chemical description languages in separating procedure specification from hardware-specific implementation details. -->
 
-### ▶ A universal system for digitization and automatic execution of the chemical synthesis literature{#xdl}
+### A universal system for digitization and automatic execution of the chemical synthesis literature{#xdl}
 [Mehr, S. H. M.]{.underline}; Craven, M.; Leonov, A. I.; Keenan, G.; Cronin, L.
 *Science*, **2020** ([10.1126/science.abc2986](https://doi.org/10.1126/science.abc2986))
 
 > **Hardware-independent synthesis automation:** Digitising synthesis requires in-depth knowledge of vendor specific programming interfaces and lengthy development to adapt literature protocols to robotic execution. Our high-level hardware-independent chemical programming language XDL formalises the chemical literature's universal method for describing synthesis procedures in prose and translates these descriptions to robot-ready instructions.
 
-### ▶ Stabilization of a Strained Heteroradialene by Peripheral Electron Delocalization
+### Stabilization of a Strained Heteroradialene by Peripheral Electron Delocalization
 [Mehr, S. H. M.]{.underline}; Patrick, B. O.; MacLachlan, M. J.
 *Org. Lett.*, **2016** ([10.1021/acs.orglett.6b00577](https://doi.org/10.1021/acs.orglett.6b00577))
 
@@ -224,11 +224,7 @@ Chemical Studies is a University of Glasgow Chemistry stream aimed at distilling
 **Examination:** Examiner on **17** viva exams.
 
 
-<details>
-
-<summary>
-<h2 style="display: inline" id="full-publication-list"> Full publication list </h2>
-</summary>
+## Full publication list {#full-publication-list}
 
 1. [Generation of carbon particles from sucrose in a programmable aerosol reactor](https://doi.org/10.26434/chemrxiv.15003608/v1)  
 Ge, Y.; Li, Z.; [Mehr, S.H.M.]{.underline}  
@@ -364,7 +360,7 @@ Frischmann, P.D.; [Mehr, S.H.M.]{.underline}; Patrick, B.O.; Lelj, F.; MacLachla
 
 1. [Influence of asymmetry on the band structure of photonic crystals](https://doi.org/10.1117/12.843857)  
 [Mehr, S.H.M.]{.underline}; Khorasani, S.  
-*Photonic and Phononic Crystal Materials and Devices X* 7609, 238-248, **2010**</details>
+*Photonic and Phononic Crystal Materials and Devices X* 7609, 238-248, **2010**
 
 [Google Scholar]: https://scholar.google.com/citations?user=HeyhCHEAAAAJ
 [ORCiD]: https://orcid.org/0000-0001-7710-3102
