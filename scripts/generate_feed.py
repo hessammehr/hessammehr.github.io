@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-import re, subprocess, sys
+import html
+import re
+import subprocess
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from xml.etree.ElementTree import Element, ElementTree, SubElement, register_namespace
@@ -22,12 +25,25 @@ def md_to_html(text):
 
 def parse_post(path):
     text = path.read_text()
-    title = m.group(1) if (m := re.search(r"^# (.+)", text, re.MULTILINE)) else path.stem
+    link = f"{POSTS}/{path.stem}.html"
+
+    if path.suffix.lower() == ".html":
+        match = re.search(r"<title[^>]*>(.*?)</title>", text, re.IGNORECASE | re.DOTALL)
+        title = html.unescape(re.sub(r"<[^>]+>", "", match.group(1))).strip() if match else path.stem
+        content = (
+            "<p>This post is an interactive HTML document. "
+            f'<a href="{link}">Read it on Hessam\'s blog.</a></p>'
+        )
+    else:
+        match = re.search(r"^# (.+)", text, re.MULTILINE)
+        title = match.group(1) if match else path.stem
+        content = md_to_html(text)
+
     return {
         "title": title,
         "date": datetime.fromisoformat(path.name[:10]).replace(tzinfo=timezone.utc),
-        "link": f"{POSTS}/{path.stem}.html",
-        "content": md_to_html(text),
+        "link": link,
+        "content": content,
     }
 
 

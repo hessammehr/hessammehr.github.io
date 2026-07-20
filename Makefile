@@ -11,6 +11,9 @@ MDS := $(patsubst blog/posts/%.md,$(OUT_DIR)/blog/posts/%.md,$(wildcard blog/pos
 HTMLS := $(patsubst blog/htmls/%.html,$(OUT_DIR)/blog/posts/%.html,$(wildcard blog/htmls/*.html))
 ALL_MDS := $(MDS) $(NOTEBOOK_MDS)
 ALL_HTMLS := $(patsubst %.md,%.html,$(ALL_MDS)) $(HTMLS)
+# Markdown is the feed source for converted posts; use HTML only for posts that
+# originate as HTML so the same post is not included twice.
+FEED_POSTS := $(ALL_MDS) $(HTMLS)
 
 IMAGES := $(patsubst blog/images/%,$(OUT_DIR)/blog/images/%,$(wildcard blog/images/*))
 
@@ -46,8 +49,8 @@ $(OUT_DIR)/blog/posts/%.html: $(OUT_DIR)/blog/posts/%.md $(OUT_DIR)/primer.css $
 	sed '1s/^# Draft: /# [Draft]{.draft-title} /' "$<" | \
 	pandoc -s --template=_template.html --syntax-highlighting=none --mathjax --metadata=pagetitle="$$title" -o "$@"
 
-$(OUT_DIR)/feed.xml: $(ALL_MDS) scripts/generate_feed.py
-	uv run --no-project python scripts/generate_feed.py $(ALL_MDS) > $@
+$(OUT_DIR)/feed.xml: $(FEED_POSTS) scripts/generate_feed.py
+	uv run --no-project python scripts/generate_feed.py $(FEED_POSTS) > $@
 
 $(OUT_DIR)/blog/index.md: $(ALL_HTMLS) $(IMAGES)
 	cp blog/index.template.md $@ && \
@@ -109,4 +112,5 @@ test:
 	@echo "MDS: $(MDS)"
 	@echo "ALL_MDS: $(ALL_MDS)"
 	@echo "ALL_HTMLS: $(ALL_HTMLS)"
+	@echo "FEED_POSTS: $(FEED_POSTS)"
 	@echo "IMAGES: $(IMAGES)"

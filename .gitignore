@@ -4,3 +4,4 @@
 .venv
 .uv-cache
 __marimo__
+__pycache__
